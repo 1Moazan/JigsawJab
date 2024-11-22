@@ -1,0 +1,41 @@
+version: 1
+LastOpenTab: Anywhere
+CurrentProfileName: default
+CurrentRegion: us-east-2
+UserProfiles: >
+  - Region: us-east-2
+    Name: default
+    BucketName: gamelift-bootstrap-339713110717-us-east-2
+    AnywhereFleetName: AiPuzzleTestFleet
+    AnywhereFleetId: fleet-0a0efc84-c413-4fd4-a40d-62c4859b7571
+    AnywhereFleetLocation: custom-my-laptop
+    ComputeName: HardwareAnywhere
+    IpAddress: 10.1.2.3
+    WebSocketUrl: wss://us-east-2.api.amazongamelift.com
+    DeploymentScenario: SingleRegion
+    DeploymentGameName: 
+    ManagedEC2FleetName: 
+    BuildName: 
+    LaunchParameters: 
+    BuildOperatingSystem: 
+    DeploymentBuildFilePath: 
+    DeploymentBuildFolderPath: 
+  - Region: us-east-1
+    Name: AwsGamelift
+    BucketName: 
+    AnywhereFleetName: 
+    AnywhereFleetId: 
+    AnywhereFleetLocation: 
+    ComputeName: 
+    IpAddress: 
+    WebSocketUrl: 
+    DeploymentScenario: SingleRegion
+    DeploymentGameName: 
+    ManagedEC2FleetName: 
+    BuildName: 
+    LaunchParameters: 
+    BuildOperatingSystem: 
+    DeploymentBuildFilePath: 
+    DeploymentBuildFolderPath: 
+CurrentBucketName: gamelift-bootstrap-339713110717-us-east-2
+...
