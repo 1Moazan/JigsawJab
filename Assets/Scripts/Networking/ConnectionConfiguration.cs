@@ -16,6 +16,7 @@ namespace Networking
 
         private void SetConnectionData()
         {
+            if(sharedConnectionData.ConnectionData == null) return;
             networkManager.networkAddress = sharedConnectionData.ConnectionData.IPAddress;
             transport.Port = (ushort)sharedConnectionData.ConnectionData.PortNo;
             if (sharedConnectionData.ConnectionData.isServer)
