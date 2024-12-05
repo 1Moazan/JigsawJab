@@ -15,7 +15,7 @@ namespace Networking.Gameplay
         [SerializeField] private TextMeshProUGUI turnText;
         [SerializeField] private TextMeshProUGUI scoreText;
 
-        public Action TurnEnded;
+        public Action ServerTurnEnded;
         private PuzzlePieceGameplay _currSelectedPiece;
         public override void OnStartServer()
         {
@@ -50,7 +50,7 @@ namespace Networking.Gameplay
         [Server]
         private void ServerEndPlayerTurn()
         {
-            TurnEnded?.Invoke();
+            ServerTurnEnded?.Invoke();
         }
 
         [Server]

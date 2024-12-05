@@ -104,7 +104,7 @@ namespace Networking.Gameplay
             if (obj.conn.identity.TryGetComponent(out PuzzlePlayer p))
             {
                 _puzzlePlayers.Add(p);
-                p.TurnEnded += ServerPlayerTurnEnded;
+                p.ServerTurnEnded += ServerPlayerTurnEnded;
             }
 
             if (_puzzlePlayers.Count >= maxPlayerCount)
