@@ -46,6 +46,7 @@ namespace Networking.Gameplay
         [TargetRpc]
         private void TargetSetTurnUI(NetworkConnectionToClient target, bool active)
         {
+            Debug.LogError("Set Target Turn UI : " + active);
             blockerImage.SetActive(!active);
             //piecesPanel.gameObject.SetActive(active);
             if (active)
@@ -188,8 +189,11 @@ namespace Networking.Gameplay
 
                 for (int i = 0; i < _puzzlePlayers.Count; i++)
                 {
-                    if (i == _currentPlayerIndex) continue;
-                    TargetSetTurnUI(_puzzlePlayers[i].connectionToClient, false);
+                    Debug.Log("Send Target Turn UI");
+                    if (_puzzlePlayers[i] != GetCurrentTurnPlayer())
+                    {
+                        TargetSetTurnUI(_puzzlePlayers[i].connectionToClient, false);
+                    }
                 }
                 
             }
