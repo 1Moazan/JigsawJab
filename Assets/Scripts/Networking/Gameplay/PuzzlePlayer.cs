@@ -14,6 +14,7 @@ namespace Networking.Gameplay
         
         [SerializeField] private TextMeshProUGUI turnText;
         [SerializeField] private TextMeshProUGUI scoreText;
+        [SerializeField] private SpriteRenderer avatarSprite;
 
         public Action ServerTurnEnded;
         private PuzzlePieceGameplay _currSelectedPiece;
@@ -70,6 +71,12 @@ namespace Networking.Gameplay
         private void RpcUpdateScoreText(int score)
         {
             scoreText.text = "Score : " + score;
+        }
+
+        [ClientRpc]
+        public void RpcSetRightPlayer()
+        {
+            avatarSprite.flipX = false;
         }
     }
 }

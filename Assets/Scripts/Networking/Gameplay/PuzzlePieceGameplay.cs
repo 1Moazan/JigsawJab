@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using DG.Tweening;
 using Mirror;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -29,26 +30,30 @@ namespace Networking.Gameplay
         private bool _isPlaced;
 
         private bool _allowDrag = true;
-        public Action<bool> ServerPiecePlaced;
+        public Action<bool, int> ServerPiecePlaced;
 
         public bool IsPlaced => _isPlaced;
 
         private void Start()
         {
             _camera = Camera.main;
-            _initialPosition = transform.position;
+            
         }
 
         [ClientRpc]
         public void RpcSetSprite(int index)
         {
+            Vector2 newPos = transform.position;
+            newPos.y += 1f;
+            transform.DOMoveY(newPos.y, 1f).SetEase(Ease.OutElastic);
+            _initialPosition = newPos;
             pieceRenderer.sprite = piecesContainer.sharedPieces[index];
             _myIndex = index;
         }
         
         void Update()
         {
-            if (_isPlaced) return;
+            if (_isPlaced || !isOwned) return;
             if (Input.GetMouseButtonDown(0) && _allowDrag)
             {
                 RaycastHit2D hit = Physics2D.Raycast(_camera.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
@@ -71,12 +76,12 @@ namespace Networking.Gameplay
                 {
                     if (IsCorrectPiece())
                     {
-                        CmdSetIsPlaced(true);
+                        CmdSetIsPlaced(true, _lastTrigger.pieceIndex);
                         _lastRoutine = StartCoroutine(SmoothMoveTo(_lastTrigger.transform.position, 10f));
                     }
                     else
                     {
-                        CmdWrongPiecePlaced();
+                        CmdWrongPiecePlaced(_lastTrigger.pieceIndex);
                         _lastRoutine = StartCoroutine(SmoothMoveTo(_initialPosition, 5f));
                     }
                 }
@@ -127,17 +132,17 @@ namespace Networking.Gameplay
         }
 
         [Command]
-        private void CmdSetIsPlaced(bool isPlaced)
+        private void CmdSetIsPlaced(bool isPlaced , int index)
         {
             _isPlaced = isPlaced;
-            ServerPiecePlaced?.Invoke(true);
+            ServerPiecePlaced?.Invoke(true , index);
             RpcPlaySuccessEffect();
         }
 
         [Command]
-        private void CmdWrongPiecePlaced()
+        private void CmdWrongPiecePlaced(int index)
         {
-            ServerPiecePlaced?.Invoke(false);
+            ServerPiecePlaced?.Invoke(false , index);
             RpcPlayFailEffect();
         }
 

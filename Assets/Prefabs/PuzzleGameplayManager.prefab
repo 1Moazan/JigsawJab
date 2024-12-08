@@ -49,8 +49,10 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0
   piecePrefab: {fileID: 2148190581973293927, guid: 4e250cba28b32457886ad1729a5a560c, type: 3}
+  animationPrefab: {fileID: 6570651012781917031, guid: 67bde0c67b0c043e794075a312ed3cb5, type: 3}
   piecePlacepoint: {fileID: 0}
-  piecesScroller: {fileID: 0}
+  piecesPanel: {fileID: 0}
+  blockerImage: {fileID: 0}
   pieceContainer: {fileID: 11400000, guid: 869e343a451da4c118bcca2f23adf135, type: 2}
   pieceTriggers:
   - {fileID: 0}
@@ -69,6 +71,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  demoTexture: {fileID: 21300000, guid: dc62a85ba7bf24a53aa239cc171aaa8b, type: 3}
   maxPlayerCount: 2
 --- !u!114 &7053420103920467636
 MonoBehaviour:
@@ -83,7 +86,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneId: 0
-  _assetId: 0
+  _assetId: 3461558027
   serverOnly: 0
   visibility: 0
   hasSpawned: 0

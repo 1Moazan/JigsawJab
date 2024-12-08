@@ -70,7 +70,6 @@ MonoBehaviour:
   syncInterval: 0
   pieceRenderer: {fileID: 6570651012781917031}
   piecesContainer: {fileID: 11400000, guid: 869e343a451da4c118bcca2f23adf135, type: 2}
-  returnSpeed: 3
   yOffset: 0.5
   minDistance: 0.5
 --- !u!114 &61573776442927324
@@ -146,7 +145,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 1170100327, guid: dc62a85ba7bf24a53aa239cc171aaa8b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -155,7 +154,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &2823198311789675649

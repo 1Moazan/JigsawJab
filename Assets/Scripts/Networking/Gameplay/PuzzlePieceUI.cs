@@ -8,6 +8,8 @@ namespace Networking.Gameplay
         public Button mainButton;
         [SerializeField] private Image pieceImage;
         private int _myIndex;
+        
+        public int PiceIndex => _myIndex;
 
         public void InitializeUiPiece(int index , Sprite pieceSprite)
         {
