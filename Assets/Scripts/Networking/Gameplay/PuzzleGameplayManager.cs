@@ -20,6 +20,7 @@ namespace Networking.Gameplay
         [SerializeField] private GameObject blockerImage;
         [SerializeField] PuzzlePiecesContainer pieceContainer;
         [SerializeField] List<PieceTrigger> pieceTriggers;
+        [SerializeField] private ParticleSystem correctVfx;
         [SerializeField] Sprite demoTexture;
 
         public int maxPlayerCount;
@@ -42,13 +43,12 @@ namespace Networking.Gameplay
         {
             PuzzleNetworkManager.OnPlayerConnected -= OnPlayerConnected;
         }
+        
 
         [TargetRpc]
         private void TargetSetTurnUI(NetworkConnectionToClient target, bool active)
         {
-            Debug.LogError("Set Target Turn UI : " + active);
             blockerImage.SetActive(!active);
-            //piecesPanel.gameObject.SetActive(active);
             if (active)
             {
                 piecesPanel.DOAnchorPosY(176f, 1f).SetEase(Ease.InElastic);
@@ -116,6 +116,7 @@ namespace Networking.Gameplay
         public override void OnStartClient()
         {
             base.OnStartClient();
+            pieceContainer.sharedVfx = correctVfx;
             SetTriggerIndices();
         }
 
@@ -189,7 +190,6 @@ namespace Networking.Gameplay
 
                 for (int i = 0; i < _puzzlePlayers.Count; i++)
                 {
-                    Debug.Log("Send Target Turn UI");
                     if (_puzzlePlayers[i] != GetCurrentTurnPlayer())
                     {
                         TargetSetTurnUI(_puzzlePlayers[i].connectionToClient, false);

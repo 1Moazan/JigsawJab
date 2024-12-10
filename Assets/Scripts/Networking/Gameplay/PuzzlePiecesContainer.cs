@@ -7,6 +7,7 @@ namespace Networking.Gameplay
     public class PuzzlePiecesContainer : ScriptableObject
     {
         public List<Sprite> sharedPieces;
-        public List<PieceTrigger> pieceTriggers; 
+        public List<PieceTrigger> pieceTriggers;
+        public ParticleSystem sharedVfx;
     }
 }

@@ -1,10 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using DG.Tweening;
 using Mirror;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Networking.Gameplay
@@ -13,6 +11,8 @@ namespace Networking.Gameplay
     {
         [SerializeField] private SpriteRenderer pieceRenderer;
         [SerializeField] private PuzzlePiecesContainer piecesContainer;
+        [SerializeField] private GameObject tickSprite;
+        [SerializeField] private GameObject crossSprite;
         
         private List<PieceTrigger> _nearTriggers;
         private Vector3 _initialPosition;
@@ -87,7 +87,7 @@ namespace Networking.Gameplay
                 }
                 else
                 {
-                    _lastRoutine = StartCoroutine(SmoothMoveTo(_initialPosition, 5f));
+                    _lastRoutine = StartCoroutine(SmoothMoveTo(_initialPosition, 5f, 3f));
                 }
             }
             if (_isDragging)
@@ -156,8 +156,9 @@ namespace Networking.Gameplay
             return _lastTrigger != null && _lastTrigger.pieceIndex == _myIndex;
         }
 
-        private IEnumerator SmoothMoveTo(Vector3 targetPosition , float moveSpeed)
+        private IEnumerator SmoothMoveTo(Vector3 targetPosition , float moveSpeed , float delay = 0f)
         {
+            yield return new WaitForSeconds(delay);
             float elapsedTime = 0f;
             Vector3 startPosition = transform.position;
 
@@ -177,15 +178,40 @@ namespace Networking.Gameplay
         }
 
         [ClientRpc]
-        public void RpcPlaySuccessEffect()
+        private void RpcPlaySuccessEffect()
         {
-            Debug.Log("Play Success");
+            if (piecesContainer.sharedVfx != null)
+            {
+                piecesContainer.sharedVfx.transform.position = transform.position;
+                piecesContainer.sharedVfx.Play();
+            }
+
+            tickSprite.SetActive(true);
+            Sequence sequence = DOTween.Sequence();
+
+            sequence.Append(tickSprite.transform.DOScale(new Vector3(2.4f, 2.4f, 2.4f), 1f).SetEase(Ease.OutElastic));
+            sequence.Append(tickSprite.transform.DOScale(new Vector3(0.1f, 0.1f, 0.1f), 1f).SetEase(Ease.InElastic));
+
+            sequence.Play().OnComplete(() =>
+            {
+                tickSprite.SetActive(false);
+            });
+            pieceRenderer.sortingOrder = 2;
         }
 
         [ClientRpc]
-        public void RpcPlayFailEffect()
+        private void RpcPlayFailEffect()
         {
-            Debug.Log("Play Fail");
+            crossSprite.SetActive(true);
+            Sequence sequence = DOTween.Sequence();
+
+            sequence.Append(crossSprite.transform.DOScale(new Vector3(2.4f, 2.4f, 2.4f), 1f).SetEase(Ease.OutElastic));
+            sequence.Append(crossSprite.transform.DOScale(new Vector3(0.1f, 0.1f, 0.1f), 1f).SetEase(Ease.InElastic));
+            
+            sequence.Play().OnComplete(() =>
+            {
+                crossSprite.SetActive(false);
+            });
         }
     }
 }
