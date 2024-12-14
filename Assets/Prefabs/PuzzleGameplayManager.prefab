@@ -74,7 +74,7 @@ MonoBehaviour:
   - {fileID: 0}
   correctVfx: {fileID: 6558040259054717161}
   demoTexture: {fileID: 21300000, guid: dc62a85ba7bf24a53aa239cc171aaa8b, type: 3}
-  maxPlayerCount: 1
+  maxPlayerCount: 2
 --- !u!114 &7053420103920467636
 MonoBehaviour:
   m_ObjectHideFlags: 0

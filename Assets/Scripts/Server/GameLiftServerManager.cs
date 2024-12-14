@@ -1,3 +1,5 @@
+#if UNITY_SERVER
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,6 +9,7 @@ using Constants;
 using Networking;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 
 namespace Server
 {
@@ -122,3 +125,5 @@ namespace Server
         }
     }
 }
+
+#endif

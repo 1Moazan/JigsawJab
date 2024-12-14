@@ -15,6 +15,8 @@ namespace Networking.Gameplay
         [SerializeField] private TextMeshProUGUI turnText;
         [SerializeField] private TextMeshProUGUI scoreText;
         [SerializeField] private SpriteRenderer avatarSprite;
+        [SerializeField] private Animator playerAnimator;
+        [SerializeField] private ParticleSystem[] hitEffects;
 
         public Action ServerTurnEnded;
         private PuzzlePieceGameplay _currSelectedPiece;
@@ -59,6 +61,7 @@ namespace Networking.Gameplay
         {
             _currScore += 20;
             RpcUpdateScoreText(_currScore);
+            RpcSetPlayerPunch();
         }
 
         [ClientRpc]
@@ -76,7 +79,43 @@ namespace Networking.Gameplay
         [ClientRpc]
         public void RpcSetRightPlayer()
         {
-            avatarSprite.flipX = false;
+            Vector3 scale = transform.localScale;
+            scale.x = -1;
+            transform.localScale = scale;
+        }
+        
+        [ClientRpc]
+        public void RpcSetPlayerIdle()
+        {
+            playerAnimator.SetTrigger("BoxingIdle");
+        }
+
+        [ClientRpc]
+        public void RpcSetPlayerReady()
+        {
+            playerAnimator.ResetTrigger("BoxingHit");
+            playerAnimator.SetTrigger("BoxingIdleReady");
+        }
+
+        [ClientRpc]
+        private void RpcSetPlayerPunchLight()
+        {
+            playerAnimator.SetTrigger("BoxingHitLight");
+        }
+
+        [ClientRpc]
+        private void RpcSetPlayerPunch()
+        {
+            playerAnimator.SetTrigger("BoxingHit");
+        }
+
+        public void PlayHitEffect()
+        {
+            foreach (ParticleSystem effect in hitEffects)
+            {
+                effect.Play();
+            }
+            CameraShake.instance.Shake();
         }
     }
 }

@@ -186,12 +186,14 @@ namespace Networking.Gameplay
             }
             else
             {
+                GetCurrentTurnPlayer().RpcSetPlayerReady();
                 TargetSetTurnUI(GetCurrentTurnPlayer().connectionToClient, true);
 
                 for (int i = 0; i < _puzzlePlayers.Count; i++)
                 {
                     if (_puzzlePlayers[i] != GetCurrentTurnPlayer())
                     {
+                        _puzzlePlayers[i].RpcSetPlayerIdle();
                         TargetSetTurnUI(_puzzlePlayers[i].connectionToClient, false);
                     }
                 }
