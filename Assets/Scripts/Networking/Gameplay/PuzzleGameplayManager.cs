@@ -3,9 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using Mirror;
-using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 namespace Networking.Gameplay
@@ -15,13 +13,13 @@ namespace Networking.Gameplay
 
         [SerializeField] private PuzzlePieceGameplay piecePrefab;
         [SerializeField] private SpriteRenderer animationPrefab;
-        [SerializeField] private Transform piecePlacepoint;
         [SerializeField] private RectTransform piecesPanel;
         [SerializeField] private GameObject blockerImage;
         [SerializeField] PuzzlePiecesContainer pieceContainer;
         [SerializeField] List<PieceTrigger> pieceTriggers;
         [SerializeField] private ParticleSystem correctVfx;
         [SerializeField] Sprite demoTexture;
+        [SerializeField] MessageBanner messageBanner;
 
         public int maxPlayerCount;
         public Action PieceAnimationCompleted;
@@ -51,12 +49,15 @@ namespace Networking.Gameplay
             blockerImage.SetActive(!active);
             if (active)
             {
+                messageBanner.Show("YOUR TURN");
                 piecesPanel.DOAnchorPosY(176f, 1f).SetEase(Ease.InElastic);
             }
             else
             {
+                messageBanner.Show("OPPONENT'S TURN");
                 piecesPanel.DOAnchorPosY(-500f, 1f).SetEase(Ease.InElastic);
             }
+            
         }
 
         [ClientRpc]
@@ -179,14 +180,17 @@ namespace Networking.Gameplay
                 RpcPlayShuffleAnimation();
                 for (int i = 0; i < _puzzlePlayers.Count; i++)
                 {
-                    if (i == _currentPlayerIndex) continue;
-                    _puzzlePlayers[i].RpcSetRightPlayer();
+                    _puzzlePlayers[i].RpcSetPlayerDirection();
+                    _puzzlePlayers[i].ServerUpdateScoreText();
+                    _puzzlePlayers[i].ServerUpdateTurnsText();
                 }
                 _firstTurn = false;
             }
             else
             {
                 GetCurrentTurnPlayer().RpcSetPlayerReady();
+                GetCurrentTurnPlayer().ServerStartTimer();
+                GetCurrentTurnPlayer().ServerUpdateTurnsText();
                 TargetSetTurnUI(GetCurrentTurnPlayer().connectionToClient, true);
 
                 for (int i = 0; i < _puzzlePlayers.Count; i++)
@@ -221,9 +225,8 @@ namespace Networking.Gameplay
         [Server]
         private void ServerPlayerTurnEnded()
         {
-            ServerDestroyLastPiece();
-            TargetSetTurnUI(GetCurrentTurnPlayer().connectionToClient, false);
             _currentPlayerIndex++;
+            ServerDestroyLastPiece();
             ServerStartPlayerTurn();
         }
 
