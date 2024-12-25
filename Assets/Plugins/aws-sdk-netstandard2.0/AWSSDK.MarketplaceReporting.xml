@@ -1,0 +1,1016 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.MarketplaceReporting</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.MarketplaceReporting.AmazonMarketplaceReportingConfig">
+            <summary>
+            Configuration for accessing Amazon MarketplaceReporting service
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceReporting.AmazonMarketplaceReportingConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.AmazonMarketplaceReportingConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceReporting.AmazonMarketplaceReportingConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceReporting.AmazonMarketplaceReportingConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceReporting.AmazonMarketplaceReportingConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceReporting.AmazonMarketplaceReportingDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon MarketplaceReporting service
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.AmazonMarketplaceReportingDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            MarketplaceReporting
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceReporting.AmazonMarketplaceReportingDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceReporting.AmazonMarketplaceReportingDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceReporting.AmazonMarketplaceReportingDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceReporting.AmazonMarketplaceReportingDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceReporting.AmazonMarketplaceReportingDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceReporting.AmazonMarketplaceReportingDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceReporting.Endpoints.MarketplaceReportingEndpointParameters">
+            <summary>
+            Contains parameters used for resolving MarketplaceReporting endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal MarketplaceReportingEndpointProvider and MarketplaceReportingEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.Endpoints.MarketplaceReportingEndpointParameters.#ctor">
+            <summary>
+            MarketplaceReportingEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceReporting.Endpoints.MarketplaceReportingEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceReporting.Endpoints.MarketplaceReportingEndpointParameters.UseDualStack">
+            <summary>
+            UseDualStack parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceReporting.Endpoints.MarketplaceReportingEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceReporting.Endpoints.MarketplaceReportingEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceReporting.AmazonMarketplaceReportingException">
+            <summary>
+             Common exception for the MarketplaceReporting service.
+             </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.AmazonMarketplaceReportingException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonMarketplaceReportingException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.AmazonMarketplaceReportingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonMarketplaceReportingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.AmazonMarketplaceReportingException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonMarketplaceReportingException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.AmazonMarketplaceReportingException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonMarketplaceReportingException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.AmazonMarketplaceReportingException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonMarketplaceReportingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.MarketplaceReporting.Internal.AmazonMarketplaceReportingEndpointProvider">
+            <summary>
+            Amazon MarketplaceReporting endpoint provider.
+            Resolves endpoint for given set of MarketplaceReportingEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.Internal.AmazonMarketplaceReportingEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for MarketplaceReportingEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceReporting.Internal.AmazonMarketplaceReportingEndpointResolver">
+            <summary>
+            Amazon MarketplaceReporting endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for MarketplaceReporting service requests.
+            Collects values for MarketplaceReportingEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses MarketplaceReportingEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceReporting.Internal.AmazonMarketplaceReportingMetadata">
+            <summary>
+            Service metadata for  Amazon MarketplaceReporting service
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceReporting.Internal.AmazonMarketplaceReportingMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceReporting.Internal.AmazonMarketplaceReportingMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceReporting.Model.AccessDeniedException">
+            <summary>
+            You do not have sufficient access to perform this action.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.Model.AccessDeniedException.#ctor(System.String)">
+            <summary>
+            Constructs a new AccessDeniedException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.Model.AccessDeniedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.Model.AccessDeniedException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.Model.AccessDeniedException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.Model.AccessDeniedException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.MarketplaceReporting.Model.BadRequestException">
+            <summary>
+            The request is malformed, or it contains an error such as an invalid parameter. Ensure
+            the request has all required parameters.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.Model.BadRequestException.#ctor(System.String)">
+            <summary>
+            Constructs a new BadRequestException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.Model.BadRequestException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of BadRequestException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.Model.BadRequestException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of BadRequestException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.Model.BadRequestException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of BadRequestException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.Model.BadRequestException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of BadRequestException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.MarketplaceReporting.Model.GetBuyerDashboardRequest">
+            <summary>
+            Container for the parameters to the GetBuyerDashboard operation.
+            Generates an embedding URL for an Amazon QuickSight dashboard for an anonymous user.
+            
+             <note> 
+            <para>
+            This API is available only to Amazon Web Services Organization management accounts
+            or delegated administrators registered for the procurement insights (<c>procurement-insights.marketplace.amazonaws.com</c>)
+            feature.
+            </para>
+             </note> 
+            <para>
+            The following rules apply to a generated URL:
+            </para>
+             <ul> <li> 
+            <para>
+            It contains a temporary bearer token, valid for 5 minutes after it is generated. Once
+            redeemed within that period, it cannot be re-used again.
+            </para>
+             </li> <li> 
+            <para>
+            It has a session lifetime of one hour. The 5-minute validity period runs separately
+            from the session lifetime.
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceReporting.Model.GetBuyerDashboardRequest.DashboardIdentifier">
+            <summary>
+            Gets and sets the property DashboardIdentifier. 
+            <para>
+            The ARN of the requested dashboard.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceReporting.Model.GetBuyerDashboardRequest.EmbeddingDomains">
+            <summary>
+            Gets and sets the property EmbeddingDomains. 
+            <para>
+            Fully qualified domains that you add to the allow list for access to the generated
+            URL that is then embedded. You can list up to two domains or subdomains in each API
+            call. To include all subdomains under a specific domain, use <c>*</c>. For example,
+            <c>https://*.amazon.com</c> includes all subdomains under <c>https://aws.amazon.com</c>.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceReporting.Model.GetBuyerDashboardResponse">
+            <summary>
+            This is the response object from the GetBuyerDashboard operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceReporting.Model.GetBuyerDashboardResponse.DashboardIdentifier">
+            <summary>
+            Gets and sets the property DashboardIdentifier. 
+            <para>
+            The ARN of the returned dashboard.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceReporting.Model.GetBuyerDashboardResponse.EmbeddingDomains">
+            <summary>
+            Gets and sets the property EmbeddingDomains. 
+            <para>
+            The fully qualified domains specified in the request. The domains enable access to
+            the generated URL that is then embedded. You can list up to two domains or subdomains
+            in each API call. To include all subdomains under a specific domain, use <c>*</c>.
+            For example, <c>https://*.amazon.com</c> includes all subdomains under <c>https://aws.amazon.com</c>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceReporting.Model.GetBuyerDashboardResponse.EmbedUrl">
+            <summary>
+            Gets and sets the property EmbedUrl. 
+            <para>
+            The dashboard's embedding URL.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceReporting.Model.InternalServerException">
+            <summary>
+            The operation failed due to a server error.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.Model.InternalServerException.#ctor(System.String)">
+            <summary>
+            Constructs a new InternalServerException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.Model.InternalServerException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.Model.InternalServerException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.Model.InternalServerException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.Model.InternalServerException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.MarketplaceReporting.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for AccessDeniedException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.MarketplaceReporting.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceReporting.Model.Internal.MarshallTransformations.BadRequestExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for BadRequestException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.Model.Internal.MarshallTransformations.BadRequestExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.Model.Internal.MarshallTransformations.BadRequestExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.MarketplaceReporting.Model.Internal.MarshallTransformations.BadRequestExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceReporting.Model.Internal.MarshallTransformations.GetBuyerDashboardRequestMarshaller">
+            <summary>
+            GetBuyerDashboard Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.Model.Internal.MarshallTransformations.GetBuyerDashboardRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.Model.Internal.MarshallTransformations.GetBuyerDashboardRequestMarshaller.Marshall(Amazon.MarketplaceReporting.Model.GetBuyerDashboardRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.MarketplaceReporting.Model.Internal.MarshallTransformations.GetBuyerDashboardRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceReporting.Model.Internal.MarshallTransformations.GetBuyerDashboardResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetBuyerDashboard operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.Model.Internal.MarshallTransformations.GetBuyerDashboardResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.Model.Internal.MarshallTransformations.GetBuyerDashboardResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.MarketplaceReporting.Model.Internal.MarshallTransformations.GetBuyerDashboardResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceReporting.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InternalServerException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.MarketplaceReporting.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceReporting.Model.Internal.MarshallTransformations.UnauthorizedExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for UnauthorizedException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.Model.Internal.MarshallTransformations.UnauthorizedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.Model.Internal.MarshallTransformations.UnauthorizedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.MarketplaceReporting.Model.Internal.MarshallTransformations.UnauthorizedExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceReporting.Model.UnauthorizedException">
+            <summary>
+            You do not have permission to perform this action.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.Model.UnauthorizedException.#ctor(System.String)">
+            <summary>
+            Constructs a new UnauthorizedException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.Model.UnauthorizedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of UnauthorizedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.Model.UnauthorizedException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of UnauthorizedException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.Model.UnauthorizedException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of UnauthorizedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.Model.UnauthorizedException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of UnauthorizedException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.MarketplaceReporting.AmazonMarketplaceReportingRequest">
+            <summary>
+            Base class for MarketplaceReporting operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceReporting.AmazonMarketplaceReportingClient">
+             <summary>
+             <para>Implementation for accessing MarketplaceReporting</para>
+            
+             The Amazon Web Services Marketplace <c>GetBuyerDashboard</c> API enables you to get
+             a procurement insights dashboard programmatically. The API gets the agreement and
+             cost analysis dashboards with data for all of the Amazon Web Services accounts in
+             your Amazon Web Services Organization. 
+             
+              
+             <para>
+             To use the Amazon Web Services Marketplace Reporting API, you must complete the following
+             prerequisites:
+             </para>
+              <ul> <li> 
+             <para>
+             Enable all features for your organization. For more information, see <a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html">Enabling
+             all features for an organization with Organizations</a>, in the <i>Organizations User
+             Guide</i>.
+             </para>
+              </li> <li> 
+             <para>
+             Call the service as the Organizations management account or an account registered
+             as a delegated administrator for the procurement insights service.
+             </para>
+              
+             <para>
+             For more information about management accounts, see <a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tutorials_basic.html">Tutorial:
+             Creating and configuring an organization</a> and <a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs-manage_accounts_management.html">Managing
+             the management account with Organizations</a>, both in the <i>Organizations User Guide</i>.
+             </para>
+              
+             <para>
+             For more information about delegated administrators, see <a href="https://docs.aws.amazon.com/marketplace/latest/buyerguide/management-delegates.html">Using
+             delegated administrators</a>, in the <i>Amazon Web Services Marketplace Buyer Guide</i>.
+             </para>
+              </li> <li> 
+             <para>
+             Create an IAM policy that enables the <c>aws-marketplace:GetBuyerDashboard</c> and
+             <c>organizations:DescribeOrganization</c> permissions. In addition, the management
+             account requires the <c>organizations:EnableAWSServiceAccess</c> and <c>iam:CreateServiceLinkedRole</c>
+             permissions to create. For more information about creating the policy, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html">Policies
+             and permissions in Identity and Access Management</a>, in the <i>IAM User Guide</i>.
+             </para>
+              <note> 
+             <para>
+             Access can be shared only by registering the desired linked account as a delegated
+             administrator. That requires <c>organizations:RegisterDelegatedAdministrator</c> <c>organizations:ListDelegatedAdministrators</c>
+             and <c>organizations:DeregisterDelegatedAdministrator</c> permissions.
+             </para>
+              </note> </li> <li> 
+             <para>
+             Use the Amazon Web Services Marketplace console to create the <c>AWSServiceRoleForProcurementInsightsPolicy</c>
+             service-linked role. The role enables Amazon Web Services Marketplace procurement
+             visibility integration. The management account requires an IAM policy with the <c>organizations:EnableAWSServiceAccess</c>
+             and <c>iam:CreateServiceLinkedRole</c> permissions to create the service-linked role
+             and enable the service access. For more information, see <a href="https://docs.aws.amazon.com/marketplace/latest/buyerguide/orgs-access-slr.html">Granting
+             access to Organizations</a> and <a href="https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-service-linked-role-procurement.html">Service-linked
+             role to share procurement data</a> in the <i>Amazon Web Services Marketplace Buyer
+             Guide</i>.
+             </para>
+              </li> <li> 
+             <para>
+             After creating the service-linked role, you must enable trusted access that grants
+             Amazon Web Services Marketplace permission to access data from your Organizations.
+             For more information, see <a href="https://docs.aws.amazon.com/marketplace/latest/buyerguide/orgs-access-slr.html">Granting
+             access to Organizations</a> in the <i>Amazon Web Services Marketplace Buyer Guide</i>.
+             </para>
+              </li> </ul>
+             </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.AmazonMarketplaceReportingClient.#ctor">
+             <summary>
+             Constructs AmazonMarketplaceReportingClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.AmazonMarketplaceReportingClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonMarketplaceReportingClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.AmazonMarketplaceReportingClient.#ctor(Amazon.MarketplaceReporting.AmazonMarketplaceReportingConfig)">
+             <summary>
+             Constructs AmazonMarketplaceReportingClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonMarketplaceReportingClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.AmazonMarketplaceReportingClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonMarketplaceReportingClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.AmazonMarketplaceReportingClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonMarketplaceReportingClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.AmazonMarketplaceReportingClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.MarketplaceReporting.AmazonMarketplaceReportingConfig)">
+            <summary>
+            Constructs AmazonMarketplaceReportingClient with AWS Credentials and an
+            AmazonMarketplaceReportingClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonMarketplaceReportingClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.AmazonMarketplaceReportingClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonMarketplaceReportingClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.AmazonMarketplaceReportingClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonMarketplaceReportingClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.AmazonMarketplaceReportingClient.#ctor(System.String,System.String,Amazon.MarketplaceReporting.AmazonMarketplaceReportingConfig)">
+            <summary>
+            Constructs AmazonMarketplaceReportingClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonMarketplaceReportingClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonMarketplaceReportingClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.AmazonMarketplaceReportingClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonMarketplaceReportingClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.AmazonMarketplaceReportingClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonMarketplaceReportingClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.AmazonMarketplaceReportingClient.#ctor(System.String,System.String,System.String,Amazon.MarketplaceReporting.AmazonMarketplaceReportingConfig)">
+            <summary>
+            Constructs AmazonMarketplaceReportingClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonMarketplaceReportingClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonMarketplaceReportingClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.AmazonMarketplaceReportingClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.AmazonMarketplaceReportingClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.MarketplaceReporting.AmazonMarketplaceReportingClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.AmazonMarketplaceReportingClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.AmazonMarketplaceReportingClient.GetBuyerDashboardAsync(Amazon.MarketplaceReporting.Model.GetBuyerDashboardRequest,System.Threading.CancellationToken)">
+            <summary>
+            Generates an embedding URL for an Amazon QuickSight dashboard for an anonymous user.
+            
+             <note> 
+            <para>
+            This API is available only to Amazon Web Services Organization management accounts
+            or delegated administrators registered for the procurement insights (<c>procurement-insights.marketplace.amazonaws.com</c>)
+            feature.
+            </para>
+             </note> 
+            <para>
+            The following rules apply to a generated URL:
+            </para>
+             <ul> <li> 
+            <para>
+            It contains a temporary bearer token, valid for 5 minutes after it is generated. Once
+            redeemed within that period, it cannot be re-used again.
+            </para>
+             </li> <li> 
+            <para>
+            It has a session lifetime of one hour. The 5-minute validity period runs separately
+            from the session lifetime.
+            </para>
+             </li> </ul>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetBuyerDashboard service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetBuyerDashboard service method, as returned by MarketplaceReporting.</returns>
+            <exception cref="T:Amazon.MarketplaceReporting.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceReporting.Model.BadRequestException">
+            The request is malformed, or it contains an error such as an invalid parameter. Ensure
+            the request has all required parameters.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceReporting.Model.InternalServerException">
+            The operation failed due to a server error.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceReporting.Model.UnauthorizedException">
+            You do not have permission to perform this action.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-reporting-2018-05-10/GetBuyerDashboard">REST API Reference for GetBuyerDashboard Operation</seealso>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.AmazonMarketplaceReportingClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.MarketplaceReporting.IAmazonMarketplaceReporting">
+             <summary>
+             <para>Interface for accessing MarketplaceReporting</para>
+            
+             The Amazon Web Services Marketplace <c>GetBuyerDashboard</c> API enables you to get
+             a procurement insights dashboard programmatically. The API gets the agreement and
+             cost analysis dashboards with data for all of the Amazon Web Services accounts in
+             your Amazon Web Services Organization. 
+             
+              
+             <para>
+             To use the Amazon Web Services Marketplace Reporting API, you must complete the following
+             prerequisites:
+             </para>
+              <ul> <li> 
+             <para>
+             Enable all features for your organization. For more information, see <a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html">Enabling
+             all features for an organization with Organizations</a>, in the <i>Organizations User
+             Guide</i>.
+             </para>
+              </li> <li> 
+             <para>
+             Call the service as the Organizations management account or an account registered
+             as a delegated administrator for the procurement insights service.
+             </para>
+              
+             <para>
+             For more information about management accounts, see <a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tutorials_basic.html">Tutorial:
+             Creating and configuring an organization</a> and <a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs-manage_accounts_management.html">Managing
+             the management account with Organizations</a>, both in the <i>Organizations User Guide</i>.
+             </para>
+              
+             <para>
+             For more information about delegated administrators, see <a href="https://docs.aws.amazon.com/marketplace/latest/buyerguide/management-delegates.html">Using
+             delegated administrators</a>, in the <i>Amazon Web Services Marketplace Buyer Guide</i>.
+             </para>
+              </li> <li> 
+             <para>
+             Create an IAM policy that enables the <c>aws-marketplace:GetBuyerDashboard</c> and
+             <c>organizations:DescribeOrganization</c> permissions. In addition, the management
+             account requires the <c>organizations:EnableAWSServiceAccess</c> and <c>iam:CreateServiceLinkedRole</c>
+             permissions to create. For more information about creating the policy, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html">Policies
+             and permissions in Identity and Access Management</a>, in the <i>IAM User Guide</i>.
+             </para>
+              <note> 
+             <para>
+             Access can be shared only by registering the desired linked account as a delegated
+             administrator. That requires <c>organizations:RegisterDelegatedAdministrator</c> <c>organizations:ListDelegatedAdministrators</c>
+             and <c>organizations:DeregisterDelegatedAdministrator</c> permissions.
+             </para>
+              </note> </li> <li> 
+             <para>
+             Use the Amazon Web Services Marketplace console to create the <c>AWSServiceRoleForProcurementInsightsPolicy</c>
+             service-linked role. The role enables Amazon Web Services Marketplace procurement
+             visibility integration. The management account requires an IAM policy with the <c>organizations:EnableAWSServiceAccess</c>
+             and <c>iam:CreateServiceLinkedRole</c> permissions to create the service-linked role
+             and enable the service access. For more information, see <a href="https://docs.aws.amazon.com/marketplace/latest/buyerguide/orgs-access-slr.html">Granting
+             access to Organizations</a> and <a href="https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-service-linked-role-procurement.html">Service-linked
+             role to share procurement data</a> in the <i>Amazon Web Services Marketplace Buyer
+             Guide</i>.
+             </para>
+              </li> <li> 
+             <para>
+             After creating the service-linked role, you must enable trusted access that grants
+             Amazon Web Services Marketplace permission to access data from your Organizations.
+             For more information, see <a href="https://docs.aws.amazon.com/marketplace/latest/buyerguide/orgs-access-slr.html">Granting
+             access to Organizations</a> in the <i>Amazon Web Services Marketplace Buyer Guide</i>.
+             </para>
+              </li> </ul>
+             </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.IAmazonMarketplaceReporting.GetBuyerDashboardAsync(Amazon.MarketplaceReporting.Model.GetBuyerDashboardRequest,System.Threading.CancellationToken)">
+            <summary>
+            Generates an embedding URL for an Amazon QuickSight dashboard for an anonymous user.
+            
+             <note> 
+            <para>
+            This API is available only to Amazon Web Services Organization management accounts
+            or delegated administrators registered for the procurement insights (<c>procurement-insights.marketplace.amazonaws.com</c>)
+            feature.
+            </para>
+             </note> 
+            <para>
+            The following rules apply to a generated URL:
+            </para>
+             <ul> <li> 
+            <para>
+            It contains a temporary bearer token, valid for 5 minutes after it is generated. Once
+            redeemed within that period, it cannot be re-used again.
+            </para>
+             </li> <li> 
+            <para>
+            It has a session lifetime of one hour. The 5-minute validity period runs separately
+            from the session lifetime.
+            </para>
+             </li> </ul>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetBuyerDashboard service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetBuyerDashboard service method, as returned by MarketplaceReporting.</returns>
+            <exception cref="T:Amazon.MarketplaceReporting.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceReporting.Model.BadRequestException">
+            The request is malformed, or it contains an error such as an invalid parameter. Ensure
+            the request has all required parameters.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceReporting.Model.InternalServerException">
+            The operation failed due to a server error.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceReporting.Model.UnauthorizedException">
+            You do not have permission to perform this action.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-reporting-2018-05-10/GetBuyerDashboard">REST API Reference for GetBuyerDashboard Operation</seealso>
+        </member>
+        <member name="M:Amazon.MarketplaceReporting.IAmazonMarketplaceReporting.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+    </members>
+</doc>

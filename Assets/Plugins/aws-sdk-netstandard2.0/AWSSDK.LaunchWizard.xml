@@ -1,0 +1,3539 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.LaunchWizard</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.LaunchWizard.AmazonLaunchWizardConfig">
+            <summary>
+            Configuration for accessing Amazon LaunchWizard service
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.AmazonLaunchWizardConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.AmazonLaunchWizardConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.AmazonLaunchWizardConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.AmazonLaunchWizardConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.AmazonLaunchWizardDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon LaunchWizard service
+            </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            LaunchWizard
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.AmazonLaunchWizardDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.AmazonLaunchWizardDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.AmazonLaunchWizardDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.AmazonLaunchWizardDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.AmazonLaunchWizardDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.AmazonLaunchWizardDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Endpoints.LaunchWizardEndpointParameters">
+            <summary>
+            Contains parameters used for resolving LaunchWizard endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal LaunchWizardEndpointProvider and LaunchWizardEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Endpoints.LaunchWizardEndpointParameters.#ctor">
+            <summary>
+            LaunchWizardEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Endpoints.LaunchWizardEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Endpoints.LaunchWizardEndpointParameters.UseDualStack">
+            <summary>
+            UseDualStack parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Endpoints.LaunchWizardEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Endpoints.LaunchWizardEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.AmazonLaunchWizardException">
+            <summary>
+             Common exception for the LaunchWizard service.
+             </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonLaunchWizardException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonLaunchWizardException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonLaunchWizardException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonLaunchWizardException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonLaunchWizardException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Internal.AmazonLaunchWizardEndpointProvider">
+            <summary>
+            Amazon LaunchWizard endpoint provider.
+            Resolves endpoint for given set of LaunchWizardEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Internal.AmazonLaunchWizardEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for LaunchWizardEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Internal.AmazonLaunchWizardEndpointResolver">
+            <summary>
+            Amazon LaunchWizard endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for LaunchWizard service requests.
+            Collects values for LaunchWizardEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses LaunchWizardEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Internal.AmazonLaunchWizardMetadata">
+            <summary>
+            Service metadata for  Amazon LaunchWizard service
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Internal.AmazonLaunchWizardMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Internal.AmazonLaunchWizardMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.AmazonLaunchWizardRequest">
+            <summary>
+            Base class for LaunchWizard operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.CreateDeploymentRequest">
+            <summary>
+            Container for the parameters to the CreateDeployment operation.
+            Creates a deployment for the given workload. Deployments created by this operation
+            are not available in the Launch Wizard console to use the <c>Clone deployment</c>
+            action on.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.CreateDeploymentRequest.DeploymentPatternName">
+            <summary>
+            Gets and sets the property DeploymentPatternName. 
+            <para>
+            The name of the deployment pattern supported by a given workload. You can use the
+            <a href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloadDeploymentPatterns.html">
+            <c>ListWorkloadDeploymentPatterns</c> </a> operation to discover supported values
+            for this parameter. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.CreateDeploymentRequest.DryRun">
+            <summary>
+            Gets and sets the property DryRun. 
+            <para>
+            Checks whether you have the required permissions for the action, without actually
+            making the request, and provides an error response. If you have the required permissions,
+            the error response is <c>DryRunOperation</c>. Otherwise, it is <c>UnauthorizedOperation</c>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.CreateDeploymentRequest.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The name of the deployment.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.CreateDeploymentRequest.Specifications">
+            <summary>
+            Gets and sets the property Specifications. 
+            <para>
+            The settings specified for the deployment. These settings define how to deploy and
+            configure your resources created by the deployment. For more information about the
+            specifications required for creating a deployment for a SAP workload, see <a href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications-sap.html">SAP
+            deployment specifications</a>. To retrieve the specifications required to create a
+            deployment for other workloads, use the <a href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_GetWorkloadDeploymentPattern.html">
+            <c>GetWorkloadDeploymentPattern</c> </a> operation.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.CreateDeploymentRequest.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+            The tags to add to the deployment.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.CreateDeploymentRequest.WorkloadName">
+            <summary>
+            Gets and sets the property WorkloadName. 
+            <para>
+            The name of the workload. You can use the <a href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloads.html">
+            <c>ListWorkloads</c> </a> operation to discover supported values for this parameter.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.CreateDeploymentResponse">
+            <summary>
+            This is the response object from the CreateDeployment operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.CreateDeploymentResponse.DeploymentId">
+            <summary>
+            Gets and sets the property DeploymentId. 
+            <para>
+            The ID of the deployment.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.DeleteDeploymentRequest">
+            <summary>
+            Container for the parameters to the DeleteDeployment operation.
+            Deletes a deployment.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeleteDeploymentRequest.DeploymentId">
+            <summary>
+            Gets and sets the property DeploymentId. 
+            <para>
+            The ID of the deployment.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.DeleteDeploymentResponse">
+            <summary>
+            This is the response object from the DeleteDeployment operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeleteDeploymentResponse.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            The status of the deployment.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeleteDeploymentResponse.StatusReason">
+            <summary>
+            Gets and sets the property StatusReason. 
+            <para>
+            The reason for the deployment status.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.DeploymentConditionalField">
+            <summary>
+            A field that details a condition of the specifications for a deployment.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeploymentConditionalField.Comparator">
+            <summary>
+            Gets and sets the property Comparator. 
+            <para>
+            The comparator of the condition.
+            </para>
+             
+            <para>
+            Valid values: <c>Equal | NotEqual</c> 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeploymentConditionalField.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The name of the deployment condition.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeploymentConditionalField.Value">
+            <summary>
+            Gets and sets the property Value. 
+            <para>
+            The value of the condition.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.DeploymentData">
+            <summary>
+            The data associated with a deployment.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeploymentData.CreatedAt">
+            <summary>
+            Gets and sets the property CreatedAt. 
+            <para>
+            The time the deployment was created.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeploymentData.DeletedAt">
+            <summary>
+            Gets and sets the property DeletedAt. 
+            <para>
+            The time the deployment was deleted.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeploymentData.DeploymentArn">
+            <summary>
+            Gets and sets the property DeploymentArn. 
+            <para>
+            The Amazon Resource Name (ARN) of the deployment.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeploymentData.Id">
+            <summary>
+            Gets and sets the property Id. 
+            <para>
+            The ID of the deployment.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeploymentData.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The name of the deployment.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeploymentData.PatternName">
+            <summary>
+            Gets and sets the property PatternName. 
+            <para>
+            The pattern name of the deployment.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeploymentData.ResourceGroup">
+            <summary>
+            Gets and sets the property ResourceGroup. 
+            <para>
+            The resource group of the deployment.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeploymentData.Specifications">
+            <summary>
+            Gets and sets the property Specifications. 
+            <para>
+            The settings specified for the deployment. These settings define how to deploy and
+            configure your resources created by the deployment. For more information about the
+            specifications required for creating a deployment for a SAP workload, see <a href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications-sap.html">SAP
+            deployment specifications</a>. To retrieve the specifications required to create a
+            deployment for other workloads, use the <a href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_GetWorkloadDeploymentPattern.html">
+            <c>GetWorkloadDeploymentPattern</c> </a> operation.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeploymentData.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            The status of the deployment.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeploymentData.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+            Information about the tags attached to a deployment.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeploymentData.WorkloadName">
+            <summary>
+            Gets and sets the property WorkloadName. 
+            <para>
+            The name of the workload.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.DeploymentDataSummary">
+            <summary>
+            A summary of the deployment data.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeploymentDataSummary.CreatedAt">
+            <summary>
+            Gets and sets the property CreatedAt. 
+            <para>
+            The time the deployment was created.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeploymentDataSummary.Id">
+            <summary>
+            Gets and sets the property Id. 
+            <para>
+            The ID of the deployment.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeploymentDataSummary.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The name of the deployment
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeploymentDataSummary.PatternName">
+            <summary>
+            Gets and sets the property PatternName. 
+            <para>
+            The name of the workload deployment pattern.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeploymentDataSummary.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            The status of the deployment.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeploymentDataSummary.WorkloadName">
+            <summary>
+            Gets and sets the property WorkloadName. 
+            <para>
+            The name of the workload.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.DeploymentEventDataSummary">
+            <summary>
+            A summary of the deployment event data.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeploymentEventDataSummary.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+            The description of the deployment event.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeploymentEventDataSummary.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The name of the deployment event.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeploymentEventDataSummary.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            The status of the deployment event.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeploymentEventDataSummary.StatusReason">
+            <summary>
+            Gets and sets the property StatusReason. 
+            <para>
+            The reason of the deployment event status.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeploymentEventDataSummary.Timestamp">
+            <summary>
+            Gets and sets the property Timestamp. 
+            <para>
+            The timestamp of the deployment event.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.DeploymentFilter">
+            <summary>
+            A filter name and value pair that is used to return more specific results from a describe
+            operation. Filters can be used to match a set of resources by specific criteria.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeploymentFilter.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The name of the filter. Filter names are case-sensitive.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeploymentFilter.Values">
+            <summary>
+            Gets and sets the property Values. 
+            <para>
+            The filter values. Filter values are case-sensitive. If you specify multiple values
+            for a filter, the values are joined with an <c>OR</c>, and the request returns all
+            results that match any of the specified values.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.DeploymentSpecificationsField">
+            <summary>
+            A field that details a specification of a deployment pattern.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeploymentSpecificationsField.AllowedValues">
+            <summary>
+            Gets and sets the property AllowedValues. 
+            <para>
+            The allowed values of the deployment specification.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeploymentSpecificationsField.Conditionals">
+            <summary>
+            Gets and sets the property Conditionals. 
+            <para>
+            The conditionals used for the deployment specification.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeploymentSpecificationsField.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+            The description of the deployment specification.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeploymentSpecificationsField.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The name of the deployment specification.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.DeploymentSpecificationsField.Required">
+            <summary>
+            Gets and sets the property Required. 
+            <para>
+            Indicates if the deployment specification is required.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.GetDeploymentRequest">
+            <summary>
+            Container for the parameters to the GetDeployment operation.
+            Returns information about the deployment.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.GetDeploymentRequest.DeploymentId">
+            <summary>
+            Gets and sets the property DeploymentId. 
+            <para>
+            The ID of the deployment.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.GetDeploymentResponse">
+            <summary>
+            This is the response object from the GetDeployment operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.GetDeploymentResponse.Deployment">
+            <summary>
+            Gets and sets the property Deployment. 
+            <para>
+            An object that details the deployment.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.GetWorkloadDeploymentPatternRequest">
+            <summary>
+            Container for the parameters to the GetWorkloadDeploymentPattern operation.
+            Returns details for a given workload and deployment pattern, including the available
+            specifications. You can use the <a href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloads.html">ListWorkloads</a>
+            operation to discover the available workload names and the <a href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloadDeploymentPatterns.html">ListWorkloadDeploymentPatterns</a>
+            operation to discover the available deployment pattern names of a given workload.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.GetWorkloadDeploymentPatternRequest.DeploymentPatternName">
+            <summary>
+            Gets and sets the property DeploymentPatternName. 
+            <para>
+            The name of the deployment pattern.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.GetWorkloadDeploymentPatternRequest.WorkloadName">
+            <summary>
+            Gets and sets the property WorkloadName. 
+            <para>
+            The name of the workload.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.GetWorkloadDeploymentPatternResponse">
+            <summary>
+            This is the response object from the GetWorkloadDeploymentPattern operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.GetWorkloadDeploymentPatternResponse.WorkloadDeploymentPattern">
+            <summary>
+            Gets and sets the property WorkloadDeploymentPattern. 
+            <para>
+            Details about the workload deployment pattern.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.GetWorkloadRequest">
+            <summary>
+            Container for the parameters to the GetWorkload operation.
+            Returns information about a workload.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.GetWorkloadRequest.WorkloadName">
+            <summary>
+            Gets and sets the property WorkloadName. 
+            <para>
+            The name of the workload.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.GetWorkloadResponse">
+            <summary>
+            This is the response object from the GetWorkload operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.GetWorkloadResponse.Workload">
+            <summary>
+            Gets and sets the property Workload. 
+            <para>
+            Information about the workload.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.InternalServerException">
+            <summary>
+            An internal error has occurred. Retry your request, but if the problem persists, contact
+            us with details by posting a question on <a href="https://repost.aws/">re:Post</a>.
+            </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.InternalServerException.#ctor(System.String)">
+            <summary>
+            Constructs a new InternalServerException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.InternalServerException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.InternalServerException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.InternalServerException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.InternalServerException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.CreateDeploymentRequestMarshaller">
+            <summary>
+            CreateDeployment Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.CreateDeploymentRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.CreateDeploymentRequestMarshaller.Marshall(Amazon.LaunchWizard.Model.CreateDeploymentRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.CreateDeploymentRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.CreateDeploymentResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for CreateDeployment operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.CreateDeploymentResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.CreateDeploymentResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.CreateDeploymentResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.DeleteDeploymentRequestMarshaller">
+            <summary>
+            DeleteDeployment Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.DeleteDeploymentRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.DeleteDeploymentRequestMarshaller.Marshall(Amazon.LaunchWizard.Model.DeleteDeploymentRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.DeleteDeploymentRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.DeleteDeploymentResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DeleteDeployment operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.DeleteDeploymentResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.DeleteDeploymentResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.DeleteDeploymentResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.DeploymentConditionalFieldUnmarshaller">
+            <summary>
+            Response Unmarshaller for DeploymentConditionalField Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.DeploymentConditionalFieldUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#LaunchWizard#Model#DeploymentConditionalField,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.DeploymentConditionalFieldUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.DeploymentConditionalFieldUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.DeploymentDataSummaryUnmarshaller">
+            <summary>
+            Response Unmarshaller for DeploymentDataSummary Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.DeploymentDataSummaryUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#LaunchWizard#Model#DeploymentDataSummary,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.DeploymentDataSummaryUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.DeploymentDataSummaryUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.DeploymentDataUnmarshaller">
+            <summary>
+            Response Unmarshaller for DeploymentData Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.DeploymentDataUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#LaunchWizard#Model#DeploymentData,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.DeploymentDataUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.DeploymentDataUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.DeploymentEventDataSummaryUnmarshaller">
+            <summary>
+            Response Unmarshaller for DeploymentEventDataSummary Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.DeploymentEventDataSummaryUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#LaunchWizard#Model#DeploymentEventDataSummary,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.DeploymentEventDataSummaryUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.DeploymentEventDataSummaryUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.DeploymentFilterMarshaller">
+            <summary>
+            DeploymentFilter Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.DeploymentFilterMarshaller.Marshall(Amazon.LaunchWizard.Model.DeploymentFilter,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.DeploymentFilterMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.DeploymentSpecificationsFieldUnmarshaller">
+            <summary>
+            Response Unmarshaller for DeploymentSpecificationsField Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.DeploymentSpecificationsFieldUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#LaunchWizard#Model#DeploymentSpecificationsField,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.DeploymentSpecificationsFieldUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.DeploymentSpecificationsFieldUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.GetDeploymentRequestMarshaller">
+            <summary>
+            GetDeployment Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.GetDeploymentRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.GetDeploymentRequestMarshaller.Marshall(Amazon.LaunchWizard.Model.GetDeploymentRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.GetDeploymentRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.GetDeploymentResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetDeployment operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.GetDeploymentResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.GetDeploymentResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.GetDeploymentResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.GetWorkloadDeploymentPatternRequestMarshaller">
+            <summary>
+            GetWorkloadDeploymentPattern Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.GetWorkloadDeploymentPatternRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.GetWorkloadDeploymentPatternRequestMarshaller.Marshall(Amazon.LaunchWizard.Model.GetWorkloadDeploymentPatternRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.GetWorkloadDeploymentPatternRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.GetWorkloadDeploymentPatternResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetWorkloadDeploymentPattern operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.GetWorkloadDeploymentPatternResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.GetWorkloadDeploymentPatternResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.GetWorkloadDeploymentPatternResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.GetWorkloadRequestMarshaller">
+            <summary>
+            GetWorkload Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.GetWorkloadRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.GetWorkloadRequestMarshaller.Marshall(Amazon.LaunchWizard.Model.GetWorkloadRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.GetWorkloadRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.GetWorkloadResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetWorkload operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.GetWorkloadResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.GetWorkloadResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.GetWorkloadResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InternalServerException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListDeploymentEventsRequestMarshaller">
+            <summary>
+            ListDeploymentEvents Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListDeploymentEventsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListDeploymentEventsRequestMarshaller.Marshall(Amazon.LaunchWizard.Model.ListDeploymentEventsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListDeploymentEventsRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListDeploymentEventsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListDeploymentEvents operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListDeploymentEventsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListDeploymentEventsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListDeploymentEventsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListDeploymentsRequestMarshaller">
+            <summary>
+            ListDeployments Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListDeploymentsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListDeploymentsRequestMarshaller.Marshall(Amazon.LaunchWizard.Model.ListDeploymentsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListDeploymentsRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListDeploymentsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListDeployments operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListDeploymentsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListDeploymentsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListDeploymentsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller">
+            <summary>
+            ListTagsForResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Marshall(Amazon.LaunchWizard.Model.ListTagsForResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListTagsForResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListWorkloadDeploymentPatternsRequestMarshaller">
+            <summary>
+            ListWorkloadDeploymentPatterns Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListWorkloadDeploymentPatternsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListWorkloadDeploymentPatternsRequestMarshaller.Marshall(Amazon.LaunchWizard.Model.ListWorkloadDeploymentPatternsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListWorkloadDeploymentPatternsRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListWorkloadDeploymentPatternsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListWorkloadDeploymentPatterns operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListWorkloadDeploymentPatternsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListWorkloadDeploymentPatternsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListWorkloadDeploymentPatternsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListWorkloadsRequestMarshaller">
+            <summary>
+            ListWorkloads Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListWorkloadsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListWorkloadsRequestMarshaller.Marshall(Amazon.LaunchWizard.Model.ListWorkloadsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListWorkloadsRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListWorkloadsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListWorkloads operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListWorkloadsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListWorkloadsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ListWorkloadsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ResourceLimitExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ResourceLimitException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ResourceLimitExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ResourceLimitExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ResourceLimitExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ResourceNotFoundException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller">
+            <summary>
+            TagResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Marshall(Amazon.LaunchWizard.Model.TagResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for TagResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller">
+            <summary>
+            UntagResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Marshall(Amazon.LaunchWizard.Model.UntagResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for UntagResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.WorkloadDataSummaryUnmarshaller">
+            <summary>
+            Response Unmarshaller for WorkloadDataSummary Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.WorkloadDataSummaryUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#LaunchWizard#Model#WorkloadDataSummary,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.WorkloadDataSummaryUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.WorkloadDataSummaryUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.WorkloadDataUnmarshaller">
+            <summary>
+            Response Unmarshaller for WorkloadData Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.WorkloadDataUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#LaunchWizard#Model#WorkloadData,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.WorkloadDataUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.WorkloadDataUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.WorkloadDeploymentPatternDataSummaryUnmarshaller">
+            <summary>
+            Response Unmarshaller for WorkloadDeploymentPatternDataSummary Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.WorkloadDeploymentPatternDataSummaryUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#LaunchWizard#Model#WorkloadDeploymentPatternDataSummary,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.WorkloadDeploymentPatternDataSummaryUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.WorkloadDeploymentPatternDataSummaryUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.WorkloadDeploymentPatternDataUnmarshaller">
+            <summary>
+            Response Unmarshaller for WorkloadDeploymentPatternData Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.WorkloadDeploymentPatternDataUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#LaunchWizard#Model#WorkloadDeploymentPatternData,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.WorkloadDeploymentPatternDataUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.Internal.MarshallTransformations.WorkloadDeploymentPatternDataUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.ListDeploymentEventsRequest">
+            <summary>
+            Container for the parameters to the ListDeploymentEvents operation.
+            Lists the events of a deployment.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.ListDeploymentEventsRequest.DeploymentId">
+            <summary>
+            Gets and sets the property DeploymentId. 
+            <para>
+            The ID of the deployment.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.ListDeploymentEventsRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            The maximum number of items to return for this request. To get the next page of items,
+            make another request with the token returned in the output.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.ListDeploymentEventsRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The token returned from a previous paginated request. Pagination continues from the
+            end of the items returned by the previous request.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.ListDeploymentEventsResponse">
+            <summary>
+            This is the response object from the ListDeploymentEvents operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.ListDeploymentEventsResponse.DeploymentEvents">
+            <summary>
+            Gets and sets the property DeploymentEvents. 
+            <para>
+            Lists the deployment events.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.ListDeploymentEventsResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The token to include in another request to get the next page of items. This value
+            is <c>null</c> when there are no more items to return.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.ListDeploymentsRequest">
+            <summary>
+            Container for the parameters to the ListDeployments operation.
+            Lists the deployments that have been created.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.ListDeploymentsRequest.Filters">
+            <summary>
+            Gets and sets the property Filters. 
+            <para>
+            Filters to scope the results. The following filters are supported:
+            </para>
+             <ul> <li> 
+            <para>
+             <c>WORKLOAD_NAME</c> - The name used in deployments.
+            </para>
+             </li> <li> 
+            <para>
+             <c>DEPLOYMENT_STATUS</c> - <c>COMPLETED</c> | <c>CREATING</c> | <c>DELETE_IN_PROGRESS</c>
+            | <c>DELETE_INITIATING</c> | <c>DELETE_FAILED</c> | <c>DELETED</c> | <c>FAILED</c>
+            | <c>IN_PROGRESS</c> | <c>VALIDATING</c> 
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.ListDeploymentsRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            The maximum number of items to return for this request. To get the next page of items,
+            make another request with the token returned in the output.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.ListDeploymentsRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The token returned from a previous paginated request. Pagination continues from the
+            end of the items returned by the previous request.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.ListDeploymentsResponse">
+            <summary>
+            This is the response object from the ListDeployments operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.ListDeploymentsResponse.Deployments">
+            <summary>
+            Gets and sets the property Deployments. 
+            <para>
+            Lists the deployments.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.ListDeploymentsResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The token to include in another request to get the next page of items. This value
+            is <c>null</c> when there are no more items to return.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.ListTagsForResourceRequest">
+            <summary>
+            Container for the parameters to the ListTagsForResource operation.
+            Lists the tags associated with a specified resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.ListTagsForResourceRequest.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+            The Amazon Resource Name (ARN) of the resource.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.ListTagsForResourceResponse">
+            <summary>
+            This is the response object from the ListTagsForResource operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.ListTagsForResourceResponse.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+            Information about the tags.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.ListWorkloadDeploymentPatternsRequest">
+            <summary>
+            Container for the parameters to the ListWorkloadDeploymentPatterns operation.
+            Lists the workload deployment patterns for a given workload name. You can use the
+            <a href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloads.html">ListWorkloads</a>
+            operation to discover the available workload names.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.ListWorkloadDeploymentPatternsRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            The maximum number of items to return for this request. To get the next page of items,
+            make another request with the token returned in the output.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.ListWorkloadDeploymentPatternsRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The token returned from a previous paginated request. Pagination continues from the
+            end of the items returned by the previous request.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.ListWorkloadDeploymentPatternsRequest.WorkloadName">
+            <summary>
+            Gets and sets the property WorkloadName. 
+            <para>
+            The name of the workload.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.ListWorkloadDeploymentPatternsResponse">
+            <summary>
+            This is the response object from the ListWorkloadDeploymentPatterns operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.ListWorkloadDeploymentPatternsResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The token to include in another request to get the next page of items. This value
+            is <c>null</c> when there are no more items to return.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.ListWorkloadDeploymentPatternsResponse.WorkloadDeploymentPatterns">
+            <summary>
+            Gets and sets the property WorkloadDeploymentPatterns. 
+            <para>
+            Describes the workload deployment patterns.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.ListWorkloadsRequest">
+            <summary>
+            Container for the parameters to the ListWorkloads operation.
+            Lists the available workload names. You can use the <a href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloadDeploymentPatterns.html">ListWorkloadDeploymentPatterns</a>
+            operation to discover the available deployment patterns for a given workload.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.ListWorkloadsRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            The maximum number of items to return for this request. To get the next page of items,
+            make another request with the token returned in the output.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.ListWorkloadsRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The token returned from a previous paginated request. Pagination continues from the
+            end of the items returned by the previous request.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.ListWorkloadsResponse">
+            <summary>
+            This is the response object from the ListWorkloads operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.ListWorkloadsResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The token to include in another request to get the next page of items. This value
+            is <c>null</c> when there are no more items to return.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.ListWorkloadsResponse.Workloads">
+            <summary>
+            Gets and sets the property Workloads. 
+            <para>
+            Information about the workloads.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.ResourceLimitException">
+            <summary>
+            You have exceeded an Launch Wizard resource limit. For example, you might have too
+            many deployments in progress.
+            </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.ResourceLimitException.#ctor(System.String)">
+            <summary>
+            Constructs a new ResourceLimitException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.ResourceLimitException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ResourceLimitException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.ResourceLimitException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ResourceLimitException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.ResourceLimitException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceLimitException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.ResourceLimitException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceLimitException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.ResourceNotFoundException">
+            <summary>
+            The specified workload or deployment resource can't be found.
+            </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.ResourceNotFoundException.#ctor(System.String)">
+            <summary>
+            Constructs a new ResourceNotFoundException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.ResourceNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.ResourceNotFoundException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.ResourceNotFoundException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.ResourceNotFoundException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.TagResourceRequest">
+            <summary>
+            Container for the parameters to the TagResource operation.
+            Adds the specified tags to the given resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.TagResourceRequest.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+            The Amazon Resource Name (ARN) of the resource.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.TagResourceRequest.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+            One or more tags to attach to the resource.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.TagResourceResponse">
+            <summary>
+            This is the response object from the TagResource operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.UntagResourceRequest">
+            <summary>
+            Container for the parameters to the UntagResource operation.
+            Removes the specified tags from the given resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.UntagResourceRequest.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+            The Amazon Resource Name (ARN) of the resource.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.UntagResourceRequest.TagKeys">
+            <summary>
+            Gets and sets the property TagKeys. 
+            <para>
+            Keys identifying the tags to remove.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.UntagResourceResponse">
+            <summary>
+            This is the response object from the UntagResource operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.ValidationException">
+            <summary>
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.ValidationException.#ctor(System.String)">
+            <summary>
+            Constructs a new ValidationException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.ValidationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.ValidationException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.ValidationException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.ValidationException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.WorkloadData">
+            <summary>
+            Describes a workload.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.WorkloadData.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+            The description of a workload.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.WorkloadData.DisplayName">
+            <summary>
+            Gets and sets the property DisplayName. 
+            <para>
+            The display name of a workload.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.WorkloadData.DocumentationUrl">
+            <summary>
+            Gets and sets the property DocumentationUrl. 
+            <para>
+            The URL of a workload document.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.WorkloadData.IconUrl">
+            <summary>
+            Gets and sets the property IconUrl. 
+            <para>
+            The URL of a workload icon.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.WorkloadData.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            The status of a workload.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.WorkloadData.StatusMessage">
+            <summary>
+            Gets and sets the property StatusMessage. 
+            <para>
+            The message about a workload's status.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.WorkloadData.WorkloadName">
+            <summary>
+            Gets and sets the property WorkloadName. 
+            <para>
+            The name of the workload.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.WorkloadDataSummary">
+            <summary>
+            Describes workload data.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.WorkloadDataSummary.DisplayName">
+            <summary>
+            Gets and sets the property DisplayName. 
+            <para>
+            The display name of the workload data.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.WorkloadDataSummary.WorkloadName">
+            <summary>
+            Gets and sets the property WorkloadName. 
+            <para>
+            The name of the workload.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.WorkloadDeploymentPatternData">
+            <summary>
+            The data that details a workload deployment pattern.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.WorkloadDeploymentPatternData.DeploymentPatternName">
+            <summary>
+            Gets and sets the property DeploymentPatternName. 
+            <para>
+            The name of the deployment pattern.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.WorkloadDeploymentPatternData.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+            The description of the deployment pattern.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.WorkloadDeploymentPatternData.DisplayName">
+            <summary>
+            Gets and sets the property DisplayName. 
+            <para>
+            The display name of the deployment pattern.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.WorkloadDeploymentPatternData.Specifications">
+            <summary>
+            Gets and sets the property Specifications. 
+            <para>
+            The settings specified for the deployment. These settings define how to deploy and
+            configure your resources created by the deployment. For more information about the
+            specifications required for creating a deployment for a SAP workload, see <a href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications-sap.html">SAP
+            deployment specifications</a>. To retrieve the specifications required to create a
+            deployment for other workloads, use the <a href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_GetWorkloadDeploymentPattern.html">
+            <c>GetWorkloadDeploymentPattern</c> </a> operation.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.WorkloadDeploymentPatternData.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            The status of the deployment pattern.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.WorkloadDeploymentPatternData.StatusMessage">
+            <summary>
+            Gets and sets the property StatusMessage. 
+            <para>
+            The status message of the deployment pattern.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.WorkloadDeploymentPatternData.WorkloadName">
+            <summary>
+            Gets and sets the property WorkloadName. 
+            <para>
+            The workload name of the deployment pattern.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.WorkloadDeploymentPatternData.WorkloadVersionName">
+            <summary>
+            Gets and sets the property WorkloadVersionName. 
+            <para>
+            The workload version name of the deployment pattern.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.WorkloadDeploymentPatternDataSummary">
+            <summary>
+            Describes a workload deployment pattern.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.WorkloadDeploymentPatternDataSummary.DeploymentPatternName">
+            <summary>
+            Gets and sets the property DeploymentPatternName. 
+            <para>
+            The name of a workload deployment pattern.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.WorkloadDeploymentPatternDataSummary.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+            The description of a workload deployment pattern.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.WorkloadDeploymentPatternDataSummary.DisplayName">
+            <summary>
+            Gets and sets the property DisplayName. 
+            <para>
+            The display name of a workload deployment pattern.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.WorkloadDeploymentPatternDataSummary.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            The status of a workload deployment pattern.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.WorkloadDeploymentPatternDataSummary.StatusMessage">
+            <summary>
+            Gets and sets the property StatusMessage. 
+            <para>
+            A message about a workload deployment pattern's status.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.WorkloadDeploymentPatternDataSummary.WorkloadName">
+            <summary>
+            Gets and sets the property WorkloadName. 
+            <para>
+            The name of the workload.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.WorkloadDeploymentPatternDataSummary.WorkloadVersionName">
+            <summary>
+            Gets and sets the property WorkloadVersionName. 
+            <para>
+            The name of the workload deployment pattern version.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.ILaunchWizardPaginatorFactory">
+             <summary>
+             Paginators for the LaunchWizard service
+            </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.ILaunchWizardPaginatorFactory.ListDeploymentEvents(Amazon.LaunchWizard.Model.ListDeploymentEventsRequest)">
+             <summary>
+             Paginator for ListDeploymentEvents operation
+            </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.ILaunchWizardPaginatorFactory.ListDeployments(Amazon.LaunchWizard.Model.ListDeploymentsRequest)">
+             <summary>
+             Paginator for ListDeployments operation
+            </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.ILaunchWizardPaginatorFactory.ListWorkloadDeploymentPatterns(Amazon.LaunchWizard.Model.ListWorkloadDeploymentPatternsRequest)">
+             <summary>
+             Paginator for ListWorkloadDeploymentPatterns operation
+            </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.ILaunchWizardPaginatorFactory.ListWorkloads(Amazon.LaunchWizard.Model.ListWorkloadsRequest)">
+             <summary>
+             Paginator for ListWorkloads operation
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.IListDeploymentEventsPaginator">
+             <summary>
+             Paginator for the ListDeploymentEvents operation
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.IListDeploymentEventsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.IListDeploymentEventsPaginator.DeploymentEvents">
+            <summary>
+            Enumerable containing all of the DeploymentEvents
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.IListDeploymentsPaginator">
+             <summary>
+             Paginator for the ListDeployments operation
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.IListDeploymentsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.IListDeploymentsPaginator.Deployments">
+            <summary>
+            Enumerable containing all of the Deployments
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.IListWorkloadDeploymentPatternsPaginator">
+             <summary>
+             Paginator for the ListWorkloadDeploymentPatterns operation
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.IListWorkloadDeploymentPatternsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.IListWorkloadDeploymentPatternsPaginator.WorkloadDeploymentPatterns">
+            <summary>
+            Enumerable containing all of the WorkloadDeploymentPatterns
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.IListWorkloadsPaginator">
+             <summary>
+             Paginator for the ListWorkloads operation
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.IListWorkloadsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.IListWorkloadsPaginator.Workloads">
+            <summary>
+            Enumerable containing all of the Workloads
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.LaunchWizardPaginatorFactory">
+             <summary>
+             Paginators for the LaunchWizard service
+            </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.LaunchWizardPaginatorFactory.ListDeploymentEvents(Amazon.LaunchWizard.Model.ListDeploymentEventsRequest)">
+             <summary>
+             Paginator for ListDeploymentEvents operation
+            </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.LaunchWizardPaginatorFactory.ListDeployments(Amazon.LaunchWizard.Model.ListDeploymentsRequest)">
+             <summary>
+             Paginator for ListDeployments operation
+            </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.LaunchWizardPaginatorFactory.ListWorkloadDeploymentPatterns(Amazon.LaunchWizard.Model.ListWorkloadDeploymentPatternsRequest)">
+             <summary>
+             Paginator for ListWorkloadDeploymentPatterns operation
+            </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.Model.LaunchWizardPaginatorFactory.ListWorkloads(Amazon.LaunchWizard.Model.ListWorkloadsRequest)">
+             <summary>
+             Paginator for ListWorkloads operation
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.ListDeploymentEventsPaginator">
+            <summary>
+            Base class for ListDeploymentEvents paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.ListDeploymentEventsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.ListDeploymentEventsPaginator.DeploymentEvents">
+            <summary>
+            Enumerable containing all of the DeploymentEvents
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.ListDeploymentsPaginator">
+            <summary>
+            Base class for ListDeployments paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.ListDeploymentsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.ListDeploymentsPaginator.Deployments">
+            <summary>
+            Enumerable containing all of the Deployments
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.ListWorkloadDeploymentPatternsPaginator">
+            <summary>
+            Base class for ListWorkloadDeploymentPatterns paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.ListWorkloadDeploymentPatternsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.ListWorkloadDeploymentPatternsPaginator.WorkloadDeploymentPatterns">
+            <summary>
+            Enumerable containing all of the WorkloadDeploymentPatterns
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.Model.ListWorkloadsPaginator">
+            <summary>
+            Base class for ListWorkloads paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.ListWorkloadsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.Model.ListWorkloadsPaginator.Workloads">
+            <summary>
+            Enumerable containing all of the Workloads
+            </summary>
+        </member>
+        <member name="T:Amazon.LaunchWizard.DeploymentFilterKey">
+            <summary>
+            Constants used for properties of type DeploymentFilterKey.
+            </summary>
+        </member>
+        <member name="F:Amazon.LaunchWizard.DeploymentFilterKey.DEPLOYMENT_STATUS">
+            <summary>
+            Constant DEPLOYMENT_STATUS for DeploymentFilterKey
+            </summary>
+        </member>
+        <member name="F:Amazon.LaunchWizard.DeploymentFilterKey.WORKLOAD_NAME">
+            <summary>
+            Constant WORKLOAD_NAME for DeploymentFilterKey
+            </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.DeploymentFilterKey.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.DeploymentFilterKey.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.DeploymentFilterKey.op_Implicit(System.String)~Amazon.LaunchWizard.DeploymentFilterKey">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.LaunchWizard.DeploymentStatus">
+            <summary>
+            Constants used for properties of type DeploymentStatus.
+            </summary>
+        </member>
+        <member name="F:Amazon.LaunchWizard.DeploymentStatus.COMPLETED">
+            <summary>
+            Constant COMPLETED for DeploymentStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.LaunchWizard.DeploymentStatus.CREATING">
+            <summary>
+            Constant CREATING for DeploymentStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.LaunchWizard.DeploymentStatus.DELETE_FAILED">
+            <summary>
+            Constant DELETE_FAILED for DeploymentStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.LaunchWizard.DeploymentStatus.DELETE_IN_PROGRESS">
+            <summary>
+            Constant DELETE_IN_PROGRESS for DeploymentStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.LaunchWizard.DeploymentStatus.DELETE_INITIATING">
+            <summary>
+            Constant DELETE_INITIATING for DeploymentStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.LaunchWizard.DeploymentStatus.DELETED">
+            <summary>
+            Constant DELETED for DeploymentStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.LaunchWizard.DeploymentStatus.FAILED">
+            <summary>
+            Constant FAILED for DeploymentStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.LaunchWizard.DeploymentStatus.IN_PROGRESS">
+            <summary>
+            Constant IN_PROGRESS for DeploymentStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.LaunchWizard.DeploymentStatus.VALIDATING">
+            <summary>
+            Constant VALIDATING for DeploymentStatus
+            </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.DeploymentStatus.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.DeploymentStatus.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.DeploymentStatus.op_Implicit(System.String)~Amazon.LaunchWizard.DeploymentStatus">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.LaunchWizard.EventStatus">
+            <summary>
+            Constants used for properties of type EventStatus.
+            </summary>
+        </member>
+        <member name="F:Amazon.LaunchWizard.EventStatus.CANCELED">
+            <summary>
+            Constant CANCELED for EventStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.LaunchWizard.EventStatus.CANCELING">
+            <summary>
+            Constant CANCELING for EventStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.LaunchWizard.EventStatus.COMPLETED">
+            <summary>
+            Constant COMPLETED for EventStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.LaunchWizard.EventStatus.CREATED">
+            <summary>
+            Constant CREATED for EventStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.LaunchWizard.EventStatus.FAILED">
+            <summary>
+            Constant FAILED for EventStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.LaunchWizard.EventStatus.IN_PROGRESS">
+            <summary>
+            Constant IN_PROGRESS for EventStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.LaunchWizard.EventStatus.PENDING">
+            <summary>
+            Constant PENDING for EventStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.LaunchWizard.EventStatus.TIMED_OUT">
+            <summary>
+            Constant TIMED_OUT for EventStatus
+            </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.EventStatus.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.EventStatus.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.EventStatus.op_Implicit(System.String)~Amazon.LaunchWizard.EventStatus">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.LaunchWizard.WorkloadDeploymentPatternStatus">
+            <summary>
+            Constants used for properties of type WorkloadDeploymentPatternStatus.
+            </summary>
+        </member>
+        <member name="F:Amazon.LaunchWizard.WorkloadDeploymentPatternStatus.ACTIVE">
+            <summary>
+            Constant ACTIVE for WorkloadDeploymentPatternStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.LaunchWizard.WorkloadDeploymentPatternStatus.DELETED">
+            <summary>
+            Constant DELETED for WorkloadDeploymentPatternStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.LaunchWizard.WorkloadDeploymentPatternStatus.DISABLED">
+            <summary>
+            Constant DISABLED for WorkloadDeploymentPatternStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.LaunchWizard.WorkloadDeploymentPatternStatus.INACTIVE">
+            <summary>
+            Constant INACTIVE for WorkloadDeploymentPatternStatus
+            </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.WorkloadDeploymentPatternStatus.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.WorkloadDeploymentPatternStatus.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.WorkloadDeploymentPatternStatus.op_Implicit(System.String)~Amazon.LaunchWizard.WorkloadDeploymentPatternStatus">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.LaunchWizard.WorkloadStatus">
+            <summary>
+            Constants used for properties of type WorkloadStatus.
+            </summary>
+        </member>
+        <member name="F:Amazon.LaunchWizard.WorkloadStatus.ACTIVE">
+            <summary>
+            Constant ACTIVE for WorkloadStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.LaunchWizard.WorkloadStatus.DELETED">
+            <summary>
+            Constant DELETED for WorkloadStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.LaunchWizard.WorkloadStatus.DISABLED">
+            <summary>
+            Constant DISABLED for WorkloadStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.LaunchWizard.WorkloadStatus.INACTIVE">
+            <summary>
+            Constant INACTIVE for WorkloadStatus
+            </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.WorkloadStatus.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.WorkloadStatus.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.LaunchWizard.WorkloadStatus.op_Implicit(System.String)~Amazon.LaunchWizard.WorkloadStatus">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.LaunchWizard.AmazonLaunchWizardClient">
+             <summary>
+             <para>Implementation for accessing LaunchWizard</para>
+            
+             Launch Wizard offers a guided way of sizing, configuring, and deploying Amazon Web
+             Services resources for third party applications, such as Microsoft SQL Server Always
+             On and HANA based SAP systems, without the need to manually identify and provision
+             individual Amazon Web Services resources.
+             </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardClient.#ctor">
+             <summary>
+             Constructs AmazonLaunchWizardClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonLaunchWizardClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardClient.#ctor(Amazon.LaunchWizard.AmazonLaunchWizardConfig)">
+             <summary>
+             Constructs AmazonLaunchWizardClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonLaunchWizardClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonLaunchWizardClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonLaunchWizardClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.LaunchWizard.AmazonLaunchWizardConfig)">
+            <summary>
+            Constructs AmazonLaunchWizardClient with AWS Credentials and an
+            AmazonLaunchWizardClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonLaunchWizardClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonLaunchWizardClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonLaunchWizardClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardClient.#ctor(System.String,System.String,Amazon.LaunchWizard.AmazonLaunchWizardConfig)">
+            <summary>
+            Constructs AmazonLaunchWizardClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonLaunchWizardClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonLaunchWizardClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonLaunchWizardClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonLaunchWizardClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardClient.#ctor(System.String,System.String,System.String,Amazon.LaunchWizard.AmazonLaunchWizardConfig)">
+            <summary>
+            Constructs AmazonLaunchWizardClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonLaunchWizardClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonLaunchWizardClient Configuration Object</param>
+        </member>
+        <member name="P:Amazon.LaunchWizard.AmazonLaunchWizardClient.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.LaunchWizard.AmazonLaunchWizardClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardClient.CreateDeploymentAsync(Amazon.LaunchWizard.Model.CreateDeploymentRequest,System.Threading.CancellationToken)">
+            <summary>
+            Creates a deployment for the given workload. Deployments created by this operation
+            are not available in the Launch Wizard console to use the <c>Clone deployment</c>
+            action on.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateDeployment service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the CreateDeployment service method, as returned by LaunchWizard.</returns>
+            <exception cref="T:Amazon.LaunchWizard.Model.InternalServerException">
+            An internal error has occurred. Retry your request, but if the problem persists, contact
+            us with details by posting a question on <a href="https://repost.aws/">re:Post</a>.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ResourceLimitException">
+            You have exceeded an Launch Wizard resource limit. For example, you might have too
+            many deployments in progress.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ResourceNotFoundException">
+            The specified workload or deployment resource can't be found.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/CreateDeployment">REST API Reference for CreateDeployment Operation</seealso>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardClient.DeleteDeploymentAsync(Amazon.LaunchWizard.Model.DeleteDeploymentRequest,System.Threading.CancellationToken)">
+            <summary>
+            Deletes a deployment.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteDeployment service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeleteDeployment service method, as returned by LaunchWizard.</returns>
+            <exception cref="T:Amazon.LaunchWizard.Model.InternalServerException">
+            An internal error has occurred. Retry your request, but if the problem persists, contact
+            us with details by posting a question on <a href="https://repost.aws/">re:Post</a>.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ResourceLimitException">
+            You have exceeded an Launch Wizard resource limit. For example, you might have too
+            many deployments in progress.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ResourceNotFoundException">
+            The specified workload or deployment resource can't be found.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/DeleteDeployment">REST API Reference for DeleteDeployment Operation</seealso>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardClient.GetDeploymentAsync(Amazon.LaunchWizard.Model.GetDeploymentRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns information about the deployment.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetDeployment service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetDeployment service method, as returned by LaunchWizard.</returns>
+            <exception cref="T:Amazon.LaunchWizard.Model.InternalServerException">
+            An internal error has occurred. Retry your request, but if the problem persists, contact
+            us with details by posting a question on <a href="https://repost.aws/">re:Post</a>.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ResourceNotFoundException">
+            The specified workload or deployment resource can't be found.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/GetDeployment">REST API Reference for GetDeployment Operation</seealso>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardClient.GetWorkloadAsync(Amazon.LaunchWizard.Model.GetWorkloadRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns information about a workload.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetWorkload service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetWorkload service method, as returned by LaunchWizard.</returns>
+            <exception cref="T:Amazon.LaunchWizard.Model.InternalServerException">
+            An internal error has occurred. Retry your request, but if the problem persists, contact
+            us with details by posting a question on <a href="https://repost.aws/">re:Post</a>.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ResourceNotFoundException">
+            The specified workload or deployment resource can't be found.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/GetWorkload">REST API Reference for GetWorkload Operation</seealso>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardClient.GetWorkloadDeploymentPatternAsync(Amazon.LaunchWizard.Model.GetWorkloadDeploymentPatternRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns details for a given workload and deployment pattern, including the available
+            specifications. You can use the <a href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloads.html">ListWorkloads</a>
+            operation to discover the available workload names and the <a href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloadDeploymentPatterns.html">ListWorkloadDeploymentPatterns</a>
+            operation to discover the available deployment pattern names of a given workload.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetWorkloadDeploymentPattern service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetWorkloadDeploymentPattern service method, as returned by LaunchWizard.</returns>
+            <exception cref="T:Amazon.LaunchWizard.Model.InternalServerException">
+            An internal error has occurred. Retry your request, but if the problem persists, contact
+            us with details by posting a question on <a href="https://repost.aws/">re:Post</a>.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ResourceNotFoundException">
+            The specified workload or deployment resource can't be found.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/GetWorkloadDeploymentPattern">REST API Reference for GetWorkloadDeploymentPattern Operation</seealso>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardClient.ListDeploymentEventsAsync(Amazon.LaunchWizard.Model.ListDeploymentEventsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists the events of a deployment.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListDeploymentEvents service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListDeploymentEvents service method, as returned by LaunchWizard.</returns>
+            <exception cref="T:Amazon.LaunchWizard.Model.InternalServerException">
+            An internal error has occurred. Retry your request, but if the problem persists, contact
+            us with details by posting a question on <a href="https://repost.aws/">re:Post</a>.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ResourceNotFoundException">
+            The specified workload or deployment resource can't be found.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/ListDeploymentEvents">REST API Reference for ListDeploymentEvents Operation</seealso>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardClient.ListDeploymentsAsync(Amazon.LaunchWizard.Model.ListDeploymentsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists the deployments that have been created.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListDeployments service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListDeployments service method, as returned by LaunchWizard.</returns>
+            <exception cref="T:Amazon.LaunchWizard.Model.InternalServerException">
+            An internal error has occurred. Retry your request, but if the problem persists, contact
+            us with details by posting a question on <a href="https://repost.aws/">re:Post</a>.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/ListDeployments">REST API Reference for ListDeployments Operation</seealso>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardClient.ListTagsForResourceAsync(Amazon.LaunchWizard.Model.ListTagsForResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists the tags associated with a specified resource.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListTagsForResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListTagsForResource service method, as returned by LaunchWizard.</returns>
+            <exception cref="T:Amazon.LaunchWizard.Model.InternalServerException">
+            An internal error has occurred. Retry your request, but if the problem persists, contact
+            us with details by posting a question on <a href="https://repost.aws/">re:Post</a>.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ResourceNotFoundException">
+            The specified workload or deployment resource can't be found.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/ListTagsForResource">REST API Reference for ListTagsForResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardClient.ListWorkloadDeploymentPatternsAsync(Amazon.LaunchWizard.Model.ListWorkloadDeploymentPatternsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists the workload deployment patterns for a given workload name. You can use the
+            <a href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloads.html">ListWorkloads</a>
+            operation to discover the available workload names.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListWorkloadDeploymentPatterns service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListWorkloadDeploymentPatterns service method, as returned by LaunchWizard.</returns>
+            <exception cref="T:Amazon.LaunchWizard.Model.InternalServerException">
+            An internal error has occurred. Retry your request, but if the problem persists, contact
+            us with details by posting a question on <a href="https://repost.aws/">re:Post</a>.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ResourceNotFoundException">
+            The specified workload or deployment resource can't be found.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/ListWorkloadDeploymentPatterns">REST API Reference for ListWorkloadDeploymentPatterns Operation</seealso>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardClient.ListWorkloadsAsync(Amazon.LaunchWizard.Model.ListWorkloadsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists the available workload names. You can use the <a href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloadDeploymentPatterns.html">ListWorkloadDeploymentPatterns</a>
+            operation to discover the available deployment patterns for a given workload.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListWorkloads service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListWorkloads service method, as returned by LaunchWizard.</returns>
+            <exception cref="T:Amazon.LaunchWizard.Model.InternalServerException">
+            An internal error has occurred. Retry your request, but if the problem persists, contact
+            us with details by posting a question on <a href="https://repost.aws/">re:Post</a>.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/ListWorkloads">REST API Reference for ListWorkloads Operation</seealso>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardClient.TagResourceAsync(Amazon.LaunchWizard.Model.TagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Adds the specified tags to the given resource.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the TagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the TagResource service method, as returned by LaunchWizard.</returns>
+            <exception cref="T:Amazon.LaunchWizard.Model.InternalServerException">
+            An internal error has occurred. Retry your request, but if the problem persists, contact
+            us with details by posting a question on <a href="https://repost.aws/">re:Post</a>.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ResourceNotFoundException">
+            The specified workload or deployment resource can't be found.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/TagResource">REST API Reference for TagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardClient.UntagResourceAsync(Amazon.LaunchWizard.Model.UntagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Removes the specified tags from the given resource.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UntagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UntagResource service method, as returned by LaunchWizard.</returns>
+            <exception cref="T:Amazon.LaunchWizard.Model.InternalServerException">
+            An internal error has occurred. Retry your request, but if the problem persists, contact
+            us with details by posting a question on <a href="https://repost.aws/">re:Post</a>.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ResourceNotFoundException">
+            The specified workload or deployment resource can't be found.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/UntagResource">REST API Reference for UntagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.LaunchWizard.AmazonLaunchWizardClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.LaunchWizard.IAmazonLaunchWizard">
+             <summary>
+             <para>Interface for accessing LaunchWizard</para>
+            
+             Launch Wizard offers a guided way of sizing, configuring, and deploying Amazon Web
+             Services resources for third party applications, such as Microsoft SQL Server Always
+             On and HANA based SAP systems, without the need to manually identify and provision
+             individual Amazon Web Services resources.
+             </summary>
+        </member>
+        <member name="P:Amazon.LaunchWizard.IAmazonLaunchWizard.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.LaunchWizard.IAmazonLaunchWizard.CreateDeploymentAsync(Amazon.LaunchWizard.Model.CreateDeploymentRequest,System.Threading.CancellationToken)">
+            <summary>
+            Creates a deployment for the given workload. Deployments created by this operation
+            are not available in the Launch Wizard console to use the <c>Clone deployment</c>
+            action on.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateDeployment service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the CreateDeployment service method, as returned by LaunchWizard.</returns>
+            <exception cref="T:Amazon.LaunchWizard.Model.InternalServerException">
+            An internal error has occurred. Retry your request, but if the problem persists, contact
+            us with details by posting a question on <a href="https://repost.aws/">re:Post</a>.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ResourceLimitException">
+            You have exceeded an Launch Wizard resource limit. For example, you might have too
+            many deployments in progress.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ResourceNotFoundException">
+            The specified workload or deployment resource can't be found.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/CreateDeployment">REST API Reference for CreateDeployment Operation</seealso>
+        </member>
+        <member name="M:Amazon.LaunchWizard.IAmazonLaunchWizard.DeleteDeploymentAsync(Amazon.LaunchWizard.Model.DeleteDeploymentRequest,System.Threading.CancellationToken)">
+            <summary>
+            Deletes a deployment.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteDeployment service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeleteDeployment service method, as returned by LaunchWizard.</returns>
+            <exception cref="T:Amazon.LaunchWizard.Model.InternalServerException">
+            An internal error has occurred. Retry your request, but if the problem persists, contact
+            us with details by posting a question on <a href="https://repost.aws/">re:Post</a>.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ResourceLimitException">
+            You have exceeded an Launch Wizard resource limit. For example, you might have too
+            many deployments in progress.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ResourceNotFoundException">
+            The specified workload or deployment resource can't be found.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/DeleteDeployment">REST API Reference for DeleteDeployment Operation</seealso>
+        </member>
+        <member name="M:Amazon.LaunchWizard.IAmazonLaunchWizard.GetDeploymentAsync(Amazon.LaunchWizard.Model.GetDeploymentRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns information about the deployment.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetDeployment service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetDeployment service method, as returned by LaunchWizard.</returns>
+            <exception cref="T:Amazon.LaunchWizard.Model.InternalServerException">
+            An internal error has occurred. Retry your request, but if the problem persists, contact
+            us with details by posting a question on <a href="https://repost.aws/">re:Post</a>.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ResourceNotFoundException">
+            The specified workload or deployment resource can't be found.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/GetDeployment">REST API Reference for GetDeployment Operation</seealso>
+        </member>
+        <member name="M:Amazon.LaunchWizard.IAmazonLaunchWizard.GetWorkloadAsync(Amazon.LaunchWizard.Model.GetWorkloadRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns information about a workload.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetWorkload service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetWorkload service method, as returned by LaunchWizard.</returns>
+            <exception cref="T:Amazon.LaunchWizard.Model.InternalServerException">
+            An internal error has occurred. Retry your request, but if the problem persists, contact
+            us with details by posting a question on <a href="https://repost.aws/">re:Post</a>.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ResourceNotFoundException">
+            The specified workload or deployment resource can't be found.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/GetWorkload">REST API Reference for GetWorkload Operation</seealso>
+        </member>
+        <member name="M:Amazon.LaunchWizard.IAmazonLaunchWizard.GetWorkloadDeploymentPatternAsync(Amazon.LaunchWizard.Model.GetWorkloadDeploymentPatternRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns details for a given workload and deployment pattern, including the available
+            specifications. You can use the <a href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloads.html">ListWorkloads</a>
+            operation to discover the available workload names and the <a href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloadDeploymentPatterns.html">ListWorkloadDeploymentPatterns</a>
+            operation to discover the available deployment pattern names of a given workload.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetWorkloadDeploymentPattern service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetWorkloadDeploymentPattern service method, as returned by LaunchWizard.</returns>
+            <exception cref="T:Amazon.LaunchWizard.Model.InternalServerException">
+            An internal error has occurred. Retry your request, but if the problem persists, contact
+            us with details by posting a question on <a href="https://repost.aws/">re:Post</a>.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ResourceNotFoundException">
+            The specified workload or deployment resource can't be found.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/GetWorkloadDeploymentPattern">REST API Reference for GetWorkloadDeploymentPattern Operation</seealso>
+        </member>
+        <member name="M:Amazon.LaunchWizard.IAmazonLaunchWizard.ListDeploymentEventsAsync(Amazon.LaunchWizard.Model.ListDeploymentEventsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists the events of a deployment.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListDeploymentEvents service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListDeploymentEvents service method, as returned by LaunchWizard.</returns>
+            <exception cref="T:Amazon.LaunchWizard.Model.InternalServerException">
+            An internal error has occurred. Retry your request, but if the problem persists, contact
+            us with details by posting a question on <a href="https://repost.aws/">re:Post</a>.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ResourceNotFoundException">
+            The specified workload or deployment resource can't be found.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/ListDeploymentEvents">REST API Reference for ListDeploymentEvents Operation</seealso>
+        </member>
+        <member name="M:Amazon.LaunchWizard.IAmazonLaunchWizard.ListDeploymentsAsync(Amazon.LaunchWizard.Model.ListDeploymentsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists the deployments that have been created.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListDeployments service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListDeployments service method, as returned by LaunchWizard.</returns>
+            <exception cref="T:Amazon.LaunchWizard.Model.InternalServerException">
+            An internal error has occurred. Retry your request, but if the problem persists, contact
+            us with details by posting a question on <a href="https://repost.aws/">re:Post</a>.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/ListDeployments">REST API Reference for ListDeployments Operation</seealso>
+        </member>
+        <member name="M:Amazon.LaunchWizard.IAmazonLaunchWizard.ListTagsForResourceAsync(Amazon.LaunchWizard.Model.ListTagsForResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists the tags associated with a specified resource.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListTagsForResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListTagsForResource service method, as returned by LaunchWizard.</returns>
+            <exception cref="T:Amazon.LaunchWizard.Model.InternalServerException">
+            An internal error has occurred. Retry your request, but if the problem persists, contact
+            us with details by posting a question on <a href="https://repost.aws/">re:Post</a>.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ResourceNotFoundException">
+            The specified workload or deployment resource can't be found.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/ListTagsForResource">REST API Reference for ListTagsForResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.LaunchWizard.IAmazonLaunchWizard.ListWorkloadDeploymentPatternsAsync(Amazon.LaunchWizard.Model.ListWorkloadDeploymentPatternsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists the workload deployment patterns for a given workload name. You can use the
+            <a href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloads.html">ListWorkloads</a>
+            operation to discover the available workload names.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListWorkloadDeploymentPatterns service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListWorkloadDeploymentPatterns service method, as returned by LaunchWizard.</returns>
+            <exception cref="T:Amazon.LaunchWizard.Model.InternalServerException">
+            An internal error has occurred. Retry your request, but if the problem persists, contact
+            us with details by posting a question on <a href="https://repost.aws/">re:Post</a>.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ResourceNotFoundException">
+            The specified workload or deployment resource can't be found.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/ListWorkloadDeploymentPatterns">REST API Reference for ListWorkloadDeploymentPatterns Operation</seealso>
+        </member>
+        <member name="M:Amazon.LaunchWizard.IAmazonLaunchWizard.ListWorkloadsAsync(Amazon.LaunchWizard.Model.ListWorkloadsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists the available workload names. You can use the <a href="https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_ListWorkloadDeploymentPatterns.html">ListWorkloadDeploymentPatterns</a>
+            operation to discover the available deployment patterns for a given workload.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListWorkloads service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListWorkloads service method, as returned by LaunchWizard.</returns>
+            <exception cref="T:Amazon.LaunchWizard.Model.InternalServerException">
+            An internal error has occurred. Retry your request, but if the problem persists, contact
+            us with details by posting a question on <a href="https://repost.aws/">re:Post</a>.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/ListWorkloads">REST API Reference for ListWorkloads Operation</seealso>
+        </member>
+        <member name="M:Amazon.LaunchWizard.IAmazonLaunchWizard.TagResourceAsync(Amazon.LaunchWizard.Model.TagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Adds the specified tags to the given resource.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the TagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the TagResource service method, as returned by LaunchWizard.</returns>
+            <exception cref="T:Amazon.LaunchWizard.Model.InternalServerException">
+            An internal error has occurred. Retry your request, but if the problem persists, contact
+            us with details by posting a question on <a href="https://repost.aws/">re:Post</a>.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ResourceNotFoundException">
+            The specified workload or deployment resource can't be found.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/TagResource">REST API Reference for TagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.LaunchWizard.IAmazonLaunchWizard.UntagResourceAsync(Amazon.LaunchWizard.Model.UntagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Removes the specified tags from the given resource.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UntagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UntagResource service method, as returned by LaunchWizard.</returns>
+            <exception cref="T:Amazon.LaunchWizard.Model.InternalServerException">
+            An internal error has occurred. Retry your request, but if the problem persists, contact
+            us with details by posting a question on <a href="https://repost.aws/">re:Post</a>.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ResourceNotFoundException">
+            The specified workload or deployment resource can't be found.
+            </exception>
+            <exception cref="T:Amazon.LaunchWizard.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/launch-wizard-2018-05-10/UntagResource">REST API Reference for UntagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.LaunchWizard.IAmazonLaunchWizard.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+    </members>
+</doc>

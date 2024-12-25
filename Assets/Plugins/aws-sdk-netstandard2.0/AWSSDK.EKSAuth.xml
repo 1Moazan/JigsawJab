@@ -1,0 +1,1480 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.EKSAuth</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.EKSAuth.AmazonEKSAuthConfig">
+            <summary>
+            Configuration for accessing Amazon EKSAuth service
+            </summary>
+        </member>
+        <member name="P:Amazon.EKSAuth.AmazonEKSAuthConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.EKSAuth.AmazonEKSAuthConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.EKSAuth.AmazonEKSAuthConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.EKSAuth.AmazonEKSAuthConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.EKSAuth.AmazonEKSAuthConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.EKSAuth.AmazonEKSAuthDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon EKSAuth service
+            </summary>
+        </member>
+        <member name="M:Amazon.EKSAuth.AmazonEKSAuthDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            EKSAuth
+            </summary>
+        </member>
+        <member name="P:Amazon.EKSAuth.AmazonEKSAuthDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.EKSAuth.AmazonEKSAuthDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.EKSAuth.AmazonEKSAuthDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.EKSAuth.AmazonEKSAuthDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.EKSAuth.AmazonEKSAuthDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.EKSAuth.AmazonEKSAuthDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.EKSAuth.Endpoints.EKSAuthEndpointParameters">
+            <summary>
+            Contains parameters used for resolving EKSAuth endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal EKSAuthEndpointProvider and EKSAuthEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.EKSAuth.Endpoints.EKSAuthEndpointParameters.#ctor">
+            <summary>
+            EKSAuthEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.EKSAuth.Endpoints.EKSAuthEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.EKSAuth.Endpoints.EKSAuthEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.EKSAuth.Endpoints.EKSAuthEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.EKSAuth.AmazonEKSAuthException">
+            <summary>
+             Common exception for the EKSAuth service.
+             </summary>
+        </member>
+        <member name="M:Amazon.EKSAuth.AmazonEKSAuthException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonEKSAuthException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.EKSAuth.AmazonEKSAuthException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonEKSAuthException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.EKSAuth.AmazonEKSAuthException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonEKSAuthException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.EKSAuth.AmazonEKSAuthException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonEKSAuthException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.EKSAuth.AmazonEKSAuthException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonEKSAuthException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.EKSAuth.Internal.AmazonEKSAuthEndpointProvider">
+            <summary>
+            Amazon EKSAuth endpoint provider.
+            Resolves endpoint for given set of EKSAuthEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.EKSAuth.Internal.AmazonEKSAuthEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for EKSAuthEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.EKSAuth.Internal.AmazonEKSAuthEndpointResolver">
+            <summary>
+            Amazon EKSAuth endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for EKSAuth service requests.
+            Collects values for EKSAuthEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses EKSAuthEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.EKSAuth.Internal.AmazonEKSAuthMetadata">
+            <summary>
+            Service metadata for  Amazon EKSAuth service
+            </summary>
+        </member>
+        <member name="P:Amazon.EKSAuth.Internal.AmazonEKSAuthMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.EKSAuth.Internal.AmazonEKSAuthMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.EKSAuth.Model.AccessDeniedException">
+            <summary>
+            You don't have permissions to perform the requested operation. The IAM principal making
+            the request must have at least one IAM permissions policy attached that grants the
+            required permissions. For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html">Access
+            management</a> in the <i>IAM User Guide</i>.
+            </summary>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.AccessDeniedException.#ctor(System.String)">
+            <summary>
+            Constructs a new AccessDeniedException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.AccessDeniedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.AccessDeniedException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.AccessDeniedException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.AccessDeniedException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.EKSAuth.Model.AssumedRoleUser">
+            <summary>
+            An object with the permanent IAM role identity and the temporary session name.
+            </summary>
+        </member>
+        <member name="P:Amazon.EKSAuth.Model.AssumedRoleUser.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+            The ARN of the IAM role that the temporary credentials authenticate to.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.EKSAuth.Model.AssumedRoleUser.AssumeRoleId">
+            <summary>
+            Gets and sets the property AssumeRoleId. 
+            <para>
+            The session name of the temporary session requested to STS. The value is a unique
+            identifier that contains the role ID, a colon (<c>:</c>), and the role session name
+            of the role that is being assumed. The role ID is generated by IAM when the role is
+            created. The role session name part of the value follows this format: <c>eks-<i>clustername</i>-<i>podname</i>-<i>random
+            UUID</i> </c> 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.EKSAuth.Model.AssumeRoleForPodIdentityRequest">
+            <summary>
+            Container for the parameters to the AssumeRoleForPodIdentity operation.
+            The Amazon EKS Auth API and the <c>AssumeRoleForPodIdentity</c> action are only used
+            by the EKS Pod Identity Agent.
+            
+             
+            <para>
+            We recommend that applications use the Amazon Web Services SDKs to connect to Amazon
+            Web Services services; if credentials from an EKS Pod Identity association are available
+            in the pod, the latest versions of the SDKs use them automatically.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.EKSAuth.Model.AssumeRoleForPodIdentityRequest.ClusterName">
+            <summary>
+            Gets and sets the property ClusterName. 
+            <para>
+            The name of the cluster for the request.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.EKSAuth.Model.AssumeRoleForPodIdentityRequest.Token">
+            <summary>
+            Gets and sets the property Token. 
+            <para>
+            The token of the Kubernetes service account for the pod.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.EKSAuth.Model.AssumeRoleForPodIdentityResponse">
+            <summary>
+            This is the response object from the AssumeRoleForPodIdentity operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.EKSAuth.Model.AssumeRoleForPodIdentityResponse.AssumedRoleUser">
+            <summary>
+            Gets and sets the property AssumedRoleUser. 
+            <para>
+            An object with the permanent IAM role identity and the temporary session name.
+            </para>
+             
+            <para>
+            The ARN of the IAM role that the temporary credentials authenticate to.
+            </para>
+             
+            <para>
+            The session name of the temporary session requested to STS. The value is a unique
+            identifier that contains the role ID, a colon (<c>:</c>), and the role session name
+            of the role that is being assumed. The role ID is generated by IAM when the role is
+            created. The role session name part of the value follows this format: <c>eks-<i>clustername</i>-<i>podname</i>-<i>random
+            UUID</i> </c> 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.EKSAuth.Model.AssumeRoleForPodIdentityResponse.Audience">
+            <summary>
+            Gets and sets the property Audience. 
+            <para>
+            The identity that is allowed to use the credentials. This value is always <c>pods.eks.amazonaws.com</c>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.EKSAuth.Model.AssumeRoleForPodIdentityResponse.Credentials">
+            <summary>
+            Gets and sets the property Credentials. 
+            <para>
+            The <i>Amazon Web Services Signature Version 4</i> type of temporary credentials.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.EKSAuth.Model.AssumeRoleForPodIdentityResponse.PodIdentityAssociation">
+            <summary>
+            Gets and sets the property PodIdentityAssociation. 
+            <para>
+            The Amazon Resource Name (ARN) and ID of the EKS Pod Identity association.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.EKSAuth.Model.AssumeRoleForPodIdentityResponse.Subject">
+            <summary>
+            Gets and sets the property Subject. 
+            <para>
+            The name of the Kubernetes service account inside the cluster to associate the IAM
+            credentials with.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.EKSAuth.Model.Credentials">
+            <summary>
+            The <i>Amazon Web Services Signature Version 4</i> type of temporary credentials.
+            </summary>
+        </member>
+        <member name="P:Amazon.EKSAuth.Model.Credentials.AccessKeyId">
+            <summary>
+            Gets and sets the property AccessKeyId. 
+            <para>
+            The access key ID that identifies the temporary security credentials.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.EKSAuth.Model.Credentials.Expiration">
+            <summary>
+            Gets and sets the property Expiration. 
+            <para>
+            The Unix epoch timestamp in seconds when the current credentials expire.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.EKSAuth.Model.Credentials.SecretAccessKey">
+            <summary>
+            Gets and sets the property SecretAccessKey. 
+            <para>
+            The secret access key that applications inside the pods use to sign requests.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.EKSAuth.Model.Credentials.SessionToken">
+            <summary>
+            Gets and sets the property SessionToken. 
+            <para>
+            The token that applications inside the pods must pass to any service API to use the
+            temporary credentials.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.EKSAuth.Model.ExpiredTokenException">
+            <summary>
+            The specified Kubernetes service account token is expired.
+            </summary>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.ExpiredTokenException.#ctor(System.String)">
+            <summary>
+            Constructs a new ExpiredTokenException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.ExpiredTokenException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ExpiredTokenException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.ExpiredTokenException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ExpiredTokenException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.ExpiredTokenException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ExpiredTokenException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.ExpiredTokenException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ExpiredTokenException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.EKSAuth.Model.InternalServerException">
+            <summary>
+            These errors are usually caused by a server-side issue.
+            </summary>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.InternalServerException.#ctor(System.String)">
+            <summary>
+            Constructs a new InternalServerException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.InternalServerException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.InternalServerException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.InternalServerException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.InternalServerException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.EKSAuth.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for AccessDeniedException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.EKSAuth.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.EKSAuth.Model.Internal.MarshallTransformations.AssumedRoleUserUnmarshaller">
+            <summary>
+            Response Unmarshaller for AssumedRoleUser Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.Internal.MarshallTransformations.AssumedRoleUserUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#EKSAuth#Model#AssumedRoleUser,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.Internal.MarshallTransformations.AssumedRoleUserUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.EKSAuth.Model.Internal.MarshallTransformations.AssumedRoleUserUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.EKSAuth.Model.Internal.MarshallTransformations.AssumeRoleForPodIdentityRequestMarshaller">
+            <summary>
+            AssumeRoleForPodIdentity Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.Internal.MarshallTransformations.AssumeRoleForPodIdentityRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.Internal.MarshallTransformations.AssumeRoleForPodIdentityRequestMarshaller.Marshall(Amazon.EKSAuth.Model.AssumeRoleForPodIdentityRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.EKSAuth.Model.Internal.MarshallTransformations.AssumeRoleForPodIdentityRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.EKSAuth.Model.Internal.MarshallTransformations.AssumeRoleForPodIdentityResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for AssumeRoleForPodIdentity operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.Internal.MarshallTransformations.AssumeRoleForPodIdentityResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.Internal.MarshallTransformations.AssumeRoleForPodIdentityResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.EKSAuth.Model.Internal.MarshallTransformations.AssumeRoleForPodIdentityResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.EKSAuth.Model.Internal.MarshallTransformations.CredentialsUnmarshaller">
+            <summary>
+            Response Unmarshaller for Credentials Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.Internal.MarshallTransformations.CredentialsUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#EKSAuth#Model#Credentials,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.Internal.MarshallTransformations.CredentialsUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.EKSAuth.Model.Internal.MarshallTransformations.CredentialsUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.EKSAuth.Model.Internal.MarshallTransformations.ExpiredTokenExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ExpiredTokenException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.Internal.MarshallTransformations.ExpiredTokenExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.Internal.MarshallTransformations.ExpiredTokenExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.EKSAuth.Model.Internal.MarshallTransformations.ExpiredTokenExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.EKSAuth.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InternalServerException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.EKSAuth.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.EKSAuth.Model.Internal.MarshallTransformations.InvalidParameterExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InvalidParameterException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.Internal.MarshallTransformations.InvalidParameterExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.Internal.MarshallTransformations.InvalidParameterExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.EKSAuth.Model.Internal.MarshallTransformations.InvalidParameterExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.EKSAuth.Model.Internal.MarshallTransformations.InvalidRequestExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InvalidRequestException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.Internal.MarshallTransformations.InvalidRequestExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.Internal.MarshallTransformations.InvalidRequestExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.EKSAuth.Model.Internal.MarshallTransformations.InvalidRequestExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.EKSAuth.Model.Internal.MarshallTransformations.InvalidTokenExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InvalidTokenException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.Internal.MarshallTransformations.InvalidTokenExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.Internal.MarshallTransformations.InvalidTokenExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.EKSAuth.Model.Internal.MarshallTransformations.InvalidTokenExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.EKSAuth.Model.Internal.MarshallTransformations.PodIdentityAssociationUnmarshaller">
+            <summary>
+            Response Unmarshaller for PodIdentityAssociation Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.Internal.MarshallTransformations.PodIdentityAssociationUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#EKSAuth#Model#PodIdentityAssociation,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.Internal.MarshallTransformations.PodIdentityAssociationUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.EKSAuth.Model.Internal.MarshallTransformations.PodIdentityAssociationUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.EKSAuth.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ResourceNotFoundException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.EKSAuth.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.EKSAuth.Model.Internal.MarshallTransformations.ServiceUnavailableExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ServiceUnavailableException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.Internal.MarshallTransformations.ServiceUnavailableExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.Internal.MarshallTransformations.ServiceUnavailableExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.EKSAuth.Model.Internal.MarshallTransformations.ServiceUnavailableExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.EKSAuth.Model.Internal.MarshallTransformations.SubjectUnmarshaller">
+            <summary>
+            Response Unmarshaller for Subject Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.Internal.MarshallTransformations.SubjectUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#EKSAuth#Model#Subject,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.Internal.MarshallTransformations.SubjectUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.EKSAuth.Model.Internal.MarshallTransformations.SubjectUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.EKSAuth.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ThrottlingException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.EKSAuth.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.EKSAuth.Model.InvalidParameterException">
+            <summary>
+            The specified parameter is invalid. Review the available parameters for the API request.
+            </summary>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.InvalidParameterException.#ctor(System.String)">
+            <summary>
+            Constructs a new InvalidParameterException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.InvalidParameterException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InvalidParameterException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.InvalidParameterException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InvalidParameterException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.InvalidParameterException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InvalidParameterException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.InvalidParameterException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InvalidParameterException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.EKSAuth.Model.InvalidRequestException">
+            <summary>
+            This exception is thrown if the request contains a semantic error. The precise meaning
+            will depend on the API, and will be documented in the error message.
+            </summary>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.InvalidRequestException.#ctor(System.String)">
+            <summary>
+            Constructs a new InvalidRequestException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.InvalidRequestException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InvalidRequestException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.InvalidRequestException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InvalidRequestException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.InvalidRequestException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InvalidRequestException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.InvalidRequestException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InvalidRequestException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.EKSAuth.Model.InvalidTokenException">
+            <summary>
+            The specified Kubernetes service account token is invalid.
+            </summary>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.InvalidTokenException.#ctor(System.String)">
+            <summary>
+            Constructs a new InvalidTokenException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.InvalidTokenException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InvalidTokenException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.InvalidTokenException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InvalidTokenException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.InvalidTokenException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InvalidTokenException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.InvalidTokenException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InvalidTokenException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.EKSAuth.Model.PodIdentityAssociation">
+            <summary>
+            Amazon EKS Pod Identity associations provide the ability to manage credentials for
+            your applications, similar to the way that Amazon EC2 instance profiles provide credentials
+            to Amazon EC2 instances.
+            </summary>
+        </member>
+        <member name="P:Amazon.EKSAuth.Model.PodIdentityAssociation.AssociationArn">
+            <summary>
+            Gets and sets the property AssociationArn. 
+            <para>
+            The Amazon Resource Name (ARN) of the EKS Pod Identity association.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.EKSAuth.Model.PodIdentityAssociation.AssociationId">
+            <summary>
+            Gets and sets the property AssociationId. 
+            <para>
+            The ID of the association.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.EKSAuth.Model.ResourceNotFoundException">
+            <summary>
+            The specified resource could not be found.
+            </summary>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.ResourceNotFoundException.#ctor(System.String)">
+            <summary>
+            Constructs a new ResourceNotFoundException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.ResourceNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.ResourceNotFoundException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.ResourceNotFoundException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.ResourceNotFoundException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.EKSAuth.Model.ServiceUnavailableException">
+            <summary>
+            The service is unavailable. Back off and retry the operation.
+            </summary>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.ServiceUnavailableException.#ctor(System.String)">
+            <summary>
+            Constructs a new ServiceUnavailableException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.ServiceUnavailableException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ServiceUnavailableException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.ServiceUnavailableException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ServiceUnavailableException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.ServiceUnavailableException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceUnavailableException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.ServiceUnavailableException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceUnavailableException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.EKSAuth.Model.Subject">
+            <summary>
+            An object containing the name of the Kubernetes service account inside the cluster
+            to associate the IAM credentials with.
+            </summary>
+        </member>
+        <member name="P:Amazon.EKSAuth.Model.Subject.Namespace">
+            <summary>
+            Gets and sets the property Namespace. 
+            <para>
+            The name of the Kubernetes namespace inside the cluster to create the association
+            in. The service account and the pods that use the service account must be in this
+            namespace.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.EKSAuth.Model.Subject.ServiceAccount">
+            <summary>
+            Gets and sets the property ServiceAccount. 
+            <para>
+            The name of the Kubernetes service account inside the cluster to associate the IAM
+            credentials with.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.EKSAuth.Model.ThrottlingException">
+            <summary>
+            The request was denied because your request rate is too high. Reduce the frequency
+            of requests.
+            </summary>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.ThrottlingException.#ctor(System.String)">
+            <summary>
+            Constructs a new ThrottlingException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.ThrottlingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.ThrottlingException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.ThrottlingException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.EKSAuth.Model.ThrottlingException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.EKSAuth.AmazonEKSAuthRequest">
+            <summary>
+            Base class for EKSAuth operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.EKSAuth.AmazonEKSAuthClient">
+             <summary>
+             <para>Implementation for accessing EKSAuth</para>
+            
+             The Amazon EKS Auth API and the <c>AssumeRoleForPodIdentity</c> action are only used
+             by the EKS Pod Identity Agent.
+             </summary>
+        </member>
+        <member name="M:Amazon.EKSAuth.AmazonEKSAuthClient.#ctor">
+             <summary>
+             Constructs AmazonEKSAuthClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.EKSAuth.AmazonEKSAuthClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonEKSAuthClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.EKSAuth.AmazonEKSAuthClient.#ctor(Amazon.EKSAuth.AmazonEKSAuthConfig)">
+             <summary>
+             Constructs AmazonEKSAuthClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonEKSAuthClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.EKSAuth.AmazonEKSAuthClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonEKSAuthClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.EKSAuth.AmazonEKSAuthClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonEKSAuthClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.EKSAuth.AmazonEKSAuthClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.EKSAuth.AmazonEKSAuthConfig)">
+            <summary>
+            Constructs AmazonEKSAuthClient with AWS Credentials and an
+            AmazonEKSAuthClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonEKSAuthClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.EKSAuth.AmazonEKSAuthClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonEKSAuthClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.EKSAuth.AmazonEKSAuthClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonEKSAuthClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.EKSAuth.AmazonEKSAuthClient.#ctor(System.String,System.String,Amazon.EKSAuth.AmazonEKSAuthConfig)">
+            <summary>
+            Constructs AmazonEKSAuthClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonEKSAuthClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonEKSAuthClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.EKSAuth.AmazonEKSAuthClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonEKSAuthClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.EKSAuth.AmazonEKSAuthClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonEKSAuthClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.EKSAuth.AmazonEKSAuthClient.#ctor(System.String,System.String,System.String,Amazon.EKSAuth.AmazonEKSAuthConfig)">
+            <summary>
+            Constructs AmazonEKSAuthClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonEKSAuthClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonEKSAuthClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.EKSAuth.AmazonEKSAuthClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.EKSAuth.AmazonEKSAuthClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.EKSAuth.AmazonEKSAuthClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.EKSAuth.AmazonEKSAuthClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.EKSAuth.AmazonEKSAuthClient.AssumeRoleForPodIdentityAsync(Amazon.EKSAuth.Model.AssumeRoleForPodIdentityRequest,System.Threading.CancellationToken)">
+            <summary>
+            The Amazon EKS Auth API and the <c>AssumeRoleForPodIdentity</c> action are only used
+            by the EKS Pod Identity Agent.
+            
+             
+            <para>
+            We recommend that applications use the Amazon Web Services SDKs to connect to Amazon
+            Web Services services; if credentials from an EKS Pod Identity association are available
+            in the pod, the latest versions of the SDKs use them automatically.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the AssumeRoleForPodIdentity service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the AssumeRoleForPodIdentity service method, as returned by EKSAuth.</returns>
+            <exception cref="T:Amazon.EKSAuth.Model.AccessDeniedException">
+            You don't have permissions to perform the requested operation. The IAM principal making
+            the request must have at least one IAM permissions policy attached that grants the
+            required permissions. For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html">Access
+            management</a> in the <i>IAM User Guide</i>.
+            </exception>
+            <exception cref="T:Amazon.EKSAuth.Model.ExpiredTokenException">
+            The specified Kubernetes service account token is expired.
+            </exception>
+            <exception cref="T:Amazon.EKSAuth.Model.InternalServerException">
+            These errors are usually caused by a server-side issue.
+            </exception>
+            <exception cref="T:Amazon.EKSAuth.Model.InvalidParameterException">
+            The specified parameter is invalid. Review the available parameters for the API request.
+            </exception>
+            <exception cref="T:Amazon.EKSAuth.Model.InvalidRequestException">
+            This exception is thrown if the request contains a semantic error. The precise meaning
+            will depend on the API, and will be documented in the error message.
+            </exception>
+            <exception cref="T:Amazon.EKSAuth.Model.InvalidTokenException">
+            The specified Kubernetes service account token is invalid.
+            </exception>
+            <exception cref="T:Amazon.EKSAuth.Model.ResourceNotFoundException">
+            The specified resource could not be found.
+            </exception>
+            <exception cref="T:Amazon.EKSAuth.Model.ServiceUnavailableException">
+            The service is unavailable. Back off and retry the operation.
+            </exception>
+            <exception cref="T:Amazon.EKSAuth.Model.ThrottlingException">
+            The request was denied because your request rate is too high. Reduce the frequency
+            of requests.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/eks-auth-2023-11-26/AssumeRoleForPodIdentity">REST API Reference for AssumeRoleForPodIdentity Operation</seealso>
+        </member>
+        <member name="M:Amazon.EKSAuth.AmazonEKSAuthClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.EKSAuth.IAmazonEKSAuth">
+             <summary>
+             <para>Interface for accessing EKSAuth</para>
+            
+             The Amazon EKS Auth API and the <c>AssumeRoleForPodIdentity</c> action are only used
+             by the EKS Pod Identity Agent.
+             </summary>
+        </member>
+        <member name="M:Amazon.EKSAuth.IAmazonEKSAuth.AssumeRoleForPodIdentityAsync(Amazon.EKSAuth.Model.AssumeRoleForPodIdentityRequest,System.Threading.CancellationToken)">
+            <summary>
+            The Amazon EKS Auth API and the <c>AssumeRoleForPodIdentity</c> action are only used
+            by the EKS Pod Identity Agent.
+            
+             
+            <para>
+            We recommend that applications use the Amazon Web Services SDKs to connect to Amazon
+            Web Services services; if credentials from an EKS Pod Identity association are available
+            in the pod, the latest versions of the SDKs use them automatically.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the AssumeRoleForPodIdentity service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the AssumeRoleForPodIdentity service method, as returned by EKSAuth.</returns>
+            <exception cref="T:Amazon.EKSAuth.Model.AccessDeniedException">
+            You don't have permissions to perform the requested operation. The IAM principal making
+            the request must have at least one IAM permissions policy attached that grants the
+            required permissions. For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html">Access
+            management</a> in the <i>IAM User Guide</i>.
+            </exception>
+            <exception cref="T:Amazon.EKSAuth.Model.ExpiredTokenException">
+            The specified Kubernetes service account token is expired.
+            </exception>
+            <exception cref="T:Amazon.EKSAuth.Model.InternalServerException">
+            These errors are usually caused by a server-side issue.
+            </exception>
+            <exception cref="T:Amazon.EKSAuth.Model.InvalidParameterException">
+            The specified parameter is invalid. Review the available parameters for the API request.
+            </exception>
+            <exception cref="T:Amazon.EKSAuth.Model.InvalidRequestException">
+            This exception is thrown if the request contains a semantic error. The precise meaning
+            will depend on the API, and will be documented in the error message.
+            </exception>
+            <exception cref="T:Amazon.EKSAuth.Model.InvalidTokenException">
+            The specified Kubernetes service account token is invalid.
+            </exception>
+            <exception cref="T:Amazon.EKSAuth.Model.ResourceNotFoundException">
+            The specified resource could not be found.
+            </exception>
+            <exception cref="T:Amazon.EKSAuth.Model.ServiceUnavailableException">
+            The service is unavailable. Back off and retry the operation.
+            </exception>
+            <exception cref="T:Amazon.EKSAuth.Model.ThrottlingException">
+            The request was denied because your request rate is too high. Reduce the frequency
+            of requests.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/eks-auth-2023-11-26/AssumeRoleForPodIdentity">REST API Reference for AssumeRoleForPodIdentity Operation</seealso>
+        </member>
+        <member name="M:Amazon.EKSAuth.IAmazonEKSAuth.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,2688 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.ControlCatalog</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.ControlCatalog.AmazonControlCatalogConfig">
+            <summary>
+            Configuration for accessing Amazon ControlCatalog service
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.AmazonControlCatalogConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlCatalog.AmazonControlCatalogConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.AmazonControlCatalogConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.AmazonControlCatalogConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.AmazonControlCatalogConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.AmazonControlCatalogDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon ControlCatalog service
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlCatalog.AmazonControlCatalogDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            ControlCatalog
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.AmazonControlCatalogDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.AmazonControlCatalogDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.AmazonControlCatalogDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.AmazonControlCatalogDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.AmazonControlCatalogDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.AmazonControlCatalogDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Endpoints.ControlCatalogEndpointParameters">
+            <summary>
+            Contains parameters used for resolving ControlCatalog endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal ControlCatalogEndpointProvider and ControlCatalogEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Endpoints.ControlCatalogEndpointParameters.#ctor">
+            <summary>
+            ControlCatalogEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Endpoints.ControlCatalogEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Endpoints.ControlCatalogEndpointParameters.UseDualStack">
+            <summary>
+            UseDualStack parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Endpoints.ControlCatalogEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Endpoints.ControlCatalogEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.AmazonControlCatalogException">
+            <summary>
+             Common exception for the ControlCatalog service.
+             </summary>
+        </member>
+        <member name="M:Amazon.ControlCatalog.AmazonControlCatalogException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonControlCatalogException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.ControlCatalog.AmazonControlCatalogException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonControlCatalogException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ControlCatalog.AmazonControlCatalogException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonControlCatalogException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ControlCatalog.AmazonControlCatalogException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonControlCatalogException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ControlCatalog.AmazonControlCatalogException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonControlCatalogException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Internal.AmazonControlCatalogEndpointProvider">
+            <summary>
+            Amazon ControlCatalog endpoint provider.
+            Resolves endpoint for given set of ControlCatalogEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Internal.AmazonControlCatalogEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for ControlCatalogEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Internal.AmazonControlCatalogEndpointResolver">
+            <summary>
+            Amazon ControlCatalog endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for ControlCatalog service requests.
+            Collects values for ControlCatalogEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses ControlCatalogEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Internal.AmazonControlCatalogMetadata">
+            <summary>
+            Service metadata for  Amazon ControlCatalog service
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Internal.AmazonControlCatalogMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Internal.AmazonControlCatalogMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.AccessDeniedException">
+            <summary>
+            You do not have sufficient access to perform this action.
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.AccessDeniedException.#ctor(System.String)">
+            <summary>
+            Constructs a new AccessDeniedException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.AccessDeniedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.AccessDeniedException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.AccessDeniedException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.AccessDeniedException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.AssociatedDomainSummary">
+            <summary>
+            A summary of the domain that a common control or an objective belongs to.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.AssociatedDomainSummary.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+            The Amazon Resource Name (ARN) of the related domain.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.AssociatedDomainSummary.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The name of the related domain.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.AssociatedObjectiveSummary">
+            <summary>
+            A summary of the objective that a common control supports.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.AssociatedObjectiveSummary.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+            The Amazon Resource Name (ARN) of the related objective.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.AssociatedObjectiveSummary.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The name of the related objective.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.CommonControlFilter">
+            <summary>
+            An optional filter that narrows the results to a specific objective.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.CommonControlFilter.Objectives">
+            <summary>
+            Gets and sets the property Objectives. 
+            <para>
+            The objective that's used as filter criteria.
+            </para>
+             
+            <para>
+            You can use this parameter to specify one objective ARN at a time. Passing multiple
+            ARNs in the <c>CommonControlFilter</c> isn’t currently supported.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.CommonControlSummary">
+            <summary>
+            A summary of metadata for a common control.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.CommonControlSummary.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+            The Amazon Resource Name (ARN) that identifies the common control.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.CommonControlSummary.CreateTime">
+            <summary>
+            Gets and sets the property CreateTime. 
+            <para>
+            The time when the common control was created.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.CommonControlSummary.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+            The description of the common control.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.CommonControlSummary.Domain">
+            <summary>
+            Gets and sets the property Domain. 
+            <para>
+            The domain that the common control belongs to.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.CommonControlSummary.LastUpdateTime">
+            <summary>
+            Gets and sets the property LastUpdateTime. 
+            <para>
+            The time when the common control was most recently updated.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.CommonControlSummary.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The name of the common control.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.CommonControlSummary.Objective">
+            <summary>
+            Gets and sets the property Objective. 
+            <para>
+            The objective that the common control belongs to.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.ControlParameter">
+            <summary>
+            Four types of control parameters are supported.
+            
+             <ul> <li> 
+            <para>
+             <b>AllowedRegions</b>: List of Amazon Web Services Regions exempted from the control.
+            Each string is expected to be an Amazon Web Services Region code. This parameter is
+            mandatory for the <b>OU Region deny</b> control, <b>CT.MULTISERVICE.PV.1</b>.
+            </para>
+             
+            <para>
+            Example: <c>["us-east-1","us-west-2"]</c> 
+            </para>
+             </li> <li> 
+            <para>
+             <b>ExemptedActions</b>: List of Amazon Web Services IAM actions exempted from the
+            control. Each string is expected to be an IAM action.
+            </para>
+             
+            <para>
+            Example: <c>["logs:DescribeLogGroups","logs:StartQuery","logs:GetQueryResults"]</c>
+            
+            </para>
+             </li> <li> 
+            <para>
+             <b>ExemptedPrincipalArns</b>: List of Amazon Web Services IAM principal ARNs exempted
+            from the control. Each string is expected to be an IAM principal that follows the
+            pattern <c>^arn:(aws|aws-us-gov):(iam|sts)::.+:.+$</c> 
+            </para>
+             
+            <para>
+            Example: <c>["arn:aws:iam::*:role/ReadOnly","arn:aws:sts::*:assumed-role/ReadOnly/*"]</c>
+            
+            </para>
+             </li> <li> 
+            <para>
+             <b>ExemptedResourceArns</b>: List of resource ARNs exempted from the control. Each
+            string is expected to be a resource ARN.
+            </para>
+             
+            <para>
+            Example: <c>["arn:aws:s3:::my-bucket-name"]</c> 
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ControlParameter.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The parameter name. This name is the parameter <c>key</c> when you call <a href="https://docs.aws.amazon.com/controltower/latest/APIReference/API_EnableControl.html">
+            <c>EnableControl</c> </a> or <a href="https://docs.aws.amazon.com/controltower/latest/APIReference/API_UpdateEnabledControl.html">
+            <c>UpdateEnabledControl</c> </a>.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.ControlSummary">
+            <summary>
+            Overview of information about a control.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ControlSummary.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+            The Amazon Resource Name (ARN) of the control.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ControlSummary.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+            A description of the control, as it may appear in the console. Describes the functionality
+            of the control.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ControlSummary.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The display name of the control.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.DomainResourceFilter">
+            <summary>
+            The domain resource that's being used as a filter.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.DomainResourceFilter.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+            The Amazon Resource Name (ARN) of the domain.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.DomainSummary">
+            <summary>
+            A summary of metadata for a domain.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.DomainSummary.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+            The Amazon Resource Name (ARN) that identifies the domain.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.DomainSummary.CreateTime">
+            <summary>
+            Gets and sets the property CreateTime. 
+            <para>
+            The time when the domain was created.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.DomainSummary.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+            The description of the domain.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.DomainSummary.LastUpdateTime">
+            <summary>
+            Gets and sets the property LastUpdateTime. 
+            <para>
+            The time when the domain was most recently updated.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.DomainSummary.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The name of the domain.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.GetControlRequest">
+            <summary>
+            Container for the parameters to the GetControl operation.
+            Returns details about a specific control, most notably a list of Amazon Web Services
+            Regions where this control is supported. Input a value for the <i>ControlArn</i> parameter,
+            in ARN form. <c>GetControl</c> accepts <i>controltower</i> or <i>controlcatalog</i>
+            control ARNs as input. Returns a <i>controlcatalog</i> ARN format.
+            
+             
+            <para>
+            In the API response, controls that have the value <c>GLOBAL</c> in the <c>Scope</c>
+            field do not show the <c>DeployableRegions</c> field, because it does not apply. Controls
+            that have the value <c>REGIONAL</c> in the <c>Scope</c> field return a value for the
+            <c>DeployableRegions</c> field, as shown in the example.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.GetControlRequest.ControlArn">
+            <summary>
+            Gets and sets the property ControlArn. 
+            <para>
+            The Amazon Resource Name (ARN) of the control. It has one of the following formats:
+            </para>
+             
+            <para>
+             <i>Global format</i> 
+            </para>
+             
+            <para>
+             <c>arn:{PARTITION}:controlcatalog:::control/{CONTROL_CATALOG_OPAQUE_ID}</c> 
+            </para>
+             
+            <para>
+             <i>Or Regional format</i> 
+            </para>
+             
+            <para>
+             <c>arn:{PARTITION}:controltower:{REGION}::control/{CONTROL_TOWER_OPAQUE_ID}</c> 
+            </para>
+             
+            <para>
+            Here is a more general pattern that covers Amazon Web Services Control Tower and Control
+            Catalog ARNs:
+            </para>
+             
+            <para>
+             <c>^arn:(aws(?:[-a-z]*)?):(controlcatalog|controltower):[a-zA-Z0-9-]*::control/[0-9a-zA-Z_\\-]+$</c>
+            
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.GetControlResponse">
+            <summary>
+            This is the response object from the GetControl operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.GetControlResponse.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+            The Amazon Resource Name (ARN) of the control.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.GetControlResponse.Behavior">
+            <summary>
+            Gets and sets the property Behavior. 
+            <para>
+            A term that identifies the control's functional behavior. One of <c>Preventive</c>,
+            <c>Detective</c>, <c>Proactive</c> 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.GetControlResponse.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+            A description of what the control does.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.GetControlResponse.Implementation">
+            <summary>
+            Gets and sets the property Implementation. 
+            <para>
+            Returns information about the control, as an <c>ImplementationDetails</c> object that
+            shows the underlying implementation type for a control.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.GetControlResponse.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The display name of the control.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.GetControlResponse.Parameters">
+            <summary>
+            Gets and sets the property Parameters. 
+            <para>
+            Returns an array of <c>ControlParameter</c> objects that specify the parameters a
+            control supports. An empty list is returned for controls that don’t support parameters.
+            
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.GetControlResponse.RegionConfiguration">
+            <summary>
+            Gets and sets the property RegionConfiguration.
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.ImplementationDetails">
+            <summary>
+            An object that describes the implementation type for a control.
+            
+             
+            <para>
+            Our <c>ImplementationDetails</c> <c>Type</c> format has three required segments:
+            </para>
+             <ul> <li> 
+            <para>
+             <c>SERVICE-PROVIDER::SERVICE-NAME::RESOURCE-NAME</c> 
+            </para>
+             </li> </ul> 
+            <para>
+            For example, <c>AWS::Config::ConfigRule</c> <b>or</b> <c>AWS::SecurityHub::SecurityControl</c>
+            resources have the format with three required segments.
+            </para>
+             
+            <para>
+            Our <c>ImplementationDetails</c> <c>Type</c> format has an optional fourth segment,
+            which is present for applicable implementation types. The format is as follows: 
+            </para>
+             <ul> <li> 
+            <para>
+             <c>SERVICE-PROVIDER::SERVICE-NAME::RESOURCE-NAME::RESOURCE-TYPE-DESCRIPTION</c> 
+            </para>
+             </li> </ul> 
+            <para>
+            For example, <c>AWS::Organizations::Policy::SERVICE_CONTROL_POLICY</c> <b>or</b> <c>AWS::CloudFormation::Type::HOOK</c>
+            have the format with four segments.
+            </para>
+             
+            <para>
+            Although the format is similar, the values for the <c>Type</c> field do not match
+            any Amazon Web Services CloudFormation values.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ImplementationDetails.Type">
+            <summary>
+            Gets and sets the property Type. 
+            <para>
+            A string that describes a control's implementation type.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.InternalServerException">
+            <summary>
+            An internal service error occurred during the processing of your request. Try again
+            later.
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.InternalServerException.#ctor(System.String)">
+            <summary>
+            Constructs a new InternalServerException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.InternalServerException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.InternalServerException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.InternalServerException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.InternalServerException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.InternalServerException.Retryable">
+            <summary>
+            Flag indicating if the exception is retryable and the associated retry
+            details. A null value indicates that the exception is not retryable.
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for AccessDeniedException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.AssociatedDomainSummaryUnmarshaller">
+            <summary>
+            Response Unmarshaller for AssociatedDomainSummary Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.AssociatedDomainSummaryUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ControlCatalog#Model#AssociatedDomainSummary,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.AssociatedDomainSummaryUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.AssociatedDomainSummaryUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.AssociatedObjectiveSummaryUnmarshaller">
+            <summary>
+            Response Unmarshaller for AssociatedObjectiveSummary Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.AssociatedObjectiveSummaryUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ControlCatalog#Model#AssociatedObjectiveSummary,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.AssociatedObjectiveSummaryUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.AssociatedObjectiveSummaryUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.CommonControlFilterMarshaller">
+            <summary>
+            CommonControlFilter Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.CommonControlFilterMarshaller.Marshall(Amazon.ControlCatalog.Model.CommonControlFilter,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.CommonControlFilterMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.CommonControlSummaryUnmarshaller">
+            <summary>
+            Response Unmarshaller for CommonControlSummary Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.CommonControlSummaryUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ControlCatalog#Model#CommonControlSummary,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.CommonControlSummaryUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.CommonControlSummaryUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ControlParameterUnmarshaller">
+            <summary>
+            Response Unmarshaller for ControlParameter Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ControlParameterUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ControlCatalog#Model#ControlParameter,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ControlParameterUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ControlParameterUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ControlSummaryUnmarshaller">
+            <summary>
+            Response Unmarshaller for ControlSummary Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ControlSummaryUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ControlCatalog#Model#ControlSummary,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ControlSummaryUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ControlSummaryUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.DomainResourceFilterMarshaller">
+            <summary>
+            DomainResourceFilter Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.DomainResourceFilterMarshaller.Marshall(Amazon.ControlCatalog.Model.DomainResourceFilter,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.DomainResourceFilterMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.DomainSummaryUnmarshaller">
+            <summary>
+            Response Unmarshaller for DomainSummary Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.DomainSummaryUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ControlCatalog#Model#DomainSummary,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.DomainSummaryUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.DomainSummaryUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.GetControlRequestMarshaller">
+            <summary>
+            GetControl Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.GetControlRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.GetControlRequestMarshaller.Marshall(Amazon.ControlCatalog.Model.GetControlRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.GetControlRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.GetControlResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetControl operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.GetControlResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.GetControlResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.GetControlResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ImplementationDetailsUnmarshaller">
+            <summary>
+            Response Unmarshaller for ImplementationDetails Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ImplementationDetailsUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ControlCatalog#Model#ImplementationDetails,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ImplementationDetailsUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ImplementationDetailsUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InternalServerException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ListCommonControlsRequestMarshaller">
+            <summary>
+            ListCommonControls Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ListCommonControlsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ListCommonControlsRequestMarshaller.Marshall(Amazon.ControlCatalog.Model.ListCommonControlsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ListCommonControlsRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ListCommonControlsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListCommonControls operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ListCommonControlsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ListCommonControlsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ListCommonControlsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ListControlsRequestMarshaller">
+            <summary>
+            ListControls Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ListControlsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ListControlsRequestMarshaller.Marshall(Amazon.ControlCatalog.Model.ListControlsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ListControlsRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ListControlsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListControls operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ListControlsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ListControlsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ListControlsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ListDomainsRequestMarshaller">
+            <summary>
+            ListDomains Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ListDomainsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ListDomainsRequestMarshaller.Marshall(Amazon.ControlCatalog.Model.ListDomainsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ListDomainsRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ListDomainsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListDomains operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ListDomainsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ListDomainsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ListDomainsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ListObjectivesRequestMarshaller">
+            <summary>
+            ListObjectives Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ListObjectivesRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ListObjectivesRequestMarshaller.Marshall(Amazon.ControlCatalog.Model.ListObjectivesRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ListObjectivesRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ListObjectivesResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListObjectives operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ListObjectivesResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ListObjectivesResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ListObjectivesResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ObjectiveFilterMarshaller">
+            <summary>
+            ObjectiveFilter Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ObjectiveFilterMarshaller.Marshall(Amazon.ControlCatalog.Model.ObjectiveFilter,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ObjectiveFilterMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ObjectiveResourceFilterMarshaller">
+            <summary>
+            ObjectiveResourceFilter Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ObjectiveResourceFilterMarshaller.Marshall(Amazon.ControlCatalog.Model.ObjectiveResourceFilter,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ObjectiveResourceFilterMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ObjectiveSummaryUnmarshaller">
+            <summary>
+            Response Unmarshaller for ObjectiveSummary Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ObjectiveSummaryUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ControlCatalog#Model#ObjectiveSummary,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ObjectiveSummaryUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ObjectiveSummaryUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.RegionConfigurationUnmarshaller">
+            <summary>
+            Response Unmarshaller for RegionConfiguration Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.RegionConfigurationUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ControlCatalog#Model#RegionConfiguration,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.RegionConfigurationUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.RegionConfigurationUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ResourceNotFoundException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ThrottlingException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.ListCommonControlsRequest">
+            <summary>
+            Container for the parameters to the ListCommonControls operation.
+            Returns a paginated list of common controls from the Amazon Web Services Control Catalog.
+            
+             
+            <para>
+            You can apply an optional filter to see common controls that have a specific objective.
+            If you don’t provide a filter, the operation returns all common controls. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ListCommonControlsRequest.CommonControlFilter">
+            <summary>
+            Gets and sets the property CommonControlFilter. 
+            <para>
+            An optional filter that narrows the results to a specific objective.
+            </para>
+             
+            <para>
+            This filter allows you to specify one objective ARN at a time. Passing multiple ARNs
+            in the <c>CommonControlFilter</c> isn’t currently supported.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ListCommonControlsRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            The maximum number of results on a page or for an API request call.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ListCommonControlsRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The pagination token that's used to fetch the next set of results.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.ListCommonControlsResponse">
+            <summary>
+            This is the response object from the ListCommonControls operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ListCommonControlsResponse.CommonControls">
+            <summary>
+            Gets and sets the property CommonControls. 
+            <para>
+            The list of common controls that the <c>ListCommonControls</c> API returns.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ListCommonControlsResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The pagination token that's used to fetch the next set of results.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.ListControlsRequest">
+            <summary>
+            Container for the parameters to the ListControls operation.
+            Returns a paginated list of all available controls in the Amazon Web Services Control
+            Catalog library. Allows you to discover available controls. The list of controls is
+            given as structures of type <i>controlSummary</i>. The ARN is returned in the global
+            <i>controlcatalog</i> format, as shown in the examples.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ListControlsRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            The maximum number of results on a page or for an API request call.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ListControlsRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The pagination token that's used to fetch the next set of results.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.ListControlsResponse">
+            <summary>
+            This is the response object from the ListControls operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ListControlsResponse.Controls">
+            <summary>
+            Gets and sets the property Controls. 
+            <para>
+            Returns a list of controls, given as structures of type <i>controlSummary</i>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ListControlsResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The pagination token that's used to fetch the next set of results.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.ListDomainsRequest">
+            <summary>
+            Container for the parameters to the ListDomains operation.
+            Returns a paginated list of domains from the Amazon Web Services Control Catalog.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ListDomainsRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            The maximum number of results on a page or for an API request call.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ListDomainsRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The pagination token that's used to fetch the next set of results.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.ListDomainsResponse">
+            <summary>
+            This is the response object from the ListDomains operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ListDomainsResponse.Domains">
+            <summary>
+            Gets and sets the property Domains. 
+            <para>
+            The list of domains that the <c>ListDomains</c> API returns.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ListDomainsResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The pagination token that's used to fetch the next set of results.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.ListObjectivesRequest">
+            <summary>
+            Container for the parameters to the ListObjectives operation.
+            Returns a paginated list of objectives from the Amazon Web Services Control Catalog.
+            
+             
+            <para>
+            You can apply an optional filter to see the objectives that belong to a specific domain.
+            If you don’t provide a filter, the operation returns all objectives. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ListObjectivesRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            The maximum number of results on a page or for an API request call.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ListObjectivesRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The pagination token that's used to fetch the next set of results.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ListObjectivesRequest.ObjectiveFilter">
+            <summary>
+            Gets and sets the property ObjectiveFilter. 
+            <para>
+            An optional filter that narrows the results to a specific domain.
+            </para>
+             
+            <para>
+            This filter allows you to specify one domain ARN at a time. Passing multiple ARNs
+            in the <c>ObjectiveFilter</c> isn’t currently supported.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.ListObjectivesResponse">
+            <summary>
+            This is the response object from the ListObjectives operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ListObjectivesResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The pagination token that's used to fetch the next set of results.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ListObjectivesResponse.Objectives">
+            <summary>
+            Gets and sets the property Objectives. 
+            <para>
+            The list of objectives that the <c>ListObjectives</c> API returns.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.ObjectiveFilter">
+            <summary>
+            An optional filter that narrows the list of objectives to a specific domain.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ObjectiveFilter.Domains">
+            <summary>
+            Gets and sets the property Domains. 
+            <para>
+            The domain that's used as filter criteria.
+            </para>
+             
+            <para>
+            You can use this parameter to specify one domain ARN at a time. Passing multiple ARNs
+            in the <c>ObjectiveFilter</c> isn’t currently supported.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.ObjectiveResourceFilter">
+            <summary>
+            The objective resource that's being used as a filter.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ObjectiveResourceFilter.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+            The Amazon Resource Name (ARN) of the objective.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.ObjectiveSummary">
+            <summary>
+            A summary of metadata for an objective.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ObjectiveSummary.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+            The Amazon Resource Name (ARN) that identifies the objective.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ObjectiveSummary.CreateTime">
+            <summary>
+            Gets and sets the property CreateTime. 
+            <para>
+            The time when the objective was created.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ObjectiveSummary.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+            The description of the objective.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ObjectiveSummary.Domain">
+            <summary>
+            Gets and sets the property Domain. 
+            <para>
+            The domain that the objective belongs to.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ObjectiveSummary.LastUpdateTime">
+            <summary>
+            Gets and sets the property LastUpdateTime. 
+            <para>
+            The time when the objective was most recently updated.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ObjectiveSummary.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The name of the objective.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.RegionConfiguration">
+            <summary>
+            Returns information about the control, including the scope of the control, if enabled,
+            and the Regions in which the control currently is available for deployment. For more
+            information about scope, see <a href="https://docs.aws.amazon.com/whitepapers/latest/aws-fault-isolation-boundaries/global-services.html">Global
+            services</a>.
+            
+             
+            <para>
+            If you are applying controls through an Amazon Web Services Control Tower landing
+            zone environment, remember that the values returned in the <c>RegionConfiguration</c>
+            API operation are not related to the governed Regions in your landing zone. For example,
+            if you are governing Regions <c>A</c>,<c>B</c>,and <c>C</c> while the control is available
+            in Regions <c>A</c>, <c>B</c>, C<c>,</c> and <c>D</c>, you'd see a response with <c>DeployableRegions</c>
+            of <c>A</c>, <c>B</c>, <c>C</c>, and <c>D</c> for a control with <c>REGIONAL</c> scope,
+            even though you may not intend to deploy the control in Region <c>D</c>, because you
+            do not govern it through your landing zone.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.RegionConfiguration.DeployableRegions">
+            <summary>
+            Gets and sets the property DeployableRegions. 
+            <para>
+            Regions in which the control is available to be deployed.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.RegionConfiguration.Scope">
+            <summary>
+            Gets and sets the property Scope. 
+            <para>
+            The coverage of the control, if deployed. Scope is an enumerated type, with value
+            <c>Regional</c>, or <c>Global</c>. A control with Global scope is effective in all
+            Amazon Web Services Regions, regardless of the Region from which it is enabled, or
+            to which it is deployed. A control implemented by an SCP is usually Global in scope.
+            A control with Regional scope has operations that are restricted specifically to the
+            Region from which it is enabled and to which it is deployed. Controls implemented
+            by Config rules and CloudFormation hooks usually are Regional in scope. Security Hub
+            controls usually are Regional in scope.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.ResourceNotFoundException">
+            <summary>
+            The requested resource does not exist.
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.ResourceNotFoundException.#ctor(System.String)">
+            <summary>
+            Constructs a new ResourceNotFoundException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.ResourceNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.ResourceNotFoundException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.ResourceNotFoundException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.ResourceNotFoundException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.ThrottlingException">
+            <summary>
+            The request was denied due to request throttling.
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.ThrottlingException.#ctor(System.String)">
+            <summary>
+            Constructs a new ThrottlingException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.ThrottlingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.ThrottlingException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.ThrottlingException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.ThrottlingException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ThrottlingException.Retryable">
+            <summary>
+            Flag indicating if the exception is retryable and the associated retry
+            details. A null value indicates that the exception is not retryable.
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.ValidationException">
+            <summary>
+            The request has invalid or missing parameters.
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.ValidationException.#ctor(System.String)">
+            <summary>
+            Constructs a new ValidationException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.ValidationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.ValidationException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.ValidationException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.ValidationException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.ControlCatalogPaginatorFactory">
+             <summary>
+             Paginators for the ControlCatalog service
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.ControlCatalogPaginatorFactory.ListCommonControls(Amazon.ControlCatalog.Model.ListCommonControlsRequest)">
+             <summary>
+             Paginator for ListCommonControls operation
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.ControlCatalogPaginatorFactory.ListControls(Amazon.ControlCatalog.Model.ListControlsRequest)">
+             <summary>
+             Paginator for ListControls operation
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.ControlCatalogPaginatorFactory.ListDomains(Amazon.ControlCatalog.Model.ListDomainsRequest)">
+             <summary>
+             Paginator for ListDomains operation
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.ControlCatalogPaginatorFactory.ListObjectives(Amazon.ControlCatalog.Model.ListObjectivesRequest)">
+             <summary>
+             Paginator for ListObjectives operation
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.IControlCatalogPaginatorFactory">
+             <summary>
+             Paginators for the ControlCatalog service
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.IControlCatalogPaginatorFactory.ListCommonControls(Amazon.ControlCatalog.Model.ListCommonControlsRequest)">
+             <summary>
+             Paginator for ListCommonControls operation
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.IControlCatalogPaginatorFactory.ListControls(Amazon.ControlCatalog.Model.ListControlsRequest)">
+             <summary>
+             Paginator for ListControls operation
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.IControlCatalogPaginatorFactory.ListDomains(Amazon.ControlCatalog.Model.ListDomainsRequest)">
+             <summary>
+             Paginator for ListDomains operation
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlCatalog.Model.IControlCatalogPaginatorFactory.ListObjectives(Amazon.ControlCatalog.Model.ListObjectivesRequest)">
+             <summary>
+             Paginator for ListObjectives operation
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.IListCommonControlsPaginator">
+             <summary>
+             Paginator for the ListCommonControls operation
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.IListCommonControlsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.IListCommonControlsPaginator.CommonControls">
+            <summary>
+            Enumerable containing all of the CommonControls
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.IListControlsPaginator">
+             <summary>
+             Paginator for the ListControls operation
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.IListControlsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.IListControlsPaginator.Controls">
+            <summary>
+            Enumerable containing all of the Controls
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.IListDomainsPaginator">
+             <summary>
+             Paginator for the ListDomains operation
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.IListDomainsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.IListDomainsPaginator.Domains">
+            <summary>
+            Enumerable containing all of the Domains
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.IListObjectivesPaginator">
+             <summary>
+             Paginator for the ListObjectives operation
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.IListObjectivesPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.IListObjectivesPaginator.Objectives">
+            <summary>
+            Enumerable containing all of the Objectives
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.ListCommonControlsPaginator">
+            <summary>
+            Base class for ListCommonControls paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ListCommonControlsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ListCommonControlsPaginator.CommonControls">
+            <summary>
+            Enumerable containing all of the CommonControls
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.ListControlsPaginator">
+            <summary>
+            Base class for ListControls paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ListControlsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ListControlsPaginator.Controls">
+            <summary>
+            Enumerable containing all of the Controls
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.ListDomainsPaginator">
+            <summary>
+            Base class for ListDomains paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ListDomainsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ListDomainsPaginator.Domains">
+            <summary>
+            Enumerable containing all of the Domains
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.Model.ListObjectivesPaginator">
+            <summary>
+            Base class for ListObjectives paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ListObjectivesPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.Model.ListObjectivesPaginator.Objectives">
+            <summary>
+            Enumerable containing all of the Objectives
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.AmazonControlCatalogRequest">
+            <summary>
+            Base class for ControlCatalog operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlCatalog.ControlBehavior">
+            <summary>
+            Constants used for properties of type ControlBehavior.
+            </summary>
+        </member>
+        <member name="F:Amazon.ControlCatalog.ControlBehavior.DETECTIVE">
+            <summary>
+            Constant DETECTIVE for ControlBehavior
+            </summary>
+        </member>
+        <member name="F:Amazon.ControlCatalog.ControlBehavior.PREVENTIVE">
+            <summary>
+            Constant PREVENTIVE for ControlBehavior
+            </summary>
+        </member>
+        <member name="F:Amazon.ControlCatalog.ControlBehavior.PROACTIVE">
+            <summary>
+            Constant PROACTIVE for ControlBehavior
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlCatalog.ControlBehavior.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlCatalog.ControlBehavior.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.ControlCatalog.ControlBehavior.op_Implicit(System.String)~Amazon.ControlCatalog.ControlBehavior">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ControlCatalog.ControlScope">
+            <summary>
+            Constants used for properties of type ControlScope.
+            </summary>
+        </member>
+        <member name="F:Amazon.ControlCatalog.ControlScope.GLOBAL">
+            <summary>
+            Constant GLOBAL for ControlScope
+            </summary>
+        </member>
+        <member name="F:Amazon.ControlCatalog.ControlScope.REGIONAL">
+            <summary>
+            Constant REGIONAL for ControlScope
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlCatalog.ControlScope.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlCatalog.ControlScope.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.ControlCatalog.ControlScope.op_Implicit(System.String)~Amazon.ControlCatalog.ControlScope">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ControlCatalog.AmazonControlCatalogClient">
+             <summary>
+             <para>Implementation for accessing ControlCatalog</para>
+            
+             Welcome to the Amazon Web Services Control Catalog API reference. This guide is for
+             developers who need detailed information about how to programmatically identify and
+             filter the common controls and related metadata that are available to Amazon Web Services
+             customers. This API reference provides descriptions, syntax, and usage examples for
+             each of the actions and data types that are supported by Amazon Web Services Control
+             Catalog. 
+             
+              
+             <para>
+             Use the following links to get started with the Amazon Web Services Control Catalog
+             API:
+             </para>
+              <ul> <li> 
+             <para>
+              <a href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/API_Operations.html">Actions</a>:
+             An alphabetical list of all Control Catalog API operations.
+             </para>
+              </li> <li> 
+             <para>
+              <a href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/API_Types.html">Data
+             types</a>: An alphabetical list of all Control Catalog data types.
+             </para>
+              </li> <li> 
+             <para>
+              <a href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/CommonParameters.html">Common
+             parameters</a>: Parameters that all operations can use.
+             </para>
+              </li> <li> 
+             <para>
+              <a href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/CommonErrors.html">Common
+             errors</a>: Client and server errors that all operations can return.
+             </para>
+              </li> </ul>
+             </summary>
+        </member>
+        <member name="M:Amazon.ControlCatalog.AmazonControlCatalogClient.#ctor">
+             <summary>
+             Constructs AmazonControlCatalogClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.ControlCatalog.AmazonControlCatalogClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonControlCatalogClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.ControlCatalog.AmazonControlCatalogClient.#ctor(Amazon.ControlCatalog.AmazonControlCatalogConfig)">
+             <summary>
+             Constructs AmazonControlCatalogClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonControlCatalogClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.ControlCatalog.AmazonControlCatalogClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonControlCatalogClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.ControlCatalog.AmazonControlCatalogClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonControlCatalogClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.ControlCatalog.AmazonControlCatalogClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.ControlCatalog.AmazonControlCatalogConfig)">
+            <summary>
+            Constructs AmazonControlCatalogClient with AWS Credentials and an
+            AmazonControlCatalogClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonControlCatalogClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.ControlCatalog.AmazonControlCatalogClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonControlCatalogClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.ControlCatalog.AmazonControlCatalogClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonControlCatalogClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.ControlCatalog.AmazonControlCatalogClient.#ctor(System.String,System.String,Amazon.ControlCatalog.AmazonControlCatalogConfig)">
+            <summary>
+            Constructs AmazonControlCatalogClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonControlCatalogClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonControlCatalogClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.ControlCatalog.AmazonControlCatalogClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonControlCatalogClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.ControlCatalog.AmazonControlCatalogClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonControlCatalogClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.ControlCatalog.AmazonControlCatalogClient.#ctor(System.String,System.String,System.String,Amazon.ControlCatalog.AmazonControlCatalogConfig)">
+            <summary>
+            Constructs AmazonControlCatalogClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonControlCatalogClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonControlCatalogClient Configuration Object</param>
+        </member>
+        <member name="P:Amazon.ControlCatalog.AmazonControlCatalogClient.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlCatalog.AmazonControlCatalogClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlCatalog.AmazonControlCatalogClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.ControlCatalog.AmazonControlCatalogClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlCatalog.AmazonControlCatalogClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlCatalog.AmazonControlCatalogClient.GetControlAsync(Amazon.ControlCatalog.Model.GetControlRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns details about a specific control, most notably a list of Amazon Web Services
+            Regions where this control is supported. Input a value for the <i>ControlArn</i> parameter,
+            in ARN form. <c>GetControl</c> accepts <i>controltower</i> or <i>controlcatalog</i>
+            control ARNs as input. Returns a <i>controlcatalog</i> ARN format.
+            
+             
+            <para>
+            In the API response, controls that have the value <c>GLOBAL</c> in the <c>Scope</c>
+            field do not show the <c>DeployableRegions</c> field, because it does not apply. Controls
+            that have the value <c>REGIONAL</c> in the <c>Scope</c> field return a value for the
+            <c>DeployableRegions</c> field, as shown in the example.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetControl service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetControl service method, as returned by ControlCatalog.</returns>
+            <exception cref="T:Amazon.ControlCatalog.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.ControlCatalog.Model.InternalServerException">
+            An internal service error occurred during the processing of your request. Try again
+            later.
+            </exception>
+            <exception cref="T:Amazon.ControlCatalog.Model.ResourceNotFoundException">
+            The requested resource does not exist.
+            </exception>
+            <exception cref="T:Amazon.ControlCatalog.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.ControlCatalog.Model.ValidationException">
+            The request has invalid or missing parameters.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/controlcatalog-2018-05-10/GetControl">REST API Reference for GetControl Operation</seealso>
+        </member>
+        <member name="M:Amazon.ControlCatalog.AmazonControlCatalogClient.ListCommonControlsAsync(Amazon.ControlCatalog.Model.ListCommonControlsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns a paginated list of common controls from the Amazon Web Services Control Catalog.
+            
+             
+            <para>
+            You can apply an optional filter to see common controls that have a specific objective.
+            If you don’t provide a filter, the operation returns all common controls. 
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListCommonControls service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListCommonControls service method, as returned by ControlCatalog.</returns>
+            <exception cref="T:Amazon.ControlCatalog.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.ControlCatalog.Model.InternalServerException">
+            An internal service error occurred during the processing of your request. Try again
+            later.
+            </exception>
+            <exception cref="T:Amazon.ControlCatalog.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.ControlCatalog.Model.ValidationException">
+            The request has invalid or missing parameters.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/controlcatalog-2018-05-10/ListCommonControls">REST API Reference for ListCommonControls Operation</seealso>
+        </member>
+        <member name="M:Amazon.ControlCatalog.AmazonControlCatalogClient.ListControlsAsync(Amazon.ControlCatalog.Model.ListControlsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns a paginated list of all available controls in the Amazon Web Services Control
+            Catalog library. Allows you to discover available controls. The list of controls is
+            given as structures of type <i>controlSummary</i>. The ARN is returned in the global
+            <i>controlcatalog</i> format, as shown in the examples.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListControls service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListControls service method, as returned by ControlCatalog.</returns>
+            <exception cref="T:Amazon.ControlCatalog.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.ControlCatalog.Model.InternalServerException">
+            An internal service error occurred during the processing of your request. Try again
+            later.
+            </exception>
+            <exception cref="T:Amazon.ControlCatalog.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.ControlCatalog.Model.ValidationException">
+            The request has invalid or missing parameters.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/controlcatalog-2018-05-10/ListControls">REST API Reference for ListControls Operation</seealso>
+        </member>
+        <member name="M:Amazon.ControlCatalog.AmazonControlCatalogClient.ListDomainsAsync(Amazon.ControlCatalog.Model.ListDomainsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns a paginated list of domains from the Amazon Web Services Control Catalog.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListDomains service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListDomains service method, as returned by ControlCatalog.</returns>
+            <exception cref="T:Amazon.ControlCatalog.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.ControlCatalog.Model.InternalServerException">
+            An internal service error occurred during the processing of your request. Try again
+            later.
+            </exception>
+            <exception cref="T:Amazon.ControlCatalog.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.ControlCatalog.Model.ValidationException">
+            The request has invalid or missing parameters.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/controlcatalog-2018-05-10/ListDomains">REST API Reference for ListDomains Operation</seealso>
+        </member>
+        <member name="M:Amazon.ControlCatalog.AmazonControlCatalogClient.ListObjectivesAsync(Amazon.ControlCatalog.Model.ListObjectivesRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns a paginated list of objectives from the Amazon Web Services Control Catalog.
+            
+             
+            <para>
+            You can apply an optional filter to see the objectives that belong to a specific domain.
+            If you don’t provide a filter, the operation returns all objectives. 
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListObjectives service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListObjectives service method, as returned by ControlCatalog.</returns>
+            <exception cref="T:Amazon.ControlCatalog.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.ControlCatalog.Model.InternalServerException">
+            An internal service error occurred during the processing of your request. Try again
+            later.
+            </exception>
+            <exception cref="T:Amazon.ControlCatalog.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.ControlCatalog.Model.ValidationException">
+            The request has invalid or missing parameters.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/controlcatalog-2018-05-10/ListObjectives">REST API Reference for ListObjectives Operation</seealso>
+        </member>
+        <member name="M:Amazon.ControlCatalog.AmazonControlCatalogClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.ControlCatalog.IAmazonControlCatalog">
+             <summary>
+             <para>Interface for accessing ControlCatalog</para>
+            
+             Welcome to the Amazon Web Services Control Catalog API reference. This guide is for
+             developers who need detailed information about how to programmatically identify and
+             filter the common controls and related metadata that are available to Amazon Web Services
+             customers. This API reference provides descriptions, syntax, and usage examples for
+             each of the actions and data types that are supported by Amazon Web Services Control
+             Catalog. 
+             
+              
+             <para>
+             Use the following links to get started with the Amazon Web Services Control Catalog
+             API:
+             </para>
+              <ul> <li> 
+             <para>
+              <a href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/API_Operations.html">Actions</a>:
+             An alphabetical list of all Control Catalog API operations.
+             </para>
+              </li> <li> 
+             <para>
+              <a href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/API_Types.html">Data
+             types</a>: An alphabetical list of all Control Catalog data types.
+             </para>
+              </li> <li> 
+             <para>
+              <a href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/CommonParameters.html">Common
+             parameters</a>: Parameters that all operations can use.
+             </para>
+              </li> <li> 
+             <para>
+              <a href="https://docs.aws.amazon.com/controlcatalog/latest/APIReference/CommonErrors.html">Common
+             errors</a>: Client and server errors that all operations can return.
+             </para>
+              </li> </ul>
+             </summary>
+        </member>
+        <member name="P:Amazon.ControlCatalog.IAmazonControlCatalog.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlCatalog.IAmazonControlCatalog.GetControlAsync(Amazon.ControlCatalog.Model.GetControlRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns details about a specific control, most notably a list of Amazon Web Services
+            Regions where this control is supported. Input a value for the <i>ControlArn</i> parameter,
+            in ARN form. <c>GetControl</c> accepts <i>controltower</i> or <i>controlcatalog</i>
+            control ARNs as input. Returns a <i>controlcatalog</i> ARN format.
+            
+             
+            <para>
+            In the API response, controls that have the value <c>GLOBAL</c> in the <c>Scope</c>
+            field do not show the <c>DeployableRegions</c> field, because it does not apply. Controls
+            that have the value <c>REGIONAL</c> in the <c>Scope</c> field return a value for the
+            <c>DeployableRegions</c> field, as shown in the example.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetControl service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetControl service method, as returned by ControlCatalog.</returns>
+            <exception cref="T:Amazon.ControlCatalog.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.ControlCatalog.Model.InternalServerException">
+            An internal service error occurred during the processing of your request. Try again
+            later.
+            </exception>
+            <exception cref="T:Amazon.ControlCatalog.Model.ResourceNotFoundException">
+            The requested resource does not exist.
+            </exception>
+            <exception cref="T:Amazon.ControlCatalog.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.ControlCatalog.Model.ValidationException">
+            The request has invalid or missing parameters.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/controlcatalog-2018-05-10/GetControl">REST API Reference for GetControl Operation</seealso>
+        </member>
+        <member name="M:Amazon.ControlCatalog.IAmazonControlCatalog.ListCommonControlsAsync(Amazon.ControlCatalog.Model.ListCommonControlsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns a paginated list of common controls from the Amazon Web Services Control Catalog.
+            
+             
+            <para>
+            You can apply an optional filter to see common controls that have a specific objective.
+            If you don’t provide a filter, the operation returns all common controls. 
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListCommonControls service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListCommonControls service method, as returned by ControlCatalog.</returns>
+            <exception cref="T:Amazon.ControlCatalog.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.ControlCatalog.Model.InternalServerException">
+            An internal service error occurred during the processing of your request. Try again
+            later.
+            </exception>
+            <exception cref="T:Amazon.ControlCatalog.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.ControlCatalog.Model.ValidationException">
+            The request has invalid or missing parameters.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/controlcatalog-2018-05-10/ListCommonControls">REST API Reference for ListCommonControls Operation</seealso>
+        </member>
+        <member name="M:Amazon.ControlCatalog.IAmazonControlCatalog.ListControlsAsync(Amazon.ControlCatalog.Model.ListControlsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns a paginated list of all available controls in the Amazon Web Services Control
+            Catalog library. Allows you to discover available controls. The list of controls is
+            given as structures of type <i>controlSummary</i>. The ARN is returned in the global
+            <i>controlcatalog</i> format, as shown in the examples.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListControls service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListControls service method, as returned by ControlCatalog.</returns>
+            <exception cref="T:Amazon.ControlCatalog.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.ControlCatalog.Model.InternalServerException">
+            An internal service error occurred during the processing of your request. Try again
+            later.
+            </exception>
+            <exception cref="T:Amazon.ControlCatalog.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.ControlCatalog.Model.ValidationException">
+            The request has invalid or missing parameters.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/controlcatalog-2018-05-10/ListControls">REST API Reference for ListControls Operation</seealso>
+        </member>
+        <member name="M:Amazon.ControlCatalog.IAmazonControlCatalog.ListDomainsAsync(Amazon.ControlCatalog.Model.ListDomainsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns a paginated list of domains from the Amazon Web Services Control Catalog.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListDomains service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListDomains service method, as returned by ControlCatalog.</returns>
+            <exception cref="T:Amazon.ControlCatalog.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.ControlCatalog.Model.InternalServerException">
+            An internal service error occurred during the processing of your request. Try again
+            later.
+            </exception>
+            <exception cref="T:Amazon.ControlCatalog.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.ControlCatalog.Model.ValidationException">
+            The request has invalid or missing parameters.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/controlcatalog-2018-05-10/ListDomains">REST API Reference for ListDomains Operation</seealso>
+        </member>
+        <member name="M:Amazon.ControlCatalog.IAmazonControlCatalog.ListObjectivesAsync(Amazon.ControlCatalog.Model.ListObjectivesRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns a paginated list of objectives from the Amazon Web Services Control Catalog.
+            
+             
+            <para>
+            You can apply an optional filter to see the objectives that belong to a specific domain.
+            If you don’t provide a filter, the operation returns all objectives. 
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListObjectives service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListObjectives service method, as returned by ControlCatalog.</returns>
+            <exception cref="T:Amazon.ControlCatalog.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.ControlCatalog.Model.InternalServerException">
+            An internal service error occurred during the processing of your request. Try again
+            later.
+            </exception>
+            <exception cref="T:Amazon.ControlCatalog.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.ControlCatalog.Model.ValidationException">
+            The request has invalid or missing parameters.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/controlcatalog-2018-05-10/ListObjectives">REST API Reference for ListObjectives Operation</seealso>
+        </member>
+        <member name="M:Amazon.ControlCatalog.IAmazonControlCatalog.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+    </members>
+</doc>

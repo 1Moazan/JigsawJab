@@ -1,13 +1,5 @@
 {
   "dependencies": {
-    "com.amazonaws.gamelift": {
-      "version": "file:/Users/asifcom/Downloads/amazon-gamelift-plugin-unity-release-2.1.0/com.amazonaws.gamelift-2.1.0.tgz",
-      "depth": 0,
-      "source": "local-tarball",
-      "dependencies": {
-        "com.unity.nuget.newtonsoft-json": "2.0.0"
-      }
-    },
     "com.amazonaws.gameliftserver.sdk": {
       "version": "file:/Users/asifcom/Downloads/GameLift-CSharp-ServerSDK-UnityPlugin-5.2.0/com.amazonaws.gameliftserver.sdk-5.2.0.tgz",
       "depth": 0,

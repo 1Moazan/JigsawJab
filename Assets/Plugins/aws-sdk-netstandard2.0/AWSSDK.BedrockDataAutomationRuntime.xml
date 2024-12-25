@@ -1,0 +1,1549 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.BedrockDataAutomationRuntime</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeConfig">
+            <summary>
+            Configuration for accessing Amazon BedrockDataAutomationRuntime service
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon BedrockDataAutomationRuntime service
+            </summary>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            BedrockDataAutomationRuntime
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Endpoints.BedrockDataAutomationRuntimeEndpointParameters">
+            <summary>
+            Contains parameters used for resolving BedrockDataAutomationRuntime endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal BedrockDataAutomationRuntimeEndpointProvider and BedrockDataAutomationRuntimeEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Endpoints.BedrockDataAutomationRuntimeEndpointParameters.#ctor">
+            <summary>
+            BedrockDataAutomationRuntimeEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Endpoints.BedrockDataAutomationRuntimeEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Endpoints.BedrockDataAutomationRuntimeEndpointParameters.UseDualStack">
+            <summary>
+            UseDualStack parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Endpoints.BedrockDataAutomationRuntimeEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Endpoints.BedrockDataAutomationRuntimeEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeException">
+            <summary>
+             Common exception for the BedrockDataAutomationRuntime service.
+             </summary>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonBedrockDataAutomationRuntimeException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonBedrockDataAutomationRuntimeException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonBedrockDataAutomationRuntimeException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonBedrockDataAutomationRuntimeException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonBedrockDataAutomationRuntimeException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Internal.AmazonBedrockDataAutomationRuntimeEndpointProvider">
+            <summary>
+            Amazon BedrockDataAutomationRuntime endpoint provider.
+            Resolves endpoint for given set of BedrockDataAutomationRuntimeEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Internal.AmazonBedrockDataAutomationRuntimeEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for BedrockDataAutomationRuntimeEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Internal.AmazonBedrockDataAutomationRuntimeEndpointResolver">
+            <summary>
+            Amazon BedrockDataAutomationRuntime endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for BedrockDataAutomationRuntime service requests.
+            Collects values for BedrockDataAutomationRuntimeEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses BedrockDataAutomationRuntimeEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Internal.AmazonBedrockDataAutomationRuntimeMetadata">
+            <summary>
+            Service metadata for  Amazon BedrockDataAutomationRuntime service
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Internal.AmazonBedrockDataAutomationRuntimeMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Internal.AmazonBedrockDataAutomationRuntimeMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.AccessDeniedException">
+            <summary>
+            This exception will be thrown when customer does not have access to API.
+            </summary>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.AccessDeniedException.#ctor(System.String)">
+            <summary>
+            Constructs a new AccessDeniedException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.AccessDeniedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.AccessDeniedException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.AccessDeniedException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.AccessDeniedException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.Blueprint">
+            <summary>
+            Structure for single blueprint entity.
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.Blueprint.BlueprintArn">
+            <summary>
+            Gets and sets the property BlueprintArn. 
+            <para>
+            Arn of blueprint.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.Blueprint.Stage">
+            <summary>
+            Gets and sets the property Stage. 
+            <para>
+            Stage of blueprint.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.Blueprint.Version">
+            <summary>
+            Gets and sets the property Version. 
+            <para>
+            Version of blueprint.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.DataAutomationConfiguration">
+            <summary>
+            Data automation configuration.
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.DataAutomationConfiguration.DataAutomationArn">
+            <summary>
+            Gets and sets the property DataAutomationArn. 
+            <para>
+            Data automation arn.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.DataAutomationConfiguration.Stage">
+            <summary>
+            Gets and sets the property Stage. 
+            <para>
+            Data automation stage.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.EncryptionConfiguration">
+            <summary>
+            Encryption configuration.
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.EncryptionConfiguration.KmsEncryptionContext">
+            <summary>
+            Gets and sets the property KmsEncryptionContext. 
+            <para>
+            KMS encryption context.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.EncryptionConfiguration.KmsKeyId">
+            <summary>
+            Gets and sets the property KmsKeyId. 
+            <para>
+            KMS key id.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.EventBridgeConfiguration">
+            <summary>
+            Event bridge configuration.
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.EventBridgeConfiguration.EventBridgeEnabled">
+            <summary>
+            Gets and sets the property EventBridgeEnabled. 
+            <para>
+            Event bridge flag.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.GetDataAutomationStatusRequest">
+            <summary>
+            Container for the parameters to the GetDataAutomationStatus operation.
+            API used to get data automation status.
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.GetDataAutomationStatusRequest.InvocationArn">
+            <summary>
+            Gets and sets the property InvocationArn. 
+            <para>
+            Invocation arn.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.GetDataAutomationStatusResponse">
+            <summary>
+            Response of GetDataAutomationStatus API.
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.GetDataAutomationStatusResponse.ErrorMessage">
+            <summary>
+            Gets and sets the property ErrorMessage. 
+            <para>
+            Error Message.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.GetDataAutomationStatusResponse.ErrorType">
+            <summary>
+            Gets and sets the property ErrorType. 
+            <para>
+            Error Type.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.GetDataAutomationStatusResponse.OutputConfiguration">
+            <summary>
+            Gets and sets the property OutputConfiguration. 
+            <para>
+            Output configuration.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.GetDataAutomationStatusResponse.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            Job Status.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.InputConfiguration">
+            <summary>
+            Input configuration.
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.InputConfiguration.S3Uri">
+            <summary>
+            Gets and sets the property S3Uri. 
+            <para>
+            S3 uri.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.InternalServerException">
+            <summary>
+            This exception is for any internal un-expected service errors.
+            </summary>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.InternalServerException.#ctor(System.String)">
+            <summary>
+            Constructs a new InternalServerException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.InternalServerException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.InternalServerException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.InternalServerException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.InternalServerException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for AccessDeniedException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.BlueprintMarshaller">
+            <summary>
+            Blueprint Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.BlueprintMarshaller.Marshall(Amazon.BedrockDataAutomationRuntime.Model.Blueprint,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.BlueprintMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.DataAutomationConfigurationMarshaller">
+            <summary>
+            DataAutomationConfiguration Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.DataAutomationConfigurationMarshaller.Marshall(Amazon.BedrockDataAutomationRuntime.Model.DataAutomationConfiguration,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.DataAutomationConfigurationMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.EncryptionConfigurationMarshaller">
+            <summary>
+            EncryptionConfiguration Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.EncryptionConfigurationMarshaller.Marshall(Amazon.BedrockDataAutomationRuntime.Model.EncryptionConfiguration,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.EncryptionConfigurationMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.EventBridgeConfigurationMarshaller">
+            <summary>
+            EventBridgeConfiguration Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.EventBridgeConfigurationMarshaller.Marshall(Amazon.BedrockDataAutomationRuntime.Model.EventBridgeConfiguration,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.EventBridgeConfigurationMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.GetDataAutomationStatusRequestMarshaller">
+            <summary>
+            GetDataAutomationStatus Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.GetDataAutomationStatusRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.GetDataAutomationStatusRequestMarshaller.Marshall(Amazon.BedrockDataAutomationRuntime.Model.GetDataAutomationStatusRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.GetDataAutomationStatusRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.GetDataAutomationStatusResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetDataAutomationStatus operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.GetDataAutomationStatusResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.GetDataAutomationStatusResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.GetDataAutomationStatusResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.InputConfigurationMarshaller">
+            <summary>
+            InputConfiguration Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.InputConfigurationMarshaller.Marshall(Amazon.BedrockDataAutomationRuntime.Model.InputConfiguration,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.InputConfigurationMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InternalServerException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.InvokeDataAutomationAsyncRequestMarshaller">
+            <summary>
+            InvokeDataAutomationAsync Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.InvokeDataAutomationAsyncRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.InvokeDataAutomationAsyncRequestMarshaller.Marshall(Amazon.BedrockDataAutomationRuntime.Model.InvokeDataAutomationAsyncRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.InvokeDataAutomationAsyncRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.InvokeDataAutomationAsyncResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for InvokeDataAutomationAsync operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.InvokeDataAutomationAsyncResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.InvokeDataAutomationAsyncResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.InvokeDataAutomationAsyncResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.NotificationConfigurationMarshaller">
+            <summary>
+            NotificationConfiguration Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.NotificationConfigurationMarshaller.Marshall(Amazon.BedrockDataAutomationRuntime.Model.NotificationConfiguration,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.NotificationConfigurationMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.OutputConfigurationMarshaller">
+            <summary>
+            OutputConfiguration Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.OutputConfigurationMarshaller.Marshall(Amazon.BedrockDataAutomationRuntime.Model.OutputConfiguration,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.OutputConfigurationMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.OutputConfigurationUnmarshaller">
+            <summary>
+            Response Unmarshaller for OutputConfiguration Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.OutputConfigurationUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#BedrockDataAutomationRuntime#Model#OutputConfiguration,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.OutputConfigurationUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.OutputConfigurationUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ResourceNotFoundException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ServiceQuotaExceededException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ThrottlingException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.InvokeDataAutomationAsyncRequest">
+            <summary>
+            Container for the parameters to the InvokeDataAutomationAsync operation.
+            Async API: Invoke data automation.
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.InvokeDataAutomationAsyncRequest.Blueprints">
+            <summary>
+            Gets and sets the property Blueprints. 
+            <para>
+            Blueprint list.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.InvokeDataAutomationAsyncRequest.ClientToken">
+            <summary>
+            Gets and sets the property ClientToken. 
+            <para>
+            Idempotency token.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.InvokeDataAutomationAsyncRequest.DataAutomationConfiguration">
+            <summary>
+            Gets and sets the property DataAutomationConfiguration. 
+            <para>
+            Data automation configuration.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.InvokeDataAutomationAsyncRequest.EncryptionConfiguration">
+            <summary>
+            Gets and sets the property EncryptionConfiguration. 
+            <para>
+            Encryption configuration.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.InvokeDataAutomationAsyncRequest.InputConfiguration">
+            <summary>
+            Gets and sets the property InputConfiguration. 
+            <para>
+            Input configuration.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.InvokeDataAutomationAsyncRequest.NotificationConfiguration">
+            <summary>
+            Gets and sets the property NotificationConfiguration. 
+            <para>
+            Notification configuration.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.InvokeDataAutomationAsyncRequest.OutputConfiguration">
+            <summary>
+            Gets and sets the property OutputConfiguration. 
+            <para>
+            Output configuration.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.InvokeDataAutomationAsyncResponse">
+            <summary>
+            Invoke Data Automation Async Response
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.InvokeDataAutomationAsyncResponse.InvocationArn">
+            <summary>
+            Gets and sets the property InvocationArn. 
+            <para>
+            ARN of the automation job
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.NotificationConfiguration">
+            <summary>
+            Notification configuration.
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.NotificationConfiguration.EventBridgeConfiguration">
+            <summary>
+            Gets and sets the property EventBridgeConfiguration. 
+            <para>
+            Event bridge configuration.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.OutputConfiguration">
+            <summary>
+            Output configuration.
+            </summary>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.Model.OutputConfiguration.S3Uri">
+            <summary>
+            Gets and sets the property S3Uri. 
+            <para>
+            S3 uri.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.ResourceNotFoundException">
+            <summary>
+            This exception will be thrown when resource provided from customer not found.
+            </summary>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.ResourceNotFoundException.#ctor(System.String)">
+            <summary>
+            Constructs a new ResourceNotFoundException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.ResourceNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.ResourceNotFoundException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.ResourceNotFoundException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.ResourceNotFoundException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.ServiceQuotaExceededException">
+            <summary>
+            This exception will be thrown when service quota is exceeded.
+            </summary>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.ServiceQuotaExceededException.#ctor(System.String)">
+            <summary>
+            Constructs a new ServiceQuotaExceededException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.ServiceQuotaExceededException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.ServiceQuotaExceededException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.ServiceQuotaExceededException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.ServiceQuotaExceededException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.ThrottlingException">
+            <summary>
+            This exception will be thrown when customer reached API TPS limit.
+            </summary>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.ThrottlingException.#ctor(System.String)">
+            <summary>
+            Constructs a new ThrottlingException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.ThrottlingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.ThrottlingException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.ThrottlingException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.ThrottlingException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.Model.ValidationException">
+            <summary>
+            This exception will be thrown when customer provided invalid parameters.
+            </summary>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.ValidationException.#ctor(System.String)">
+            <summary>
+            Constructs a new ValidationException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.ValidationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.ValidationException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.ValidationException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.Model.ValidationException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeRequest">
+            <summary>
+            Base class for BedrockDataAutomationRuntime operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.AutomationJobStatus">
+            <summary>
+            Constants used for properties of type AutomationJobStatus.
+            </summary>
+        </member>
+        <member name="F:Amazon.BedrockDataAutomationRuntime.AutomationJobStatus.ClientError">
+            <summary>
+            Constant ClientError for AutomationJobStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.BedrockDataAutomationRuntime.AutomationJobStatus.Created">
+            <summary>
+            Constant Created for AutomationJobStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.BedrockDataAutomationRuntime.AutomationJobStatus.InProgress">
+            <summary>
+            Constant InProgress for AutomationJobStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.BedrockDataAutomationRuntime.AutomationJobStatus.ServiceError">
+            <summary>
+            Constant ServiceError for AutomationJobStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.BedrockDataAutomationRuntime.AutomationJobStatus.Success">
+            <summary>
+            Constant Success for AutomationJobStatus
+            </summary>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.AutomationJobStatus.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.AutomationJobStatus.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.AutomationJobStatus.op_Implicit(System.String)~Amazon.BedrockDataAutomationRuntime.AutomationJobStatus">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.BlueprintStage">
+            <summary>
+            Constants used for properties of type BlueprintStage.
+            </summary>
+        </member>
+        <member name="F:Amazon.BedrockDataAutomationRuntime.BlueprintStage.DEVELOPMENT">
+            <summary>
+            Constant DEVELOPMENT for BlueprintStage
+            </summary>
+        </member>
+        <member name="F:Amazon.BedrockDataAutomationRuntime.BlueprintStage.LIVE">
+            <summary>
+            Constant LIVE for BlueprintStage
+            </summary>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.BlueprintStage.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.BlueprintStage.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.BlueprintStage.op_Implicit(System.String)~Amazon.BedrockDataAutomationRuntime.BlueprintStage">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.DataAutomationStage">
+            <summary>
+            Constants used for properties of type DataAutomationStage.
+            </summary>
+        </member>
+        <member name="F:Amazon.BedrockDataAutomationRuntime.DataAutomationStage.DEVELOPMENT">
+            <summary>
+            Constant DEVELOPMENT for DataAutomationStage
+            </summary>
+        </member>
+        <member name="F:Amazon.BedrockDataAutomationRuntime.DataAutomationStage.LIVE">
+            <summary>
+            Constant LIVE for DataAutomationStage
+            </summary>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.DataAutomationStage.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.DataAutomationStage.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.DataAutomationStage.op_Implicit(System.String)~Amazon.BedrockDataAutomationRuntime.DataAutomationStage">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeClient">
+             <summary>
+             <para>Implementation for accessing BedrockDataAutomationRuntime</para>
+            
+             Amazon Bedrock Data Automation Runtime
+             </summary>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeClient.#ctor">
+             <summary>
+             Constructs AmazonBedrockDataAutomationRuntimeClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonBedrockDataAutomationRuntimeClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeClient.#ctor(Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeConfig)">
+             <summary>
+             Constructs AmazonBedrockDataAutomationRuntimeClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonBedrockDataAutomationRuntimeClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonBedrockDataAutomationRuntimeClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonBedrockDataAutomationRuntimeClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeConfig)">
+            <summary>
+            Constructs AmazonBedrockDataAutomationRuntimeClient with AWS Credentials and an
+            AmazonBedrockDataAutomationRuntimeClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonBedrockDataAutomationRuntimeClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonBedrockDataAutomationRuntimeClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonBedrockDataAutomationRuntimeClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeClient.#ctor(System.String,System.String,Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeConfig)">
+            <summary>
+            Constructs AmazonBedrockDataAutomationRuntimeClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonBedrockDataAutomationRuntimeClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonBedrockDataAutomationRuntimeClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonBedrockDataAutomationRuntimeClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonBedrockDataAutomationRuntimeClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeClient.#ctor(System.String,System.String,System.String,Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeConfig)">
+            <summary>
+            Constructs AmazonBedrockDataAutomationRuntimeClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonBedrockDataAutomationRuntimeClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonBedrockDataAutomationRuntimeClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeClient.GetDataAutomationStatusAsync(Amazon.BedrockDataAutomationRuntime.Model.GetDataAutomationStatusRequest,System.Threading.CancellationToken)">
+            <summary>
+            API used to get data automation status.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetDataAutomationStatus service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetDataAutomationStatus service method, as returned by BedrockDataAutomationRuntime.</returns>
+            <exception cref="T:Amazon.BedrockDataAutomationRuntime.Model.AccessDeniedException">
+            This exception will be thrown when customer does not have access to API.
+            </exception>
+            <exception cref="T:Amazon.BedrockDataAutomationRuntime.Model.InternalServerException">
+            This exception is for any internal un-expected service errors.
+            </exception>
+            <exception cref="T:Amazon.BedrockDataAutomationRuntime.Model.ResourceNotFoundException">
+            This exception will be thrown when resource provided from customer not found.
+            </exception>
+            <exception cref="T:Amazon.BedrockDataAutomationRuntime.Model.ThrottlingException">
+            This exception will be thrown when customer reached API TPS limit.
+            </exception>
+            <exception cref="T:Amazon.BedrockDataAutomationRuntime.Model.ValidationException">
+            This exception will be thrown when customer provided invalid parameters.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-data-automation-runtime-2024-06-13/GetDataAutomationStatus">REST API Reference for GetDataAutomationStatus Operation</seealso>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeClient.InvokeDataAutomationAsyncAsync(Amazon.BedrockDataAutomationRuntime.Model.InvokeDataAutomationAsyncRequest,System.Threading.CancellationToken)">
+            <summary>
+            Async API: Invoke data automation.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the InvokeDataAutomationAsync service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the InvokeDataAutomationAsync service method, as returned by BedrockDataAutomationRuntime.</returns>
+            <exception cref="T:Amazon.BedrockDataAutomationRuntime.Model.AccessDeniedException">
+            This exception will be thrown when customer does not have access to API.
+            </exception>
+            <exception cref="T:Amazon.BedrockDataAutomationRuntime.Model.InternalServerException">
+            This exception is for any internal un-expected service errors.
+            </exception>
+            <exception cref="T:Amazon.BedrockDataAutomationRuntime.Model.ServiceQuotaExceededException">
+            This exception will be thrown when service quota is exceeded.
+            </exception>
+            <exception cref="T:Amazon.BedrockDataAutomationRuntime.Model.ThrottlingException">
+            This exception will be thrown when customer reached API TPS limit.
+            </exception>
+            <exception cref="T:Amazon.BedrockDataAutomationRuntime.Model.ValidationException">
+            This exception will be thrown when customer provided invalid parameters.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-data-automation-runtime-2024-06-13/InvokeDataAutomationAsync">REST API Reference for InvokeDataAutomationAsync Operation</seealso>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.AmazonBedrockDataAutomationRuntimeClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.BedrockDataAutomationRuntime.IAmazonBedrockDataAutomationRuntime">
+             <summary>
+             <para>Interface for accessing BedrockDataAutomationRuntime</para>
+            
+             Amazon Bedrock Data Automation Runtime
+             </summary>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.IAmazonBedrockDataAutomationRuntime.GetDataAutomationStatusAsync(Amazon.BedrockDataAutomationRuntime.Model.GetDataAutomationStatusRequest,System.Threading.CancellationToken)">
+            <summary>
+            API used to get data automation status.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetDataAutomationStatus service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetDataAutomationStatus service method, as returned by BedrockDataAutomationRuntime.</returns>
+            <exception cref="T:Amazon.BedrockDataAutomationRuntime.Model.AccessDeniedException">
+            This exception will be thrown when customer does not have access to API.
+            </exception>
+            <exception cref="T:Amazon.BedrockDataAutomationRuntime.Model.InternalServerException">
+            This exception is for any internal un-expected service errors.
+            </exception>
+            <exception cref="T:Amazon.BedrockDataAutomationRuntime.Model.ResourceNotFoundException">
+            This exception will be thrown when resource provided from customer not found.
+            </exception>
+            <exception cref="T:Amazon.BedrockDataAutomationRuntime.Model.ThrottlingException">
+            This exception will be thrown when customer reached API TPS limit.
+            </exception>
+            <exception cref="T:Amazon.BedrockDataAutomationRuntime.Model.ValidationException">
+            This exception will be thrown when customer provided invalid parameters.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-data-automation-runtime-2024-06-13/GetDataAutomationStatus">REST API Reference for GetDataAutomationStatus Operation</seealso>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.IAmazonBedrockDataAutomationRuntime.InvokeDataAutomationAsyncAsync(Amazon.BedrockDataAutomationRuntime.Model.InvokeDataAutomationAsyncRequest,System.Threading.CancellationToken)">
+            <summary>
+            Async API: Invoke data automation.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the InvokeDataAutomationAsync service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the InvokeDataAutomationAsync service method, as returned by BedrockDataAutomationRuntime.</returns>
+            <exception cref="T:Amazon.BedrockDataAutomationRuntime.Model.AccessDeniedException">
+            This exception will be thrown when customer does not have access to API.
+            </exception>
+            <exception cref="T:Amazon.BedrockDataAutomationRuntime.Model.InternalServerException">
+            This exception is for any internal un-expected service errors.
+            </exception>
+            <exception cref="T:Amazon.BedrockDataAutomationRuntime.Model.ServiceQuotaExceededException">
+            This exception will be thrown when service quota is exceeded.
+            </exception>
+            <exception cref="T:Amazon.BedrockDataAutomationRuntime.Model.ThrottlingException">
+            This exception will be thrown when customer reached API TPS limit.
+            </exception>
+            <exception cref="T:Amazon.BedrockDataAutomationRuntime.Model.ValidationException">
+            This exception will be thrown when customer provided invalid parameters.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-data-automation-runtime-2024-06-13/InvokeDataAutomationAsync">REST API Reference for InvokeDataAutomationAsync Operation</seealso>
+        </member>
+        <member name="M:Amazon.BedrockDataAutomationRuntime.IAmazonBedrockDataAutomationRuntime.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,1038 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.InspectorScan</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.InspectorScan.AmazonInspectorScanConfig">
+            <summary>
+            Configuration for accessing Amazon InspectorScan service
+            </summary>
+        </member>
+        <member name="P:Amazon.InspectorScan.AmazonInspectorScanConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.InspectorScan.AmazonInspectorScanConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.InspectorScan.AmazonInspectorScanConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.InspectorScan.AmazonInspectorScanConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.InspectorScan.AmazonInspectorScanConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.InspectorScan.AmazonInspectorScanDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon InspectorScan service
+            </summary>
+        </member>
+        <member name="M:Amazon.InspectorScan.AmazonInspectorScanDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            InspectorScan
+            </summary>
+        </member>
+        <member name="P:Amazon.InspectorScan.AmazonInspectorScanDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.InspectorScan.AmazonInspectorScanDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.InspectorScan.AmazonInspectorScanDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.InspectorScan.AmazonInspectorScanDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.InspectorScan.AmazonInspectorScanDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.InspectorScan.AmazonInspectorScanDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.InspectorScan.Endpoints.InspectorScanEndpointParameters">
+            <summary>
+            Contains parameters used for resolving InspectorScan endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal InspectorScanEndpointProvider and InspectorScanEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.InspectorScan.Endpoints.InspectorScanEndpointParameters.#ctor">
+            <summary>
+            InspectorScanEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.InspectorScan.Endpoints.InspectorScanEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.InspectorScan.Endpoints.InspectorScanEndpointParameters.UseDualStack">
+            <summary>
+            UseDualStack parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.InspectorScan.Endpoints.InspectorScanEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.InspectorScan.Endpoints.InspectorScanEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.InspectorScan.AmazonInspectorScanException">
+            <summary>
+             Common exception for the InspectorScan service.
+             </summary>
+        </member>
+        <member name="M:Amazon.InspectorScan.AmazonInspectorScanException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonInspectorScanException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.InspectorScan.AmazonInspectorScanException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonInspectorScanException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.InspectorScan.AmazonInspectorScanException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonInspectorScanException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.InspectorScan.AmazonInspectorScanException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonInspectorScanException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.InspectorScan.AmazonInspectorScanException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonInspectorScanException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.InspectorScan.Internal.AmazonInspectorScanEndpointProvider">
+            <summary>
+            Amazon InspectorScan endpoint provider.
+            Resolves endpoint for given set of InspectorScanEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.InspectorScan.Internal.AmazonInspectorScanEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for InspectorScanEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.InspectorScan.Internal.AmazonInspectorScanEndpointResolver">
+            <summary>
+            Amazon InspectorScan endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for InspectorScan service requests.
+            Collects values for InspectorScanEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses InspectorScanEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.InspectorScan.Internal.AmazonInspectorScanMetadata">
+            <summary>
+            Service metadata for  Amazon InspectorScan service
+            </summary>
+        </member>
+        <member name="P:Amazon.InspectorScan.Internal.AmazonInspectorScanMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.InspectorScan.Internal.AmazonInspectorScanMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.InspectorScan.Model.AccessDeniedException">
+            <summary>
+            You do not have sufficient access to perform this action.
+            </summary>
+        </member>
+        <member name="M:Amazon.InspectorScan.Model.AccessDeniedException.#ctor(System.String)">
+            <summary>
+            Constructs a new AccessDeniedException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.InspectorScan.Model.AccessDeniedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.InspectorScan.Model.AccessDeniedException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.InspectorScan.Model.AccessDeniedException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.InspectorScan.Model.AccessDeniedException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.InspectorScan.Model.InternalServerException">
+            <summary>
+            The request processing has failed because of an unknown error, exception or failure.
+            </summary>
+        </member>
+        <member name="M:Amazon.InspectorScan.Model.InternalServerException.#ctor(System.String)">
+            <summary>
+            Constructs a new InternalServerException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.InspectorScan.Model.InternalServerException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.InspectorScan.Model.InternalServerException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.InspectorScan.Model.InternalServerException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.InspectorScan.Model.InternalServerException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.InspectorScan.Model.InternalServerException.Reason">
+            <summary>
+            Gets and sets the property Reason. 
+            <para>
+            The reason for the validation failure.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.InspectorScan.Model.InternalServerException.RetryAfterSeconds">
+            <summary>
+            Gets and sets the property RetryAfterSeconds. 
+            <para>
+            The number of seconds to wait before retrying the request.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.InspectorScan.Model.InternalServerException.Retryable">
+            <summary>
+            Flag indicating if the exception is retryable and the associated retry
+            details. A null value indicates that the exception is not retryable.
+            </summary>
+        </member>
+        <member name="T:Amazon.InspectorScan.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for AccessDeniedException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.InspectorScan.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.InspectorScan.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.InspectorScan.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.InspectorScan.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InternalServerException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.InspectorScan.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.InspectorScan.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.InspectorScan.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.InspectorScan.Model.Internal.MarshallTransformations.ScanSbomRequestMarshaller">
+            <summary>
+            ScanSbom Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.InspectorScan.Model.Internal.MarshallTransformations.ScanSbomRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.InspectorScan.Model.Internal.MarshallTransformations.ScanSbomRequestMarshaller.Marshall(Amazon.InspectorScan.Model.ScanSbomRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.InspectorScan.Model.Internal.MarshallTransformations.ScanSbomRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.InspectorScan.Model.Internal.MarshallTransformations.ScanSbomResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ScanSbom operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.InspectorScan.Model.Internal.MarshallTransformations.ScanSbomResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.InspectorScan.Model.Internal.MarshallTransformations.ScanSbomResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.InspectorScan.Model.Internal.MarshallTransformations.ScanSbomResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.InspectorScan.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ThrottlingException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.InspectorScan.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.InspectorScan.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.InspectorScan.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.InspectorScan.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationExceptionField Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.InspectorScan.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#InspectorScan#Model#ValidationExceptionField,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.InspectorScan.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.InspectorScan.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.InspectorScan.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.InspectorScan.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.InspectorScan.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.InspectorScan.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.InspectorScan.Model.ScanSbomRequest">
+            <summary>
+            Container for the parameters to the ScanSbom operation.
+            Scans a provided CycloneDX 1.5 SBOM and reports on any vulnerabilities discovered
+            in that SBOM. You can generate compatible SBOMs for your resources using the <a href="">Amazon
+            Inspector SBOM generator</a>.
+            </summary>
+        </member>
+        <member name="P:Amazon.InspectorScan.Model.ScanSbomRequest.OutputFormat">
+            <summary>
+            Gets and sets the property OutputFormat. 
+            <para>
+            The output format for the vulnerability report.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.InspectorScan.Model.ScanSbomRequest.Sbom">
+            <summary>
+            Gets and sets the property Sbom. 
+            <para>
+            The JSON file for the SBOM you want to scan. The SBOM must be in CycloneDX 1.5 format.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.InspectorScan.Model.ScanSbomResponse">
+            <summary>
+            This is the response object from the ScanSbom operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.InspectorScan.Model.ScanSbomResponse.Sbom">
+            <summary>
+            Gets and sets the property Sbom. 
+            <para>
+            The vulnerability report for the scanned SBOM.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.InspectorScan.Model.ThrottlingException">
+            <summary>
+            The request was denied due to request throttling.
+            </summary>
+        </member>
+        <member name="M:Amazon.InspectorScan.Model.ThrottlingException.#ctor(System.String)">
+            <summary>
+            Constructs a new ThrottlingException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.InspectorScan.Model.ThrottlingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.InspectorScan.Model.ThrottlingException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.InspectorScan.Model.ThrottlingException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.InspectorScan.Model.ThrottlingException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.InspectorScan.Model.ThrottlingException.RetryAfterSeconds">
+            <summary>
+            Gets and sets the property RetryAfterSeconds. 
+            <para>
+            The number of seconds to wait before retrying the request.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.InspectorScan.Model.ThrottlingException.Retryable">
+            <summary>
+            Flag indicating if the exception is retryable and the associated retry
+            details. A null value indicates that the exception is not retryable.
+            </summary>
+        </member>
+        <member name="T:Amazon.InspectorScan.Model.ValidationException">
+            <summary>
+            The request has failed validation due to missing required fields or having invalid
+            inputs.
+            </summary>
+        </member>
+        <member name="M:Amazon.InspectorScan.Model.ValidationException.#ctor(System.String)">
+            <summary>
+            Constructs a new ValidationException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.InspectorScan.Model.ValidationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.InspectorScan.Model.ValidationException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.InspectorScan.Model.ValidationException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.InspectorScan.Model.ValidationException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.InspectorScan.Model.ValidationException.Fields">
+            <summary>
+            Gets and sets the property Fields. 
+            <para>
+            The fields that failed validation.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.InspectorScan.Model.ValidationException.Reason">
+            <summary>
+            Gets and sets the property Reason. 
+            <para>
+            The reason for the validation failure.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.InspectorScan.Model.ValidationExceptionField">
+            <summary>
+            The request has failed validation due to missing required fields or having invalid
+            inputs.
+            </summary>
+        </member>
+        <member name="P:Amazon.InspectorScan.Model.ValidationExceptionField.Message">
+            <summary>
+            Gets and sets the property Message. 
+            <para>
+            The validation exception message. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.InspectorScan.Model.ValidationExceptionField.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The name of the validation exception. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.InspectorScan.AmazonInspectorScanRequest">
+            <summary>
+            Base class for InspectorScan operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.InspectorScan.InternalServerExceptionReason">
+            <summary>
+            Constants used for properties of type InternalServerExceptionReason.
+            </summary>
+        </member>
+        <member name="F:Amazon.InspectorScan.InternalServerExceptionReason.FAILED_TO_GENERATE_SBOM">
+            <summary>
+            Constant FAILED_TO_GENERATE_SBOM for InternalServerExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.InspectorScan.InternalServerExceptionReason.OTHER">
+            <summary>
+            Constant OTHER for InternalServerExceptionReason
+            </summary>
+        </member>
+        <member name="M:Amazon.InspectorScan.InternalServerExceptionReason.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.InspectorScan.InternalServerExceptionReason.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.InspectorScan.InternalServerExceptionReason.op_Implicit(System.String)~Amazon.InspectorScan.InternalServerExceptionReason">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.InspectorScan.OutputFormat">
+            <summary>
+            Constants used for properties of type OutputFormat.
+            </summary>
+        </member>
+        <member name="F:Amazon.InspectorScan.OutputFormat.CYCLONE_DX_1_5">
+            <summary>
+            Constant CYCLONE_DX_1_5 for OutputFormat
+            </summary>
+        </member>
+        <member name="F:Amazon.InspectorScan.OutputFormat.INSPECTOR">
+            <summary>
+            Constant INSPECTOR for OutputFormat
+            </summary>
+        </member>
+        <member name="M:Amazon.InspectorScan.OutputFormat.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.InspectorScan.OutputFormat.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.InspectorScan.OutputFormat.op_Implicit(System.String)~Amazon.InspectorScan.OutputFormat">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.InspectorScan.ValidationExceptionReason">
+            <summary>
+            Constants used for properties of type ValidationExceptionReason.
+            </summary>
+        </member>
+        <member name="F:Amazon.InspectorScan.ValidationExceptionReason.CANNOT_PARSE">
+            <summary>
+            Constant CANNOT_PARSE for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.InspectorScan.ValidationExceptionReason.FIELD_VALIDATION_FAILED">
+            <summary>
+            Constant FIELD_VALIDATION_FAILED for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.InspectorScan.ValidationExceptionReason.OTHER">
+            <summary>
+            Constant OTHER for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.InspectorScan.ValidationExceptionReason.UNKNOWN_OPERATION">
+            <summary>
+            Constant UNKNOWN_OPERATION for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.InspectorScan.ValidationExceptionReason.UNSUPPORTED_SBOM_TYPE">
+            <summary>
+            Constant UNSUPPORTED_SBOM_TYPE for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="M:Amazon.InspectorScan.ValidationExceptionReason.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.InspectorScan.ValidationExceptionReason.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.InspectorScan.ValidationExceptionReason.op_Implicit(System.String)~Amazon.InspectorScan.ValidationExceptionReason">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.InspectorScan.AmazonInspectorScanClient">
+             <summary>
+             <para>Implementation for accessing InspectorScan</para>
+            
+             Amazon Inspector Scan is a vulnerability discovery service that scans a provided Software
+             Bill of Materials (SBOM) for security vulnerabilities.
+             </summary>
+        </member>
+        <member name="M:Amazon.InspectorScan.AmazonInspectorScanClient.#ctor">
+             <summary>
+             Constructs AmazonInspectorScanClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.InspectorScan.AmazonInspectorScanClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonInspectorScanClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.InspectorScan.AmazonInspectorScanClient.#ctor(Amazon.InspectorScan.AmazonInspectorScanConfig)">
+             <summary>
+             Constructs AmazonInspectorScanClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonInspectorScanClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.InspectorScan.AmazonInspectorScanClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonInspectorScanClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.InspectorScan.AmazonInspectorScanClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonInspectorScanClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.InspectorScan.AmazonInspectorScanClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.InspectorScan.AmazonInspectorScanConfig)">
+            <summary>
+            Constructs AmazonInspectorScanClient with AWS Credentials and an
+            AmazonInspectorScanClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonInspectorScanClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.InspectorScan.AmazonInspectorScanClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonInspectorScanClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.InspectorScan.AmazonInspectorScanClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonInspectorScanClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.InspectorScan.AmazonInspectorScanClient.#ctor(System.String,System.String,Amazon.InspectorScan.AmazonInspectorScanConfig)">
+            <summary>
+            Constructs AmazonInspectorScanClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonInspectorScanClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonInspectorScanClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.InspectorScan.AmazonInspectorScanClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonInspectorScanClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.InspectorScan.AmazonInspectorScanClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonInspectorScanClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.InspectorScan.AmazonInspectorScanClient.#ctor(System.String,System.String,System.String,Amazon.InspectorScan.AmazonInspectorScanConfig)">
+            <summary>
+            Constructs AmazonInspectorScanClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonInspectorScanClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonInspectorScanClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.InspectorScan.AmazonInspectorScanClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.InspectorScan.AmazonInspectorScanClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.InspectorScan.AmazonInspectorScanClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.InspectorScan.AmazonInspectorScanClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.InspectorScan.AmazonInspectorScanClient.ScanSbomAsync(Amazon.InspectorScan.Model.ScanSbomRequest,System.Threading.CancellationToken)">
+            <summary>
+            Scans a provided CycloneDX 1.5 SBOM and reports on any vulnerabilities discovered
+            in that SBOM. You can generate compatible SBOMs for your resources using the <a href="">Amazon
+            Inspector SBOM generator</a>.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ScanSbom service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ScanSbom service method, as returned by InspectorScan.</returns>
+            <exception cref="T:Amazon.InspectorScan.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.InspectorScan.Model.InternalServerException">
+            The request processing has failed because of an unknown error, exception or failure.
+            </exception>
+            <exception cref="T:Amazon.InspectorScan.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.InspectorScan.Model.ValidationException">
+            The request has failed validation due to missing required fields or having invalid
+            inputs.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/inspector-scan-2023-08-08/ScanSbom">REST API Reference for ScanSbom Operation</seealso>
+        </member>
+        <member name="M:Amazon.InspectorScan.AmazonInspectorScanClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.InspectorScan.IAmazonInspectorScan">
+             <summary>
+             <para>Interface for accessing InspectorScan</para>
+            
+             Amazon Inspector Scan is a vulnerability discovery service that scans a provided Software
+             Bill of Materials (SBOM) for security vulnerabilities.
+             </summary>
+        </member>
+        <member name="M:Amazon.InspectorScan.IAmazonInspectorScan.ScanSbomAsync(Amazon.InspectorScan.Model.ScanSbomRequest,System.Threading.CancellationToken)">
+            <summary>
+            Scans a provided CycloneDX 1.5 SBOM and reports on any vulnerabilities discovered
+            in that SBOM. You can generate compatible SBOMs for your resources using the <a href="">Amazon
+            Inspector SBOM generator</a>.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ScanSbom service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ScanSbom service method, as returned by InspectorScan.</returns>
+            <exception cref="T:Amazon.InspectorScan.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.InspectorScan.Model.InternalServerException">
+            The request processing has failed because of an unknown error, exception or failure.
+            </exception>
+            <exception cref="T:Amazon.InspectorScan.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.InspectorScan.Model.ValidationException">
+            The request has failed validation due to missing required fields or having invalid
+            inputs.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/inspector-scan-2023-08-08/ScanSbom">REST API Reference for ScanSbom Operation</seealso>
+        </member>
+        <member name="M:Amazon.InspectorScan.IAmazonInspectorScan.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+    </members>
+</doc>

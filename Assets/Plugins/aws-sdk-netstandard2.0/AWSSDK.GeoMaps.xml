@@ -1,0 +1,2503 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.GeoMaps</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.GeoMaps.AmazonGeoMapsConfig">
+            <summary>
+            Configuration for accessing Amazon GeoMaps service
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.AmazonGeoMapsConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.GeoMaps.AmazonGeoMapsConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.AmazonGeoMapsConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.AmazonGeoMapsConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.AmazonGeoMapsConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.GeoMaps.AmazonGeoMapsDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon GeoMaps service
+            </summary>
+        </member>
+        <member name="M:Amazon.GeoMaps.AmazonGeoMapsDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            GeoMaps
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.AmazonGeoMapsDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.AmazonGeoMapsDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.AmazonGeoMapsDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.AmazonGeoMapsDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.AmazonGeoMapsDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.AmazonGeoMapsDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.GeoMaps.Endpoints.GeoMapsEndpointParameters">
+            <summary>
+            Contains parameters used for resolving GeoMaps endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal GeoMapsEndpointProvider and GeoMapsEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.GeoMaps.Endpoints.GeoMapsEndpointParameters.#ctor">
+            <summary>
+            GeoMapsEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Endpoints.GeoMapsEndpointParameters.UseDualStack">
+            <summary>
+            UseDualStack parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Endpoints.GeoMapsEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Endpoints.GeoMapsEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Endpoints.GeoMapsEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.GeoMaps.AmazonGeoMapsException">
+            <summary>
+             Common exception for the GeoMaps service.
+             </summary>
+        </member>
+        <member name="M:Amazon.GeoMaps.AmazonGeoMapsException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonGeoMapsException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.GeoMaps.AmazonGeoMapsException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonGeoMapsException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.GeoMaps.AmazonGeoMapsException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonGeoMapsException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.GeoMaps.AmazonGeoMapsException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonGeoMapsException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.GeoMaps.AmazonGeoMapsException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonGeoMapsException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.GeoMaps.Internal.AmazonGeoMapsEndpointProvider">
+            <summary>
+            Amazon GeoMaps endpoint provider.
+            Resolves endpoint for given set of GeoMapsEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.GeoMaps.Internal.AmazonGeoMapsEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for GeoMapsEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.GeoMaps.Internal.AmazonGeoMapsEndpointResolver">
+            <summary>
+            Amazon GeoMaps endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for GeoMaps service requests.
+            Collects values for GeoMapsEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses GeoMapsEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.GeoMaps.Internal.AmazonGeoMapsMetadata">
+            <summary>
+            Service metadata for  Amazon GeoMaps service
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Internal.AmazonGeoMapsMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Internal.AmazonGeoMapsMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.GeoMaps.Model.AccessDeniedException">
+            <summary>
+            The request was denied because of insufficient access or permissions. Check with an
+            administrator to verify your permissions.
+            </summary>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.AccessDeniedException.#ctor(System.String)">
+            <summary>
+            Constructs a new AccessDeniedException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.AccessDeniedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.AccessDeniedException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.AccessDeniedException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.AccessDeniedException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.GeoMaps.Model.GetGlyphsRequest">
+            <summary>
+            Container for the parameters to the GetGlyphs operation.
+            Returns the map's glyphs.
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetGlyphsRequest.FontStack">
+            <summary>
+            Gets and sets the property FontStack. 
+            <para>
+            Name of the <c>FontStack</c> to retrieve. 
+            </para>
+             
+            <para>
+            Example: <c>Amazon Ember Bold,Noto Sans Bold</c>.
+            </para>
+             
+            <para>
+            The supported font stacks are as follows:
+            </para>
+             <ul> <li> 
+            <para>
+            Amazon Ember Bold
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Bold Italic
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Bold,Noto Sans Bold
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Bold,Noto Sans Bold,Noto Sans Arabic Bold
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Condensed RC BdItalic
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Condensed RC Bold
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Condensed RC Bold Italic
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Condensed RC Bold,Noto Sans Bold
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Condensed RC Bold,Noto Sans Bold,Noto Sans Arabic Condensed Bold
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Condensed RC Light
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Condensed RC Light Italic
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Condensed RC LtItalic
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Condensed RC Regular
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Condensed RC Regular Italic
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Condensed RC Regular,Noto Sans Regular
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Condensed RC Regular,Noto Sans Regular,Noto Sans Arabic Condensed Regular
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Condensed RC RgItalic
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Condensed RC ThItalic
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Condensed RC Thin
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Condensed RC Thin Italic
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Heavy
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Heavy Italic
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Light
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Light Italic
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Medium
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Medium Italic
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Medium,Noto Sans Medium
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Medium,Noto Sans Medium,Noto Sans Arabic Medium
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Regular
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Regular Italic
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Regular Italic,Noto Sans Italic
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Regular Italic,Noto Sans Italic,Noto Sans Arabic Regular
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Regular,Noto Sans Regular
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Regular,Noto Sans Regular,Noto Sans Arabic Regular
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Thin
+            </para>
+             </li> <li> 
+            <para>
+            Amazon Ember Thin Italic
+            </para>
+             </li> <li> 
+            <para>
+            AmazonEmberCdRC_Bd
+            </para>
+             </li> <li> 
+            <para>
+            AmazonEmberCdRC_BdIt
+            </para>
+             </li> <li> 
+            <para>
+            AmazonEmberCdRC_Lt
+            </para>
+             </li> <li> 
+            <para>
+            AmazonEmberCdRC_LtIt
+            </para>
+             </li> <li> 
+            <para>
+            AmazonEmberCdRC_Rg
+            </para>
+             </li> <li> 
+            <para>
+            AmazonEmberCdRC_RgIt
+            </para>
+             </li> <li> 
+            <para>
+            AmazonEmberCdRC_Th
+            </para>
+             </li> <li> 
+            <para>
+            AmazonEmberCdRC_ThIt
+            </para>
+             </li> <li> 
+            <para>
+            AmazonEmber_Bd
+            </para>
+             </li> <li> 
+            <para>
+            AmazonEmber_BdIt
+            </para>
+             </li> <li> 
+            <para>
+            AmazonEmber_He
+            </para>
+             </li> <li> 
+            <para>
+            AmazonEmber_HeIt
+            </para>
+             </li> <li> 
+            <para>
+            AmazonEmber_Lt
+            </para>
+             </li> <li> 
+            <para>
+            AmazonEmber_LtIt
+            </para>
+             </li> <li> 
+            <para>
+            AmazonEmber_Md
+            </para>
+             </li> <li> 
+            <para>
+            AmazonEmber_MdIt
+            </para>
+             </li> <li> 
+            <para>
+            AmazonEmber_Rg
+            </para>
+             </li> <li> 
+            <para>
+            AmazonEmber_RgIt
+            </para>
+             </li> <li> 
+            <para>
+            AmazonEmber_Th
+            </para>
+             </li> <li> 
+            <para>
+            AmazonEmber_ThIt
+            </para>
+             </li> <li> 
+            <para>
+            Noto Sans Black
+            </para>
+             </li> <li> 
+            <para>
+            Noto Sans Black Italic
+            </para>
+             </li> <li> 
+            <para>
+            Noto Sans Bold
+            </para>
+             </li> <li> 
+            <para>
+            Noto Sans Bold Italic
+            </para>
+             </li> <li> 
+            <para>
+            Noto Sans Extra Bold
+            </para>
+             </li> <li> 
+            <para>
+            Noto Sans Extra Bold Italic
+            </para>
+             </li> <li> 
+            <para>
+            Noto Sans Extra Light
+            </para>
+             </li> <li> 
+            <para>
+            Noto Sans Extra Light Italic
+            </para>
+             </li> <li> 
+            <para>
+            Noto Sans Italic
+            </para>
+             </li> <li> 
+            <para>
+            Noto Sans Light
+            </para>
+             </li> <li> 
+            <para>
+            Noto Sans Light Italic
+            </para>
+             </li> <li> 
+            <para>
+            Noto Sans Medium
+            </para>
+             </li> <li> 
+            <para>
+            Noto Sans Medium Italic
+            </para>
+             </li> <li> 
+            <para>
+            Noto Sans Regular
+            </para>
+             </li> <li> 
+            <para>
+            Noto Sans Semi Bold
+            </para>
+             </li> <li> 
+            <para>
+            Noto Sans Semi Bold Italic
+            </para>
+             </li> <li> 
+            <para>
+            Noto Sans Thin
+            </para>
+             </li> <li> 
+            <para>
+            Noto Sans Thin Italic
+            </para>
+             </li> <li> 
+            <para>
+            NotoSans-Bold
+            </para>
+             </li> <li> 
+            <para>
+            NotoSans-Italic
+            </para>
+             </li> <li> 
+            <para>
+            NotoSans-Medium
+            </para>
+             </li> <li> 
+            <para>
+            NotoSans-Regular
+            </para>
+             </li> <li> 
+            <para>
+            Open Sans Regular,Arial Unicode MS Regular
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetGlyphsRequest.FontUnicodeRange">
+            <summary>
+            Gets and sets the property FontUnicodeRange. 
+            <para>
+            A Unicode range of characters to download glyphs for. This must be aligned to multiples
+            of 256. 
+            </para>
+             
+            <para>
+            Example: <c>0-255.pdf</c> 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.GeoMaps.Model.GetGlyphsResponse">
+            <summary>
+            This is the response object from the GetGlyphs operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetGlyphsResponse.Blob">
+            <summary>
+            Gets and sets the property Blob. 
+            <para>
+            The Glyph, as a binary blob.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetGlyphsResponse.CacheControl">
+            <summary>
+            Gets and sets the property CacheControl. 
+            <para>
+            Header that instructs caching configuration for the client.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetGlyphsResponse.ContentType">
+            <summary>
+            Gets and sets the property ContentType. 
+            <para>
+            Header that represents the format of the response. The response returns the following
+            as the HTTP body.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetGlyphsResponse.ETag">
+            <summary>
+            Gets and sets the property ETag. 
+            <para>
+            The glyph's Etag.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.GeoMaps.Model.GetSpritesRequest">
+            <summary>
+            Container for the parameters to the GetSprites operation.
+            Returns the map's sprites.
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetSpritesRequest.ColorScheme">
+            <summary>
+            Gets and sets the property ColorScheme. 
+            <para>
+            Sets color tone for map such as dark and light for specific map styles. It applies
+            to only vector map styles such as Standard and Monochrome.
+            </para>
+             
+            <para>
+            Example: <c>Light</c> 
+            </para>
+             
+            <para>
+            Default value: <c>Light</c> 
+            </para>
+             <note> 
+            <para>
+            Valid values for ColorScheme are case sensitive.
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetSpritesRequest.FileName">
+            <summary>
+            Gets and sets the property FileName. 
+            <para>
+             <c>Sprites</c> API: The name of the sprite ﬁle to retrieve, following pattern <c>sprites(@2x)?\.(png|json)</c>.
+            </para>
+             
+            <para>
+            Example: <c>sprites.png</c> 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetSpritesRequest.Style">
+            <summary>
+            Gets and sets the property Style. 
+            <para>
+            Style specifies the desired map style for the <c>Sprites</c> APIs.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetSpritesRequest.Variant">
+            <summary>
+            Gets and sets the property Variant. 
+            <para>
+            Optimizes map styles for specific use case or industry. You can choose allowed variant
+            only with Standard map style.
+            </para>
+             
+            <para>
+            Example: <c>Default</c> 
+            </para>
+             <note> 
+            <para>
+            Valid values for Variant are case sensitive.
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="T:Amazon.GeoMaps.Model.GetSpritesResponse">
+            <summary>
+            This is the response object from the GetSprites operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetSpritesResponse.Blob">
+            <summary>
+            Gets and sets the property Blob. 
+            <para>
+            The body of the sprite sheet or JSON offset file (image/png or application/json, depending
+            on input).
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetSpritesResponse.CacheControl">
+            <summary>
+            Gets and sets the property CacheControl. 
+            <para>
+            Header that instructs caching configuration for the client.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetSpritesResponse.ContentType">
+            <summary>
+            Gets and sets the property ContentType. 
+            <para>
+            Header that represents the format of the response. The response returns the following
+            as the HTTP body.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetSpritesResponse.ETag">
+            <summary>
+            Gets and sets the property ETag. 
+            <para>
+            The sprite's Etag.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.GeoMaps.Model.GetStaticMapRequest">
+            <summary>
+            Container for the parameters to the GetStaticMap operation.
+            Provides high-quality static map images with customizable options. You can modify
+            the map's appearance and overlay additional information. It's an ideal solution for
+            applications requiring tailored static map snapshots.
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetStaticMapRequest.BoundedPositions">
+            <summary>
+            Gets and sets the property BoundedPositions. 
+            <para>
+            Takes in two or more pair of coordinates, [Lon, Lat], with each coordinate separated
+            by a comma. The API will generate an image to encompass all of the provided coordinates.
+            
+            </para>
+             <note> 
+            <para>
+            Cannot be used with <c>Zoom</c> and or <c>Radius</c> 
+            </para>
+             </note> 
+            <para>
+            Example: 97.170451,78.039098,99.045536,27.176178
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetStaticMapRequest.BoundingBox">
+            <summary>
+            Gets and sets the property BoundingBox. 
+            <para>
+            Takes in two pairs of coordinates, [Lon, Lat], denoting south-westerly and north-easterly
+            edges of the image. The underlying area becomes the view of the image. 
+            </para>
+             
+            <para>
+            Example: -123.17075,49.26959,-123.08125,49.31429
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetStaticMapRequest.Center">
+            <summary>
+            Gets and sets the property Center. 
+            <para>
+            Takes in a pair of coordinates, [Lon, Lat], which becomes the center point of the
+            image. This parameter requires that either zoom or radius is set.
+            </para>
+             <note> 
+            <para>
+            Cannot be used with <c>Zoom</c> and or <c>Radius</c> 
+            </para>
+             </note> 
+            <para>
+            Example: 49.295,-123.108
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetStaticMapRequest.CompactOverlay">
+            <summary>
+            Gets and sets the property CompactOverlay. 
+            <para>
+            Takes in a string to draw geometries on the image. The input is a comma separated
+            format as follows format: <c>[Lon, Lat]</c> 
+            </para>
+             
+            <para>
+            Example: <c>line:-122.407653,37.798557,-122.413291,37.802443;color=%23DD0000;width=7;outline-color=#00DD00;outline-width=5yd|point:-122.40572,37.80004;label=Fog
+            Hill Market;size=large;text-color=%23DD0000;color=#EE4B2B</c> 
+            </para>
+             <note> 
+            <para>
+            Currently it supports the following geometry types: point, line and polygon. It does
+            not support multiPoint , multiLine and multiPolgyon.
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetStaticMapRequest.FileName">
+            <summary>
+            Gets and sets the property FileName. 
+            <para>
+            The map scaling parameter to size the image, icons, and labels. It follows the pattern
+            of <c>^map(@2x)?$</c>.
+            </para>
+             
+            <para>
+            Example: <c>map, map@2x</c> 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetStaticMapRequest.GeoJsonOverlay">
+            <summary>
+            Gets and sets the property GeoJsonOverlay. 
+            <para>
+            Takes in a string to draw geometries on the image. The input is a valid GeoJSON collection
+            object. 
+            </para>
+             
+            <para>
+            Example: <c>{"type":"FeatureCollection","features": [{"type":"Feature","geometry":{"type":"MultiPoint","coordinates":
+            [[-90.076345,51.504107],[-0.074451,51.506892]]},"properties": {"color":"#00DD00"}}]}</c>
+            
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetStaticMapRequest.Height">
+            <summary>
+            Gets and sets the property Height. 
+            <para>
+            Specifies the height of the map image.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetStaticMapRequest.Key">
+            <summary>
+            Gets and sets the property Key. 
+            <para>
+            Optional: The API key to be used for authorization. Either an API key or valid SigV4
+            signature must be provided when making a request. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetStaticMapRequest.Padding">
+            <summary>
+            Gets and sets the property Padding. 
+            <para>
+            Applies additional space (in pixels) around overlay feature to prevent them from being
+            cut or obscured.
+            </para>
+             <note> 
+            <para>
+            Value for max and min is determined by:
+            </para>
+             
+            <para>
+            Min: <c>1</c> 
+            </para>
+             
+            <para>
+            Max: <c>min(height, width)/4</c> 
+            </para>
+             </note> 
+            <para>
+            Example: <c>100</c> 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetStaticMapRequest.Radius">
+            <summary>
+            Gets and sets the property Radius. 
+            <para>
+            Used with center parameter, it specifies the zoom of the image where you can control
+            it on a granular level. Takes in any value <c>&gt;= 1</c>. 
+            </para>
+             
+            <para>
+            Example: <c>1500</c> 
+            </para>
+             <note> 
+            <para>
+            Cannot be used with <c>Zoom</c>.
+            </para>
+             </note> 
+            <para>
+             <b>Unit</b>: <c>Meters</c> 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetStaticMapRequest.ScaleBarUnit">
+            <summary>
+            Gets and sets the property ScaleBarUnit. 
+            <para>
+            Displays a scale on the bottom right of the map image with the unit specified in the
+            input. 
+            </para>
+             
+            <para>
+            Example: <c>KilometersMiles, Miles, Kilometers, MilesKilometers</c> 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetStaticMapRequest.Style">
+            <summary>
+            Gets and sets the property Style. 
+            <para>
+            Style specifies the desired map style for the <c>Style</c> APIs.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetStaticMapRequest.Width">
+            <summary>
+            Gets and sets the property Width. 
+            <para>
+            Specifies the width of the map image.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetStaticMapRequest.Zoom">
+            <summary>
+            Gets and sets the property Zoom. 
+            <para>
+            Specifies the zoom level of the map image.
+            </para>
+             <note> 
+            <para>
+            Cannot be used with <c>Radius</c>.
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="T:Amazon.GeoMaps.Model.GetStaticMapResponse">
+            <summary>
+            This is the response object from the GetStaticMap operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetStaticMapResponse.Blob">
+            <summary>
+            Gets and sets the property Blob. 
+            <para>
+            The blob represents a map image as a <c>jpeg</c> for the <c>GetStaticMap</c> API.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetStaticMapResponse.CacheControl">
+            <summary>
+            Gets and sets the property CacheControl. 
+            <para>
+            Header that instructs caching configuration for the client.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetStaticMapResponse.ContentType">
+            <summary>
+            Gets and sets the property ContentType. 
+            <para>
+            Header that represents the format of the response. The response returns the following
+            as the HTTP body.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetStaticMapResponse.ETag">
+            <summary>
+            Gets and sets the property ETag. 
+            <para>
+            The static map's Etag.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetStaticMapResponse.PricingBucket">
+            <summary>
+            Gets and sets the property PricingBucket. 
+            <para>
+            The pricing bucket for which the request is charged at.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.GeoMaps.Model.GetStyleDescriptorRequest">
+            <summary>
+            Container for the parameters to the GetStyleDescriptor operation.
+            Returns information about the style.
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetStyleDescriptorRequest.ColorScheme">
+            <summary>
+            Gets and sets the property ColorScheme. 
+            <para>
+            Sets color tone for map such as dark and light for specific map styles. It applies
+            to only vector map styles such as Standard and Monochrome.
+            </para>
+             
+            <para>
+            Example: <c>Light</c> 
+            </para>
+             
+            <para>
+            Default value: <c>Light</c> 
+            </para>
+             <note> 
+            <para>
+            Valid values for ColorScheme are case sensitive.
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetStyleDescriptorRequest.Key">
+            <summary>
+            Gets and sets the property Key. 
+            <para>
+            Optional: The API key to be used for authorization. Either an API key or valid SigV4
+            signature must be provided when making a request. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetStyleDescriptorRequest.PoliticalView">
+            <summary>
+            Gets and sets the property PoliticalView. 
+            <para>
+            Specifies the political view using ISO 3166-2 or ISO 3166-3 country code format.
+            </para>
+             
+            <para>
+            The following political views are currently supported:
+            </para>
+             <ul> <li> 
+            <para>
+             <c>ARG</c>: Argentina's view on the Southern Patagonian Ice Field and Tierra Del
+            Fuego, including the Falkland Islands, South Georgia, and South Sandwich Islands
+            </para>
+             </li> <li> 
+            <para>
+             <c>EGY</c>: Egypt's view on Bir Tawil
+            </para>
+             </li> <li> 
+            <para>
+             <c>IND</c>: India's view on Gilgit-Baltistan
+            </para>
+             </li> <li> 
+            <para>
+             <c>KEN</c>: Kenya's view on the Ilemi Triangle
+            </para>
+             </li> <li> 
+            <para>
+             <c>MAR</c>: Morocco's view on Western Sahara
+            </para>
+             </li> <li> 
+            <para>
+             <c>PAK</c>: Pakistan's view on Jammu and Kashmir and the Junagadh Area
+            </para>
+             </li> <li> 
+            <para>
+             <c>RUS</c>: Russia's view on Crimea
+            </para>
+             </li> <li> 
+            <para>
+             <c>SDN</c>: Sudan's view on the Halaib Triangle
+            </para>
+             </li> <li> 
+            <para>
+             <c>SRB</c>: Serbia's view on Kosovo, Vukovar, and Sarengrad Islands
+            </para>
+             </li> <li> 
+            <para>
+             <c>SUR</c>: Suriname's view on the Courantyne Headwaters and Lawa Headwaters
+            </para>
+             </li> <li> 
+            <para>
+             <c>SYR</c>: Syria's view on the Golan Heights
+            </para>
+             </li> <li> 
+            <para>
+             <c>TUR</c>: Turkey's view on Cyprus and Northern Cyprus
+            </para>
+             </li> <li> 
+            <para>
+             <c>TZA</c>: Tanzania's view on Lake Malawi
+            </para>
+             </li> <li> 
+            <para>
+             <c>URY</c>: Uruguay's view on Rincon de Artigas
+            </para>
+             </li> <li> 
+            <para>
+             <c>VNM</c>: Vietnam's view on the Paracel Islands and Spratly Islands
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetStyleDescriptorRequest.Style">
+            <summary>
+            Gets and sets the property Style. 
+            <para>
+            Style specifies the desired map style.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.GeoMaps.Model.GetStyleDescriptorResponse">
+            <summary>
+            This is the response object from the GetStyleDescriptor operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetStyleDescriptorResponse.Blob">
+            <summary>
+            Gets and sets the property Blob. 
+            <para>
+            This Blob contains the body of the style descriptor which is in application/json format.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetStyleDescriptorResponse.CacheControl">
+            <summary>
+            Gets and sets the property CacheControl. 
+            <para>
+            Header that instructs caching configuration for the client.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetStyleDescriptorResponse.ContentType">
+            <summary>
+            Gets and sets the property ContentType. 
+            <para>
+            Header that represents the format of the response. The response returns the following
+            as the HTTP body.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetStyleDescriptorResponse.ETag">
+            <summary>
+            Gets and sets the property ETag. 
+            <para>
+            The style descriptor's Etag.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.GeoMaps.Model.GetTileRequest">
+            <summary>
+            Container for the parameters to the GetTile operation.
+            Returns a tile. Map tiles are used by clients to render a map. they're addressed using
+            a grid arrangement with an X coordinate, Y coordinate, and Z (zoom) level.
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetTileRequest.Key">
+            <summary>
+            Gets and sets the property Key. 
+            <para>
+            Optional: The API key to be used for authorization. Either an API key or valid SigV4
+            signature must be provided when making a request. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetTileRequest.Tileset">
+            <summary>
+            Gets and sets the property Tileset. 
+            <para>
+            Specifies the desired tile set.
+            </para>
+             
+            <para>
+            Valid Values: <c>raster.satellite | vector.basemap</c> 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetTileRequest.X">
+            <summary>
+            Gets and sets the property X. 
+            <para>
+            The X axis value for the map tile. Must be between 0 and 19.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetTileRequest.Y">
+            <summary>
+            Gets and sets the property Y. 
+            <para>
+            The Y axis value for the map tile.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetTileRequest.Z">
+            <summary>
+            Gets and sets the property Z. 
+            <para>
+            The zoom value for the map tile.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.GeoMaps.Model.GetTileResponse">
+            <summary>
+            This is the response object from the GetTile operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetTileResponse.Blob">
+            <summary>
+            Gets and sets the property Blob. 
+            <para>
+            The blob represents a vector tile in <c>mvt</c> format for the <c>GetTile</c> API.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetTileResponse.CacheControl">
+            <summary>
+            Gets and sets the property CacheControl. 
+            <para>
+            Header that instructs caching configuration for the client.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetTileResponse.ContentType">
+            <summary>
+            Gets and sets the property ContentType. 
+            <para>
+            Header that represents the format of the response. The response returns the following
+            as the HTTP body.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetTileResponse.ETag">
+            <summary>
+            Gets and sets the property ETag. 
+            <para>
+            The pricing bucket for which the request is charged at.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.GetTileResponse.PricingBucket">
+            <summary>
+            Gets and sets the property PricingBucket. 
+            <para>
+            The pricing bucket for which the request is charged at.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.GeoMaps.Model.InternalServerException">
+            <summary>
+            The request processing has failed because of an unknown error, exception or failure.
+            </summary>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.InternalServerException.#ctor(System.String)">
+            <summary>
+            Constructs a new InternalServerException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.InternalServerException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.InternalServerException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.InternalServerException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.InternalServerException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.InternalServerException.Retryable">
+            <summary>
+            Flag indicating if the exception is retryable and the associated retry
+            details. A null value indicates that the exception is not retryable.
+            </summary>
+        </member>
+        <member name="T:Amazon.GeoMaps.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for AccessDeniedException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetGlyphsRequestMarshaller">
+            <summary>
+            GetGlyphs Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetGlyphsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetGlyphsRequestMarshaller.Marshall(Amazon.GeoMaps.Model.GetGlyphsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetGlyphsRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetGlyphsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetGlyphs operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetGlyphsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetGlyphsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetGlyphsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetSpritesRequestMarshaller">
+            <summary>
+            GetSprites Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetSpritesRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetSpritesRequestMarshaller.Marshall(Amazon.GeoMaps.Model.GetSpritesRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetSpritesRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetSpritesResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetSprites operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetSpritesResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetSpritesResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetSpritesResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetStaticMapRequestMarshaller">
+            <summary>
+            GetStaticMap Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetStaticMapRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetStaticMapRequestMarshaller.Marshall(Amazon.GeoMaps.Model.GetStaticMapRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetStaticMapRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetStaticMapResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetStaticMap operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetStaticMapResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetStaticMapResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetStaticMapResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetStyleDescriptorRequestMarshaller">
+            <summary>
+            GetStyleDescriptor Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetStyleDescriptorRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetStyleDescriptorRequestMarshaller.Marshall(Amazon.GeoMaps.Model.GetStyleDescriptorRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetStyleDescriptorRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetStyleDescriptorResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetStyleDescriptor operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetStyleDescriptorResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetStyleDescriptorResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetStyleDescriptorResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetTileRequestMarshaller">
+            <summary>
+            GetTile Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetTileRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetTileRequestMarshaller.Marshall(Amazon.GeoMaps.Model.GetTileRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetTileRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetTileResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetTile operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetTileResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetTileResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.Internal.MarshallTransformations.GetTileResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.GeoMaps.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InternalServerException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.GeoMaps.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ThrottlingException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.GeoMaps.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationExceptionField Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#GeoMaps#Model#ValidationExceptionField,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.GeoMaps.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.GeoMaps.Model.ThrottlingException">
+            <summary>
+            The request was denied due to request throttling.
+            </summary>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.ThrottlingException.#ctor(System.String)">
+            <summary>
+            Constructs a new ThrottlingException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.ThrottlingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.ThrottlingException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.ThrottlingException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.ThrottlingException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.ThrottlingException.Retryable">
+            <summary>
+            Flag indicating if the exception is retryable and the associated retry
+            details. A null value indicates that the exception is not retryable.
+            </summary>
+        </member>
+        <member name="T:Amazon.GeoMaps.Model.ValidationException">
+            <summary>
+            The input fails to satisfy the constraints specified by an AWS service.
+            </summary>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.ValidationException.#ctor(System.String)">
+            <summary>
+            Constructs a new ValidationException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.ValidationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.ValidationException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.ValidationException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.GeoMaps.Model.ValidationException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.ValidationException.FieldList">
+            <summary>
+            Gets and sets the property FieldList. 
+            <para>
+            A message with the reason for the validation exception error.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.ValidationException.Reason">
+            <summary>
+            Gets and sets the property Reason. 
+            <para>
+            The field where thebb invalid entry was detected.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.GeoMaps.Model.ValidationExceptionField">
+            <summary>
+            The input fails to satisfy the constraints specified by the Amazon Location service.
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.ValidationExceptionField.Message">
+            <summary>
+            Gets and sets the property Message. 
+            <para>
+            The error message.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.GeoMaps.Model.ValidationExceptionField.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The name of the resource.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.GeoMaps.AmazonGeoMapsRequest">
+            <summary>
+            Base class for GeoMaps operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.GeoMaps.ColorScheme">
+            <summary>
+            Constants used for properties of type ColorScheme.
+            </summary>
+        </member>
+        <member name="F:Amazon.GeoMaps.ColorScheme.Dark">
+            <summary>
+            Constant Dark for ColorScheme
+            </summary>
+        </member>
+        <member name="F:Amazon.GeoMaps.ColorScheme.Light">
+            <summary>
+            Constant Light for ColorScheme
+            </summary>
+        </member>
+        <member name="M:Amazon.GeoMaps.ColorScheme.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.GeoMaps.ColorScheme.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.GeoMaps.ColorScheme.op_Implicit(System.String)~Amazon.GeoMaps.ColorScheme">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.GeoMaps.MapStyle">
+            <summary>
+            Constants used for properties of type MapStyle.
+            </summary>
+        </member>
+        <member name="F:Amazon.GeoMaps.MapStyle.Hybrid">
+            <summary>
+            Constant Hybrid for MapStyle
+            </summary>
+        </member>
+        <member name="F:Amazon.GeoMaps.MapStyle.Monochrome">
+            <summary>
+            Constant Monochrome for MapStyle
+            </summary>
+        </member>
+        <member name="F:Amazon.GeoMaps.MapStyle.Satellite">
+            <summary>
+            Constant Satellite for MapStyle
+            </summary>
+        </member>
+        <member name="F:Amazon.GeoMaps.MapStyle.Standard">
+            <summary>
+            Constant Standard for MapStyle
+            </summary>
+        </member>
+        <member name="M:Amazon.GeoMaps.MapStyle.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.GeoMaps.MapStyle.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.GeoMaps.MapStyle.op_Implicit(System.String)~Amazon.GeoMaps.MapStyle">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.GeoMaps.ScaleBarUnit">
+            <summary>
+            Constants used for properties of type ScaleBarUnit.
+            </summary>
+        </member>
+        <member name="F:Amazon.GeoMaps.ScaleBarUnit.Kilometers">
+            <summary>
+            Constant Kilometers for ScaleBarUnit
+            </summary>
+        </member>
+        <member name="F:Amazon.GeoMaps.ScaleBarUnit.KilometersMiles">
+            <summary>
+            Constant KilometersMiles for ScaleBarUnit
+            </summary>
+        </member>
+        <member name="F:Amazon.GeoMaps.ScaleBarUnit.Miles">
+            <summary>
+            Constant Miles for ScaleBarUnit
+            </summary>
+        </member>
+        <member name="F:Amazon.GeoMaps.ScaleBarUnit.MilesKilometers">
+            <summary>
+            Constant MilesKilometers for ScaleBarUnit
+            </summary>
+        </member>
+        <member name="M:Amazon.GeoMaps.ScaleBarUnit.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.GeoMaps.ScaleBarUnit.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.GeoMaps.ScaleBarUnit.op_Implicit(System.String)~Amazon.GeoMaps.ScaleBarUnit">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.GeoMaps.StaticMapStyle">
+            <summary>
+            Constants used for properties of type StaticMapStyle.
+            </summary>
+        </member>
+        <member name="F:Amazon.GeoMaps.StaticMapStyle.Satellite">
+            <summary>
+            Constant Satellite for StaticMapStyle
+            </summary>
+        </member>
+        <member name="M:Amazon.GeoMaps.StaticMapStyle.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.GeoMaps.StaticMapStyle.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.GeoMaps.StaticMapStyle.op_Implicit(System.String)~Amazon.GeoMaps.StaticMapStyle">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.GeoMaps.ValidationExceptionReason">
+            <summary>
+            Constants used for properties of type ValidationExceptionReason.
+            </summary>
+        </member>
+        <member name="F:Amazon.GeoMaps.ValidationExceptionReason.CannotParse">
+            <summary>
+            Constant CannotParse for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.GeoMaps.ValidationExceptionReason.FieldValidationFailed">
+            <summary>
+            Constant FieldValidationFailed for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.GeoMaps.ValidationExceptionReason.Missing">
+            <summary>
+            Constant Missing for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.GeoMaps.ValidationExceptionReason.Other">
+            <summary>
+            Constant Other for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.GeoMaps.ValidationExceptionReason.UnknownField">
+            <summary>
+            Constant UnknownField for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.GeoMaps.ValidationExceptionReason.UnknownOperation">
+            <summary>
+            Constant UnknownOperation for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="M:Amazon.GeoMaps.ValidationExceptionReason.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.GeoMaps.ValidationExceptionReason.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.GeoMaps.ValidationExceptionReason.op_Implicit(System.String)~Amazon.GeoMaps.ValidationExceptionReason">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.GeoMaps.Variant">
+            <summary>
+            Constants used for properties of type Variant.
+            </summary>
+        </member>
+        <member name="F:Amazon.GeoMaps.Variant.Default">
+            <summary>
+            Constant Default for Variant
+            </summary>
+        </member>
+        <member name="M:Amazon.GeoMaps.Variant.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.GeoMaps.Variant.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.GeoMaps.Variant.op_Implicit(System.String)~Amazon.GeoMaps.Variant">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.GeoMaps.AmazonGeoMapsClient">
+             <summary>
+             <para>Implementation for accessing GeoMaps</para>
+            
+             Integrate high-quality base map data into your applications using <a href="https://maplibre.org">MapLibre</a>.
+             Capabilities include: 
+             
+              <ul> <li> 
+             <para>
+             Access to comprehensive base map data, allowing you to tailor the map display to your
+             specific needs.
+             </para>
+              </li> <li> 
+             <para>
+             Multiple pre-designed map styles suited for various application types, such as navigation,
+             logistics, or data visualization.
+             </para>
+              </li> <li> 
+             <para>
+             Generation of static map images for scenarios where interactive maps aren't suitable,
+             such as:
+             </para>
+              <ul> <li> 
+             <para>
+             Embedding in emails or documents
+             </para>
+              </li> <li> 
+             <para>
+             Displaying in low-bandwidth environments
+             </para>
+              </li> <li> 
+             <para>
+             Creating printable maps
+             </para>
+              </li> <li> 
+             <para>
+             Enhancing application performance by reducing client-side rendering
+             </para>
+              </li> </ul> </li> </ul>
+             </summary>
+        </member>
+        <member name="M:Amazon.GeoMaps.AmazonGeoMapsClient.#ctor">
+             <summary>
+             Constructs AmazonGeoMapsClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.GeoMaps.AmazonGeoMapsClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonGeoMapsClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.GeoMaps.AmazonGeoMapsClient.#ctor(Amazon.GeoMaps.AmazonGeoMapsConfig)">
+             <summary>
+             Constructs AmazonGeoMapsClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonGeoMapsClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.GeoMaps.AmazonGeoMapsClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonGeoMapsClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.GeoMaps.AmazonGeoMapsClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonGeoMapsClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.GeoMaps.AmazonGeoMapsClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.GeoMaps.AmazonGeoMapsConfig)">
+            <summary>
+            Constructs AmazonGeoMapsClient with AWS Credentials and an
+            AmazonGeoMapsClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonGeoMapsClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.GeoMaps.AmazonGeoMapsClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonGeoMapsClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.GeoMaps.AmazonGeoMapsClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonGeoMapsClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.GeoMaps.AmazonGeoMapsClient.#ctor(System.String,System.String,Amazon.GeoMaps.AmazonGeoMapsConfig)">
+            <summary>
+            Constructs AmazonGeoMapsClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonGeoMapsClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonGeoMapsClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.GeoMaps.AmazonGeoMapsClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonGeoMapsClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.GeoMaps.AmazonGeoMapsClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonGeoMapsClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.GeoMaps.AmazonGeoMapsClient.#ctor(System.String,System.String,System.String,Amazon.GeoMaps.AmazonGeoMapsConfig)">
+            <summary>
+            Constructs AmazonGeoMapsClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonGeoMapsClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonGeoMapsClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.GeoMaps.AmazonGeoMapsClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.GeoMaps.AmazonGeoMapsClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.GeoMaps.AmazonGeoMapsClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.GeoMaps.AmazonGeoMapsClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.GeoMaps.AmazonGeoMapsClient.GetGlyphsAsync(Amazon.GeoMaps.Model.GetGlyphsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns the map's glyphs.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetGlyphs service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetGlyphs service method, as returned by GeoMaps.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/geo-maps-2020-11-19/GetGlyphs">REST API Reference for GetGlyphs Operation</seealso>
+        </member>
+        <member name="M:Amazon.GeoMaps.AmazonGeoMapsClient.GetSpritesAsync(Amazon.GeoMaps.Model.GetSpritesRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns the map's sprites.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetSprites service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetSprites service method, as returned by GeoMaps.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/geo-maps-2020-11-19/GetSprites">REST API Reference for GetSprites Operation</seealso>
+        </member>
+        <member name="M:Amazon.GeoMaps.AmazonGeoMapsClient.GetStaticMapAsync(Amazon.GeoMaps.Model.GetStaticMapRequest,System.Threading.CancellationToken)">
+            <summary>
+            Provides high-quality static map images with customizable options. You can modify
+            the map's appearance and overlay additional information. It's an ideal solution for
+            applications requiring tailored static map snapshots.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetStaticMap service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetStaticMap service method, as returned by GeoMaps.</returns>
+            <exception cref="T:Amazon.GeoMaps.Model.AccessDeniedException">
+            The request was denied because of insufficient access or permissions. Check with an
+            administrator to verify your permissions.
+            </exception>
+            <exception cref="T:Amazon.GeoMaps.Model.InternalServerException">
+            The request processing has failed because of an unknown error, exception or failure.
+            </exception>
+            <exception cref="T:Amazon.GeoMaps.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.GeoMaps.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/geo-maps-2020-11-19/GetStaticMap">REST API Reference for GetStaticMap Operation</seealso>
+        </member>
+        <member name="M:Amazon.GeoMaps.AmazonGeoMapsClient.GetStyleDescriptorAsync(Amazon.GeoMaps.Model.GetStyleDescriptorRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns information about the style.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetStyleDescriptor service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetStyleDescriptor service method, as returned by GeoMaps.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/geo-maps-2020-11-19/GetStyleDescriptor">REST API Reference for GetStyleDescriptor Operation</seealso>
+        </member>
+        <member name="M:Amazon.GeoMaps.AmazonGeoMapsClient.GetTileAsync(Amazon.GeoMaps.Model.GetTileRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns a tile. Map tiles are used by clients to render a map. they're addressed using
+            a grid arrangement with an X coordinate, Y coordinate, and Z (zoom) level.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetTile service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetTile service method, as returned by GeoMaps.</returns>
+            <exception cref="T:Amazon.GeoMaps.Model.AccessDeniedException">
+            The request was denied because of insufficient access or permissions. Check with an
+            administrator to verify your permissions.
+            </exception>
+            <exception cref="T:Amazon.GeoMaps.Model.InternalServerException">
+            The request processing has failed because of an unknown error, exception or failure.
+            </exception>
+            <exception cref="T:Amazon.GeoMaps.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.GeoMaps.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/geo-maps-2020-11-19/GetTile">REST API Reference for GetTile Operation</seealso>
+        </member>
+        <member name="M:Amazon.GeoMaps.AmazonGeoMapsClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.GeoMaps.IAmazonGeoMaps">
+             <summary>
+             <para>Interface for accessing GeoMaps</para>
+            
+             Integrate high-quality base map data into your applications using <a href="https://maplibre.org">MapLibre</a>.
+             Capabilities include: 
+             
+              <ul> <li> 
+             <para>
+             Access to comprehensive base map data, allowing you to tailor the map display to your
+             specific needs.
+             </para>
+              </li> <li> 
+             <para>
+             Multiple pre-designed map styles suited for various application types, such as navigation,
+             logistics, or data visualization.
+             </para>
+              </li> <li> 
+             <para>
+             Generation of static map images for scenarios where interactive maps aren't suitable,
+             such as:
+             </para>
+              <ul> <li> 
+             <para>
+             Embedding in emails or documents
+             </para>
+              </li> <li> 
+             <para>
+             Displaying in low-bandwidth environments
+             </para>
+              </li> <li> 
+             <para>
+             Creating printable maps
+             </para>
+              </li> <li> 
+             <para>
+             Enhancing application performance by reducing client-side rendering
+             </para>
+              </li> </ul> </li> </ul>
+             </summary>
+        </member>
+        <member name="M:Amazon.GeoMaps.IAmazonGeoMaps.GetGlyphsAsync(Amazon.GeoMaps.Model.GetGlyphsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns the map's glyphs.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetGlyphs service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetGlyphs service method, as returned by GeoMaps.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/geo-maps-2020-11-19/GetGlyphs">REST API Reference for GetGlyphs Operation</seealso>
+        </member>
+        <member name="M:Amazon.GeoMaps.IAmazonGeoMaps.GetSpritesAsync(Amazon.GeoMaps.Model.GetSpritesRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns the map's sprites.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetSprites service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetSprites service method, as returned by GeoMaps.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/geo-maps-2020-11-19/GetSprites">REST API Reference for GetSprites Operation</seealso>
+        </member>
+        <member name="M:Amazon.GeoMaps.IAmazonGeoMaps.GetStaticMapAsync(Amazon.GeoMaps.Model.GetStaticMapRequest,System.Threading.CancellationToken)">
+            <summary>
+            Provides high-quality static map images with customizable options. You can modify
+            the map's appearance and overlay additional information. It's an ideal solution for
+            applications requiring tailored static map snapshots.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetStaticMap service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetStaticMap service method, as returned by GeoMaps.</returns>
+            <exception cref="T:Amazon.GeoMaps.Model.AccessDeniedException">
+            The request was denied because of insufficient access or permissions. Check with an
+            administrator to verify your permissions.
+            </exception>
+            <exception cref="T:Amazon.GeoMaps.Model.InternalServerException">
+            The request processing has failed because of an unknown error, exception or failure.
+            </exception>
+            <exception cref="T:Amazon.GeoMaps.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.GeoMaps.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/geo-maps-2020-11-19/GetStaticMap">REST API Reference for GetStaticMap Operation</seealso>
+        </member>
+        <member name="M:Amazon.GeoMaps.IAmazonGeoMaps.GetStyleDescriptorAsync(Amazon.GeoMaps.Model.GetStyleDescriptorRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns information about the style.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetStyleDescriptor service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetStyleDescriptor service method, as returned by GeoMaps.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/geo-maps-2020-11-19/GetStyleDescriptor">REST API Reference for GetStyleDescriptor Operation</seealso>
+        </member>
+        <member name="M:Amazon.GeoMaps.IAmazonGeoMaps.GetTileAsync(Amazon.GeoMaps.Model.GetTileRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns a tile. Map tiles are used by clients to render a map. they're addressed using
+            a grid arrangement with an X coordinate, Y coordinate, and Z (zoom) level.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetTile service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetTile service method, as returned by GeoMaps.</returns>
+            <exception cref="T:Amazon.GeoMaps.Model.AccessDeniedException">
+            The request was denied because of insufficient access or permissions. Check with an
+            administrator to verify your permissions.
+            </exception>
+            <exception cref="T:Amazon.GeoMaps.Model.InternalServerException">
+            The request processing has failed because of an unknown error, exception or failure.
+            </exception>
+            <exception cref="T:Amazon.GeoMaps.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.GeoMaps.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/geo-maps-2020-11-19/GetTile">REST API Reference for GetTile Operation</seealso>
+        </member>
+        <member name="M:Amazon.GeoMaps.IAmazonGeoMaps.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+    </members>
+</doc>

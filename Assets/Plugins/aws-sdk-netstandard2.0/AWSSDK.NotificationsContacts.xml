@@ -1,0 +1,2551 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.NotificationsContacts</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.NotificationsContacts.AmazonNotificationsContactsConfig">
+            <summary>
+            Configuration for accessing Amazon NotificationsContacts service
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.AmazonNotificationsContactsConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.AmazonNotificationsContactsConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.AmazonNotificationsContactsConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.AmazonNotificationsContactsConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.AmazonNotificationsContactsConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.AmazonNotificationsContactsDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon NotificationsContacts service
+            </summary>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.AmazonNotificationsContactsDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            NotificationsContacts
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.AmazonNotificationsContactsDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.AmazonNotificationsContactsDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.AmazonNotificationsContactsDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.AmazonNotificationsContactsDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.AmazonNotificationsContactsDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.AmazonNotificationsContactsDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Endpoints.NotificationsContactsEndpointParameters">
+            <summary>
+            Contains parameters used for resolving NotificationsContacts endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal NotificationsContactsEndpointProvider and NotificationsContactsEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Endpoints.NotificationsContactsEndpointParameters.#ctor">
+            <summary>
+            NotificationsContactsEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Endpoints.NotificationsContactsEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Endpoints.NotificationsContactsEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Endpoints.NotificationsContactsEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.AmazonNotificationsContactsException">
+            <summary>
+             Common exception for the NotificationsContacts service.
+             </summary>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.AmazonNotificationsContactsException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonNotificationsContactsException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.AmazonNotificationsContactsException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonNotificationsContactsException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.AmazonNotificationsContactsException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonNotificationsContactsException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.AmazonNotificationsContactsException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonNotificationsContactsException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.AmazonNotificationsContactsException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonNotificationsContactsException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Internal.AmazonNotificationsContactsEndpointProvider">
+            <summary>
+            Amazon NotificationsContacts endpoint provider.
+            Resolves endpoint for given set of NotificationsContactsEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Internal.AmazonNotificationsContactsEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for NotificationsContactsEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Internal.AmazonNotificationsContactsEndpointResolver">
+            <summary>
+            Amazon NotificationsContacts endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for NotificationsContacts service requests.
+            Collects values for NotificationsContactsEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses NotificationsContactsEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Internal.AmazonNotificationsContactsMetadata">
+            <summary>
+            Service metadata for  Amazon NotificationsContacts service
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Internal.AmazonNotificationsContactsMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Internal.AmazonNotificationsContactsMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.AccessDeniedException">
+            <summary>
+            You do not have sufficient access to perform this action.
+            </summary>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.AccessDeniedException.#ctor(System.String)">
+            <summary>
+            Constructs a new AccessDeniedException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.AccessDeniedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.AccessDeniedException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.AccessDeniedException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.AccessDeniedException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.ActivateEmailContactRequest">
+            <summary>
+            Container for the parameters to the ActivateEmailContact operation.
+            Activates an email contact using an activation code. This code is in the activation
+            email sent to the email address associated with this email contact.
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.ActivateEmailContactRequest.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+            The Amazon Resource Name (ARN) of the resource.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.ActivateEmailContactRequest.Code">
+            <summary>
+            Gets and sets the property Code. 
+            <para>
+            The activation code for this email contact.
+            </para>
+             
+            <para>
+            An email contact has a maximum of five activation attempts. Activation codes expire
+            after 12 hours and are generated by the <a href="https://docs.aws.amazon.com/notificationscontacts/latest/APIReference/API_SendActivationCode.html">SendActivationCode</a>
+            API action.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.ActivateEmailContactResponse">
+            <summary>
+            This is the response object from the ActivateEmailContact operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.ConflictException">
+            <summary>
+            Updating or deleting a resource can cause an inconsistent state.
+            </summary>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.ConflictException.#ctor(System.String)">
+            <summary>
+            Constructs a new ConflictException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.ConflictException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.ConflictException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.ConflictException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.ConflictException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.ConflictException.ResourceId">
+            <summary>
+            Gets and sets the property ResourceId. 
+            <para>
+            The resource ID that prompted the conflict error.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.ConflictException.ResourceType">
+            <summary>
+            Gets and sets the property ResourceType. 
+            <para>
+            The resource type that prompted the conflict error.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.CreateEmailContactRequest">
+            <summary>
+            Container for the parameters to the CreateEmailContact operation.
+            Creates an email contact for the provided email address.
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.CreateEmailContactRequest.EmailAddress">
+            <summary>
+            Gets and sets the property EmailAddress. 
+            <para>
+            The email address this email contact points to. The activation email and any subscribed
+            emails are sent here.
+            </para>
+             <note> 
+            <para>
+            This email address can't receive emails until it's activated.
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.CreateEmailContactRequest.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The name of the email contact.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.CreateEmailContactRequest.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+            A map of tags assigned to a resource. A tag is a string-to-string map of key-value
+            pairs.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.CreateEmailContactResponse">
+            <summary>
+            This is the response object from the CreateEmailContact operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.CreateEmailContactResponse.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+            The Amazon Resource Name (ARN) of the resource.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.DeleteEmailContactRequest">
+            <summary>
+            Container for the parameters to the DeleteEmailContact operation.
+            Deletes an email contact.
+            
+             <note> 
+            <para>
+            Deleting an email contact removes it from all associated notification configurations.
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.DeleteEmailContactRequest.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+            The Amazon Resource Name (ARN) of the resource.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.DeleteEmailContactResponse">
+            <summary>
+            This is the response object from the DeleteEmailContact operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.EmailContact">
+            <summary>
+            An email contact.
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.EmailContact.Address">
+            <summary>
+            Gets and sets the property Address. 
+            <para>
+            The email address this email contact points to. The activation email and any subscribed
+            emails are sent here.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.EmailContact.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+            The Amazon Resource Name (ARN) of the email contact.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.EmailContact.CreationTime">
+            <summary>
+            Gets and sets the property CreationTime. 
+            <para>
+            The creation time of the resource.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.EmailContact.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The name of the email contact.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.EmailContact.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            The status of the email contact. Only activated email contacts receive emails.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.EmailContact.UpdateTime">
+            <summary>
+            Gets and sets the property UpdateTime. 
+            <para>
+            The time the resource was last updated.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.GetEmailContactRequest">
+            <summary>
+            Container for the parameters to the GetEmailContact operation.
+            Returns an email contact.
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.GetEmailContactRequest.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+            The Amazon Resource Name (ARN) of the email contact to get.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.GetEmailContactResponse">
+            <summary>
+            This is the response object from the GetEmailContact operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.GetEmailContactResponse.EmailContact">
+            <summary>
+            Gets and sets the property EmailContact. 
+            <para>
+            The email contact for the provided email address.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.InternalServerException">
+            <summary>
+            Unexpected error during processing of request.
+            </summary>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.InternalServerException.#ctor(System.String)">
+            <summary>
+            Constructs a new InternalServerException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.InternalServerException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.InternalServerException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.InternalServerException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.InternalServerException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.InternalServerException.Retryable">
+            <summary>
+            Flag indicating if the exception is retryable and the associated retry
+            details. A null value indicates that the exception is not retryable.
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for AccessDeniedException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ActivateEmailContactRequestMarshaller">
+            <summary>
+            ActivateEmailContact Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ActivateEmailContactRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ActivateEmailContactRequestMarshaller.Marshall(Amazon.NotificationsContacts.Model.ActivateEmailContactRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ActivateEmailContactRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ActivateEmailContactResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ActivateEmailContact operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ActivateEmailContactResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ActivateEmailContactResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ActivateEmailContactResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ConflictException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.CreateEmailContactRequestMarshaller">
+            <summary>
+            CreateEmailContact Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.CreateEmailContactRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.CreateEmailContactRequestMarshaller.Marshall(Amazon.NotificationsContacts.Model.CreateEmailContactRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.CreateEmailContactRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.CreateEmailContactResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for CreateEmailContact operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.CreateEmailContactResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.CreateEmailContactResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.CreateEmailContactResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.DeleteEmailContactRequestMarshaller">
+            <summary>
+            DeleteEmailContact Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.DeleteEmailContactRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.DeleteEmailContactRequestMarshaller.Marshall(Amazon.NotificationsContacts.Model.DeleteEmailContactRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.DeleteEmailContactRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.DeleteEmailContactResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DeleteEmailContact operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.DeleteEmailContactResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.DeleteEmailContactResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.DeleteEmailContactResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.EmailContactUnmarshaller">
+            <summary>
+            Response Unmarshaller for EmailContact Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.EmailContactUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#NotificationsContacts#Model#EmailContact,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.EmailContactUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.EmailContactUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.GetEmailContactRequestMarshaller">
+            <summary>
+            GetEmailContact Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.GetEmailContactRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.GetEmailContactRequestMarshaller.Marshall(Amazon.NotificationsContacts.Model.GetEmailContactRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.GetEmailContactRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.GetEmailContactResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetEmailContact operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.GetEmailContactResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.GetEmailContactResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.GetEmailContactResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InternalServerException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ListEmailContactsRequestMarshaller">
+            <summary>
+            ListEmailContacts Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ListEmailContactsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ListEmailContactsRequestMarshaller.Marshall(Amazon.NotificationsContacts.Model.ListEmailContactsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ListEmailContactsRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ListEmailContactsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListEmailContacts operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ListEmailContactsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ListEmailContactsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ListEmailContactsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller">
+            <summary>
+            ListTagsForResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Marshall(Amazon.NotificationsContacts.Model.ListTagsForResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListTagsForResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ResourceNotFoundException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.SendActivationCodeRequestMarshaller">
+            <summary>
+            SendActivationCode Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.SendActivationCodeRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.SendActivationCodeRequestMarshaller.Marshall(Amazon.NotificationsContacts.Model.SendActivationCodeRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.SendActivationCodeRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.SendActivationCodeResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for SendActivationCode operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.SendActivationCodeResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.SendActivationCodeResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.SendActivationCodeResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ServiceQuotaExceededException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller">
+            <summary>
+            TagResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Marshall(Amazon.NotificationsContacts.Model.TagResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for TagResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ThrottlingException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller">
+            <summary>
+            UntagResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Marshall(Amazon.NotificationsContacts.Model.UntagResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for UntagResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationExceptionField Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#NotificationsContacts#Model#ValidationExceptionField,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.ListEmailContactsRequest">
+            <summary>
+            Container for the parameters to the ListEmailContacts operation.
+            Lists all email contacts created under the Account.
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.ListEmailContactsRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            The maximum number of results to include in the response. If more results exist than
+            the specified MaxResults value, a token is included in the response so that the remaining
+            results can be retrieved.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.ListEmailContactsRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            An optional token returned from a prior request. Use this token for pagination of
+            results from this action. If this parameter is specified, the response includes only
+            results beyond the token, up to the value specified by MaxResults.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.ListEmailContactsResponse">
+            <summary>
+            This is the response object from the ListEmailContacts operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.ListEmailContactsResponse.EmailContacts">
+            <summary>
+            Gets and sets the property EmailContacts. 
+            <para>
+            A list of email contacts.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.ListEmailContactsResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            An optional token returned from a prior request. Use this token for pagination of
+            results from this action. If this parameter is specified, the response includes only
+            results beyond the token, up to the value specified by MaxResults.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.ListTagsForResourceRequest">
+            <summary>
+            Container for the parameters to the ListTagsForResource operation.
+            Lists all of the tags associated with the Amazon Resource Name (ARN) that you specify.
+            The resource can be a user, server, or role.
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.ListTagsForResourceRequest.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+            The ARN you specified to list the tags of.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.ListTagsForResourceResponse">
+            <summary>
+            This is the response object from the ListTagsForResource operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.ListTagsForResourceResponse.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+            Key-value pairs that are assigned to a resource, usually for the purpose of grouping
+            and searching for items. Tags are metadata that you define.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.ResourceNotFoundException">
+            <summary>
+            Your request references a resource which does not exist.
+            </summary>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.ResourceNotFoundException.#ctor(System.String)">
+            <summary>
+            Constructs a new ResourceNotFoundException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.ResourceNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.ResourceNotFoundException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.ResourceNotFoundException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.ResourceNotFoundException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.ResourceNotFoundException.ResourceId">
+            <summary>
+            Gets and sets the property ResourceId. 
+            <para>
+            The ID of the resource that wasn't found.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.ResourceNotFoundException.ResourceType">
+            <summary>
+            Gets and sets the property ResourceType. 
+            <para>
+            The type of resource that wasn't found.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.SendActivationCodeRequest">
+            <summary>
+            Container for the parameters to the SendActivationCode operation.
+            Sends an activation email to the email address associated with the specified email
+            contact.
+            
+             <note> 
+            <para>
+            It might take a few minutes for the activation email to arrive. If it doesn't arrive,
+            check in your spam folder or try sending another activation email.
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.SendActivationCodeRequest.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+            The Amazon Resource Name (ARN) of the resource.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.SendActivationCodeResponse">
+            <summary>
+            This is the response object from the SendActivationCode operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.ServiceQuotaExceededException">
+            <summary>
+            Request would cause a service quota to be exceeded.
+            </summary>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.ServiceQuotaExceededException.#ctor(System.String)">
+            <summary>
+            Constructs a new ServiceQuotaExceededException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.ServiceQuotaExceededException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.ServiceQuotaExceededException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.ServiceQuotaExceededException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.ServiceQuotaExceededException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.ServiceQuotaExceededException.QuotaCode">
+            <summary>
+            Gets and sets the property QuotaCode. 
+            <para>
+            The code for the service quota in <a href="https://docs.aws.amazon.com/servicequotas/latest/userguide/intro.html">Service
+            Quotas</a>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.ServiceQuotaExceededException.ResourceId">
+            <summary>
+            Gets and sets the property ResourceId. 
+            <para>
+            The ID of the resource that exceeds the service quota.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.ServiceQuotaExceededException.ResourceType">
+            <summary>
+            Gets and sets the property ResourceType. 
+            <para>
+            The type of the resource that exceeds the service quota.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.ServiceQuotaExceededException.ServiceCode">
+            <summary>
+            Gets and sets the property ServiceCode. 
+            <para>
+            The code for the service quota exceeded in <a href="https://docs.aws.amazon.com/servicequotas/latest/userguide/intro.html">Service
+            Quotas</a>.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.TagResourceRequest">
+            <summary>
+            Container for the parameters to the TagResource operation.
+            Attaches a key-value pair to a resource, as identified by its Amazon Resource Name
+            (ARN). Taggable resources in AWS User Notifications Contacts include email contacts.
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.TagResourceRequest.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+            The ARN of the configuration.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.TagResourceRequest.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+            A list of tags to apply to the configuration.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.TagResourceResponse">
+            <summary>
+            This is the response object from the TagResource operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.ThrottlingException">
+            <summary>
+            The request was denied due to request throttling.
+            </summary>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.ThrottlingException.#ctor(System.String)">
+            <summary>
+            Constructs a new ThrottlingException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.ThrottlingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.ThrottlingException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.ThrottlingException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.ThrottlingException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.ThrottlingException.QuotaCode">
+            <summary>
+            Gets and sets the property QuotaCode. 
+            <para>
+            Identifies the quota that is being throttled.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.ThrottlingException.RetryAfterSeconds">
+            <summary>
+            Gets and sets the property RetryAfterSeconds. 
+            <para>
+            The number of seconds a client should wait before retrying the request.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.ThrottlingException.ServiceCode">
+            <summary>
+            Gets and sets the property ServiceCode. 
+            <para>
+            Identifies the service being throttled.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.ThrottlingException.Retryable">
+            <summary>
+            Flag indicating if the exception is retryable and the associated retry
+            details. A null value indicates that the exception is not retryable.
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.UntagResourceRequest">
+            <summary>
+            Container for the parameters to the UntagResource operation.
+            Detaches a key-value pair from a resource, as identified by its Amazon Resource Name
+            (ARN). Taggable resources in AWS User Notifications Contacts include email contacts..
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.UntagResourceRequest.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+            The value of the resource that will have the tag removed. An Amazon Resource Name
+            (ARN) is an identifier for a specific AWS resource, such as a server, user, or role.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.UntagResourceRequest.TagKeys">
+            <summary>
+            Gets and sets the property TagKeys. 
+            <para>
+            Specifies a list of tag keys that you want to remove from the specified resources.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.UntagResourceResponse">
+            <summary>
+            This is the response object from the UntagResource operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.ValidationException">
+            <summary>
+            The input fails to satisfy the constraints specified by an AWS service.
+            </summary>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.ValidationException.#ctor(System.String)">
+            <summary>
+            Constructs a new ValidationException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.ValidationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.ValidationException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.ValidationException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.ValidationException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.ValidationException.FieldList">
+            <summary>
+            Gets and sets the property FieldList. 
+            <para>
+            The list of input fields that are invalid.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.ValidationException.Reason">
+            <summary>
+            Gets and sets the property Reason. 
+            <para>
+            The reason why your input is considered invalid.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.ValidationExceptionField">
+            <summary>
+            Stores information about a field passed inside a request that resulted in an exception.
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.ValidationExceptionField.Message">
+            <summary>
+            Gets and sets the property Message. 
+            <para>
+            A message with the reason for the validation exception error.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.ValidationExceptionField.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The field name where the invalid entry was detected.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.IListEmailContactsPaginator">
+             <summary>
+             Paginator for the ListEmailContacts operation
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.IListEmailContactsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.IListEmailContactsPaginator.EmailContacts">
+            <summary>
+            Enumerable containing all of the EmailContacts
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.INotificationsContactsPaginatorFactory">
+             <summary>
+             Paginators for the NotificationsContacts service
+            </summary>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.INotificationsContactsPaginatorFactory.ListEmailContacts(Amazon.NotificationsContacts.Model.ListEmailContactsRequest)">
+             <summary>
+             Paginator for ListEmailContacts operation
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.ListEmailContactsPaginator">
+            <summary>
+            Base class for ListEmailContacts paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.ListEmailContactsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.Model.ListEmailContactsPaginator.EmailContacts">
+            <summary>
+            Enumerable containing all of the EmailContacts
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.Model.NotificationsContactsPaginatorFactory">
+             <summary>
+             Paginators for the NotificationsContacts service
+            </summary>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.Model.NotificationsContactsPaginatorFactory.ListEmailContacts(Amazon.NotificationsContacts.Model.ListEmailContactsRequest)">
+             <summary>
+             Paginator for ListEmailContacts operation
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.AmazonNotificationsContactsRequest">
+            <summary>
+            Base class for NotificationsContacts operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.EmailContactStatus">
+            <summary>
+            Constants used for properties of type EmailContactStatus.
+            </summary>
+        </member>
+        <member name="F:Amazon.NotificationsContacts.EmailContactStatus.Active">
+            <summary>
+            Constant Active for EmailContactStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.NotificationsContacts.EmailContactStatus.Inactive">
+            <summary>
+            Constant Inactive for EmailContactStatus
+            </summary>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.EmailContactStatus.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.EmailContactStatus.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.EmailContactStatus.op_Implicit(System.String)~Amazon.NotificationsContacts.EmailContactStatus">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.ValidationExceptionReason">
+            <summary>
+            Constants used for properties of type ValidationExceptionReason.
+            </summary>
+        </member>
+        <member name="F:Amazon.NotificationsContacts.ValidationExceptionReason.FieldValidationFailed">
+            <summary>
+            Constant FieldValidationFailed for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.NotificationsContacts.ValidationExceptionReason.Other">
+            <summary>
+            Constant Other for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.ValidationExceptionReason.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.ValidationExceptionReason.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.ValidationExceptionReason.op_Implicit(System.String)~Amazon.NotificationsContacts.ValidationExceptionReason">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.AmazonNotificationsContactsClient">
+             <summary>
+             <para>Implementation for accessing NotificationsContacts</para>
+            
+             AWS User Notifications Contacts is a service that allows you to create and manage
+             email contacts for AWS User Notifications. The AWS User Notifications Contacts API
+             Reference provides descriptions, API request parameters, and the JSON response for
+             all email contact related API actions.
+             </summary>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.AmazonNotificationsContactsClient.#ctor">
+             <summary>
+             Constructs AmazonNotificationsContactsClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.AmazonNotificationsContactsClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonNotificationsContactsClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.AmazonNotificationsContactsClient.#ctor(Amazon.NotificationsContacts.AmazonNotificationsContactsConfig)">
+             <summary>
+             Constructs AmazonNotificationsContactsClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonNotificationsContactsClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.AmazonNotificationsContactsClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonNotificationsContactsClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.AmazonNotificationsContactsClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonNotificationsContactsClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.AmazonNotificationsContactsClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.NotificationsContacts.AmazonNotificationsContactsConfig)">
+            <summary>
+            Constructs AmazonNotificationsContactsClient with AWS Credentials and an
+            AmazonNotificationsContactsClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonNotificationsContactsClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.AmazonNotificationsContactsClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonNotificationsContactsClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.AmazonNotificationsContactsClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonNotificationsContactsClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.AmazonNotificationsContactsClient.#ctor(System.String,System.String,Amazon.NotificationsContacts.AmazonNotificationsContactsConfig)">
+            <summary>
+            Constructs AmazonNotificationsContactsClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonNotificationsContactsClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonNotificationsContactsClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.AmazonNotificationsContactsClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonNotificationsContactsClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.AmazonNotificationsContactsClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonNotificationsContactsClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.AmazonNotificationsContactsClient.#ctor(System.String,System.String,System.String,Amazon.NotificationsContacts.AmazonNotificationsContactsConfig)">
+            <summary>
+            Constructs AmazonNotificationsContactsClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonNotificationsContactsClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonNotificationsContactsClient Configuration Object</param>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.AmazonNotificationsContactsClient.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.AmazonNotificationsContactsClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.AmazonNotificationsContactsClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.AmazonNotificationsContactsClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.AmazonNotificationsContactsClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.AmazonNotificationsContactsClient.ActivateEmailContactAsync(Amazon.NotificationsContacts.Model.ActivateEmailContactRequest,System.Threading.CancellationToken)">
+            <summary>
+            Activates an email contact using an activation code. This code is in the activation
+            email sent to the email address associated with this email contact.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ActivateEmailContact service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ActivateEmailContact service method, as returned by NotificationsContacts.</returns>
+            <exception cref="T:Amazon.NotificationsContacts.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ConflictException">
+            Updating or deleting a resource can cause an inconsistent state.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ResourceNotFoundException">
+            Your request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/notificationscontacts-2018-05-10/ActivateEmailContact">REST API Reference for ActivateEmailContact Operation</seealso>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.AmazonNotificationsContactsClient.CreateEmailContactAsync(Amazon.NotificationsContacts.Model.CreateEmailContactRequest,System.Threading.CancellationToken)">
+            <summary>
+            Creates an email contact for the provided email address.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateEmailContact service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the CreateEmailContact service method, as returned by NotificationsContacts.</returns>
+            <exception cref="T:Amazon.NotificationsContacts.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ConflictException">
+            Updating or deleting a resource can cause an inconsistent state.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ServiceQuotaExceededException">
+            Request would cause a service quota to be exceeded.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/notificationscontacts-2018-05-10/CreateEmailContact">REST API Reference for CreateEmailContact Operation</seealso>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.AmazonNotificationsContactsClient.DeleteEmailContactAsync(Amazon.NotificationsContacts.Model.DeleteEmailContactRequest,System.Threading.CancellationToken)">
+            <summary>
+            Deletes an email contact.
+            
+             <note> 
+            <para>
+            Deleting an email contact removes it from all associated notification configurations.
+            </para>
+             </note>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteEmailContact service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeleteEmailContact service method, as returned by NotificationsContacts.</returns>
+            <exception cref="T:Amazon.NotificationsContacts.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ConflictException">
+            Updating or deleting a resource can cause an inconsistent state.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ResourceNotFoundException">
+            Your request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/notificationscontacts-2018-05-10/DeleteEmailContact">REST API Reference for DeleteEmailContact Operation</seealso>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.AmazonNotificationsContactsClient.GetEmailContactAsync(Amazon.NotificationsContacts.Model.GetEmailContactRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns an email contact.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetEmailContact service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetEmailContact service method, as returned by NotificationsContacts.</returns>
+            <exception cref="T:Amazon.NotificationsContacts.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ResourceNotFoundException">
+            Your request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/notificationscontacts-2018-05-10/GetEmailContact">REST API Reference for GetEmailContact Operation</seealso>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.AmazonNotificationsContactsClient.ListEmailContactsAsync(Amazon.NotificationsContacts.Model.ListEmailContactsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists all email contacts created under the Account.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListEmailContacts service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListEmailContacts service method, as returned by NotificationsContacts.</returns>
+            <exception cref="T:Amazon.NotificationsContacts.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/notificationscontacts-2018-05-10/ListEmailContacts">REST API Reference for ListEmailContacts Operation</seealso>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.AmazonNotificationsContactsClient.ListTagsForResourceAsync(Amazon.NotificationsContacts.Model.ListTagsForResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists all of the tags associated with the Amazon Resource Name (ARN) that you specify.
+            The resource can be a user, server, or role.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListTagsForResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListTagsForResource service method, as returned by NotificationsContacts.</returns>
+            <exception cref="T:Amazon.NotificationsContacts.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ResourceNotFoundException">
+            Your request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/notificationscontacts-2018-05-10/ListTagsForResource">REST API Reference for ListTagsForResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.AmazonNotificationsContactsClient.SendActivationCodeAsync(Amazon.NotificationsContacts.Model.SendActivationCodeRequest,System.Threading.CancellationToken)">
+            <summary>
+            Sends an activation email to the email address associated with the specified email
+            contact.
+            
+             <note> 
+            <para>
+            It might take a few minutes for the activation email to arrive. If it doesn't arrive,
+            check in your spam folder or try sending another activation email.
+            </para>
+             </note>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the SendActivationCode service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the SendActivationCode service method, as returned by NotificationsContacts.</returns>
+            <exception cref="T:Amazon.NotificationsContacts.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ConflictException">
+            Updating or deleting a resource can cause an inconsistent state.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ResourceNotFoundException">
+            Your request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/notificationscontacts-2018-05-10/SendActivationCode">REST API Reference for SendActivationCode Operation</seealso>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.AmazonNotificationsContactsClient.TagResourceAsync(Amazon.NotificationsContacts.Model.TagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Attaches a key-value pair to a resource, as identified by its Amazon Resource Name
+            (ARN). Taggable resources in AWS User Notifications Contacts include email contacts.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the TagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the TagResource service method, as returned by NotificationsContacts.</returns>
+            <exception cref="T:Amazon.NotificationsContacts.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ResourceNotFoundException">
+            Your request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/notificationscontacts-2018-05-10/TagResource">REST API Reference for TagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.AmazonNotificationsContactsClient.UntagResourceAsync(Amazon.NotificationsContacts.Model.UntagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Detaches a key-value pair from a resource, as identified by its Amazon Resource Name
+            (ARN). Taggable resources in AWS User Notifications Contacts include email contacts..
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UntagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UntagResource service method, as returned by NotificationsContacts.</returns>
+            <exception cref="T:Amazon.NotificationsContacts.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ResourceNotFoundException">
+            Your request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/notificationscontacts-2018-05-10/UntagResource">REST API Reference for UntagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.AmazonNotificationsContactsClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.NotificationsContacts.IAmazonNotificationsContacts">
+             <summary>
+             <para>Interface for accessing NotificationsContacts</para>
+            
+             AWS User Notifications Contacts is a service that allows you to create and manage
+             email contacts for AWS User Notifications. The AWS User Notifications Contacts API
+             Reference provides descriptions, API request parameters, and the JSON response for
+             all email contact related API actions.
+             </summary>
+        </member>
+        <member name="P:Amazon.NotificationsContacts.IAmazonNotificationsContacts.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.IAmazonNotificationsContacts.ActivateEmailContactAsync(Amazon.NotificationsContacts.Model.ActivateEmailContactRequest,System.Threading.CancellationToken)">
+            <summary>
+            Activates an email contact using an activation code. This code is in the activation
+            email sent to the email address associated with this email contact.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ActivateEmailContact service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ActivateEmailContact service method, as returned by NotificationsContacts.</returns>
+            <exception cref="T:Amazon.NotificationsContacts.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ConflictException">
+            Updating or deleting a resource can cause an inconsistent state.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ResourceNotFoundException">
+            Your request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/notificationscontacts-2018-05-10/ActivateEmailContact">REST API Reference for ActivateEmailContact Operation</seealso>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.IAmazonNotificationsContacts.CreateEmailContactAsync(Amazon.NotificationsContacts.Model.CreateEmailContactRequest,System.Threading.CancellationToken)">
+            <summary>
+            Creates an email contact for the provided email address.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateEmailContact service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the CreateEmailContact service method, as returned by NotificationsContacts.</returns>
+            <exception cref="T:Amazon.NotificationsContacts.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ConflictException">
+            Updating or deleting a resource can cause an inconsistent state.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ServiceQuotaExceededException">
+            Request would cause a service quota to be exceeded.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/notificationscontacts-2018-05-10/CreateEmailContact">REST API Reference for CreateEmailContact Operation</seealso>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.IAmazonNotificationsContacts.DeleteEmailContactAsync(Amazon.NotificationsContacts.Model.DeleteEmailContactRequest,System.Threading.CancellationToken)">
+            <summary>
+            Deletes an email contact.
+            
+             <note> 
+            <para>
+            Deleting an email contact removes it from all associated notification configurations.
+            </para>
+             </note>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteEmailContact service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeleteEmailContact service method, as returned by NotificationsContacts.</returns>
+            <exception cref="T:Amazon.NotificationsContacts.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ConflictException">
+            Updating or deleting a resource can cause an inconsistent state.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ResourceNotFoundException">
+            Your request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/notificationscontacts-2018-05-10/DeleteEmailContact">REST API Reference for DeleteEmailContact Operation</seealso>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.IAmazonNotificationsContacts.GetEmailContactAsync(Amazon.NotificationsContacts.Model.GetEmailContactRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns an email contact.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetEmailContact service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetEmailContact service method, as returned by NotificationsContacts.</returns>
+            <exception cref="T:Amazon.NotificationsContacts.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ResourceNotFoundException">
+            Your request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/notificationscontacts-2018-05-10/GetEmailContact">REST API Reference for GetEmailContact Operation</seealso>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.IAmazonNotificationsContacts.ListEmailContactsAsync(Amazon.NotificationsContacts.Model.ListEmailContactsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists all email contacts created under the Account.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListEmailContacts service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListEmailContacts service method, as returned by NotificationsContacts.</returns>
+            <exception cref="T:Amazon.NotificationsContacts.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/notificationscontacts-2018-05-10/ListEmailContacts">REST API Reference for ListEmailContacts Operation</seealso>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.IAmazonNotificationsContacts.ListTagsForResourceAsync(Amazon.NotificationsContacts.Model.ListTagsForResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists all of the tags associated with the Amazon Resource Name (ARN) that you specify.
+            The resource can be a user, server, or role.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListTagsForResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListTagsForResource service method, as returned by NotificationsContacts.</returns>
+            <exception cref="T:Amazon.NotificationsContacts.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ResourceNotFoundException">
+            Your request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/notificationscontacts-2018-05-10/ListTagsForResource">REST API Reference for ListTagsForResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.IAmazonNotificationsContacts.SendActivationCodeAsync(Amazon.NotificationsContacts.Model.SendActivationCodeRequest,System.Threading.CancellationToken)">
+            <summary>
+            Sends an activation email to the email address associated with the specified email
+            contact.
+            
+             <note> 
+            <para>
+            It might take a few minutes for the activation email to arrive. If it doesn't arrive,
+            check in your spam folder or try sending another activation email.
+            </para>
+             </note>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the SendActivationCode service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the SendActivationCode service method, as returned by NotificationsContacts.</returns>
+            <exception cref="T:Amazon.NotificationsContacts.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ConflictException">
+            Updating or deleting a resource can cause an inconsistent state.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ResourceNotFoundException">
+            Your request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/notificationscontacts-2018-05-10/SendActivationCode">REST API Reference for SendActivationCode Operation</seealso>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.IAmazonNotificationsContacts.TagResourceAsync(Amazon.NotificationsContacts.Model.TagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Attaches a key-value pair to a resource, as identified by its Amazon Resource Name
+            (ARN). Taggable resources in AWS User Notifications Contacts include email contacts.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the TagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the TagResource service method, as returned by NotificationsContacts.</returns>
+            <exception cref="T:Amazon.NotificationsContacts.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ResourceNotFoundException">
+            Your request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/notificationscontacts-2018-05-10/TagResource">REST API Reference for TagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.IAmazonNotificationsContacts.UntagResourceAsync(Amazon.NotificationsContacts.Model.UntagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Detaches a key-value pair from a resource, as identified by its Amazon Resource Name
+            (ARN). Taggable resources in AWS User Notifications Contacts include email contacts..
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UntagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UntagResource service method, as returned by NotificationsContacts.</returns>
+            <exception cref="T:Amazon.NotificationsContacts.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ResourceNotFoundException">
+            Your request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.NotificationsContacts.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/notificationscontacts-2018-05-10/UntagResource">REST API Reference for UntagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.NotificationsContacts.IAmazonNotificationsContacts.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+    </members>
+</doc>

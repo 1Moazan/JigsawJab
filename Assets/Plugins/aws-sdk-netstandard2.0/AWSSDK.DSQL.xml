@@ -1,0 +1,3093 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.DSQL</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.DSQL.Util.DSQLAuthTokenGenerator">
+            <summary>
+            Provides authorization tokens for IAM authentication to an DSQL database.
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Util.DSQLAuthTokenGenerator.GenerateDSQLAuthTokenRequest">
+            <summary>
+            AWS4PreSignedUrlSigner is built around operation request objects.
+            This request type will only be used to generate the signed token.
+            It will never be used to make an actual request to DSQL.
+            </summary>
+        </member>
+        <member name="M:Amazon.DSQL.Util.DSQLAuthTokenGenerator.GenerateDbConnectAuthToken(System.String)">
+            <summary>
+            Generate a token for IAM authentication to a DSQL database cluster for the DbConnect action.
+            <remarks>
+            The AWS region and credentials for creating the auth token will be searched for
+            using the SDK's standard environment search pattern. This includes using
+            default profile configuration and AWS Compute environment settings.
+            </remarks>
+            </summary>
+            <param name="hostname">Hostname of the DSQL database.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Util.DSQLAuthTokenGenerator.GenerateDbConnectAuthToken(Amazon.RegionEndpoint,System.String)">
+            <summary>
+            Generate a token for IAM authentication to a DSQL database cluster for the DbConnect action.
+            <remarks>
+            The AWS credentials for creating the auth token will be searched for
+            using the SDK's standard environment search pattern. This includes using
+            default profile configuration and AWS Compute environment settings.
+            </remarks>
+            </summary>
+            <param name="region">The region of the DSQL database.</param>
+            <param name="hostname">Hostname of the DSQL database.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Util.DSQLAuthTokenGenerator.GenerateDbConnectAuthToken(Amazon.Runtime.AWSCredentials,System.String)">
+            <summary>
+            Generate a token for IAM authentication to a DSQL database cluster for the DbConnect action.
+            <remarks>
+            The AWS region for creating the auth token will be searched for
+            using the SDK's standard environment search pattern. This includes using
+            default profile configuration and AWS Compute environment settings.
+            </remarks>
+            </summary>
+            <param name="credentials">The credentials for the token.</param>
+            <param name="hostname">Hostname of the DSQL database.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Util.DSQLAuthTokenGenerator.GenerateDbConnectAuthToken(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint,System.String)">
+            <summary>
+            Generate a token for IAM authentication to a DSQL database cluster for the DbConnect action.
+            </summary>
+            <param name="credentials">The credentials for the token.</param>
+            <param name="region">The region of the DSQL database.</param>
+            <param name="hostname">Hostname of the DSQL database.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Util.DSQLAuthTokenGenerator.GenerateDbConnectAuthTokenAsync(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint,System.String)">
+            <summary>
+            Generate a token for IAM authentication to a DSQL database cluster for the DbConnect action.
+            </summary>
+            <param name="credentials">The credentials for the token.</param>
+            <param name="region">The region of the DSQL database.</param>
+            <param name="hostname">Hostname of the DSQL database.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Util.DSQLAuthTokenGenerator.GenerateDbConnectAdminAuthToken(System.String)">
+            <summary>
+            Generate a token for IAM authentication to a DSQL database cluster for the DbConnectAdmin action.
+            <remarks>
+            The AWS region and credentials for creating the auth token will be searched for
+            using the SDK's standard environment search pattern. This includes using
+            default profile configuration and AWS Compute environment settings.
+            </remarks>
+            </summary>
+            <param name="hostname">Hostname of the DSQL database.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Util.DSQLAuthTokenGenerator.GenerateDbConnectAdminAuthToken(Amazon.RegionEndpoint,System.String)">
+            <summary>
+            Generate a token for IAM authentication to a DSQL database cluster for the DbConnectAdmin action.
+            <remarks>
+            The AWS credentials for creating the auth token will be searched for
+            using the SDK's standard environment search pattern. This includes using
+            default profile configuration and AWS Compute environment settings.
+            </remarks>
+            </summary>
+            <param name="region">The region of the DSQL database.</param>
+            <param name="hostname">Hostname of the DSQL database.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Util.DSQLAuthTokenGenerator.GenerateDbConnectAdminAuthToken(Amazon.Runtime.AWSCredentials,System.String)">
+            <summary>
+            Generate a token for IAM authentication to a DSQL database cluster for the DbConnectAdmin action.
+            <remarks>
+            The AWS region for creating the auth token will be searched for
+            using the SDK's standard environment search pattern. This includes using
+            default profile configuration and AWS Compute environment settings.
+            </remarks>
+            </summary>
+            <param name="credentials">The credentials for the token.</param>
+            <param name="hostname">Hostname of the DSQL database.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Util.DSQLAuthTokenGenerator.GenerateDbConnectAdminAuthToken(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint,System.String)">
+            <summary>
+            Generate a token for IAM authentication to a DSQL database cluster for the DbConnectAdmin action.
+            </summary>
+            <param name="credentials">The credentials for the token.</param>
+            <param name="region">The region of the DSQL database.</param>
+            <param name="hostname">Hostname of the DSQL database.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Util.DSQLAuthTokenGenerator.GenerateDbConnectAdminAuthTokenAsync(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint,System.String)">
+            <summary>
+            Generate a token for IAM authentication to a DSQL database cluster for the DbConnectAdmin action.
+            </summary>
+            <param name="credentials">The credentials for the token.</param>
+            <param name="region">The region of the DSQL database.</param>
+            <param name="hostname">Hostname of the DSQL database.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.DSQL.AmazonDSQLConfig">
+            <summary>
+            Configuration for accessing Amazon DSQL service
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.AmazonDSQLConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.DSQL.AmazonDSQLConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.AmazonDSQLConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.AmazonDSQLConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.AmazonDSQLConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.AmazonDSQLDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon DSQL service
+            </summary>
+        </member>
+        <member name="M:Amazon.DSQL.AmazonDSQLDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            DSQL
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.AmazonDSQLDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.AmazonDSQLDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.AmazonDSQLDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.AmazonDSQLDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.AmazonDSQLDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.AmazonDSQLDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Endpoints.DSQLEndpointParameters">
+            <summary>
+            Contains parameters used for resolving DSQL endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal DSQLEndpointProvider and DSQLEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.DSQL.Endpoints.DSQLEndpointParameters.#ctor">
+            <summary>
+            DSQLEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Endpoints.DSQLEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Endpoints.DSQLEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Endpoints.DSQLEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.AmazonDSQLException">
+            <summary>
+             Common exception for the DSQL service.
+             </summary>
+        </member>
+        <member name="M:Amazon.DSQL.AmazonDSQLException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonDSQLException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.DSQL.AmazonDSQLException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonDSQLException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.DSQL.AmazonDSQLException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonDSQLException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.DSQL.AmazonDSQLException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonDSQLException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.DSQL.AmazonDSQLException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonDSQLException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.DSQL.Internal.AmazonDSQLEndpointProvider">
+            <summary>
+            Amazon DSQL endpoint provider.
+            Resolves endpoint for given set of DSQLEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.DSQL.Internal.AmazonDSQLEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for DSQLEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Internal.AmazonDSQLEndpointResolver">
+            <summary>
+            Amazon DSQL endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for DSQL service requests.
+            Collects values for DSQLEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses DSQLEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Internal.AmazonDSQLMetadata">
+            <summary>
+            Service metadata for  Amazon DSQL service
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Internal.AmazonDSQLMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Internal.AmazonDSQLMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Model.AccessDeniedException">
+            <summary>
+            You do not have sufficient access to perform this action.
+            </summary>
+        </member>
+        <member name="M:Amazon.DSQL.Model.AccessDeniedException.#ctor(System.String)">
+            <summary>
+            Constructs a new AccessDeniedException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.DSQL.Model.AccessDeniedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.DSQL.Model.AccessDeniedException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.DSQL.Model.AccessDeniedException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.DSQL.Model.AccessDeniedException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.DSQL.Model.ClusterSummary">
+            <summary>
+            A summary of the properties of a cluster.
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.ClusterSummary.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+            The ARN of the cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.ClusterSummary.Identifier">
+            <summary>
+            Gets and sets the property Identifier. 
+            <para>
+            The ID of the cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Model.ConflictException">
+            <summary>
+            The submitted action has conflicts.
+            </summary>
+        </member>
+        <member name="M:Amazon.DSQL.Model.ConflictException.#ctor(System.String)">
+            <summary>
+            Constructs a new ConflictException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.DSQL.Model.ConflictException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.DSQL.Model.ConflictException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.DSQL.Model.ConflictException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.DSQL.Model.ConflictException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.DSQL.Model.ConflictException.ResourceId">
+            <summary>
+            Gets and sets the property ResourceId. 
+            <para>
+            Resource Id
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.ConflictException.ResourceType">
+            <summary>
+            Gets and sets the property ResourceType. 
+            <para>
+            Resource Type
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Model.CreateClusterRequest">
+            <summary>
+            Container for the parameters to the CreateCluster operation.
+            Creates a cluster in Amazon Aurora DSQL.
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.CreateClusterRequest.ClientToken">
+            <summary>
+            Gets and sets the property ClientToken. 
+            <para>
+            A unique, case-sensitive identifier that you provide to ensure the idempotency of
+            the request. Idempotency ensures that an API request completes only once. With an
+            idempotent request, if the original request completes successfully, the subsequent
+            retries with the same client token return the result from the original successful
+            request and they have no additional effect.
+            </para>
+             
+            <para>
+            If you don't specify a client token, the Amazon Web Services SDK automatically generates
+            one.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.CreateClusterRequest.DeletionProtectionEnabled">
+            <summary>
+            Gets and sets the property DeletionProtectionEnabled. 
+            <para>
+            If enabled, you can't delete your cluster. You must first disable this property before
+            you can delete your cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.CreateClusterRequest.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+            A map of key and value pairs to use to tag your cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Model.CreateClusterResponse">
+            <summary>
+            Output Mixin
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.CreateClusterResponse.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+            The ARN of the created cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.CreateClusterResponse.CreationTime">
+            <summary>
+            Gets and sets the property CreationTime. 
+            <para>
+            The time of when created the cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.CreateClusterResponse.DeletionProtectionEnabled">
+            <summary>
+            Gets and sets the property DeletionProtectionEnabled. 
+            <para>
+            Whether deletion protection is enabled on this cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.CreateClusterResponse.Identifier">
+            <summary>
+            Gets and sets the property Identifier. 
+            <para>
+            The ID of the created cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.CreateClusterResponse.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            The status of the created cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Model.CreateMultiRegionClustersRequest">
+            <summary>
+            Container for the parameters to the CreateMultiRegionClusters operation.
+            Creates multi-Region clusters in Amazon Aurora DSQL. Multi-Region clusters require
+            a linked Region list, which is an array of the Regions in which you want to create
+            linked clusters. Multi-Region clusters require a witness Region, which participates
+            in quorum in failure scenarios.
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.CreateMultiRegionClustersRequest.ClientToken">
+            <summary>
+            Gets and sets the property ClientToken. 
+            <para>
+            A unique, case-sensitive identifier that you provide to ensure the idempotency of
+            the request. Idempotency ensures that an API request completes only once. With an
+            idempotent request, if the original request completes successfully. The subsequent
+            retries with the same client token return the result from the original successful
+            request and they have no additional effect.
+            </para>
+             
+            <para>
+            If you don't specify a client token, the Amazon Web Services SDK automatically generates
+            one.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.CreateMultiRegionClustersRequest.ClusterProperties">
+            <summary>
+            Gets and sets the property ClusterProperties. 
+            <para>
+            A mapping of properties to use when creating linked clusters.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.CreateMultiRegionClustersRequest.LinkedRegionList">
+            <summary>
+            Gets and sets the property LinkedRegionList. 
+            <para>
+            An array of the Regions in which you want to create additional clusters.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.CreateMultiRegionClustersRequest.WitnessRegion">
+            <summary>
+            Gets and sets the property WitnessRegion. 
+            <para>
+            The witness Region of multi-Region clusters.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Model.CreateMultiRegionClustersResponse">
+            <summary>
+            This is the response object from the CreateMultiRegionClusters operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.CreateMultiRegionClustersResponse.LinkedClusterArns">
+            <summary>
+            Gets and sets the property LinkedClusterArns. 
+            <para>
+            An array that contains the ARNs of all linked clusters.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Model.DeleteClusterRequest">
+            <summary>
+            Container for the parameters to the DeleteCluster operation.
+            Deletes a cluster in Amazon Aurora DSQL.
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.DeleteClusterRequest.ClientToken">
+            <summary>
+            Gets and sets the property ClientToken. 
+            <para>
+            A unique, case-sensitive identifier that you provide to ensure the idempotency of
+            the request. Idempotency ensures that an API request completes only once. With an
+            idempotent request, if the original request completes successfully. The subsequent
+            retries with the same client token return the result from the original successful
+            request and they have no additional effect.
+            </para>
+             
+            <para>
+            If you don't specify a client token, the Amazon Web Services SDK automatically generates
+            one.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.DeleteClusterRequest.Identifier">
+            <summary>
+            Gets and sets the property Identifier. 
+            <para>
+            The ID of the cluster to delete.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Model.DeleteClusterResponse">
+            <summary>
+            Output Mixin
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.DeleteClusterResponse.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+            The ARN of the deleted cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.DeleteClusterResponse.CreationTime">
+            <summary>
+            Gets and sets the property CreationTime. 
+            <para>
+            The time of when the cluster was created.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.DeleteClusterResponse.DeletionProtectionEnabled">
+            <summary>
+            Gets and sets the property DeletionProtectionEnabled. 
+            <para>
+            Specifies whether deletion protection was enabled on the cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.DeleteClusterResponse.Identifier">
+            <summary>
+            Gets and sets the property Identifier. 
+            <para>
+            The ID of the deleted cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.DeleteClusterResponse.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            The status of the cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Model.DeleteMultiRegionClustersRequest">
+            <summary>
+            Container for the parameters to the DeleteMultiRegionClusters operation.
+            Deletes a multi-Region cluster in Amazon Aurora DSQL.
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.DeleteMultiRegionClustersRequest.ClientToken">
+            <summary>
+            Gets and sets the property ClientToken. 
+            <para>
+            A unique, case-sensitive identifier that you provide to ensure the idempotency of
+            the request. Idempotency ensures that an API request completes only once. With an
+            idempotent request, if the original request completes successfully. The subsequent
+            retries with the same client token return the result from the original successful
+            request and they have no additional effect.
+            </para>
+             
+            <para>
+            If you don't specify a client token, the Amazon Web Services SDK automatically generates
+            one.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.DeleteMultiRegionClustersRequest.LinkedClusterArns">
+            <summary>
+            Gets and sets the property LinkedClusterArns. 
+            <para>
+            The ARNs of the clusters linked to the cluster you want to delete. also deletes these
+            clusters as part of the operation.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Model.DeleteMultiRegionClustersResponse">
+            <summary>
+            This is the response object from the DeleteMultiRegionClusters operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Model.GetClusterRequest">
+            <summary>
+            Container for the parameters to the GetCluster operation.
+            Retrieves information about a cluster.
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.GetClusterRequest.Identifier">
+            <summary>
+            Gets and sets the property Identifier. 
+            <para>
+            The ID of the cluster to retrieve.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Model.GetClusterResponse">
+            <summary>
+            Output Mixin
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.GetClusterResponse.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+            The ARN of the retrieved cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.GetClusterResponse.CreationTime">
+            <summary>
+            Gets and sets the property CreationTime. 
+            <para>
+            The time of when the cluster was created.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.GetClusterResponse.DeletionProtectionEnabled">
+            <summary>
+            Gets and sets the property DeletionProtectionEnabled. 
+            <para>
+            Whether deletion protection is enabled in this cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.GetClusterResponse.Identifier">
+            <summary>
+            Gets and sets the property Identifier. 
+            <para>
+            The ID of the retrieved cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.GetClusterResponse.LinkedClusterArns">
+            <summary>
+            Gets and sets the property LinkedClusterArns. 
+            <para>
+            The ARNs of the clusters linked to the retrieved cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.GetClusterResponse.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            The status of the retrieved cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.GetClusterResponse.WitnessRegion">
+            <summary>
+            Gets and sets the property WitnessRegion. 
+            <para>
+            The witness Region of the cluster. Applicable only for multi-Region clusters.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Model.InternalServerException">
+            <summary>
+            The request processing has failed because of an unknown error, exception or failure.
+            </summary>
+        </member>
+        <member name="M:Amazon.DSQL.Model.InternalServerException.#ctor(System.String)">
+            <summary>
+            Constructs a new InternalServerException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.DSQL.Model.InternalServerException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.DSQL.Model.InternalServerException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.DSQL.Model.InternalServerException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.DSQL.Model.InternalServerException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.DSQL.Model.InternalServerException.RetryAfterSeconds">
+            <summary>
+            Gets and sets the property RetryAfterSeconds. 
+            <para>
+            Retry after seconds.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.InternalServerException.Retryable">
+            <summary>
+            Flag indicating if the exception is retryable and the associated retry
+            details. A null value indicates that the exception is not retryable.
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for AccessDeniedException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DSQL.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DSQL.Model.Internal.MarshallTransformations.ClusterSummaryUnmarshaller">
+            <summary>
+            Response Unmarshaller for ClusterSummary Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.ClusterSummaryUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#DSQL#Model#ClusterSummary,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.ClusterSummaryUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.DSQL.Model.Internal.MarshallTransformations.ClusterSummaryUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DSQL.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ConflictException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DSQL.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DSQL.Model.Internal.MarshallTransformations.CreateClusterRequestMarshaller">
+            <summary>
+            CreateCluster Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.CreateClusterRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.CreateClusterRequestMarshaller.Marshall(Amazon.DSQL.Model.CreateClusterRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DSQL.Model.Internal.MarshallTransformations.CreateClusterRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DSQL.Model.Internal.MarshallTransformations.CreateClusterResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for CreateCluster operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.CreateClusterResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.CreateClusterResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DSQL.Model.Internal.MarshallTransformations.CreateClusterResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DSQL.Model.Internal.MarshallTransformations.CreateMultiRegionClustersRequestMarshaller">
+            <summary>
+            CreateMultiRegionClusters Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.CreateMultiRegionClustersRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.CreateMultiRegionClustersRequestMarshaller.Marshall(Amazon.DSQL.Model.CreateMultiRegionClustersRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DSQL.Model.Internal.MarshallTransformations.CreateMultiRegionClustersRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DSQL.Model.Internal.MarshallTransformations.CreateMultiRegionClustersResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for CreateMultiRegionClusters operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.CreateMultiRegionClustersResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.CreateMultiRegionClustersResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DSQL.Model.Internal.MarshallTransformations.CreateMultiRegionClustersResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DSQL.Model.Internal.MarshallTransformations.DeleteClusterRequestMarshaller">
+            <summary>
+            DeleteCluster Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.DeleteClusterRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.DeleteClusterRequestMarshaller.Marshall(Amazon.DSQL.Model.DeleteClusterRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DSQL.Model.Internal.MarshallTransformations.DeleteClusterRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DSQL.Model.Internal.MarshallTransformations.DeleteClusterResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DeleteCluster operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.DeleteClusterResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.DeleteClusterResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DSQL.Model.Internal.MarshallTransformations.DeleteClusterResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DSQL.Model.Internal.MarshallTransformations.DeleteMultiRegionClustersRequestMarshaller">
+            <summary>
+            DeleteMultiRegionClusters Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.DeleteMultiRegionClustersRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.DeleteMultiRegionClustersRequestMarshaller.Marshall(Amazon.DSQL.Model.DeleteMultiRegionClustersRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DSQL.Model.Internal.MarshallTransformations.DeleteMultiRegionClustersRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DSQL.Model.Internal.MarshallTransformations.DeleteMultiRegionClustersResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DeleteMultiRegionClusters operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.DeleteMultiRegionClustersResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.DeleteMultiRegionClustersResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DSQL.Model.Internal.MarshallTransformations.DeleteMultiRegionClustersResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DSQL.Model.Internal.MarshallTransformations.GetClusterRequestMarshaller">
+            <summary>
+            GetCluster Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.GetClusterRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.GetClusterRequestMarshaller.Marshall(Amazon.DSQL.Model.GetClusterRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DSQL.Model.Internal.MarshallTransformations.GetClusterRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DSQL.Model.Internal.MarshallTransformations.GetClusterResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetCluster operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.GetClusterResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.GetClusterResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DSQL.Model.Internal.MarshallTransformations.GetClusterResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DSQL.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InternalServerException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DSQL.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DSQL.Model.Internal.MarshallTransformations.LinkedClusterPropertiesMarshaller">
+            <summary>
+            LinkedClusterProperties Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.LinkedClusterPropertiesMarshaller.Marshall(Amazon.DSQL.Model.LinkedClusterProperties,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.DSQL.Model.Internal.MarshallTransformations.LinkedClusterPropertiesMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Model.Internal.MarshallTransformations.ListClustersRequestMarshaller">
+            <summary>
+            ListClusters Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.ListClustersRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.ListClustersRequestMarshaller.Marshall(Amazon.DSQL.Model.ListClustersRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DSQL.Model.Internal.MarshallTransformations.ListClustersRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DSQL.Model.Internal.MarshallTransformations.ListClustersResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListClusters operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.ListClustersResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.ListClustersResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DSQL.Model.Internal.MarshallTransformations.ListClustersResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DSQL.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller">
+            <summary>
+            ListTagsForResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Marshall(Amazon.DSQL.Model.ListTagsForResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DSQL.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DSQL.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListTagsForResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DSQL.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DSQL.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ResourceNotFoundException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DSQL.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DSQL.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ServiceQuotaExceededException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DSQL.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DSQL.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller">
+            <summary>
+            TagResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Marshall(Amazon.DSQL.Model.TagResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DSQL.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DSQL.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for TagResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DSQL.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DSQL.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ThrottlingException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DSQL.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DSQL.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller">
+            <summary>
+            UntagResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Marshall(Amazon.DSQL.Model.UntagResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DSQL.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DSQL.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for UntagResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DSQL.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DSQL.Model.Internal.MarshallTransformations.UpdateClusterRequestMarshaller">
+            <summary>
+            UpdateCluster Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.UpdateClusterRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.UpdateClusterRequestMarshaller.Marshall(Amazon.DSQL.Model.UpdateClusterRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DSQL.Model.Internal.MarshallTransformations.UpdateClusterRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DSQL.Model.Internal.MarshallTransformations.UpdateClusterResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for UpdateCluster operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.UpdateClusterResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.UpdateClusterResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DSQL.Model.Internal.MarshallTransformations.UpdateClusterResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DSQL.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationExceptionField Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#DSQL#Model#ValidationExceptionField,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.DSQL.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DSQL.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DSQL.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DSQL.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DSQL.Model.LinkedClusterProperties">
+            <summary>
+            Properties of linked clusters.
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.LinkedClusterProperties.DeletionProtectionEnabled">
+            <summary>
+            Gets and sets the property DeletionProtectionEnabled. 
+            <para>
+            Whether deletion protection is enabled.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.LinkedClusterProperties.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+            A map of key and value pairs the linked cluster is tagged with.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Model.ListClustersRequest">
+            <summary>
+            Container for the parameters to the ListClusters operation.
+            Retrieves information about a list of clusters.
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.ListClustersRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            An optional parameter that specifies the maximum number of results to return. You
+            can use nextToken to display the next page of results.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.ListClustersRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            If your initial ListClusters operation returns a nextToken, you can include the returned
+            nextToken in following ListClusters operations, which returns results in the next
+            page.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Model.ListClustersResponse">
+            <summary>
+            This is the response object from the ListClusters operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.ListClustersResponse.Clusters">
+            <summary>
+            Gets and sets the property Clusters. 
+            <para>
+            An array of the returned clusters.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.ListClustersResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            If nextToken is returned, there are more results available. The value of nextToken
+            is a unique pagination token for each page. To retrieve the next page, make the call
+            again using the returned token.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Model.ListTagsForResourceRequest">
+            <summary>
+            Container for the parameters to the ListTagsForResource operation.
+            Lists all of the tags for a resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.ListTagsForResourceRequest.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+            The ARN of the resource for which you want to list the tags.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Model.ListTagsForResourceResponse">
+            <summary>
+            This is the response object from the ListTagsForResource operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.ListTagsForResourceResponse.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+            A map of key and value pairs that you used to tag your resource.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Model.ResourceNotFoundException">
+            <summary>
+            The resource could not be found.
+            </summary>
+        </member>
+        <member name="M:Amazon.DSQL.Model.ResourceNotFoundException.#ctor(System.String)">
+            <summary>
+            Constructs a new ResourceNotFoundException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.DSQL.Model.ResourceNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.DSQL.Model.ResourceNotFoundException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.DSQL.Model.ResourceNotFoundException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.DSQL.Model.ResourceNotFoundException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.DSQL.Model.ResourceNotFoundException.ResourceId">
+            <summary>
+            Gets and sets the property ResourceId. 
+            <para>
+            Hypothetical identifier of the resource which does not exist
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.ResourceNotFoundException.ResourceType">
+            <summary>
+            Gets and sets the property ResourceType. 
+            <para>
+            Hypothetical type of the resource which does not exist
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Model.ServiceQuotaExceededException">
+            <summary>
+            The service limit was exceeded.
+            </summary>
+        </member>
+        <member name="M:Amazon.DSQL.Model.ServiceQuotaExceededException.#ctor(System.String)">
+            <summary>
+            Constructs a new ServiceQuotaExceededException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.DSQL.Model.ServiceQuotaExceededException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.DSQL.Model.ServiceQuotaExceededException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.DSQL.Model.ServiceQuotaExceededException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.DSQL.Model.ServiceQuotaExceededException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.DSQL.Model.ServiceQuotaExceededException.QuotaCode">
+            <summary>
+            Gets and sets the property QuotaCode. 
+            <para>
+            Service Quotas requirement to identify originating quota
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.ServiceQuotaExceededException.ResourceId">
+            <summary>
+            Gets and sets the property ResourceId. 
+            <para>
+            Identifier of the resource affected
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.ServiceQuotaExceededException.ResourceType">
+            <summary>
+            Gets and sets the property ResourceType. 
+            <para>
+            Type of the resource affected
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.ServiceQuotaExceededException.ServiceCode">
+            <summary>
+            Gets and sets the property ServiceCode. 
+            <para>
+            Service Quotas requirement to identify originating service
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Model.TagResourceRequest">
+            <summary>
+            Container for the parameters to the TagResource operation.
+            Tags a resource with a map of key and value pairs.
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.TagResourceRequest.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+            The ARN of the resource that you want to tag.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.TagResourceRequest.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+            A map of key and value pairs to use to tag your resource.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Model.TagResourceResponse">
+            <summary>
+            This is the response object from the TagResource operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Model.ThrottlingException">
+            <summary>
+            The request was denied due to request throttling.
+            </summary>
+        </member>
+        <member name="M:Amazon.DSQL.Model.ThrottlingException.#ctor(System.String)">
+            <summary>
+            Constructs a new ThrottlingException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.DSQL.Model.ThrottlingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.DSQL.Model.ThrottlingException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.DSQL.Model.ThrottlingException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.DSQL.Model.ThrottlingException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.DSQL.Model.ThrottlingException.QuotaCode">
+            <summary>
+            Gets and sets the property QuotaCode. 
+            <para>
+            Service Quotas requirement to identify originating quota
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.ThrottlingException.RetryAfterSeconds">
+            <summary>
+            Gets and sets the property RetryAfterSeconds. 
+            <para>
+            Advice to clients on when the call can be safely retried
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.ThrottlingException.ServiceCode">
+            <summary>
+            Gets and sets the property ServiceCode. 
+            <para>
+            Service Quotas requirement to identify originating service
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.ThrottlingException.Retryable">
+            <summary>
+            Flag indicating if the exception is retryable and the associated retry
+            details. A null value indicates that the exception is not retryable.
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Model.UntagResourceRequest">
+            <summary>
+            Container for the parameters to the UntagResource operation.
+            Removes a tag from a resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.UntagResourceRequest.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+            The ARN of the resource from which to remove tags.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.UntagResourceRequest.TagKeys">
+            <summary>
+            Gets and sets the property TagKeys. 
+            <para>
+            The array of keys of the tags that you want to remove.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Model.UntagResourceResponse">
+            <summary>
+            This is the response object from the UntagResource operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Model.UpdateClusterRequest">
+            <summary>
+            Container for the parameters to the UpdateCluster operation.
+            Updates a cluster.
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.UpdateClusterRequest.ClientToken">
+            <summary>
+            Gets and sets the property ClientToken. 
+            <para>
+            A unique, case-sensitive identifier that you provide to ensure the idempotency of
+            the request. Idempotency ensures that an API request completes only once. With an
+            idempotent request, if the original request completes successfully. The subsequent
+            retries with the same client token return the result from the original successful
+            request and they have no additional effect.
+            </para>
+             
+            <para>
+            If you don't specify a client token, the Amazon Web Services SDK automatically generates
+            one.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.UpdateClusterRequest.DeletionProtectionEnabled">
+            <summary>
+            Gets and sets the property DeletionProtectionEnabled. 
+            <para>
+            Specifies whether to enable deletion protection in your cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.UpdateClusterRequest.Identifier">
+            <summary>
+            Gets and sets the property Identifier. 
+            <para>
+            The ID of the cluster you want to update.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Model.UpdateClusterResponse">
+            <summary>
+            Output Mixin
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.UpdateClusterResponse.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+            The ARN of the updated cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.UpdateClusterResponse.CreationTime">
+            <summary>
+            Gets and sets the property CreationTime. 
+            <para>
+            The time of when the cluster was created.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.UpdateClusterResponse.DeletionProtectionEnabled">
+            <summary>
+            Gets and sets the property DeletionProtectionEnabled. 
+            <para>
+            Whether deletion protection is enabled for the updated cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.UpdateClusterResponse.Identifier">
+            <summary>
+            Gets and sets the property Identifier. 
+            <para>
+            The ID of the cluster to update.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.UpdateClusterResponse.LinkedClusterArns">
+            <summary>
+            Gets and sets the property LinkedClusterArns. 
+            <para>
+            The ARNs of the clusters linked to the updated cluster. Applicable only for multi-Region
+            clusters.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.UpdateClusterResponse.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            The status of the updated cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.UpdateClusterResponse.WitnessRegion">
+            <summary>
+            Gets and sets the property WitnessRegion. 
+            <para>
+            The Region that receives all data you write to linked clusters.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Model.ValidationException">
+            <summary>
+            The input failed to satisfy the constraints specified by an Amazon Web Services service.
+            </summary>
+        </member>
+        <member name="M:Amazon.DSQL.Model.ValidationException.#ctor(System.String)">
+            <summary>
+            Constructs a new ValidationException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.DSQL.Model.ValidationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.DSQL.Model.ValidationException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.DSQL.Model.ValidationException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.DSQL.Model.ValidationException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.DSQL.Model.ValidationException.FieldList">
+            <summary>
+            Gets and sets the property FieldList.
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.ValidationException.Reason">
+            <summary>
+            Gets and sets the property Reason.
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Model.ValidationExceptionField">
+            <summary>
+            Stores information about a field passed inside a request that resulted in an validation
+            error.
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.ValidationExceptionField.Message">
+            <summary>
+            Gets and sets the property Message. 
+            <para>
+            A message describing why this field failed validation.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.ValidationExceptionField.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The name of the field.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Model.DSQLPaginatorFactory">
+             <summary>
+             Paginators for the DSQL service
+            </summary>
+        </member>
+        <member name="M:Amazon.DSQL.Model.DSQLPaginatorFactory.ListClusters(Amazon.DSQL.Model.ListClustersRequest)">
+             <summary>
+             Paginator for ListClusters operation
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Model.IDSQLPaginatorFactory">
+             <summary>
+             Paginators for the DSQL service
+            </summary>
+        </member>
+        <member name="M:Amazon.DSQL.Model.IDSQLPaginatorFactory.ListClusters(Amazon.DSQL.Model.ListClustersRequest)">
+             <summary>
+             Paginator for ListClusters operation
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Model.IListClustersPaginator">
+             <summary>
+             Paginator for the ListClusters operation
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.IListClustersPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.IListClustersPaginator.Clusters">
+            <summary>
+            Enumerable containing all of the Clusters
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.Model.ListClustersPaginator">
+            <summary>
+            Base class for ListClusters paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.ListClustersPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.DSQL.Model.ListClustersPaginator.Clusters">
+            <summary>
+            Enumerable containing all of the Clusters
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.AmazonDSQLRequest">
+            <summary>
+            Base class for DSQL operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.DSQL.ClusterStatus">
+            <summary>
+            Constants used for properties of type ClusterStatus.
+            </summary>
+        </member>
+        <member name="F:Amazon.DSQL.ClusterStatus.ACTIVE">
+            <summary>
+            Constant ACTIVE for ClusterStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.DSQL.ClusterStatus.CREATING">
+            <summary>
+            Constant CREATING for ClusterStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.DSQL.ClusterStatus.DELETED">
+            <summary>
+            Constant DELETED for ClusterStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.DSQL.ClusterStatus.DELETING">
+            <summary>
+            Constant DELETING for ClusterStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.DSQL.ClusterStatus.FAILED">
+            <summary>
+            Constant FAILED for ClusterStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.DSQL.ClusterStatus.UPDATING">
+            <summary>
+            Constant UPDATING for ClusterStatus
+            </summary>
+        </member>
+        <member name="M:Amazon.DSQL.ClusterStatus.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.DSQL.ClusterStatus.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.DSQL.ClusterStatus.op_Implicit(System.String)~Amazon.DSQL.ClusterStatus">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.DSQL.ValidationExceptionReason">
+            <summary>
+            Constants used for properties of type ValidationExceptionReason.
+            </summary>
+        </member>
+        <member name="F:Amazon.DSQL.ValidationExceptionReason.CannotParse">
+            <summary>
+            Constant CannotParse for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.DSQL.ValidationExceptionReason.DeletionProtectionEnabled">
+            <summary>
+            Constant DeletionProtectionEnabled for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.DSQL.ValidationExceptionReason.FieldValidationFailed">
+            <summary>
+            Constant FieldValidationFailed for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.DSQL.ValidationExceptionReason.Other">
+            <summary>
+            Constant Other for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.DSQL.ValidationExceptionReason.UnknownOperation">
+            <summary>
+            Constant UnknownOperation for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="M:Amazon.DSQL.ValidationExceptionReason.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.DSQL.ValidationExceptionReason.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.DSQL.ValidationExceptionReason.op_Implicit(System.String)~Amazon.DSQL.ValidationExceptionReason">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.DSQL.AmazonDSQLClient">
+             <summary>
+             <para>Implementation for accessing DSQL</para>
+            
+             This is an interface reference for Amazon Aurora DSQL. It contains documentation for
+             one of the programming or command line interfaces you can use to manage Amazon Aurora
+             DSQL.
+             
+              
+             <para>
+             Amazon Aurora DSQL is a serverless, distributed SQL database suitable for workloads
+             of any size. Aurora DSQL is available in both single-Region and multi-Region configurations,
+             so your clusters and databases are always available even if an Availability Zone or
+             an Amazon Web Services Region are unavailable. Aurora DSQL lets you focus on using
+             your data to acquire new insights for your business and customers.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Amazon.DSQL.AmazonDSQLClient.#ctor">
+             <summary>
+             Constructs AmazonDSQLClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.DSQL.AmazonDSQLClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonDSQLClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.DSQL.AmazonDSQLClient.#ctor(Amazon.DSQL.AmazonDSQLConfig)">
+             <summary>
+             Constructs AmazonDSQLClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonDSQLClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.DSQL.AmazonDSQLClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonDSQLClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.DSQL.AmazonDSQLClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonDSQLClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.DSQL.AmazonDSQLClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.DSQL.AmazonDSQLConfig)">
+            <summary>
+            Constructs AmazonDSQLClient with AWS Credentials and an
+            AmazonDSQLClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonDSQLClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.DSQL.AmazonDSQLClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonDSQLClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.DSQL.AmazonDSQLClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonDSQLClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.DSQL.AmazonDSQLClient.#ctor(System.String,System.String,Amazon.DSQL.AmazonDSQLConfig)">
+            <summary>
+            Constructs AmazonDSQLClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonDSQLClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonDSQLClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.DSQL.AmazonDSQLClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonDSQLClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.DSQL.AmazonDSQLClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonDSQLClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.DSQL.AmazonDSQLClient.#ctor(System.String,System.String,System.String,Amazon.DSQL.AmazonDSQLConfig)">
+            <summary>
+            Constructs AmazonDSQLClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonDSQLClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonDSQLClient Configuration Object</param>
+        </member>
+        <member name="P:Amazon.DSQL.AmazonDSQLClient.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.DSQL.AmazonDSQLClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.DSQL.AmazonDSQLClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.DSQL.AmazonDSQLClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.DSQL.AmazonDSQLClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.DSQL.AmazonDSQLClient.CreateClusterAsync(Amazon.DSQL.Model.CreateClusterRequest,System.Threading.CancellationToken)">
+            <summary>
+            Creates a cluster in Amazon Aurora DSQL.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateCluster service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the CreateCluster service method, as returned by DSQL.</returns>
+            <exception cref="T:Amazon.DSQL.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ConflictException">
+            The submitted action has conflicts.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.InternalServerException">
+            The request processing has failed because of an unknown error, exception or failure.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ServiceQuotaExceededException">
+            The service limit was exceeded.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ValidationException">
+            The input failed to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/dsql-2018-05-10/CreateCluster">REST API Reference for CreateCluster Operation</seealso>
+        </member>
+        <member name="M:Amazon.DSQL.AmazonDSQLClient.CreateMultiRegionClustersAsync(Amazon.DSQL.Model.CreateMultiRegionClustersRequest,System.Threading.CancellationToken)">
+            <summary>
+            Creates multi-Region clusters in Amazon Aurora DSQL. Multi-Region clusters require
+            a linked Region list, which is an array of the Regions in which you want to create
+            linked clusters. Multi-Region clusters require a witness Region, which participates
+            in quorum in failure scenarios.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateMultiRegionClusters service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the CreateMultiRegionClusters service method, as returned by DSQL.</returns>
+            <exception cref="T:Amazon.DSQL.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ConflictException">
+            The submitted action has conflicts.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.InternalServerException">
+            The request processing has failed because of an unknown error, exception or failure.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ServiceQuotaExceededException">
+            The service limit was exceeded.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ValidationException">
+            The input failed to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/dsql-2018-05-10/CreateMultiRegionClusters">REST API Reference for CreateMultiRegionClusters Operation</seealso>
+        </member>
+        <member name="M:Amazon.DSQL.AmazonDSQLClient.DeleteClusterAsync(Amazon.DSQL.Model.DeleteClusterRequest,System.Threading.CancellationToken)">
+            <summary>
+            Deletes a cluster in Amazon Aurora DSQL.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteCluster service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeleteCluster service method, as returned by DSQL.</returns>
+            <exception cref="T:Amazon.DSQL.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ConflictException">
+            The submitted action has conflicts.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.InternalServerException">
+            The request processing has failed because of an unknown error, exception or failure.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ResourceNotFoundException">
+            The resource could not be found.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ValidationException">
+            The input failed to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/dsql-2018-05-10/DeleteCluster">REST API Reference for DeleteCluster Operation</seealso>
+        </member>
+        <member name="M:Amazon.DSQL.AmazonDSQLClient.DeleteMultiRegionClustersAsync(Amazon.DSQL.Model.DeleteMultiRegionClustersRequest,System.Threading.CancellationToken)">
+            <summary>
+            Deletes a multi-Region cluster in Amazon Aurora DSQL.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteMultiRegionClusters service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeleteMultiRegionClusters service method, as returned by DSQL.</returns>
+            <exception cref="T:Amazon.DSQL.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ConflictException">
+            The submitted action has conflicts.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.InternalServerException">
+            The request processing has failed because of an unknown error, exception or failure.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ResourceNotFoundException">
+            The resource could not be found.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ValidationException">
+            The input failed to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/dsql-2018-05-10/DeleteMultiRegionClusters">REST API Reference for DeleteMultiRegionClusters Operation</seealso>
+        </member>
+        <member name="M:Amazon.DSQL.AmazonDSQLClient.GetClusterAsync(Amazon.DSQL.Model.GetClusterRequest,System.Threading.CancellationToken)">
+            <summary>
+            Retrieves information about a cluster.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetCluster service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetCluster service method, as returned by DSQL.</returns>
+            <exception cref="T:Amazon.DSQL.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.InternalServerException">
+            The request processing has failed because of an unknown error, exception or failure.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ResourceNotFoundException">
+            The resource could not be found.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ValidationException">
+            The input failed to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/dsql-2018-05-10/GetCluster">REST API Reference for GetCluster Operation</seealso>
+        </member>
+        <member name="M:Amazon.DSQL.AmazonDSQLClient.ListClustersAsync(Amazon.DSQL.Model.ListClustersRequest,System.Threading.CancellationToken)">
+            <summary>
+            Retrieves information about a list of clusters.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListClusters service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListClusters service method, as returned by DSQL.</returns>
+            <exception cref="T:Amazon.DSQL.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.InternalServerException">
+            The request processing has failed because of an unknown error, exception or failure.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ResourceNotFoundException">
+            The resource could not be found.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ValidationException">
+            The input failed to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/dsql-2018-05-10/ListClusters">REST API Reference for ListClusters Operation</seealso>
+        </member>
+        <member name="M:Amazon.DSQL.AmazonDSQLClient.ListTagsForResourceAsync(Amazon.DSQL.Model.ListTagsForResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists all of the tags for a resource.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListTagsForResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListTagsForResource service method, as returned by DSQL.</returns>
+            <exception cref="T:Amazon.DSQL.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.InternalServerException">
+            The request processing has failed because of an unknown error, exception or failure.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ResourceNotFoundException">
+            The resource could not be found.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ValidationException">
+            The input failed to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/dsql-2018-05-10/ListTagsForResource">REST API Reference for ListTagsForResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.DSQL.AmazonDSQLClient.TagResourceAsync(Amazon.DSQL.Model.TagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Tags a resource with a map of key and value pairs.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the TagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the TagResource service method, as returned by DSQL.</returns>
+            <exception cref="T:Amazon.DSQL.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.InternalServerException">
+            The request processing has failed because of an unknown error, exception or failure.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ResourceNotFoundException">
+            The resource could not be found.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ServiceQuotaExceededException">
+            The service limit was exceeded.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ValidationException">
+            The input failed to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/dsql-2018-05-10/TagResource">REST API Reference for TagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.DSQL.AmazonDSQLClient.UntagResourceAsync(Amazon.DSQL.Model.UntagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Removes a tag from a resource.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UntagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UntagResource service method, as returned by DSQL.</returns>
+            <exception cref="T:Amazon.DSQL.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.InternalServerException">
+            The request processing has failed because of an unknown error, exception or failure.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ResourceNotFoundException">
+            The resource could not be found.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ValidationException">
+            The input failed to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/dsql-2018-05-10/UntagResource">REST API Reference for UntagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.DSQL.AmazonDSQLClient.UpdateClusterAsync(Amazon.DSQL.Model.UpdateClusterRequest,System.Threading.CancellationToken)">
+            <summary>
+            Updates a cluster.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UpdateCluster service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UpdateCluster service method, as returned by DSQL.</returns>
+            <exception cref="T:Amazon.DSQL.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ConflictException">
+            The submitted action has conflicts.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.InternalServerException">
+            The request processing has failed because of an unknown error, exception or failure.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ResourceNotFoundException">
+            The resource could not be found.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ValidationException">
+            The input failed to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/dsql-2018-05-10/UpdateCluster">REST API Reference for UpdateCluster Operation</seealso>
+        </member>
+        <member name="M:Amazon.DSQL.AmazonDSQLClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.DSQL.IAmazonDSQL">
+             <summary>
+             <para>Interface for accessing DSQL</para>
+            
+             This is an interface reference for Amazon Aurora DSQL. It contains documentation for
+             one of the programming or command line interfaces you can use to manage Amazon Aurora
+             DSQL.
+             
+              
+             <para>
+             Amazon Aurora DSQL is a serverless, distributed SQL database suitable for workloads
+             of any size. Aurora DSQL is available in both single-Region and multi-Region configurations,
+             so your clusters and databases are always available even if an Availability Zone or
+             an Amazon Web Services Region are unavailable. Aurora DSQL lets you focus on using
+             your data to acquire new insights for your business and customers.
+             </para>
+             </summary>
+        </member>
+        <member name="P:Amazon.DSQL.IAmazonDSQL.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.DSQL.IAmazonDSQL.CreateClusterAsync(Amazon.DSQL.Model.CreateClusterRequest,System.Threading.CancellationToken)">
+            <summary>
+            Creates a cluster in Amazon Aurora DSQL.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateCluster service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the CreateCluster service method, as returned by DSQL.</returns>
+            <exception cref="T:Amazon.DSQL.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ConflictException">
+            The submitted action has conflicts.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.InternalServerException">
+            The request processing has failed because of an unknown error, exception or failure.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ServiceQuotaExceededException">
+            The service limit was exceeded.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ValidationException">
+            The input failed to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/dsql-2018-05-10/CreateCluster">REST API Reference for CreateCluster Operation</seealso>
+        </member>
+        <member name="M:Amazon.DSQL.IAmazonDSQL.CreateMultiRegionClustersAsync(Amazon.DSQL.Model.CreateMultiRegionClustersRequest,System.Threading.CancellationToken)">
+            <summary>
+            Creates multi-Region clusters in Amazon Aurora DSQL. Multi-Region clusters require
+            a linked Region list, which is an array of the Regions in which you want to create
+            linked clusters. Multi-Region clusters require a witness Region, which participates
+            in quorum in failure scenarios.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateMultiRegionClusters service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the CreateMultiRegionClusters service method, as returned by DSQL.</returns>
+            <exception cref="T:Amazon.DSQL.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ConflictException">
+            The submitted action has conflicts.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.InternalServerException">
+            The request processing has failed because of an unknown error, exception or failure.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ServiceQuotaExceededException">
+            The service limit was exceeded.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ValidationException">
+            The input failed to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/dsql-2018-05-10/CreateMultiRegionClusters">REST API Reference for CreateMultiRegionClusters Operation</seealso>
+        </member>
+        <member name="M:Amazon.DSQL.IAmazonDSQL.DeleteClusterAsync(Amazon.DSQL.Model.DeleteClusterRequest,System.Threading.CancellationToken)">
+            <summary>
+            Deletes a cluster in Amazon Aurora DSQL.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteCluster service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeleteCluster service method, as returned by DSQL.</returns>
+            <exception cref="T:Amazon.DSQL.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ConflictException">
+            The submitted action has conflicts.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.InternalServerException">
+            The request processing has failed because of an unknown error, exception or failure.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ResourceNotFoundException">
+            The resource could not be found.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ValidationException">
+            The input failed to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/dsql-2018-05-10/DeleteCluster">REST API Reference for DeleteCluster Operation</seealso>
+        </member>
+        <member name="M:Amazon.DSQL.IAmazonDSQL.DeleteMultiRegionClustersAsync(Amazon.DSQL.Model.DeleteMultiRegionClustersRequest,System.Threading.CancellationToken)">
+            <summary>
+            Deletes a multi-Region cluster in Amazon Aurora DSQL.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteMultiRegionClusters service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeleteMultiRegionClusters service method, as returned by DSQL.</returns>
+            <exception cref="T:Amazon.DSQL.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ConflictException">
+            The submitted action has conflicts.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.InternalServerException">
+            The request processing has failed because of an unknown error, exception or failure.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ResourceNotFoundException">
+            The resource could not be found.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ValidationException">
+            The input failed to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/dsql-2018-05-10/DeleteMultiRegionClusters">REST API Reference for DeleteMultiRegionClusters Operation</seealso>
+        </member>
+        <member name="M:Amazon.DSQL.IAmazonDSQL.GetClusterAsync(Amazon.DSQL.Model.GetClusterRequest,System.Threading.CancellationToken)">
+            <summary>
+            Retrieves information about a cluster.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetCluster service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetCluster service method, as returned by DSQL.</returns>
+            <exception cref="T:Amazon.DSQL.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.InternalServerException">
+            The request processing has failed because of an unknown error, exception or failure.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ResourceNotFoundException">
+            The resource could not be found.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ValidationException">
+            The input failed to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/dsql-2018-05-10/GetCluster">REST API Reference for GetCluster Operation</seealso>
+        </member>
+        <member name="M:Amazon.DSQL.IAmazonDSQL.ListClustersAsync(Amazon.DSQL.Model.ListClustersRequest,System.Threading.CancellationToken)">
+            <summary>
+            Retrieves information about a list of clusters.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListClusters service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListClusters service method, as returned by DSQL.</returns>
+            <exception cref="T:Amazon.DSQL.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.InternalServerException">
+            The request processing has failed because of an unknown error, exception or failure.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ResourceNotFoundException">
+            The resource could not be found.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ValidationException">
+            The input failed to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/dsql-2018-05-10/ListClusters">REST API Reference for ListClusters Operation</seealso>
+        </member>
+        <member name="M:Amazon.DSQL.IAmazonDSQL.ListTagsForResourceAsync(Amazon.DSQL.Model.ListTagsForResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists all of the tags for a resource.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListTagsForResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListTagsForResource service method, as returned by DSQL.</returns>
+            <exception cref="T:Amazon.DSQL.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.InternalServerException">
+            The request processing has failed because of an unknown error, exception or failure.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ResourceNotFoundException">
+            The resource could not be found.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ValidationException">
+            The input failed to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/dsql-2018-05-10/ListTagsForResource">REST API Reference for ListTagsForResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.DSQL.IAmazonDSQL.TagResourceAsync(Amazon.DSQL.Model.TagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Tags a resource with a map of key and value pairs.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the TagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the TagResource service method, as returned by DSQL.</returns>
+            <exception cref="T:Amazon.DSQL.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.InternalServerException">
+            The request processing has failed because of an unknown error, exception or failure.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ResourceNotFoundException">
+            The resource could not be found.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ServiceQuotaExceededException">
+            The service limit was exceeded.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ValidationException">
+            The input failed to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/dsql-2018-05-10/TagResource">REST API Reference for TagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.DSQL.IAmazonDSQL.UntagResourceAsync(Amazon.DSQL.Model.UntagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Removes a tag from a resource.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UntagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UntagResource service method, as returned by DSQL.</returns>
+            <exception cref="T:Amazon.DSQL.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.InternalServerException">
+            The request processing has failed because of an unknown error, exception or failure.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ResourceNotFoundException">
+            The resource could not be found.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ValidationException">
+            The input failed to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/dsql-2018-05-10/UntagResource">REST API Reference for UntagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.DSQL.IAmazonDSQL.UpdateClusterAsync(Amazon.DSQL.Model.UpdateClusterRequest,System.Threading.CancellationToken)">
+            <summary>
+            Updates a cluster.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UpdateCluster service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UpdateCluster service method, as returned by DSQL.</returns>
+            <exception cref="T:Amazon.DSQL.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ConflictException">
+            The submitted action has conflicts.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.InternalServerException">
+            The request processing has failed because of an unknown error, exception or failure.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ResourceNotFoundException">
+            The resource could not be found.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DSQL.Model.ValidationException">
+            The input failed to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/dsql-2018-05-10/UpdateCluster">REST API Reference for UpdateCluster Operation</seealso>
+        </member>
+        <member name="M:Amazon.DSQL.IAmazonDSQL.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,3843 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.MarketplaceAgreement</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementConfig">
+            <summary>
+            Configuration for accessing Amazon MarketplaceAgreement service
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon MarketplaceAgreement service
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            MarketplaceAgreement
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Endpoints.MarketplaceAgreementEndpointParameters">
+            <summary>
+            Contains parameters used for resolving MarketplaceAgreement endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal MarketplaceAgreementEndpointProvider and MarketplaceAgreementEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Endpoints.MarketplaceAgreementEndpointParameters.#ctor">
+            <summary>
+            MarketplaceAgreementEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Endpoints.MarketplaceAgreementEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Endpoints.MarketplaceAgreementEndpointParameters.UseDualStack">
+            <summary>
+            UseDualStack parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Endpoints.MarketplaceAgreementEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Endpoints.MarketplaceAgreementEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementException">
+            <summary>
+             Common exception for the MarketplaceAgreement service.
+             </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonMarketplaceAgreementException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonMarketplaceAgreementException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonMarketplaceAgreementException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonMarketplaceAgreementException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonMarketplaceAgreementException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Internal.AmazonMarketplaceAgreementEndpointProvider">
+            <summary>
+            Amazon MarketplaceAgreement endpoint provider.
+            Resolves endpoint for given set of MarketplaceAgreementEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Internal.AmazonMarketplaceAgreementEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for MarketplaceAgreementEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Internal.AmazonMarketplaceAgreementEndpointResolver">
+            <summary>
+            Amazon MarketplaceAgreement endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for MarketplaceAgreement service requests.
+            Collects values for MarketplaceAgreementEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses MarketplaceAgreementEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Internal.AmazonMarketplaceAgreementMetadata">
+            <summary>
+            Service metadata for  Amazon MarketplaceAgreement service
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Internal.AmazonMarketplaceAgreementMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Internal.AmazonMarketplaceAgreementMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.AcceptedTerm">
+            <summary>
+            A subset of terms proposed by the proposer, which have been accepted by the acceptor
+            as part of agreement creation.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.AcceptedTerm.ByolPricingTerm">
+            <summary>
+            Gets and sets the property ByolPricingTerm. 
+            <para>
+            Enables you and your customers to move your existing agreements to AWS Marketplace.
+            The customer won't be charged for product usage in AWS Marketplace because they already
+            paid for the product outside of AWS Marketplace.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.AcceptedTerm.ConfigurableUpfrontPricingTerm">
+            <summary>
+            Gets and sets the property ConfigurableUpfrontPricingTerm. 
+            <para>
+            Defines a prepaid payment model that allows buyers to configure the entitlements they
+            want to purchase and the duration.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.AcceptedTerm.FixedUpfrontPricingTerm">
+            <summary>
+            Gets and sets the property FixedUpfrontPricingTerm. 
+            <para>
+            Defines a pre-paid pricing model where the customers are charged a fixed upfront amount.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.AcceptedTerm.FreeTrialPricingTerm">
+            <summary>
+            Gets and sets the property FreeTrialPricingTerm. 
+            <para>
+            Defines a short-term free pricing model where the buyers aren’t charged anything within
+            a specified limit.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.AcceptedTerm.LegalTerm">
+            <summary>
+            Gets and sets the property LegalTerm. 
+            <para>
+            Defines the list of text agreements proposed to the acceptors. An example is the end
+            user license agreement (EULA).
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.AcceptedTerm.PaymentScheduleTerm">
+            <summary>
+            Gets and sets the property PaymentScheduleTerm. 
+            <para>
+            Defines an installment-based pricing model where customers are charged a fixed price
+            on different dates during the agreement validity period. This is used most commonly
+            for flexible payment schedule pricing.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.AcceptedTerm.RecurringPaymentTerm">
+            <summary>
+            Gets and sets the property RecurringPaymentTerm. 
+            <para>
+            Defines a pricing model where customers are charged a fixed recurring price at the
+            end of each billing period.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.AcceptedTerm.RenewalTerm">
+            <summary>
+            Gets and sets the property RenewalTerm. 
+            <para>
+            Defines that on graceful expiration of the agreement (when the agreement ends on its
+            pre-defined end date), a new agreement will be created using the accepted terms on
+            the existing agreement. In other words, the agreement will be renewed. Presence of
+            <c>RenewalTerm</c> in the offer document means that auto-renewal is allowed. Buyers
+            will have the option to accept or decline auto-renewal at the offer acceptance/agreement
+            creation. Buyers can also change this flag from <c>True</c> to <c>False</c> or <c>False</c>
+            to <c>True</c> at anytime during the agreement's lifecycle.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.AcceptedTerm.SupportTerm">
+            <summary>
+            Gets and sets the property SupportTerm. 
+            <para>
+            Defines the customer support available for the acceptors when they purchase the software.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.AcceptedTerm.UsageBasedPricingTerm">
+            <summary>
+            Gets and sets the property UsageBasedPricingTerm. 
+            <para>
+            Defines a usage-based pricing model (typically, pay-as-you-go pricing), where the
+            customers are charged based on product usage.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.AcceptedTerm.ValidityTerm">
+            <summary>
+            Gets and sets the property ValidityTerm. 
+            <para>
+            Defines the conditions that will keep an agreement created from this offer valid.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Acceptor">
+            <summary>
+            The details of the party accepting the agreement terms. This is commonly the buyer
+            for <c>PurchaseAgreement</c>.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Acceptor.AccountId">
+            <summary>
+            Gets and sets the property AccountId. 
+            <para>
+            The AWS account ID of the acceptor.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.AccessDeniedException">
+            <summary>
+            User does not have sufficient access to perform this action.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.AccessDeniedException.#ctor(System.String)">
+            <summary>
+            Constructs a new AccessDeniedException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.AccessDeniedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.AccessDeniedException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.AccessDeniedException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.AccessDeniedException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.AgreementViewSummary">
+            <summary>
+            A summary of the agreement, including top-level attributes (for example, the agreement
+            ID, version, proposer, and acceptor).
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.AgreementViewSummary.AcceptanceTime">
+            <summary>
+            Gets and sets the property AcceptanceTime. 
+            <para>
+            The date and time that the agreement was accepted.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.AgreementViewSummary.Acceptor">
+            <summary>
+            Gets and sets the property Acceptor. 
+            <para>
+            Details of the party accepting the agreement terms. This is commonly the buyer for
+            <c>PurchaseAgreement.</c> 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.AgreementViewSummary.AgreementId">
+            <summary>
+            Gets and sets the property AgreementId. 
+            <para>
+            The unique identifier of the agreement.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.AgreementViewSummary.AgreementType">
+            <summary>
+            Gets and sets the property AgreementType. 
+            <para>
+            The type of agreement. Values are <c>PurchaseAgreement</c> or <c>VendorInsightsAgreement</c>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.AgreementViewSummary.EndTime">
+            <summary>
+            Gets and sets the property EndTime. 
+            <para>
+            The date and time when the agreement ends. The field is <c>null</c> for pay-as-you-go
+            agreements, which don’t have end dates.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.AgreementViewSummary.ProposalSummary">
+            <summary>
+            Gets and sets the property ProposalSummary. 
+            <para>
+            A summary of the proposal
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.AgreementViewSummary.Proposer">
+            <summary>
+            Gets and sets the property Proposer. 
+            <para>
+            Details of the party proposing the agreement terms, most commonly the seller for <c>PurchaseAgreement</c>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.AgreementViewSummary.StartTime">
+            <summary>
+            Gets and sets the property StartTime. 
+            <para>
+            The date and time when the agreement starts.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.AgreementViewSummary.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            The current status of the agreement. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.ByolPricingTerm">
+            <summary>
+            Enables you and your customers to move your existing agreements to AWS Marketplace.
+            The customer won't be charged for product usage in AWS Marketplace because they already
+            paid for the product outside of AWS Marketplace.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.ByolPricingTerm.Type">
+            <summary>
+            Gets and sets the property Type. 
+            <para>
+            Type of the term being updated.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.ConfigurableUpfrontPricingTerm">
+            <summary>
+            Defines a prepaid payment model that allows buyers to configure the entitlements they
+            want to purchase and the duration.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.ConfigurableUpfrontPricingTerm.Configuration">
+            <summary>
+            Gets and sets the property Configuration. 
+            <para>
+            Additional parameters specified by the acceptor while accepting the term.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.ConfigurableUpfrontPricingTerm.CurrencyCode">
+            <summary>
+            Gets and sets the property CurrencyCode. 
+            <para>
+            Defines the currency for the prices mentioned in the term.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.ConfigurableUpfrontPricingTerm.RateCards">
+            <summary>
+            Gets and sets the property RateCards. 
+            <para>
+            A rate card defines the per unit rates for product dimensions.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.ConfigurableUpfrontPricingTerm.Type">
+            <summary>
+            Gets and sets the property Type. 
+            <para>
+            Category of selector.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.ConfigurableUpfrontPricingTermConfiguration">
+            <summary>
+            Defines a prepaid payment model that allows buyers to configure the entitlements they
+            want to purchase and the duration.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.ConfigurableUpfrontPricingTermConfiguration.Dimensions">
+            <summary>
+            Gets and sets the property Dimensions. 
+            <para>
+            Defines the dimensions that the acceptor has purchased from the overall set of dimensions
+            presented in the rate card.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.ConfigurableUpfrontPricingTermConfiguration.SelectorValue">
+            <summary>
+            Gets and sets the property SelectorValue. 
+            <para>
+            Defines the length of time for which the particular pricing/dimension is being purchased
+            by the acceptor.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.ConfigurableUpfrontRateCardItem">
+            <summary>
+            Within the prepaid payment model defined under <c>ConfigurableUpfrontPricingTerm</c>,
+            the <c>RateCardItem</c> defines all the various rate cards (including pricing and
+            dimensions) that have been proposed.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.ConfigurableUpfrontRateCardItem.Constraints">
+            <summary>
+            Gets and sets the property Constraints. 
+            <para>
+            Defines limits on how the term can be configured by acceptors.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.ConfigurableUpfrontRateCardItem.RateCard">
+            <summary>
+            Gets and sets the property RateCard. 
+            <para>
+            Defines the per unit rates for product dimensions.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.ConfigurableUpfrontRateCardItem.Selector">
+            <summary>
+            Gets and sets the property Selector. 
+            <para>
+            Differentiates between the mutually exclusive rate cards in the same pricing term
+            to be selected by the buyer.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Constraints">
+            <summary>
+            Defines limits on how the term can be configured by acceptors.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Constraints.MultipleDimensionSelection">
+            <summary>
+            Gets and sets the property MultipleDimensionSelection. 
+            <para>
+            Determines if buyers are allowed to select multiple dimensions in the rate card. The
+            possible values are <c>Allowed</c> and <c>Disallowed</c>. The default value is <c>Allowed</c>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Constraints.QuantityConfiguration">
+            <summary>
+            Gets and sets the property QuantityConfiguration. 
+            <para>
+            Determines if acceptors are allowed to configure quantity for each dimension in rate
+            card. The possible values are <c>Allowed</c> and <c>Disallowed</c>. The default value
+            is <c>Allowed</c>.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.DescribeAgreementRequest">
+            <summary>
+            Container for the parameters to the DescribeAgreement operation.
+            Provides details about an agreement, such as the proposer, acceptor, start date, and
+            end date.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.DescribeAgreementRequest.AgreementId">
+            <summary>
+            Gets and sets the property AgreementId. 
+            <para>
+            The unique identifier of the agreement.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.DescribeAgreementResponse">
+            <summary>
+            This is the response object from the DescribeAgreement operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.DescribeAgreementResponse.AcceptanceTime">
+            <summary>
+            Gets and sets the property AcceptanceTime. 
+            <para>
+            The date and time the offer was accepted or the agreement was created.
+            </para>
+             <note> 
+            <para>
+             <c>AcceptanceTime</c> and <c>StartTime</c> can differ for future dated agreements
+            (FDAs).
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.DescribeAgreementResponse.Acceptor">
+            <summary>
+            Gets and sets the property Acceptor. 
+            <para>
+            The details of the party accepting the agreement terms. This is commonly the buyer
+            for <c>PurchaseAgreement</c>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.DescribeAgreementResponse.AgreementId">
+            <summary>
+            Gets and sets the property AgreementId. 
+            <para>
+            The unique identifier of the agreement.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.DescribeAgreementResponse.AgreementType">
+            <summary>
+            Gets and sets the property AgreementType. 
+            <para>
+            The type of agreement. Values are <c>PurchaseAgreement</c> or <c>VendorInsightsAgreement</c>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.DescribeAgreementResponse.EndTime">
+            <summary>
+            Gets and sets the property EndTime. 
+            <para>
+            The date and time when the agreement ends. The field is <c>null</c> for pay-as-you-go
+            agreements, which don’t have end dates.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.DescribeAgreementResponse.EstimatedCharges">
+            <summary>
+            Gets and sets the property EstimatedCharges. 
+            <para>
+            The estimated cost of the agreement.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.DescribeAgreementResponse.ProposalSummary">
+            <summary>
+            Gets and sets the property ProposalSummary. 
+            <para>
+            A summary of the proposal received from the proposer.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.DescribeAgreementResponse.Proposer">
+            <summary>
+            Gets and sets the property Proposer. 
+            <para>
+            The details of the party proposing the agreement terms. This is commonly the seller
+            for <c>PurchaseAgreement</c>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.DescribeAgreementResponse.StartTime">
+            <summary>
+            Gets and sets the property StartTime. 
+            <para>
+            The date and time when the agreement starts.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.DescribeAgreementResponse.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            The current status of the agreement.
+            </para>
+             
+            <para>
+            Statuses include:
+            </para>
+             <ul> <li> 
+            <para>
+             <c>ACTIVE</c> – The terms of the agreement are active.
+            </para>
+             </li> <li> 
+            <para>
+             <c>ARCHIVED</c> – The agreement ended without a specified reason.
+            </para>
+             </li> <li> 
+            <para>
+             <c>CANCELLED</c> – The acceptor ended the agreement before the defined end date.
+            </para>
+             </li> <li> 
+            <para>
+             <c>EXPIRED</c> – The agreement ended on the defined end date.
+            </para>
+             </li> <li> 
+            <para>
+             <c>RENEWED</c> – The agreement was renewed into a new agreement (for example, an
+            auto-renewal).
+            </para>
+             </li> <li> 
+            <para>
+             <c>REPLACED</c> – The agreement was replaced using an agreement replacement offer.
+            </para>
+             </li> <li> 
+            <para>
+             <c>ROLLED_BACK</c> (Only applicable to inactive agreement revisions) – The agreement
+            revision has been rolled back because of an error. An earlier revision is now active.
+            </para>
+             </li> <li> 
+            <para>
+             <c>SUPERCEDED</c> (Only applicable to inactive agreement revisions) – The agreement
+            revision is no longer active and another agreement revision is now active.
+            </para>
+             </li> <li> 
+            <para>
+             <c>TERMINATED</c> – The agreement ended before the defined end date because of an
+            AWS termination (for example, a payment failure).
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Dimension">
+            <summary>
+            Defines the dimensions that the acceptor has purchased from the overall set of dimensions
+            presented in the rate card.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Dimension.DimensionKey">
+            <summary>
+            Gets and sets the property DimensionKey. 
+            <para>
+            The name of key value of the dimension.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Dimension.DimensionValue">
+            <summary>
+            Gets and sets the property DimensionValue. 
+            <para>
+            The number of units of the dimension the acceptor has purchased.
+            </para>
+             <note> 
+            <para>
+            For Agreements with <c>ConfigurableUpfrontPricingTerm</c>, the <c>RateCard</c> section
+            will define the prices and dimensions defined by the seller (proposer), whereas the
+            <c>Configuration</c> section will define the actual dimensions, prices, and units
+            the buyer has chosen to accept.
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.DocumentItem">
+            <summary>
+            Includes the list of references to legal resources proposed by the proposer to the
+            acceptor. Each <c>DocumentItem</c> refers to an individual reference.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.DocumentItem.Type">
+            <summary>
+            Gets and sets the property Type. 
+            <para>
+            Category of the document. Document types include:
+            </para>
+             <ul> <li> 
+            <para>
+             <c>CustomEula</c> – A custom EULA provided by you as seller. A URL for a EULA stored
+            in an accessible Amazon S3 bucket is required for this document type.
+            </para>
+             </li> <li> 
+            <para>
+             <c>CustomDsa</c> – A custom Data Subscription Agreement (DSA) provided by you as
+            seller. A URL for a DSA stored in an accessible Amazon S3 bucket is required for this
+            document type.
+            </para>
+             </li> <li> 
+            <para>
+             <c>StandardEula</c> – The Standard Contract for AWS Marketplace (SCMP). For more
+            information about SCMP, see the AWS Marketplace Seller Guide. You don’t provide a
+            URL for this type because it’s managed by AWS Marketplace.
+            </para>
+             </li> <li> 
+            <para>
+             <c>StandardDsa</c> – DSA for AWS Marketplace. For more information about the DSA,
+            see the AWS Data Exchange User Guide. You don’t provide a URL for this type because
+            it’s managed by AWS Marketplace.
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.DocumentItem.Url">
+            <summary>
+            Gets and sets the property Url. 
+            <para>
+            A URL to the legal document for buyers to read. Required when <c>Type</c> is <c>CustomEula</c>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.DocumentItem.Version">
+            <summary>
+            Gets and sets the property Version. 
+            <para>
+            Version of standard contracts provided by AWS Marketplace. Required when Type is <c>StandardEula</c>
+            or <c>StandardDsa</c>. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.EstimatedCharges">
+            <summary>
+            Estimated cost of the agreement.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.EstimatedCharges.AgreementValue">
+            <summary>
+            Gets and sets the property AgreementValue. 
+            <para>
+            The total known amount customer has to pay across the lifecycle of the agreement.
+            </para>
+             <note> 
+            <para>
+            This is the total contract value if accepted terms contain <c>ConfigurableUpfrontPricingTerm</c>
+            or <c>FixedUpfrontPricingTerm</c>. In the case of pure contract pricing, this will
+            be the total value of the contract. In the case of contracts with consumption pricing,
+            this will only include the committed value and not include any overages that occur.
+            </para>
+             
+            <para>
+            If the accepted terms contain <c>PaymentScheduleTerm</c>, it will be the total payment
+            schedule amount. This occurs when flexible payment schedule is used, and is the sum
+            of all invoice charges in the payment schedule.
+            </para>
+             
+            <para>
+            In case a customer has amended an agreement, by purchasing more units of any dimension,
+            this will include both the original cost as well as the added cost incurred due to
+            addition of new units. 
+            </para>
+             
+            <para>
+            This is <c>0</c> if the accepted terms contain <c>UsageBasedPricingTerm</c> without
+            <c>ConfigurableUpfrontPricingTerm</c> or <c>RecurringPaymentTerm</c>. This occurs
+            for usage-based pricing (such as SaaS metered or AMI/container hourly or monthly),
+            because the exact usage is not known upfront.
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.EstimatedCharges.CurrencyCode">
+            <summary>
+            Gets and sets the property CurrencyCode. 
+            <para>
+            Defines the currency code for the charge.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Filter">
+            <summary>
+            The filter name and value pair that is used to return a more specific list of results.
+            Filters can be used to match a set of resources by various criteria, such as <c>offerId</c>
+            or <c>productId</c>.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Filter.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The name of the filter.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Filter.Values">
+            <summary>
+            Gets and sets the property Values. 
+            <para>
+            The filter value.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.FixedUpfrontPricingTerm">
+            <summary>
+            Defines a prepaid pricing model where the customers are charged a fixed upfront amount.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.FixedUpfrontPricingTerm.CurrencyCode">
+            <summary>
+            Gets and sets the property CurrencyCode. 
+            <para>
+            Defines the currency for the prices mentioned in this term. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.FixedUpfrontPricingTerm.Duration">
+            <summary>
+            Gets and sets the property Duration. 
+            <para>
+            Contract duration for the terms.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.FixedUpfrontPricingTerm.Grants">
+            <summary>
+            Gets and sets the property Grants. 
+            <para>
+            Entitlements granted to the acceptor of fixed upfront as part of agreement execution.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.FixedUpfrontPricingTerm.Price">
+            <summary>
+            Gets and sets the property Price. 
+            <para>
+            Fixed amount to be charged to the customer when this term is accepted.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.FixedUpfrontPricingTerm.Type">
+            <summary>
+            Gets and sets the property Type. 
+            <para>
+            Category of the term being updated.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.FreeTrialPricingTerm">
+            <summary>
+            Defines a short-term free pricing model where the buyers aren’t charged anything within
+            a specified limit.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.FreeTrialPricingTerm.Duration">
+            <summary>
+            Gets and sets the property Duration. 
+            <para>
+            Duration of the free trial period (5–31 days). 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.FreeTrialPricingTerm.Grants">
+            <summary>
+            Gets and sets the property Grants. 
+            <para>
+            Entitlements granted to the acceptor of a free trial as part of an agreement execution.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.FreeTrialPricingTerm.Type">
+            <summary>
+            Gets and sets the property Type. 
+            <para>
+            Category of the term.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.GetAgreementTermsRequest">
+            <summary>
+            Container for the parameters to the GetAgreementTerms operation.
+            Obtains details about the terms in an agreement that you participated in as proposer
+            or acceptor.
+            
+             
+            <para>
+            The details include:
+            </para>
+             <ul> <li> 
+            <para>
+             <c>TermType</c> – The type of term, such as <c>LegalTerm</c>, <c>RenewalTerm</c>,
+            or <c>ConfigurableUpfrontPricingTerm</c>.
+            </para>
+             </li> <li> 
+            <para>
+             <c>TermID</c> – The ID of the particular term, which is common between offer and
+            agreement.
+            </para>
+             </li> <li> 
+            <para>
+             <c>TermPayload</c> – The key information contained in the term, such as the EULA
+            for <c>LegalTerm</c> or pricing and dimensions for various pricing terms, such as
+            <c>ConfigurableUpfrontPricingTerm</c> or <c>UsageBasedPricingTerm</c>.
+            </para>
+             </li> </ul> <ul> <li> 
+            <para>
+             <c>Configuration</c> – The buyer/acceptor's selection at the time of agreement creation,
+            such as the number of units purchased for a dimension or setting the <c>EnableAutoRenew</c>
+            flag.
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.GetAgreementTermsRequest.AgreementId">
+            <summary>
+            Gets and sets the property AgreementId. 
+            <para>
+            The unique identifier of the agreement.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.GetAgreementTermsRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            The maximum number of agreements to return in the response.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.GetAgreementTermsRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            A token to specify where to start pagination
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.GetAgreementTermsResponse">
+            <summary>
+            This is the response object from the GetAgreementTerms operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.GetAgreementTermsResponse.AcceptedTerms">
+            <summary>
+            Gets and sets the property AcceptedTerms. 
+            <para>
+            A subset of terms proposed by the proposer that have been accepted by the acceptor
+            as part of the agreement creation.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.GetAgreementTermsResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            A token to specify where to start pagination
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.GrantItem">
+            <summary>
+            Entitlements granted to the acceptor of fixed upfront as part of agreement execution.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.GrantItem.DimensionKey">
+            <summary>
+            Gets and sets the property DimensionKey. 
+            <para>
+            Unique dimension key defined in the product document. Dimensions represent categories
+            of capacity in a product and are specified when the product is listed in AWS Marketplace.
+            
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.GrantItem.MaxQuantity">
+            <summary>
+            Gets and sets the property MaxQuantity. 
+            <para>
+            Maximum amount of capacity that the buyer can be entitled to the given dimension of
+            the product. If <c>MaxQuantity</c> is not provided, the buyer will be able to use
+            an unlimited amount of the given dimension. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.InternalServerException">
+            <summary>
+            Unexpected error during processing of request.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.InternalServerException.#ctor(System.String)">
+            <summary>
+            Constructs a new InternalServerException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.InternalServerException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.InternalServerException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.InternalServerException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.InternalServerException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.AcceptedTermUnmarshaller">
+            <summary>
+            Response Unmarshaller for AcceptedTerm Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.AcceptedTermUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#MarketplaceAgreement#Model#AcceptedTerm,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.AcceptedTermUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.AcceptedTermUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.AcceptorUnmarshaller">
+            <summary>
+            Response Unmarshaller for Acceptor Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.AcceptorUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#MarketplaceAgreement#Model#Acceptor,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.AcceptorUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.AcceptorUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for AccessDeniedException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.AgreementViewSummaryUnmarshaller">
+            <summary>
+            Response Unmarshaller for AgreementViewSummary Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.AgreementViewSummaryUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#MarketplaceAgreement#Model#AgreementViewSummary,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.AgreementViewSummaryUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.AgreementViewSummaryUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ByolPricingTermUnmarshaller">
+            <summary>
+            Response Unmarshaller for ByolPricingTerm Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ByolPricingTermUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#MarketplaceAgreement#Model#ByolPricingTerm,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ByolPricingTermUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ByolPricingTermUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ConfigurableUpfrontPricingTermConfigurationUnmarshaller">
+            <summary>
+            Response Unmarshaller for ConfigurableUpfrontPricingTermConfiguration Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ConfigurableUpfrontPricingTermConfigurationUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#MarketplaceAgreement#Model#ConfigurableUpfrontPricingTermConfiguration,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ConfigurableUpfrontPricingTermConfigurationUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ConfigurableUpfrontPricingTermConfigurationUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ConfigurableUpfrontPricingTermUnmarshaller">
+            <summary>
+            Response Unmarshaller for ConfigurableUpfrontPricingTerm Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ConfigurableUpfrontPricingTermUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#MarketplaceAgreement#Model#ConfigurableUpfrontPricingTerm,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ConfigurableUpfrontPricingTermUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ConfigurableUpfrontPricingTermUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ConfigurableUpfrontRateCardItemUnmarshaller">
+            <summary>
+            Response Unmarshaller for ConfigurableUpfrontRateCardItem Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ConfigurableUpfrontRateCardItemUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#MarketplaceAgreement#Model#ConfigurableUpfrontRateCardItem,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ConfigurableUpfrontRateCardItemUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ConfigurableUpfrontRateCardItemUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ConstraintsUnmarshaller">
+            <summary>
+            Response Unmarshaller for Constraints Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ConstraintsUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#MarketplaceAgreement#Model#Constraints,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ConstraintsUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ConstraintsUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.DescribeAgreementRequestMarshaller">
+            <summary>
+            DescribeAgreement Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.DescribeAgreementRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.DescribeAgreementRequestMarshaller.Marshall(Amazon.MarketplaceAgreement.Model.DescribeAgreementRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.DescribeAgreementRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.DescribeAgreementResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DescribeAgreement operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.DescribeAgreementResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.DescribeAgreementResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.DescribeAgreementResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.DimensionUnmarshaller">
+            <summary>
+            Response Unmarshaller for Dimension Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.DimensionUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#MarketplaceAgreement#Model#Dimension,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.DimensionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.DimensionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.DocumentItemUnmarshaller">
+            <summary>
+            Response Unmarshaller for DocumentItem Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.DocumentItemUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#MarketplaceAgreement#Model#DocumentItem,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.DocumentItemUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.DocumentItemUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.EstimatedChargesUnmarshaller">
+            <summary>
+            Response Unmarshaller for EstimatedCharges Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.EstimatedChargesUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#MarketplaceAgreement#Model#EstimatedCharges,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.EstimatedChargesUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.EstimatedChargesUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.FilterMarshaller">
+            <summary>
+            Filter Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.FilterMarshaller.Marshall(Amazon.MarketplaceAgreement.Model.Filter,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.FilterMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.FixedUpfrontPricingTermUnmarshaller">
+            <summary>
+            Response Unmarshaller for FixedUpfrontPricingTerm Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.FixedUpfrontPricingTermUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#MarketplaceAgreement#Model#FixedUpfrontPricingTerm,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.FixedUpfrontPricingTermUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.FixedUpfrontPricingTermUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.FreeTrialPricingTermUnmarshaller">
+            <summary>
+            Response Unmarshaller for FreeTrialPricingTerm Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.FreeTrialPricingTermUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#MarketplaceAgreement#Model#FreeTrialPricingTerm,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.FreeTrialPricingTermUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.FreeTrialPricingTermUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.GetAgreementTermsRequestMarshaller">
+            <summary>
+            GetAgreementTerms Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.GetAgreementTermsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.GetAgreementTermsRequestMarshaller.Marshall(Amazon.MarketplaceAgreement.Model.GetAgreementTermsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.GetAgreementTermsRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.GetAgreementTermsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetAgreementTerms operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.GetAgreementTermsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.GetAgreementTermsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.GetAgreementTermsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.GrantItemUnmarshaller">
+            <summary>
+            Response Unmarshaller for GrantItem Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.GrantItemUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#MarketplaceAgreement#Model#GrantItem,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.GrantItemUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.GrantItemUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InternalServerException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.LegalTermUnmarshaller">
+            <summary>
+            Response Unmarshaller for LegalTerm Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.LegalTermUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#MarketplaceAgreement#Model#LegalTerm,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.LegalTermUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.LegalTermUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.PaymentScheduleTermUnmarshaller">
+            <summary>
+            Response Unmarshaller for PaymentScheduleTerm Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.PaymentScheduleTermUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#MarketplaceAgreement#Model#PaymentScheduleTerm,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.PaymentScheduleTermUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.PaymentScheduleTermUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ProposalSummaryUnmarshaller">
+            <summary>
+            Response Unmarshaller for ProposalSummary Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ProposalSummaryUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#MarketplaceAgreement#Model#ProposalSummary,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ProposalSummaryUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ProposalSummaryUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ProposerUnmarshaller">
+            <summary>
+            Response Unmarshaller for Proposer Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ProposerUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#MarketplaceAgreement#Model#Proposer,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ProposerUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ProposerUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.RateCardItemUnmarshaller">
+            <summary>
+            Response Unmarshaller for RateCardItem Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.RateCardItemUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#MarketplaceAgreement#Model#RateCardItem,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.RateCardItemUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.RateCardItemUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.RecurringPaymentTermUnmarshaller">
+            <summary>
+            Response Unmarshaller for RecurringPaymentTerm Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.RecurringPaymentTermUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#MarketplaceAgreement#Model#RecurringPaymentTerm,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.RecurringPaymentTermUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.RecurringPaymentTermUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.RenewalTermConfigurationUnmarshaller">
+            <summary>
+            Response Unmarshaller for RenewalTermConfiguration Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.RenewalTermConfigurationUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#MarketplaceAgreement#Model#RenewalTermConfiguration,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.RenewalTermConfigurationUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.RenewalTermConfigurationUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.RenewalTermUnmarshaller">
+            <summary>
+            Response Unmarshaller for RenewalTerm Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.RenewalTermUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#MarketplaceAgreement#Model#RenewalTerm,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.RenewalTermUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.RenewalTermUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ResourceNotFoundException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ResourceUnmarshaller">
+            <summary>
+            Response Unmarshaller for Resource Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ResourceUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#MarketplaceAgreement#Model#Resource,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ResourceUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ResourceUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ScheduleItemUnmarshaller">
+            <summary>
+            Response Unmarshaller for ScheduleItem Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ScheduleItemUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#MarketplaceAgreement#Model#ScheduleItem,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ScheduleItemUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ScheduleItemUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.SearchAgreementsRequestMarshaller">
+            <summary>
+            SearchAgreements Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.SearchAgreementsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.SearchAgreementsRequestMarshaller.Marshall(Amazon.MarketplaceAgreement.Model.SearchAgreementsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.SearchAgreementsRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.SearchAgreementsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for SearchAgreements operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.SearchAgreementsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.SearchAgreementsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.SearchAgreementsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.SelectorUnmarshaller">
+            <summary>
+            Response Unmarshaller for Selector Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.SelectorUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#MarketplaceAgreement#Model#Selector,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.SelectorUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.SelectorUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.SortMarshaller">
+            <summary>
+            Sort Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.SortMarshaller.Marshall(Amazon.MarketplaceAgreement.Model.Sort,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.SortMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.SupportTermUnmarshaller">
+            <summary>
+            Response Unmarshaller for SupportTerm Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.SupportTermUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#MarketplaceAgreement#Model#SupportTerm,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.SupportTermUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.SupportTermUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ThrottlingException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.UsageBasedPricingTermUnmarshaller">
+            <summary>
+            Response Unmarshaller for UsageBasedPricingTerm Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.UsageBasedPricingTermUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#MarketplaceAgreement#Model#UsageBasedPricingTerm,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.UsageBasedPricingTermUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.UsageBasedPricingTermUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.UsageBasedRateCardItemUnmarshaller">
+            <summary>
+            Response Unmarshaller for UsageBasedRateCardItem Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.UsageBasedRateCardItemUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#MarketplaceAgreement#Model#UsageBasedRateCardItem,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.UsageBasedRateCardItemUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.UsageBasedRateCardItemUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationExceptionField Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#MarketplaceAgreement#Model#ValidationExceptionField,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ValidityTermUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidityTerm Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ValidityTermUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#MarketplaceAgreement#Model#ValidityTerm,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ValidityTermUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Internal.MarshallTransformations.ValidityTermUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.LegalTerm">
+            <summary>
+            Defines the list of text agreements proposed to the acceptors. An example is the end
+            user license agreement (EULA).
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.LegalTerm.Documents">
+            <summary>
+            Gets and sets the property Documents. 
+            <para>
+            List of references to legal resources proposed to the buyers. An example is the EULA.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.LegalTerm.Type">
+            <summary>
+            Gets and sets the property Type. 
+            <para>
+            Category of the term being updated.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.PaymentScheduleTerm">
+            <summary>
+            Defines an installment-based pricing model where customers are charged a fixed price
+            on different dates during the agreement validity period. This is used most commonly
+            for flexible payment schedule pricing.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.PaymentScheduleTerm.CurrencyCode">
+            <summary>
+            Gets and sets the property CurrencyCode. 
+            <para>
+            Defines the currency for the prices mentioned in the term. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.PaymentScheduleTerm.Schedule">
+            <summary>
+            Gets and sets the property Schedule. 
+            <para>
+            List of the payment schedule where each element defines one installment of payment.
+            It contains the information necessary for calculating the price.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.PaymentScheduleTerm.Type">
+            <summary>
+            Gets and sets the property Type. 
+            <para>
+            Type of the term.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.ProposalSummary">
+            <summary>
+            A summary of the proposal received from the proposer.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.ProposalSummary.OfferId">
+            <summary>
+            Gets and sets the property OfferId. 
+            <para>
+            The unique identifier of the offer in AWS Marketplace.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.ProposalSummary.Resources">
+            <summary>
+            Gets and sets the property Resources. 
+            <para>
+            The list of resources involved in the agreement.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Proposer">
+            <summary>
+            Details of the party proposing the agreement terms,. This is commonly the seller for
+            <c>PurchaseAgreement</c>.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Proposer.AccountId">
+            <summary>
+            Gets and sets the property AccountId. 
+            <para>
+            The AWS account ID of the proposer.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.RateCardItem">
+            <summary>
+            Defines the per unit rates for each individual product dimension.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.RateCardItem.DimensionKey">
+            <summary>
+            Gets and sets the property DimensionKey. 
+            <para>
+            Dimension for which the given entitlement applies. Dimensions represent categories
+            of capacity in a product and are specified when the product is listed in AWS Marketplace.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.RateCardItem.Price">
+            <summary>
+            Gets and sets the property Price. 
+            <para>
+            Per unit price for the product dimension that’s used for calculating the amount to
+            be charged.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.RecurringPaymentTerm">
+            <summary>
+            Defines a pricing model where customers are charged a fixed recurring price at the
+            end of each billing period.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.RecurringPaymentTerm.BillingPeriod">
+            <summary>
+            Gets and sets the property BillingPeriod. 
+            <para>
+            Defines the recurrence at which buyers are charged.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.RecurringPaymentTerm.CurrencyCode">
+            <summary>
+            Gets and sets the property CurrencyCode. 
+            <para>
+            Defines the currency for the prices mentioned in this term. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.RecurringPaymentTerm.Price">
+            <summary>
+            Gets and sets the property Price. 
+            <para>
+            Amount charged to the buyer every billing period.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.RecurringPaymentTerm.Type">
+            <summary>
+            Gets and sets the property Type. 
+            <para>
+            Type of the term being updated.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.RenewalTerm">
+            <summary>
+            Defines that on graceful expiration of the agreement (when the agreement ends on its
+            pre-defined end date), a new agreement will be created using the accepted terms on
+            the existing agreement. In other words, the agreement will be renewed. The presence
+            of <c>RenewalTerm</c> in the offer document means that auto-renewal is allowed. Buyers
+            will have the option to accept or decline auto-renewal at the offer acceptance/agreement
+            creation. Buyers can also change this flag from <c>True</c> to <c>False</c> or <c>False</c>
+            to <c>True</c> at anytime during the agreement's lifecycle.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.RenewalTerm.Configuration">
+            <summary>
+            Gets and sets the property Configuration. 
+            <para>
+            Additional parameters specified by the acceptor while accepting the term.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.RenewalTerm.Type">
+            <summary>
+            Gets and sets the property Type. 
+            <para>
+            Category of the term being updated. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.RenewalTermConfiguration">
+            <summary>
+            Additional parameters specified by the acceptor while accepting the term.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.RenewalTermConfiguration.EnableAutoRenew">
+            <summary>
+            Gets and sets the property EnableAutoRenew. 
+            <para>
+            Defines whether the acceptor has chosen to auto-renew the agreement at the end of
+            its lifecycle. Can be set to <c>True</c> or <c>False</c>.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Resource">
+            <summary>
+            The list of resources involved in the agreement.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Resource.Id">
+            <summary>
+            Gets and sets the property Id. 
+            <para>
+            The unique identifier of the resource.
+            </para>
+             <note> 
+            <para>
+            We mention the term resource, which is most commonly a product, so a <c>resourceId</c>
+            is also a <c>productId</c>.
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Resource.Type">
+            <summary>
+            Gets and sets the property Type. 
+            <para>
+            Type of the resource, which is the product. Values include <c>SaaSProduct</c> or <c>AmiProduct</c>.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.ResourceNotFoundException">
+            <summary>
+            Request references a resource which does not exist.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.ResourceNotFoundException.#ctor(System.String)">
+            <summary>
+            Constructs a new ResourceNotFoundException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.ResourceNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.ResourceNotFoundException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.ResourceNotFoundException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.ResourceNotFoundException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.ResourceNotFoundException.ResourceId">
+            <summary>
+            Gets and sets the property ResourceId. 
+            <para>
+            The unique identifier for the resource.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.ResourceNotFoundException.ResourceType">
+            <summary>
+            Gets and sets the property ResourceType. 
+            <para>
+            The type of resource.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.ScheduleItem">
+            <summary>
+            An individual installment of the payment that includes the date and amount of the
+            charge.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.ScheduleItem.ChargeAmount">
+            <summary>
+            Gets and sets the property ChargeAmount. 
+            <para>
+            The price that the customer would pay on the scheduled date (chargeDate).
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.ScheduleItem.ChargeDate">
+            <summary>
+            Gets and sets the property ChargeDate. 
+            <para>
+            The date that the customer would pay the price defined in this payment schedule term.
+            Invoices are generated on the date provided.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.SearchAgreementsRequest">
+            <summary>
+            Container for the parameters to the SearchAgreements operation.
+            Searches across all agreements that a proposer or an acceptor has in AWS Marketplace.
+            The search returns a list of agreements with basic agreement information.
+            
+             
+            <para>
+            The following filter combinations are supported:
+            </para>
+             <ul> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>ResourceIdentifier</c>
+            
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>OfferId</c> 
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>AcceptorAccountId</c>
+            
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>Status</c> 
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>ResourceIdentifier</c>
+            + <c>Status</c> 
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>OfferId</c> + <c>Status</c>
+            
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>AcceptorAccountId</c>
+            + <c>Status</c> 
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>ResourceType</c>
+            + <c>Status</c> 
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>AcceptorAccountId</c>
+            + <c>ResourceType</c> + <c>Status</c> 
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>AcceptorAccountId</c>
+            + <c>OfferId</c> 
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>AcceptorAccountId</c>
+            + <c>OfferId</c> + <c>Status</c> 
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>AcceptorAccountId</c>
+            + <c>ResourceIdentifier</c> 
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>AcceptorAccountId</c>
+            + <c>ResourceIdentifier</c> + <c>Status</c> 
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>AcceptorAccountId</c>
+            + <c>ResourceType</c> 
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.SearchAgreementsRequest.Catalog">
+            <summary>
+            Gets and sets the property Catalog. 
+            <para>
+            The catalog in which the agreement was created.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.SearchAgreementsRequest.Filters">
+            <summary>
+            Gets and sets the property Filters. 
+            <para>
+            The filter name and value pair used to return a specific list of results.
+            </para>
+             
+            <para>
+            The following filters are supported:
+            </para>
+             <ul> <li> 
+            <para>
+             <c>ResourceIdentifier</c> – The unique identifier of the resource.
+            </para>
+             </li> <li> 
+            <para>
+             <c>ResourceType</c> – Type of the resource, which is the product (<c>AmiProduct</c>,
+            <c>ContainerProduct</c>, or <c>SaaSProduct</c>).
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> – The party type (either <c>Acceptor</c> or <c>Proposer</c>) of
+            the caller. For agreements where the caller is the proposer, use the <c>Proposer</c>
+            filter. For agreements where the caller is the acceptor, use the <c>Acceptor</c> filter.
+            </para>
+             </li> <li> 
+            <para>
+             <c>AcceptorAccountId</c> – The AWS account ID of the party accepting the agreement
+            terms.
+            </para>
+             </li> <li> 
+            <para>
+             <c>OfferId</c> – The unique identifier of the offer in which the terms are registered
+            in the agreement token.
+            </para>
+             </li> <li> 
+            <para>
+             <c>Status</c> – The current status of the agreement. Values include <c>ACTIVE</c>,
+            <c>ARCHIVED</c>, <c>CANCELLED</c>, <c>EXPIRED</c>, <c>RENEWED</c>, <c>REPLACED</c>,
+            and <c>TERMINATED</c>.
+            </para>
+             </li> <li> 
+            <para>
+             <c>BeforeEndTime</c> – A date used to filter agreements with a date before the <c>endTime</c>
+            of an agreement.
+            </para>
+             </li> <li> 
+            <para>
+             <c>AfterEndTime</c> – A date used to filter agreements with a date after the <c>endTime</c>
+            of an agreement.
+            </para>
+             </li> <li> 
+            <para>
+             <c>AgreementType</c> – The type of agreement. Values include <c>PurchaseAgreement</c>
+            or <c>VendorInsightsAgreement</c>.
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.SearchAgreementsRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            The maximum number of agreements to return in the response.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.SearchAgreementsRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            A token to specify where to start pagination.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.SearchAgreementsRequest.Sort">
+            <summary>
+            Gets and sets the property Sort. 
+            <para>
+            An object that contains the <c>SortBy</c> and <c>SortOrder</c> attributes.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.SearchAgreementsResponse">
+            <summary>
+            This is the response object from the SearchAgreements operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.SearchAgreementsResponse.AgreementViewSummaries">
+            <summary>
+            Gets and sets the property AgreementViewSummaries. 
+            <para>
+            A summary of the agreement, including top-level attributes (for example, the agreement
+            ID, version, proposer, and acceptor).
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.SearchAgreementsResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The token used for pagination. The field is <c>null</c> if there are no more results.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Selector">
+            <summary>
+            Differentiates between the mutually exclusive rate cards in the same pricing term
+            to be selected by the buyer.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Selector.Type">
+            <summary>
+            Gets and sets the property Type. 
+            <para>
+            Category of selector.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Selector.Value">
+            <summary>
+            Gets and sets the property Value. 
+            <para>
+            Contract duration. This field supports the ISO 8601 format. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.Sort">
+            <summary>
+            An object that contains the <c>SortBy</c> and <c>SortOrder</c> attributes.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Sort.SortBy">
+            <summary>
+            Gets and sets the property SortBy. 
+            <para>
+            The attribute on which the data is grouped, which can be by <c>StartTime</c> and <c>EndTime</c>.
+            The default value is <c>EndTime</c>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.Sort.SortOrder">
+            <summary>
+            Gets and sets the property SortOrder. 
+            <para>
+            The sorting order, which can be <c>ASCENDING</c> or <c>DESCENDING</c>. The default
+            value is <c>DESCENDING</c>.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.SupportTerm">
+            <summary>
+            Defines the customer support available for the acceptors when they purchase the software.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.SupportTerm.RefundPolicy">
+            <summary>
+            Gets and sets the property RefundPolicy. 
+            <para>
+            Free-text field about the refund policy description that will be shown to customers
+            as is on the website and console.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.SupportTerm.Type">
+            <summary>
+            Gets and sets the property Type. 
+            <para>
+            Category of the term being updated.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.ThrottlingException">
+            <summary>
+            Request was denied due to request throttling.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.ThrottlingException.#ctor(System.String)">
+            <summary>
+            Constructs a new ThrottlingException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.ThrottlingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.ThrottlingException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.ThrottlingException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.ThrottlingException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.UsageBasedPricingTerm">
+            <summary>
+            Defines a usage-based pricing model (typically, pay-as-you-go pricing), where the
+            customers are charged based on product usage.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.UsageBasedPricingTerm.CurrencyCode">
+            <summary>
+            Gets and sets the property CurrencyCode. 
+            <para>
+            Defines the currency for the prices mentioned in the term. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.UsageBasedPricingTerm.RateCards">
+            <summary>
+            Gets and sets the property RateCards. 
+            <para>
+            List of rate cards.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.UsageBasedPricingTerm.Type">
+            <summary>
+            Gets and sets the property Type. 
+            <para>
+            Category of the term.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.UsageBasedRateCardItem">
+            <summary>
+            Within the pay-as-you-go model defined under <c>UsageBasedPricingTerm</c>, the <c>UsageBasedRateCardItem</c>
+            defines an individual rate for a product dimension.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.UsageBasedRateCardItem.RateCard">
+            <summary>
+            Gets and sets the property RateCard. 
+            <para>
+            Defines the per unit rates for product dimensions.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.ValidationException">
+            <summary>
+            The input fails to satisfy the constraints specified by the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.ValidationException.#ctor(System.String)">
+            <summary>
+            Constructs a new ValidationException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.ValidationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.ValidationException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.ValidationException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.ValidationException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.ValidationException.Fields">
+            <summary>
+            Gets and sets the property Fields. 
+            <para>
+            The fields associated with the error.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.ValidationException.Reason">
+            <summary>
+            Gets and sets the property Reason. 
+            <para>
+            The reason associated with the error.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.ValidationExceptionField">
+            <summary>
+            The input fails to satisfy the constraints specified by the service.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.ValidationExceptionField.Message">
+            <summary>
+            Gets and sets the property Message. 
+            <para>
+            See applicable actions.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.ValidationExceptionField.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The name of the field associated with the error.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.ValidityTerm">
+            <summary>
+            Defines the conditions that will keep an agreement created from this offer valid.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.ValidityTerm.AgreementDuration">
+            <summary>
+            Gets and sets the property AgreementDuration. 
+            <para>
+            Defines the duration that the agreement remains active. If <c>AgreementStartDate</c>
+            isn’t provided, the agreement duration is relative to the agreement signature time.
+            The duration is represented in the ISO_8601 format.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.ValidityTerm.AgreementEndDate">
+            <summary>
+            Gets and sets the property AgreementEndDate. 
+            <para>
+            Defines the date when the agreement ends. The agreement ends at 23:59:59.999 UTC on
+            the date provided. If <c>AgreementEndDate</c> isn’t provided, the agreement end date
+            is determined by the validity of individual terms.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.ValidityTerm.AgreementStartDate">
+            <summary>
+            Gets and sets the property AgreementStartDate. 
+            <para>
+            Defines the date when agreement starts. The agreement starts at 00:00:00.000 UTC on
+            the date provided. If <c>AgreementStartDate</c> isn’t provided, the agreement start
+            date is determined based on agreement signature time.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.ValidityTerm.Type">
+            <summary>
+            Gets and sets the property Type. 
+            <para>
+            Category of the term being updated. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.GetAgreementTermsPaginator">
+            <summary>
+            Base class for GetAgreementTerms paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.GetAgreementTermsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.IGetAgreementTermsPaginator">
+             <summary>
+             Paginator for the GetAgreementTerms operation
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.IGetAgreementTermsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.IMarketplaceAgreementPaginatorFactory">
+             <summary>
+             Paginators for the MarketplaceAgreement service
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.IMarketplaceAgreementPaginatorFactory.GetAgreementTerms(Amazon.MarketplaceAgreement.Model.GetAgreementTermsRequest)">
+             <summary>
+             Paginator for GetAgreementTerms operation
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.IMarketplaceAgreementPaginatorFactory.SearchAgreements(Amazon.MarketplaceAgreement.Model.SearchAgreementsRequest)">
+             <summary>
+             Paginator for SearchAgreements operation
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.ISearchAgreementsPaginator">
+             <summary>
+             Paginator for the SearchAgreements operation
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.ISearchAgreementsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.MarketplaceAgreementPaginatorFactory">
+             <summary>
+             Paginators for the MarketplaceAgreement service
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.MarketplaceAgreementPaginatorFactory.GetAgreementTerms(Amazon.MarketplaceAgreement.Model.GetAgreementTermsRequest)">
+             <summary>
+             Paginator for GetAgreementTerms operation
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.Model.MarketplaceAgreementPaginatorFactory.SearchAgreements(Amazon.MarketplaceAgreement.Model.SearchAgreementsRequest)">
+             <summary>
+             Paginator for SearchAgreements operation
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.Model.SearchAgreementsPaginator">
+            <summary>
+            Base class for SearchAgreements paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.Model.SearchAgreementsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementRequest">
+            <summary>
+            Base class for MarketplaceAgreement operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.AgreementStatus">
+            <summary>
+            Constants used for properties of type AgreementStatus.
+            </summary>
+        </member>
+        <member name="F:Amazon.MarketplaceAgreement.AgreementStatus.ACTIVE">
+            <summary>
+            Constant ACTIVE for AgreementStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.MarketplaceAgreement.AgreementStatus.ARCHIVED">
+            <summary>
+            Constant ARCHIVED for AgreementStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.MarketplaceAgreement.AgreementStatus.CANCELLED">
+            <summary>
+            Constant CANCELLED for AgreementStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.MarketplaceAgreement.AgreementStatus.EXPIRED">
+            <summary>
+            Constant EXPIRED for AgreementStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.MarketplaceAgreement.AgreementStatus.RENEWED">
+            <summary>
+            Constant RENEWED for AgreementStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.MarketplaceAgreement.AgreementStatus.REPLACED">
+            <summary>
+            Constant REPLACED for AgreementStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.MarketplaceAgreement.AgreementStatus.ROLLED_BACK">
+            <summary>
+            Constant ROLLED_BACK for AgreementStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.MarketplaceAgreement.AgreementStatus.SUPERSEDED">
+            <summary>
+            Constant SUPERSEDED for AgreementStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.MarketplaceAgreement.AgreementStatus.TERMINATED">
+            <summary>
+            Constant TERMINATED for AgreementStatus
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.AgreementStatus.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.AgreementStatus.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.AgreementStatus.op_Implicit(System.String)~Amazon.MarketplaceAgreement.AgreementStatus">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.ResourceType">
+            <summary>
+            Constants used for properties of type ResourceType.
+            </summary>
+        </member>
+        <member name="F:Amazon.MarketplaceAgreement.ResourceType.Agreement">
+            <summary>
+            Constant Agreement for ResourceType
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.ResourceType.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.ResourceType.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.ResourceType.op_Implicit(System.String)~Amazon.MarketplaceAgreement.ResourceType">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.SortOrder">
+            <summary>
+            Constants used for properties of type SortOrder.
+            </summary>
+        </member>
+        <member name="F:Amazon.MarketplaceAgreement.SortOrder.ASCENDING">
+            <summary>
+            Constant ASCENDING for SortOrder
+            </summary>
+        </member>
+        <member name="F:Amazon.MarketplaceAgreement.SortOrder.DESCENDING">
+            <summary>
+            Constant DESCENDING for SortOrder
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.SortOrder.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.SortOrder.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.SortOrder.op_Implicit(System.String)~Amazon.MarketplaceAgreement.SortOrder">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.ValidationExceptionReason">
+            <summary>
+            Constants used for properties of type ValidationExceptionReason.
+            </summary>
+        </member>
+        <member name="F:Amazon.MarketplaceAgreement.ValidationExceptionReason.INVALID_AGREEMENT_ID">
+            <summary>
+            Constant INVALID_AGREEMENT_ID for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.MarketplaceAgreement.ValidationExceptionReason.INVALID_CATALOG">
+            <summary>
+            Constant INVALID_CATALOG for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.MarketplaceAgreement.ValidationExceptionReason.INVALID_FILTER_NAME">
+            <summary>
+            Constant INVALID_FILTER_NAME for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.MarketplaceAgreement.ValidationExceptionReason.INVALID_FILTER_VALUES">
+            <summary>
+            Constant INVALID_FILTER_VALUES for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.MarketplaceAgreement.ValidationExceptionReason.INVALID_MAX_RESULTS">
+            <summary>
+            Constant INVALID_MAX_RESULTS for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.MarketplaceAgreement.ValidationExceptionReason.INVALID_NEXT_TOKEN">
+            <summary>
+            Constant INVALID_NEXT_TOKEN for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.MarketplaceAgreement.ValidationExceptionReason.INVALID_SORT_BY">
+            <summary>
+            Constant INVALID_SORT_BY for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.MarketplaceAgreement.ValidationExceptionReason.INVALID_SORT_ORDER">
+            <summary>
+            Constant INVALID_SORT_ORDER for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.MarketplaceAgreement.ValidationExceptionReason.MISSING_AGREEMENT_ID">
+            <summary>
+            Constant MISSING_AGREEMENT_ID for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.MarketplaceAgreement.ValidationExceptionReason.OTHER">
+            <summary>
+            Constant OTHER for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.MarketplaceAgreement.ValidationExceptionReason.UNSUPPORTED_FILTERS">
+            <summary>
+            Constant UNSUPPORTED_FILTERS for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.ValidationExceptionReason.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.ValidationExceptionReason.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.ValidationExceptionReason.op_Implicit(System.String)~Amazon.MarketplaceAgreement.ValidationExceptionReason">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementClient">
+             <summary>
+             <para>Implementation for accessing MarketplaceAgreement</para>
+            
+             AWS Marketplace is a curated digital catalog that customers can use to find, buy,
+             deploy, and manage third-party software, data, and services to build solutions and
+             run their businesses. The AWS Marketplace Agreement Service provides an API interface
+             that helps AWS Marketplace sellers manage their product-related agreements, including
+             listing, searching, and filtering agreements.
+             
+              
+             <para>
+             To manage agreements in AWS Marketplace, you must ensure that your AWS Identity and
+             Access Management (IAM) policies and roles are set up. The user must have the required
+             policies/permissions that allow them to carry out the actions in AWS:
+             </para>
+              <ul> <li> 
+             <para>
+              <c>DescribeAgreement</c> – Grants permission to users to obtain detailed meta data
+             about any of their agreements.
+             </para>
+              </li> <li> 
+             <para>
+              <c>GetAgreementTerms</c> – Grants permission to users to obtain details about the
+             terms of an agreement.
+             </para>
+              </li> <li> 
+             <para>
+              <c>SearchAgreements</c> – Grants permission to users to search through all their
+             agreements.
+             </para>
+              </li> </ul>
+             </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementClient.#ctor">
+             <summary>
+             Constructs AmazonMarketplaceAgreementClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonMarketplaceAgreementClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementClient.#ctor(Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementConfig)">
+             <summary>
+             Constructs AmazonMarketplaceAgreementClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonMarketplaceAgreementClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonMarketplaceAgreementClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonMarketplaceAgreementClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementConfig)">
+            <summary>
+            Constructs AmazonMarketplaceAgreementClient with AWS Credentials and an
+            AmazonMarketplaceAgreementClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonMarketplaceAgreementClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonMarketplaceAgreementClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonMarketplaceAgreementClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementClient.#ctor(System.String,System.String,Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementConfig)">
+            <summary>
+            Constructs AmazonMarketplaceAgreementClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonMarketplaceAgreementClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonMarketplaceAgreementClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonMarketplaceAgreementClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonMarketplaceAgreementClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementClient.#ctor(System.String,System.String,System.String,Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementConfig)">
+            <summary>
+            Constructs AmazonMarketplaceAgreementClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonMarketplaceAgreementClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonMarketplaceAgreementClient Configuration Object</param>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementClient.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementClient.DescribeAgreementAsync(Amazon.MarketplaceAgreement.Model.DescribeAgreementRequest,System.Threading.CancellationToken)">
+            <summary>
+            Provides details about an agreement, such as the proposer, acceptor, start date, and
+            end date.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DescribeAgreement service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DescribeAgreement service method, as returned by MarketplaceAgreement.</returns>
+            <exception cref="T:Amazon.MarketplaceAgreement.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceAgreement.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceAgreement.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceAgreement.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceAgreement.Model.ValidationException">
+            The input fails to satisfy the constraints specified by the service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-agreement-2020-03-01/DescribeAgreement">REST API Reference for DescribeAgreement Operation</seealso>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementClient.GetAgreementTermsAsync(Amazon.MarketplaceAgreement.Model.GetAgreementTermsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Obtains details about the terms in an agreement that you participated in as proposer
+            or acceptor.
+            
+             
+            <para>
+            The details include:
+            </para>
+             <ul> <li> 
+            <para>
+             <c>TermType</c> – The type of term, such as <c>LegalTerm</c>, <c>RenewalTerm</c>,
+            or <c>ConfigurableUpfrontPricingTerm</c>.
+            </para>
+             </li> <li> 
+            <para>
+             <c>TermID</c> – The ID of the particular term, which is common between offer and
+            agreement.
+            </para>
+             </li> <li> 
+            <para>
+             <c>TermPayload</c> – The key information contained in the term, such as the EULA
+            for <c>LegalTerm</c> or pricing and dimensions for various pricing terms, such as
+            <c>ConfigurableUpfrontPricingTerm</c> or <c>UsageBasedPricingTerm</c>.
+            </para>
+             </li> </ul> <ul> <li> 
+            <para>
+             <c>Configuration</c> – The buyer/acceptor's selection at the time of agreement creation,
+            such as the number of units purchased for a dimension or setting the <c>EnableAutoRenew</c>
+            flag.
+            </para>
+             </li> </ul>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetAgreementTerms service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetAgreementTerms service method, as returned by MarketplaceAgreement.</returns>
+            <exception cref="T:Amazon.MarketplaceAgreement.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceAgreement.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceAgreement.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceAgreement.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceAgreement.Model.ValidationException">
+            The input fails to satisfy the constraints specified by the service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-agreement-2020-03-01/GetAgreementTerms">REST API Reference for GetAgreementTerms Operation</seealso>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementClient.SearchAgreementsAsync(Amazon.MarketplaceAgreement.Model.SearchAgreementsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Searches across all agreements that a proposer or an acceptor has in AWS Marketplace.
+            The search returns a list of agreements with basic agreement information.
+            
+             
+            <para>
+            The following filter combinations are supported:
+            </para>
+             <ul> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>ResourceIdentifier</c>
+            
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>OfferId</c> 
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>AcceptorAccountId</c>
+            
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>Status</c> 
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>ResourceIdentifier</c>
+            + <c>Status</c> 
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>OfferId</c> + <c>Status</c>
+            
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>AcceptorAccountId</c>
+            + <c>Status</c> 
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>ResourceType</c>
+            + <c>Status</c> 
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>AcceptorAccountId</c>
+            + <c>ResourceType</c> + <c>Status</c> 
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>AcceptorAccountId</c>
+            + <c>OfferId</c> 
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>AcceptorAccountId</c>
+            + <c>OfferId</c> + <c>Status</c> 
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>AcceptorAccountId</c>
+            + <c>ResourceIdentifier</c> 
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>AcceptorAccountId</c>
+            + <c>ResourceIdentifier</c> + <c>Status</c> 
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>AcceptorAccountId</c>
+            + <c>ResourceType</c> 
+            </para>
+             </li> </ul>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the SearchAgreements service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the SearchAgreements service method, as returned by MarketplaceAgreement.</returns>
+            <exception cref="T:Amazon.MarketplaceAgreement.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceAgreement.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceAgreement.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceAgreement.Model.ValidationException">
+            The input fails to satisfy the constraints specified by the service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-agreement-2020-03-01/SearchAgreements">REST API Reference for SearchAgreements Operation</seealso>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.AmazonMarketplaceAgreementClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.MarketplaceAgreement.IAmazonMarketplaceAgreement">
+             <summary>
+             <para>Interface for accessing MarketplaceAgreement</para>
+            
+             AWS Marketplace is a curated digital catalog that customers can use to find, buy,
+             deploy, and manage third-party software, data, and services to build solutions and
+             run their businesses. The AWS Marketplace Agreement Service provides an API interface
+             that helps AWS Marketplace sellers manage their product-related agreements, including
+             listing, searching, and filtering agreements.
+             
+              
+             <para>
+             To manage agreements in AWS Marketplace, you must ensure that your AWS Identity and
+             Access Management (IAM) policies and roles are set up. The user must have the required
+             policies/permissions that allow them to carry out the actions in AWS:
+             </para>
+              <ul> <li> 
+             <para>
+              <c>DescribeAgreement</c> – Grants permission to users to obtain detailed meta data
+             about any of their agreements.
+             </para>
+              </li> <li> 
+             <para>
+              <c>GetAgreementTerms</c> – Grants permission to users to obtain details about the
+             terms of an agreement.
+             </para>
+              </li> <li> 
+             <para>
+              <c>SearchAgreements</c> – Grants permission to users to search through all their
+             agreements.
+             </para>
+              </li> </ul>
+             </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceAgreement.IAmazonMarketplaceAgreement.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.IAmazonMarketplaceAgreement.DescribeAgreementAsync(Amazon.MarketplaceAgreement.Model.DescribeAgreementRequest,System.Threading.CancellationToken)">
+            <summary>
+            Provides details about an agreement, such as the proposer, acceptor, start date, and
+            end date.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DescribeAgreement service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DescribeAgreement service method, as returned by MarketplaceAgreement.</returns>
+            <exception cref="T:Amazon.MarketplaceAgreement.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceAgreement.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceAgreement.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceAgreement.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceAgreement.Model.ValidationException">
+            The input fails to satisfy the constraints specified by the service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-agreement-2020-03-01/DescribeAgreement">REST API Reference for DescribeAgreement Operation</seealso>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.IAmazonMarketplaceAgreement.GetAgreementTermsAsync(Amazon.MarketplaceAgreement.Model.GetAgreementTermsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Obtains details about the terms in an agreement that you participated in as proposer
+            or acceptor.
+            
+             
+            <para>
+            The details include:
+            </para>
+             <ul> <li> 
+            <para>
+             <c>TermType</c> – The type of term, such as <c>LegalTerm</c>, <c>RenewalTerm</c>,
+            or <c>ConfigurableUpfrontPricingTerm</c>.
+            </para>
+             </li> <li> 
+            <para>
+             <c>TermID</c> – The ID of the particular term, which is common between offer and
+            agreement.
+            </para>
+             </li> <li> 
+            <para>
+             <c>TermPayload</c> – The key information contained in the term, such as the EULA
+            for <c>LegalTerm</c> or pricing and dimensions for various pricing terms, such as
+            <c>ConfigurableUpfrontPricingTerm</c> or <c>UsageBasedPricingTerm</c>.
+            </para>
+             </li> </ul> <ul> <li> 
+            <para>
+             <c>Configuration</c> – The buyer/acceptor's selection at the time of agreement creation,
+            such as the number of units purchased for a dimension or setting the <c>EnableAutoRenew</c>
+            flag.
+            </para>
+             </li> </ul>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetAgreementTerms service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetAgreementTerms service method, as returned by MarketplaceAgreement.</returns>
+            <exception cref="T:Amazon.MarketplaceAgreement.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceAgreement.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceAgreement.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceAgreement.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceAgreement.Model.ValidationException">
+            The input fails to satisfy the constraints specified by the service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-agreement-2020-03-01/GetAgreementTerms">REST API Reference for GetAgreementTerms Operation</seealso>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.IAmazonMarketplaceAgreement.SearchAgreementsAsync(Amazon.MarketplaceAgreement.Model.SearchAgreementsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Searches across all agreements that a proposer or an acceptor has in AWS Marketplace.
+            The search returns a list of agreements with basic agreement information.
+            
+             
+            <para>
+            The following filter combinations are supported:
+            </para>
+             <ul> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>ResourceIdentifier</c>
+            
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>OfferId</c> 
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>AcceptorAccountId</c>
+            
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>Status</c> 
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>ResourceIdentifier</c>
+            + <c>Status</c> 
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>OfferId</c> + <c>Status</c>
+            
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>AcceptorAccountId</c>
+            + <c>Status</c> 
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>ResourceType</c>
+            + <c>Status</c> 
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>AcceptorAccountId</c>
+            + <c>ResourceType</c> + <c>Status</c> 
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>AcceptorAccountId</c>
+            + <c>OfferId</c> 
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>AcceptorAccountId</c>
+            + <c>OfferId</c> + <c>Status</c> 
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>AcceptorAccountId</c>
+            + <c>ResourceIdentifier</c> 
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>AcceptorAccountId</c>
+            + <c>ResourceIdentifier</c> + <c>Status</c> 
+            </para>
+             </li> <li> 
+            <para>
+             <c>PartyType</c> as <c>Proposer</c> + <c>AgreementType</c> + <c>AcceptorAccountId</c>
+            + <c>ResourceType</c> 
+            </para>
+             </li> </ul>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the SearchAgreements service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the SearchAgreements service method, as returned by MarketplaceAgreement.</returns>
+            <exception cref="T:Amazon.MarketplaceAgreement.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceAgreement.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceAgreement.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceAgreement.Model.ValidationException">
+            The input fails to satisfy the constraints specified by the service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-agreement-2020-03-01/SearchAgreements">REST API Reference for SearchAgreements Operation</seealso>
+        </member>
+        <member name="M:Amazon.MarketplaceAgreement.IAmazonMarketplaceAgreement.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+    </members>
+</doc>

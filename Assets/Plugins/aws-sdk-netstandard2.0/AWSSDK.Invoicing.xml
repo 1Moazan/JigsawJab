@@ -1,0 +1,2931 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.Invoicing</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.Invoicing.AmazonInvoicingConfig">
+            <summary>
+            Configuration for accessing Amazon Invoicing service
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.AmazonInvoicingConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.Invoicing.AmazonInvoicingConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.AmazonInvoicingConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.AmazonInvoicingConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.AmazonInvoicingConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.AmazonInvoicingDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon Invoicing service
+            </summary>
+        </member>
+        <member name="M:Amazon.Invoicing.AmazonInvoicingDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            Invoicing
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.AmazonInvoicingDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.AmazonInvoicingDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.AmazonInvoicingDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.AmazonInvoicingDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.AmazonInvoicingDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.AmazonInvoicingDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Endpoints.InvoicingEndpointParameters">
+            <summary>
+            Contains parameters used for resolving Invoicing endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal InvoicingEndpointProvider and InvoicingEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.Invoicing.Endpoints.InvoicingEndpointParameters.#ctor">
+            <summary>
+            InvoicingEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Endpoints.InvoicingEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Endpoints.InvoicingEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Endpoints.InvoicingEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.AmazonInvoicingException">
+            <summary>
+             Common exception for the Invoicing service.
+             </summary>
+        </member>
+        <member name="M:Amazon.Invoicing.AmazonInvoicingException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonInvoicingException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.Invoicing.AmazonInvoicingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonInvoicingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Invoicing.AmazonInvoicingException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonInvoicingException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Invoicing.AmazonInvoicingException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonInvoicingException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Invoicing.AmazonInvoicingException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonInvoicingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.Invoicing.Internal.AmazonInvoicingEndpointProvider">
+            <summary>
+            Amazon Invoicing endpoint provider.
+            Resolves endpoint for given set of InvoicingEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.Invoicing.Internal.AmazonInvoicingEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for InvoicingEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Internal.AmazonInvoicingEndpointResolver">
+            <summary>
+            Amazon Invoicing endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for Invoicing service requests.
+            Collects values for InvoicingEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses InvoicingEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Internal.AmazonInvoicingMetadata">
+            <summary>
+            Service metadata for  Amazon Invoicing service
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Internal.AmazonInvoicingMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Internal.AmazonInvoicingMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.AccessDeniedException">
+            <summary>
+            You don't have sufficient access to perform this action.
+            </summary>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.AccessDeniedException.#ctor(System.String)">
+            <summary>
+            Constructs a new AccessDeniedException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.AccessDeniedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.AccessDeniedException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.AccessDeniedException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.AccessDeniedException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.AccessDeniedException.ResourceName">
+            <summary>
+            Gets and sets the property ResourceName. 
+            <para>
+            You don't have sufficient access to perform this action. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.BatchGetInvoiceProfileRequest">
+            <summary>
+            Container for the parameters to the BatchGetInvoiceProfile operation.
+            This gets the invoice profile associated with a set of accounts. The accounts must
+            be linked accounts under the requester management account organization.
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.BatchGetInvoiceProfileRequest.AccountIds">
+            <summary>
+            Gets and sets the property AccountIds. 
+            <para>
+            Retrieves the corresponding invoice profile data for these account IDs. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.BatchGetInvoiceProfileResponse">
+            <summary>
+            This is the response object from the BatchGetInvoiceProfile operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.BatchGetInvoiceProfileResponse.Profiles">
+            <summary>
+            Gets and sets the property Profiles. 
+            <para>
+             A list of invoice profiles corresponding to the requested accounts. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.CreateInvoiceUnitRequest">
+            <summary>
+            Container for the parameters to the CreateInvoiceUnit operation.
+            This creates a new invoice unit with the provided definition.
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.CreateInvoiceUnitRequest.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+             The invoice unit's description. This can be changed at a later time. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.CreateInvoiceUnitRequest.InvoiceReceiver">
+            <summary>
+            Gets and sets the property InvoiceReceiver. 
+            <para>
+             The Amazon Web Services account ID chosen to be the receiver of an invoice unit.
+            All invoices generated for that invoice unit will be sent to this account ID. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.CreateInvoiceUnitRequest.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+             The unique name of the invoice unit that is shown on the generated invoice. This
+            can't be changed once it is set. To change this name, you must delete the invoice
+            unit recreate. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.CreateInvoiceUnitRequest.ResourceTags">
+            <summary>
+            Gets and sets the property ResourceTags. 
+            <para>
+             The tag structure that contains a tag key and value. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.CreateInvoiceUnitRequest.Rule">
+            <summary>
+            Gets and sets the property Rule. 
+            <para>
+            The <c>InvoiceUnitRule</c> object used to create invoice units. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.CreateInvoiceUnitRequest.TaxInheritanceDisabled">
+            <summary>
+            Gets and sets the property TaxInheritanceDisabled. 
+            <para>
+            Whether the invoice unit based tax inheritance is/ should be enabled or disabled.
+            
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.CreateInvoiceUnitResponse">
+            <summary>
+            This is the response object from the CreateInvoiceUnit operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.CreateInvoiceUnitResponse.InvoiceUnitArn">
+            <summary>
+            Gets and sets the property InvoiceUnitArn. 
+            <para>
+             The ARN to identify an invoice unit. This information can't be modified or deleted.
+            
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.DeleteInvoiceUnitRequest">
+            <summary>
+            Container for the parameters to the DeleteInvoiceUnit operation.
+            This deletes an invoice unit with the provided invoice unit ARN.
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.DeleteInvoiceUnitRequest.InvoiceUnitArn">
+            <summary>
+            Gets and sets the property InvoiceUnitArn. 
+            <para>
+             The ARN to identify an invoice unit. This information can't be modified or deleted.
+            
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.DeleteInvoiceUnitResponse">
+            <summary>
+            This is the response object from the DeleteInvoiceUnit operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.DeleteInvoiceUnitResponse.InvoiceUnitArn">
+            <summary>
+            Gets and sets the property InvoiceUnitArn. 
+            <para>
+             The ARN to identify an invoice unit. This information can't be modified or deleted.
+            
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.Filters">
+            <summary>
+            An optional input to the list API. If multiple filters are specified, the returned
+            list will be a configuration that match all of the provided filters. Supported filter
+            types are <c>InvoiceReceivers</c>, <c>Names</c>, and <c>Accounts</c>.
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.Filters.Accounts">
+            <summary>
+            Gets and sets the property Accounts. 
+            <para>
+             You can specify a list of Amazon Web Services account IDs inside filters to return
+            invoice units that match only the specified accounts. If multiple accounts are provided,
+            the result is an <c>OR</c> condition (match any) of the specified accounts. The specified
+            account IDs are matched with either the receiver or the linked accounts in the rules.
+            
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.Filters.InvoiceReceivers">
+            <summary>
+            Gets and sets the property InvoiceReceivers. 
+            <para>
+             You can specify a list of Amazon Web Services account IDs inside filters to return
+            invoice units that match only the specified accounts. If multiple accounts are provided,
+            the result is an <c>OR</c> condition (match any) of the specified accounts. This filter
+            only matches the specified accounts on the invoice receivers of the invoice units.
+            
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.Filters.Names">
+            <summary>
+            Gets and sets the property Names. 
+            <para>
+             An optional input to the list API. You can specify a list of invoice unit names inside
+            filters to return invoice units that match only the specified invoice unit names.
+            If multiple names are provided, the result is an <c>OR</c> condition (match any) of
+            the specified invoice unit names. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.GetInvoiceUnitRequest">
+            <summary>
+            Container for the parameters to the GetInvoiceUnit operation.
+            This retrieves the invoice unit definition.
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.GetInvoiceUnitRequest.AsOf">
+            <summary>
+            Gets and sets the property AsOf. 
+            <para>
+             The state of an invoice unit at a specified time. You can see legacy invoice units
+            that are currently deleted if the <c>AsOf</c> time is set to before it was deleted.
+            If an <c>AsOf</c> is not provided, the default value is the current time. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.GetInvoiceUnitRequest.InvoiceUnitArn">
+            <summary>
+            Gets and sets the property InvoiceUnitArn. 
+            <para>
+             The ARN to identify an invoice unit. This information can't be modified or deleted.
+            
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.GetInvoiceUnitResponse">
+            <summary>
+            This is the response object from the GetInvoiceUnit operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.GetInvoiceUnitResponse.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+             The assigned description for an invoice unit. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.GetInvoiceUnitResponse.InvoiceReceiver">
+            <summary>
+            Gets and sets the property InvoiceReceiver. 
+            <para>
+             The Amazon Web Services account ID chosen to be the receiver of an invoice unit.
+            All invoices generated for that invoice unit will be sent to this account ID. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.GetInvoiceUnitResponse.InvoiceUnitArn">
+            <summary>
+            Gets and sets the property InvoiceUnitArn. 
+            <para>
+             The ARN to identify an invoice unit. This information can't be modified or deleted.
+            
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.GetInvoiceUnitResponse.LastModified">
+            <summary>
+            Gets and sets the property LastModified. 
+            <para>
+             The most recent date the invoice unit response was updated. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.GetInvoiceUnitResponse.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+             The unique name of the invoice unit that is shown on the generated invoice. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.GetInvoiceUnitResponse.Rule">
+            <summary>
+            Gets and sets the property Rule.
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.GetInvoiceUnitResponse.TaxInheritanceDisabled">
+            <summary>
+            Gets and sets the property TaxInheritanceDisabled. 
+            <para>
+             Whether the invoice unit based tax inheritance is/ should be enabled or disabled.
+            
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.InternalServerException">
+            <summary>
+            The processing request failed because of an unknown error, exception, or failure.
+            </summary>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.InternalServerException.#ctor(System.String)">
+            <summary>
+            Constructs a new InternalServerException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.InternalServerException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.InternalServerException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.InternalServerException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.InternalServerException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.InternalServerException.RetryAfterSeconds">
+            <summary>
+            Gets and sets the property RetryAfterSeconds. 
+            <para>
+            The processing request failed because of an unknown error, exception, or failure.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for AccessDeniedException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Invoicing.Model.Internal.MarshallTransformations.BatchGetInvoiceProfileRequestMarshaller">
+            <summary>
+            BatchGetInvoiceProfile Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.BatchGetInvoiceProfileRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.BatchGetInvoiceProfileRequestMarshaller.Marshall(Amazon.Invoicing.Model.BatchGetInvoiceProfileRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.Internal.MarshallTransformations.BatchGetInvoiceProfileRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Invoicing.Model.Internal.MarshallTransformations.BatchGetInvoiceProfileResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for BatchGetInvoiceProfile operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.BatchGetInvoiceProfileResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.BatchGetInvoiceProfileResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.Internal.MarshallTransformations.BatchGetInvoiceProfileResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Invoicing.Model.Internal.MarshallTransformations.CreateInvoiceUnitRequestMarshaller">
+            <summary>
+            CreateInvoiceUnit Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.CreateInvoiceUnitRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.CreateInvoiceUnitRequestMarshaller.Marshall(Amazon.Invoicing.Model.CreateInvoiceUnitRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.Internal.MarshallTransformations.CreateInvoiceUnitRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Invoicing.Model.Internal.MarshallTransformations.CreateInvoiceUnitResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for CreateInvoiceUnit operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.CreateInvoiceUnitResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.CreateInvoiceUnitResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.Internal.MarshallTransformations.CreateInvoiceUnitResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Invoicing.Model.Internal.MarshallTransformations.DeleteInvoiceUnitRequestMarshaller">
+            <summary>
+            DeleteInvoiceUnit Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.DeleteInvoiceUnitRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.DeleteInvoiceUnitRequestMarshaller.Marshall(Amazon.Invoicing.Model.DeleteInvoiceUnitRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.Internal.MarshallTransformations.DeleteInvoiceUnitRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Invoicing.Model.Internal.MarshallTransformations.DeleteInvoiceUnitResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DeleteInvoiceUnit operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.DeleteInvoiceUnitResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.DeleteInvoiceUnitResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.Internal.MarshallTransformations.DeleteInvoiceUnitResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Invoicing.Model.Internal.MarshallTransformations.FiltersMarshaller">
+            <summary>
+            Filters Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.FiltersMarshaller.Marshall(Amazon.Invoicing.Model.Filters,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.Invoicing.Model.Internal.MarshallTransformations.FiltersMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.Internal.MarshallTransformations.GetInvoiceUnitRequestMarshaller">
+            <summary>
+            GetInvoiceUnit Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.GetInvoiceUnitRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.GetInvoiceUnitRequestMarshaller.Marshall(Amazon.Invoicing.Model.GetInvoiceUnitRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.Internal.MarshallTransformations.GetInvoiceUnitRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Invoicing.Model.Internal.MarshallTransformations.GetInvoiceUnitResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetInvoiceUnit operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.GetInvoiceUnitResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.GetInvoiceUnitResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.Internal.MarshallTransformations.GetInvoiceUnitResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Invoicing.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InternalServerException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Invoicing.Model.Internal.MarshallTransformations.InvoiceProfileUnmarshaller">
+            <summary>
+            Response Unmarshaller for InvoiceProfile Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.InvoiceProfileUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Invoicing#Model#InvoiceProfile,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.InvoiceProfileUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.Internal.MarshallTransformations.InvoiceProfileUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Invoicing.Model.Internal.MarshallTransformations.InvoiceUnitRuleMarshaller">
+            <summary>
+            InvoiceUnitRule Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.InvoiceUnitRuleMarshaller.Marshall(Amazon.Invoicing.Model.InvoiceUnitRule,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.Invoicing.Model.Internal.MarshallTransformations.InvoiceUnitRuleMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.Internal.MarshallTransformations.InvoiceUnitRuleUnmarshaller">
+            <summary>
+            Response Unmarshaller for InvoiceUnitRule Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.InvoiceUnitRuleUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Invoicing#Model#InvoiceUnitRule,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.InvoiceUnitRuleUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.Internal.MarshallTransformations.InvoiceUnitRuleUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Invoicing.Model.Internal.MarshallTransformations.InvoiceUnitUnmarshaller">
+            <summary>
+            Response Unmarshaller for InvoiceUnit Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.InvoiceUnitUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Invoicing#Model#InvoiceUnit,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.InvoiceUnitUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.Internal.MarshallTransformations.InvoiceUnitUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Invoicing.Model.Internal.MarshallTransformations.ListInvoiceUnitsRequestMarshaller">
+            <summary>
+            ListInvoiceUnits Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.ListInvoiceUnitsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.ListInvoiceUnitsRequestMarshaller.Marshall(Amazon.Invoicing.Model.ListInvoiceUnitsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.Internal.MarshallTransformations.ListInvoiceUnitsRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Invoicing.Model.Internal.MarshallTransformations.ListInvoiceUnitsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListInvoiceUnits operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.ListInvoiceUnitsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.ListInvoiceUnitsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.Internal.MarshallTransformations.ListInvoiceUnitsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Invoicing.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller">
+            <summary>
+            ListTagsForResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Marshall(Amazon.Invoicing.Model.ListTagsForResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Invoicing.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListTagsForResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Invoicing.Model.Internal.MarshallTransformations.ReceiverAddressUnmarshaller">
+            <summary>
+            Response Unmarshaller for ReceiverAddress Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.ReceiverAddressUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Invoicing#Model#ReceiverAddress,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.ReceiverAddressUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.Internal.MarshallTransformations.ReceiverAddressUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Invoicing.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ResourceNotFoundException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Invoicing.Model.Internal.MarshallTransformations.ResourceTagMarshaller">
+            <summary>
+            ResourceTag Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.ResourceTagMarshaller.Marshall(Amazon.Invoicing.Model.ResourceTag,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.Invoicing.Model.Internal.MarshallTransformations.ResourceTagMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.Internal.MarshallTransformations.ResourceTagUnmarshaller">
+            <summary>
+            Response Unmarshaller for ResourceTag Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.ResourceTagUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Invoicing#Model#ResourceTag,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.ResourceTagUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.Internal.MarshallTransformations.ResourceTagUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Invoicing.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ServiceQuotaExceededException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Invoicing.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller">
+            <summary>
+            TagResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Marshall(Amazon.Invoicing.Model.TagResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Invoicing.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for TagResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Invoicing.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ThrottlingException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Invoicing.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller">
+            <summary>
+            UntagResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Marshall(Amazon.Invoicing.Model.UntagResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Invoicing.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for UntagResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Invoicing.Model.Internal.MarshallTransformations.UpdateInvoiceUnitRequestMarshaller">
+            <summary>
+            UpdateInvoiceUnit Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.UpdateInvoiceUnitRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.UpdateInvoiceUnitRequestMarshaller.Marshall(Amazon.Invoicing.Model.UpdateInvoiceUnitRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.Internal.MarshallTransformations.UpdateInvoiceUnitRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Invoicing.Model.Internal.MarshallTransformations.UpdateInvoiceUnitResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for UpdateInvoiceUnit operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.UpdateInvoiceUnitResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.UpdateInvoiceUnitResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.Internal.MarshallTransformations.UpdateInvoiceUnitResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Invoicing.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationExceptionField Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Invoicing#Model#ValidationExceptionField,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Invoicing.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Invoicing.Model.InvoiceProfile">
+            <summary>
+            Contains high-level information about the invoice receiver.
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.InvoiceProfile.AccountId">
+            <summary>
+            Gets and sets the property AccountId. 
+            <para>
+             The account ID the invoice profile is generated for. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.InvoiceProfile.Issuer">
+            <summary>
+            Gets and sets the property Issuer. 
+            <para>
+             This specifies the issuing entity of the invoice. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.InvoiceProfile.ReceiverAddress">
+            <summary>
+            Gets and sets the property ReceiverAddress. 
+            <para>
+            The address of the receiver that will be printed on the invoice. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.InvoiceProfile.ReceiverEmail">
+            <summary>
+            Gets and sets the property ReceiverEmail. 
+            <para>
+            The email address for the invoice profile receiver. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.InvoiceProfile.ReceiverName">
+            <summary>
+            Gets and sets the property ReceiverName. 
+            <para>
+             The name of the person receiving the invoice profile. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.InvoiceProfile.TaxRegistrationNumber">
+            <summary>
+            Gets and sets the property TaxRegistrationNumber. 
+            <para>
+             Your Tax Registration Number (TRN) information. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.InvoiceUnit">
+            <summary>
+            An invoice unit is a set of mutually exclusive accounts that correspond to your business
+            entity. Invoice units allow you separate Amazon Web Services account costs and configures
+            your invoice for each business entity going forward.
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.InvoiceUnit.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+            The assigned description for an invoice unit. This information can't be modified or
+            deleted. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.InvoiceUnit.InvoiceReceiver">
+            <summary>
+            Gets and sets the property InvoiceReceiver. 
+            <para>
+            The account that receives invoices related to the invoice unit. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.InvoiceUnit.InvoiceUnitArn">
+            <summary>
+            Gets and sets the property InvoiceUnitArn. 
+            <para>
+            ARN to identify an invoice unit. This information can't be modified or deleted. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.InvoiceUnit.LastModified">
+            <summary>
+            Gets and sets the property LastModified. 
+            <para>
+             The last time the invoice unit was updated. This is important to determine the version
+            of invoice unit configuration used to create the invoices. Any invoice created after
+            this modified time will use this invoice unit configuration. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.InvoiceUnit.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+             A unique name that is distinctive within your Amazon Web Services. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.InvoiceUnit.Rule">
+            <summary>
+            Gets and sets the property Rule. 
+            <para>
+             An <c>InvoiceUnitRule</c> object used the categorize invoice units. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.InvoiceUnit.TaxInheritanceDisabled">
+            <summary>
+            Gets and sets the property TaxInheritanceDisabled. 
+            <para>
+            Whether the invoice unit based tax inheritance is/ should be enabled or disabled.
+            
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.InvoiceUnitRule">
+            <summary>
+            This is used to categorize the invoice unit. Values are Amazon Web Services account
+            IDs. Currently, the only supported rule is <c>LINKED_ACCOUNT</c>.
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.InvoiceUnitRule.LinkedAccounts">
+            <summary>
+            Gets and sets the property LinkedAccounts. 
+            <para>
+            The list of <c>LINKED_ACCOUNT</c> IDs where charges are included within the invoice
+            unit. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.ListInvoiceUnitsRequest">
+            <summary>
+            Container for the parameters to the ListInvoiceUnits operation.
+            This fetches a list of all invoice unit definitions for a given account, as of the
+            provided <c>AsOf</c> date.
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.ListInvoiceUnitsRequest.AsOf">
+            <summary>
+            Gets and sets the property AsOf. 
+            <para>
+             The state of an invoice unit at a specified time. You can see legacy invoice units
+            that are currently deleted if the <c>AsOf</c> time is set to before it was deleted.
+            If an <c>AsOf</c> is not provided, the default value is the current time. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.ListInvoiceUnitsRequest.Filters">
+            <summary>
+            Gets and sets the property Filters. 
+            <para>
+             An optional input to the list API. If multiple filters are specified, the returned
+            list will be a configuration that match all of the provided filters. Supported filter
+            types are <c>InvoiceReceivers</c>, <c>Names</c>, and <c>Accounts</c>. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.ListInvoiceUnitsRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            The maximum number of invoice units that can be returned. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.ListInvoiceUnitsRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The next token used to indicate where the returned list should start from. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.ListInvoiceUnitsResponse">
+            <summary>
+            This is the response object from the ListInvoiceUnits operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.ListInvoiceUnitsResponse.InvoiceUnits">
+            <summary>
+            Gets and sets the property InvoiceUnits. 
+            <para>
+             An invoice unit is a set of mutually exclusive accounts that correspond to your business
+            entity. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.ListInvoiceUnitsResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The next token used to indicate where the returned list should start from. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.ListTagsForResourceRequest">
+            <summary>
+            Container for the parameters to the ListTagsForResource operation.
+            Lists the tags for a resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.ListTagsForResourceRequest.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+            The Amazon Resource Name (ARN) of tags to list. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.ListTagsForResourceResponse">
+            <summary>
+            This is the response object from the ListTagsForResource operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.ListTagsForResourceResponse.ResourceTags">
+            <summary>
+            Gets and sets the property ResourceTags. 
+            <para>
+             Adds a tag to a resource. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.ReceiverAddress">
+            <summary>
+            The details of the address associated with the receiver.
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.ReceiverAddress.AddressLine1">
+            <summary>
+            Gets and sets the property AddressLine1. 
+            <para>
+             The first line of the address. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.ReceiverAddress.AddressLine2">
+            <summary>
+            Gets and sets the property AddressLine2. 
+            <para>
+             The second line of the address, if applicable. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.ReceiverAddress.AddressLine3">
+            <summary>
+            Gets and sets the property AddressLine3. 
+            <para>
+             The third line of the address, if applicable. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.ReceiverAddress.City">
+            <summary>
+            Gets and sets the property City. 
+            <para>
+             The city that the address is in. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.ReceiverAddress.CompanyName">
+            <summary>
+            Gets and sets the property CompanyName. 
+            <para>
+             A unique company name. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.ReceiverAddress.CountryCode">
+            <summary>
+            Gets and sets the property CountryCode. 
+            <para>
+             The country code for the country the address is in. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.ReceiverAddress.DistrictOrCounty">
+            <summary>
+            Gets and sets the property DistrictOrCounty. 
+            <para>
+             The district or country the address is located in. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.ReceiverAddress.PostalCode">
+            <summary>
+            Gets and sets the property PostalCode. 
+            <para>
+             The postal code associated with the address. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.ReceiverAddress.StateOrRegion">
+            <summary>
+            Gets and sets the property StateOrRegion. 
+            <para>
+             The state, region, or province the address is located. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.ResourceNotFoundException">
+            <summary>
+            The resource could not be found.
+            </summary>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.ResourceNotFoundException.#ctor(System.String)">
+            <summary>
+            Constructs a new ResourceNotFoundException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.ResourceNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.ResourceNotFoundException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.ResourceNotFoundException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.ResourceNotFoundException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.ResourceNotFoundException.ResourceName">
+            <summary>
+            Gets and sets the property ResourceName. 
+            <para>
+            The resource could not be found.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.ResourceTag">
+            <summary>
+            The tag structure that contains a tag key and value.
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.ResourceTag.Key">
+            <summary>
+            Gets and sets the property Key. 
+            <para>
+            The object key of your of your resource tag. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.ResourceTag.Value">
+            <summary>
+            Gets and sets the property Value. 
+            <para>
+             The specific value of the resource tag. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.ServiceQuotaExceededException">
+            <summary>
+            The request was rejected because it attempted to create resources beyond the current
+            Amazon Web Services account limits. The error message describes the limit exceeded.
+            </summary>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.ServiceQuotaExceededException.#ctor(System.String)">
+            <summary>
+            Constructs a new ServiceQuotaExceededException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.ServiceQuotaExceededException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.ServiceQuotaExceededException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.ServiceQuotaExceededException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.ServiceQuotaExceededException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.TagResourceRequest">
+            <summary>
+            Container for the parameters to the TagResource operation.
+            Adds a tag to a resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.TagResourceRequest.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+            The Amazon Resource Name (ARN) of the tags. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.TagResourceRequest.ResourceTags">
+            <summary>
+            Gets and sets the property ResourceTags. 
+            <para>
+             Adds a tag to a resource. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.TagResourceResponse">
+            <summary>
+            This is the response object from the TagResource operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.ThrottlingException">
+            <summary>
+            The request was denied due to request throttling.
+            </summary>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.ThrottlingException.#ctor(System.String)">
+            <summary>
+            Constructs a new ThrottlingException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.ThrottlingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.ThrottlingException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.ThrottlingException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.ThrottlingException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.UntagResourceRequest">
+            <summary>
+            Container for the parameters to the UntagResource operation.
+            Removes a tag from a resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.UntagResourceRequest.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+             The Amazon Resource Name (ARN) to untag. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.UntagResourceRequest.ResourceTagKeys">
+            <summary>
+            Gets and sets the property ResourceTagKeys. 
+            <para>
+             Keys for the tags to be removed. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.UntagResourceResponse">
+            <summary>
+            This is the response object from the UntagResource operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.UpdateInvoiceUnitRequest">
+            <summary>
+            Container for the parameters to the UpdateInvoiceUnit operation.
+            You can update the invoice unit configuration at any time, and Amazon Web Services
+            will use the latest configuration at the end of the month.
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.UpdateInvoiceUnitRequest.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+            The assigned description for an invoice unit. This information can't be modified or
+            deleted. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.UpdateInvoiceUnitRequest.InvoiceUnitArn">
+            <summary>
+            Gets and sets the property InvoiceUnitArn. 
+            <para>
+            The ARN to identify an invoice unit. This information can't be modified or deleted.
+            
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.UpdateInvoiceUnitRequest.Rule">
+            <summary>
+            Gets and sets the property Rule. 
+            <para>
+            The <c>InvoiceUnitRule</c> object used to update invoice units. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.UpdateInvoiceUnitRequest.TaxInheritanceDisabled">
+            <summary>
+            Gets and sets the property TaxInheritanceDisabled. 
+            <para>
+            Whether the invoice unit based tax inheritance is/ should be enabled or disabled.
+            
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.UpdateInvoiceUnitResponse">
+            <summary>
+            This is the response object from the UpdateInvoiceUnit operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.UpdateInvoiceUnitResponse.InvoiceUnitArn">
+            <summary>
+            Gets and sets the property InvoiceUnitArn. 
+            <para>
+             The ARN to identify an invoice unit. This information can't be modified or deleted.
+            
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.ValidationException">
+            <summary>
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </summary>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.ValidationException.#ctor(System.String)">
+            <summary>
+            Constructs a new ValidationException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.ValidationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.ValidationException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.ValidationException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.ValidationException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.ValidationException.FieldList">
+            <summary>
+            Gets and sets the property FieldList. 
+            <para>
+             The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.ValidationException.Reason">
+            <summary>
+            Gets and sets the property Reason. 
+            <para>
+            You don't have sufficient access to perform this action. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.ValidationException.ResourceName">
+            <summary>
+            Gets and sets the property ResourceName. 
+            <para>
+            You don't have sufficient access to perform this action. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.ValidationExceptionField">
+            <summary>
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.ValidationExceptionField.Message">
+            <summary>
+            Gets and sets the property Message. 
+            <para>
+             The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.ValidationExceptionField.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+             The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.IInvoicingPaginatorFactory">
+             <summary>
+             Paginators for the Invoicing service
+            </summary>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.IInvoicingPaginatorFactory.ListInvoiceUnits(Amazon.Invoicing.Model.ListInvoiceUnitsRequest)">
+             <summary>
+             Paginator for ListInvoiceUnits operation
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.IListInvoiceUnitsPaginator">
+             <summary>
+             Paginator for the ListInvoiceUnits operation
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.IListInvoiceUnitsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.IListInvoiceUnitsPaginator.InvoiceUnits">
+            <summary>
+            Enumerable containing all of the InvoiceUnits
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.InvoicingPaginatorFactory">
+             <summary>
+             Paginators for the Invoicing service
+            </summary>
+        </member>
+        <member name="M:Amazon.Invoicing.Model.InvoicingPaginatorFactory.ListInvoiceUnits(Amazon.Invoicing.Model.ListInvoiceUnitsRequest)">
+             <summary>
+             Paginator for ListInvoiceUnits operation
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.Model.ListInvoiceUnitsPaginator">
+            <summary>
+            Base class for ListInvoiceUnits paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.ListInvoiceUnitsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.Model.ListInvoiceUnitsPaginator.InvoiceUnits">
+            <summary>
+            Enumerable containing all of the InvoiceUnits
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.AmazonInvoicingRequest">
+            <summary>
+            Base class for Invoicing operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.Invoicing.ValidationExceptionReason">
+            <summary>
+            Constants used for properties of type ValidationExceptionReason.
+            </summary>
+        </member>
+        <member name="F:Amazon.Invoicing.ValidationExceptionReason.AccountMembershipError">
+            <summary>
+            Constant AccountMembershipError for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.Invoicing.ValidationExceptionReason.CannotParse">
+            <summary>
+            Constant CannotParse for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.Invoicing.ValidationExceptionReason.DuplicateInvoiceUnit">
+            <summary>
+            Constant DuplicateInvoiceUnit for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.Invoicing.ValidationExceptionReason.ExpiredNextToken">
+            <summary>
+            Constant ExpiredNextToken for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.Invoicing.ValidationExceptionReason.FieldValidationFailed">
+            <summary>
+            Constant FieldValidationFailed for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.Invoicing.ValidationExceptionReason.InvalidInput">
+            <summary>
+            Constant InvalidInput for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.Invoicing.ValidationExceptionReason.InvalidNextToken">
+            <summary>
+            Constant InvalidNextToken for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.Invoicing.ValidationExceptionReason.MaxAccountsExceeded">
+            <summary>
+            Constant MaxAccountsExceeded for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.Invoicing.ValidationExceptionReason.MaxInvoiceUnitsExceeded">
+            <summary>
+            Constant MaxInvoiceUnitsExceeded for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.Invoicing.ValidationExceptionReason.MutualExclusionError">
+            <summary>
+            Constant MutualExclusionError for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.Invoicing.ValidationExceptionReason.NonMemberPresent">
+            <summary>
+            Constant NonMemberPresent for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.Invoicing.ValidationExceptionReason.Other">
+            <summary>
+            Constant Other for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.Invoicing.ValidationExceptionReason.TaxSettingsError">
+            <summary>
+            Constant TaxSettingsError for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.Invoicing.ValidationExceptionReason.UnknownOperation">
+            <summary>
+            Constant UnknownOperation for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="M:Amazon.Invoicing.ValidationExceptionReason.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.Invoicing.ValidationExceptionReason.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.Invoicing.ValidationExceptionReason.op_Implicit(System.String)~Amazon.Invoicing.ValidationExceptionReason">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Invoicing.AmazonInvoicingClient">
+             <summary>
+             <para>Implementation for accessing Invoicing</para>
+            
+             <b>Amazon Web Services Invoice Configuration</b> 
+             
+              
+             <para>
+             You can use Amazon Web Services Invoice Configuration APIs to programmatically create,
+             update, delete, get, and list invoice units. You can also programmatically fetch the
+             information of the invoice receiver. For example, business legal name, address, and
+             invoicing contacts. 
+             </para>
+              
+             <para>
+             You can use Amazon Web Services Invoice Configuration to receive separate Amazon Web
+             Services invoices based your organizational needs. By using Amazon Web Services Invoice
+             Configuration, you can configure invoice units that are groups of Amazon Web Services
+             accounts that represent your business entities, and receive separate invoices for
+             each business entity. You can also assign a unique member or payer account as the
+             invoice receiver for each invoice unit. As you create new accounts within your Organizations
+             using Amazon Web Services Invoice Configuration APIs, you can automate the creation
+             of new invoice units and subsequently automate the addition of new accounts to your
+             invoice units.
+             </para>
+              
+             <para>
+             Service endpoint
+             </para>
+              
+             <para>
+             You can use the following endpoints for Amazon Web Services Invoice Configuration:
+             </para>
+              <ul> <li> 
+             <para>
+              <c>https://invoicing.us-east-1.api.aws</c> 
+             </para>
+              </li> </ul>
+             </summary>
+        </member>
+        <member name="M:Amazon.Invoicing.AmazonInvoicingClient.#ctor">
+             <summary>
+             Constructs AmazonInvoicingClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.Invoicing.AmazonInvoicingClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonInvoicingClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.Invoicing.AmazonInvoicingClient.#ctor(Amazon.Invoicing.AmazonInvoicingConfig)">
+             <summary>
+             Constructs AmazonInvoicingClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonInvoicingClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.Invoicing.AmazonInvoicingClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonInvoicingClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.Invoicing.AmazonInvoicingClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonInvoicingClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.Invoicing.AmazonInvoicingClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.Invoicing.AmazonInvoicingConfig)">
+            <summary>
+            Constructs AmazonInvoicingClient with AWS Credentials and an
+            AmazonInvoicingClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonInvoicingClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.Invoicing.AmazonInvoicingClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonInvoicingClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.Invoicing.AmazonInvoicingClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonInvoicingClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.Invoicing.AmazonInvoicingClient.#ctor(System.String,System.String,Amazon.Invoicing.AmazonInvoicingConfig)">
+            <summary>
+            Constructs AmazonInvoicingClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonInvoicingClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonInvoicingClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.Invoicing.AmazonInvoicingClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonInvoicingClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.Invoicing.AmazonInvoicingClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonInvoicingClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.Invoicing.AmazonInvoicingClient.#ctor(System.String,System.String,System.String,Amazon.Invoicing.AmazonInvoicingConfig)">
+            <summary>
+            Constructs AmazonInvoicingClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonInvoicingClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonInvoicingClient Configuration Object</param>
+        </member>
+        <member name="P:Amazon.Invoicing.AmazonInvoicingClient.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.Invoicing.AmazonInvoicingClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.Invoicing.AmazonInvoicingClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.Invoicing.AmazonInvoicingClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.Invoicing.AmazonInvoicingClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.Invoicing.AmazonInvoicingClient.BatchGetInvoiceProfileAsync(Amazon.Invoicing.Model.BatchGetInvoiceProfileRequest,System.Threading.CancellationToken)">
+            <summary>
+            This gets the invoice profile associated with a set of accounts. The accounts must
+            be linked accounts under the requester management account organization.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the BatchGetInvoiceProfile service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the BatchGetInvoiceProfile service method, as returned by Invoicing.</returns>
+            <exception cref="T:Amazon.Invoicing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.InternalServerException">
+            The processing request failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ResourceNotFoundException">
+            The resource could not be found.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/invoicing-2024-12-01/BatchGetInvoiceProfile">REST API Reference for BatchGetInvoiceProfile Operation</seealso>
+        </member>
+        <member name="M:Amazon.Invoicing.AmazonInvoicingClient.CreateInvoiceUnitAsync(Amazon.Invoicing.Model.CreateInvoiceUnitRequest,System.Threading.CancellationToken)">
+            <summary>
+            This creates a new invoice unit with the provided definition.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateInvoiceUnit service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the CreateInvoiceUnit service method, as returned by Invoicing.</returns>
+            <exception cref="T:Amazon.Invoicing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.InternalServerException">
+            The processing request failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/invoicing-2024-12-01/CreateInvoiceUnit">REST API Reference for CreateInvoiceUnit Operation</seealso>
+        </member>
+        <member name="M:Amazon.Invoicing.AmazonInvoicingClient.DeleteInvoiceUnitAsync(Amazon.Invoicing.Model.DeleteInvoiceUnitRequest,System.Threading.CancellationToken)">
+            <summary>
+            This deletes an invoice unit with the provided invoice unit ARN.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteInvoiceUnit service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeleteInvoiceUnit service method, as returned by Invoicing.</returns>
+            <exception cref="T:Amazon.Invoicing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.InternalServerException">
+            The processing request failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ResourceNotFoundException">
+            The resource could not be found.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/invoicing-2024-12-01/DeleteInvoiceUnit">REST API Reference for DeleteInvoiceUnit Operation</seealso>
+        </member>
+        <member name="M:Amazon.Invoicing.AmazonInvoicingClient.GetInvoiceUnitAsync(Amazon.Invoicing.Model.GetInvoiceUnitRequest,System.Threading.CancellationToken)">
+            <summary>
+            This retrieves the invoice unit definition.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetInvoiceUnit service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetInvoiceUnit service method, as returned by Invoicing.</returns>
+            <exception cref="T:Amazon.Invoicing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.InternalServerException">
+            The processing request failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ResourceNotFoundException">
+            The resource could not be found.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/invoicing-2024-12-01/GetInvoiceUnit">REST API Reference for GetInvoiceUnit Operation</seealso>
+        </member>
+        <member name="M:Amazon.Invoicing.AmazonInvoicingClient.ListInvoiceUnitsAsync(Amazon.Invoicing.Model.ListInvoiceUnitsRequest,System.Threading.CancellationToken)">
+            <summary>
+            This fetches a list of all invoice unit definitions for a given account, as of the
+            provided <c>AsOf</c> date.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListInvoiceUnits service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListInvoiceUnits service method, as returned by Invoicing.</returns>
+            <exception cref="T:Amazon.Invoicing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.InternalServerException">
+            The processing request failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/invoicing-2024-12-01/ListInvoiceUnits">REST API Reference for ListInvoiceUnits Operation</seealso>
+        </member>
+        <member name="M:Amazon.Invoicing.AmazonInvoicingClient.ListTagsForResourceAsync(Amazon.Invoicing.Model.ListTagsForResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists the tags for a resource.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListTagsForResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListTagsForResource service method, as returned by Invoicing.</returns>
+            <exception cref="T:Amazon.Invoicing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.InternalServerException">
+            The processing request failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ResourceNotFoundException">
+            The resource could not be found.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/invoicing-2024-12-01/ListTagsForResource">REST API Reference for ListTagsForResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.Invoicing.AmazonInvoicingClient.TagResourceAsync(Amazon.Invoicing.Model.TagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Adds a tag to a resource.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the TagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the TagResource service method, as returned by Invoicing.</returns>
+            <exception cref="T:Amazon.Invoicing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.InternalServerException">
+            The processing request failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ResourceNotFoundException">
+            The resource could not be found.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ServiceQuotaExceededException">
+            The request was rejected because it attempted to create resources beyond the current
+            Amazon Web Services account limits. The error message describes the limit exceeded.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/invoicing-2024-12-01/TagResource">REST API Reference for TagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.Invoicing.AmazonInvoicingClient.UntagResourceAsync(Amazon.Invoicing.Model.UntagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Removes a tag from a resource.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UntagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UntagResource service method, as returned by Invoicing.</returns>
+            <exception cref="T:Amazon.Invoicing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.InternalServerException">
+            The processing request failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ResourceNotFoundException">
+            The resource could not be found.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/invoicing-2024-12-01/UntagResource">REST API Reference for UntagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.Invoicing.AmazonInvoicingClient.UpdateInvoiceUnitAsync(Amazon.Invoicing.Model.UpdateInvoiceUnitRequest,System.Threading.CancellationToken)">
+            <summary>
+            You can update the invoice unit configuration at any time, and Amazon Web Services
+            will use the latest configuration at the end of the month.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UpdateInvoiceUnit service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UpdateInvoiceUnit service method, as returned by Invoicing.</returns>
+            <exception cref="T:Amazon.Invoicing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.InternalServerException">
+            The processing request failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ResourceNotFoundException">
+            The resource could not be found.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/invoicing-2024-12-01/UpdateInvoiceUnit">REST API Reference for UpdateInvoiceUnit Operation</seealso>
+        </member>
+        <member name="M:Amazon.Invoicing.AmazonInvoicingClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.Invoicing.IAmazonInvoicing">
+             <summary>
+             <para>Interface for accessing Invoicing</para>
+            
+             <b>Amazon Web Services Invoice Configuration</b> 
+             
+              
+             <para>
+             You can use Amazon Web Services Invoice Configuration APIs to programmatically create,
+             update, delete, get, and list invoice units. You can also programmatically fetch the
+             information of the invoice receiver. For example, business legal name, address, and
+             invoicing contacts. 
+             </para>
+              
+             <para>
+             You can use Amazon Web Services Invoice Configuration to receive separate Amazon Web
+             Services invoices based your organizational needs. By using Amazon Web Services Invoice
+             Configuration, you can configure invoice units that are groups of Amazon Web Services
+             accounts that represent your business entities, and receive separate invoices for
+             each business entity. You can also assign a unique member or payer account as the
+             invoice receiver for each invoice unit. As you create new accounts within your Organizations
+             using Amazon Web Services Invoice Configuration APIs, you can automate the creation
+             of new invoice units and subsequently automate the addition of new accounts to your
+             invoice units.
+             </para>
+              
+             <para>
+             Service endpoint
+             </para>
+              
+             <para>
+             You can use the following endpoints for Amazon Web Services Invoice Configuration:
+             </para>
+              <ul> <li> 
+             <para>
+              <c>https://invoicing.us-east-1.api.aws</c> 
+             </para>
+              </li> </ul>
+             </summary>
+        </member>
+        <member name="P:Amazon.Invoicing.IAmazonInvoicing.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.Invoicing.IAmazonInvoicing.BatchGetInvoiceProfileAsync(Amazon.Invoicing.Model.BatchGetInvoiceProfileRequest,System.Threading.CancellationToken)">
+            <summary>
+            This gets the invoice profile associated with a set of accounts. The accounts must
+            be linked accounts under the requester management account organization.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the BatchGetInvoiceProfile service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the BatchGetInvoiceProfile service method, as returned by Invoicing.</returns>
+            <exception cref="T:Amazon.Invoicing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.InternalServerException">
+            The processing request failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ResourceNotFoundException">
+            The resource could not be found.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/invoicing-2024-12-01/BatchGetInvoiceProfile">REST API Reference for BatchGetInvoiceProfile Operation</seealso>
+        </member>
+        <member name="M:Amazon.Invoicing.IAmazonInvoicing.CreateInvoiceUnitAsync(Amazon.Invoicing.Model.CreateInvoiceUnitRequest,System.Threading.CancellationToken)">
+            <summary>
+            This creates a new invoice unit with the provided definition.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateInvoiceUnit service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the CreateInvoiceUnit service method, as returned by Invoicing.</returns>
+            <exception cref="T:Amazon.Invoicing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.InternalServerException">
+            The processing request failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/invoicing-2024-12-01/CreateInvoiceUnit">REST API Reference for CreateInvoiceUnit Operation</seealso>
+        </member>
+        <member name="M:Amazon.Invoicing.IAmazonInvoicing.DeleteInvoiceUnitAsync(Amazon.Invoicing.Model.DeleteInvoiceUnitRequest,System.Threading.CancellationToken)">
+            <summary>
+            This deletes an invoice unit with the provided invoice unit ARN.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteInvoiceUnit service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeleteInvoiceUnit service method, as returned by Invoicing.</returns>
+            <exception cref="T:Amazon.Invoicing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.InternalServerException">
+            The processing request failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ResourceNotFoundException">
+            The resource could not be found.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/invoicing-2024-12-01/DeleteInvoiceUnit">REST API Reference for DeleteInvoiceUnit Operation</seealso>
+        </member>
+        <member name="M:Amazon.Invoicing.IAmazonInvoicing.GetInvoiceUnitAsync(Amazon.Invoicing.Model.GetInvoiceUnitRequest,System.Threading.CancellationToken)">
+            <summary>
+            This retrieves the invoice unit definition.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetInvoiceUnit service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetInvoiceUnit service method, as returned by Invoicing.</returns>
+            <exception cref="T:Amazon.Invoicing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.InternalServerException">
+            The processing request failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ResourceNotFoundException">
+            The resource could not be found.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/invoicing-2024-12-01/GetInvoiceUnit">REST API Reference for GetInvoiceUnit Operation</seealso>
+        </member>
+        <member name="M:Amazon.Invoicing.IAmazonInvoicing.ListInvoiceUnitsAsync(Amazon.Invoicing.Model.ListInvoiceUnitsRequest,System.Threading.CancellationToken)">
+            <summary>
+            This fetches a list of all invoice unit definitions for a given account, as of the
+            provided <c>AsOf</c> date.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListInvoiceUnits service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListInvoiceUnits service method, as returned by Invoicing.</returns>
+            <exception cref="T:Amazon.Invoicing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.InternalServerException">
+            The processing request failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/invoicing-2024-12-01/ListInvoiceUnits">REST API Reference for ListInvoiceUnits Operation</seealso>
+        </member>
+        <member name="M:Amazon.Invoicing.IAmazonInvoicing.ListTagsForResourceAsync(Amazon.Invoicing.Model.ListTagsForResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists the tags for a resource.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListTagsForResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListTagsForResource service method, as returned by Invoicing.</returns>
+            <exception cref="T:Amazon.Invoicing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.InternalServerException">
+            The processing request failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ResourceNotFoundException">
+            The resource could not be found.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/invoicing-2024-12-01/ListTagsForResource">REST API Reference for ListTagsForResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.Invoicing.IAmazonInvoicing.TagResourceAsync(Amazon.Invoicing.Model.TagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Adds a tag to a resource.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the TagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the TagResource service method, as returned by Invoicing.</returns>
+            <exception cref="T:Amazon.Invoicing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.InternalServerException">
+            The processing request failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ResourceNotFoundException">
+            The resource could not be found.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ServiceQuotaExceededException">
+            The request was rejected because it attempted to create resources beyond the current
+            Amazon Web Services account limits. The error message describes the limit exceeded.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/invoicing-2024-12-01/TagResource">REST API Reference for TagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.Invoicing.IAmazonInvoicing.UntagResourceAsync(Amazon.Invoicing.Model.UntagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Removes a tag from a resource.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UntagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UntagResource service method, as returned by Invoicing.</returns>
+            <exception cref="T:Amazon.Invoicing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.InternalServerException">
+            The processing request failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ResourceNotFoundException">
+            The resource could not be found.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/invoicing-2024-12-01/UntagResource">REST API Reference for UntagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.Invoicing.IAmazonInvoicing.UpdateInvoiceUnitAsync(Amazon.Invoicing.Model.UpdateInvoiceUnitRequest,System.Threading.CancellationToken)">
+            <summary>
+            You can update the invoice unit configuration at any time, and Amazon Web Services
+            will use the latest configuration at the end of the month.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UpdateInvoiceUnit service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UpdateInvoiceUnit service method, as returned by Invoicing.</returns>
+            <exception cref="T:Amazon.Invoicing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.InternalServerException">
+            The processing request failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ResourceNotFoundException">
+            The resource could not be found.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Invoicing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/invoicing-2024-12-01/UpdateInvoiceUnit">REST API Reference for UpdateInvoiceUnit Operation</seealso>
+        </member>
+        <member name="M:Amazon.Invoicing.IAmazonInvoicing.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+    </members>
+</doc>

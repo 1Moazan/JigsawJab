@@ -1,0 +1,1244 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.FreeTier</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.FreeTier.AmazonFreeTierConfig">
+            <summary>
+            Configuration for accessing Amazon FreeTier service
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.AmazonFreeTierConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.FreeTier.AmazonFreeTierConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.AmazonFreeTierConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.AmazonFreeTierConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.AmazonFreeTierConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.FreeTier.AmazonFreeTierDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon FreeTier service
+            </summary>
+        </member>
+        <member name="M:Amazon.FreeTier.AmazonFreeTierDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            FreeTier
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.AmazonFreeTierDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.AmazonFreeTierDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.AmazonFreeTierDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.AmazonFreeTierDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.AmazonFreeTierDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.AmazonFreeTierDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.FreeTier.Endpoints.FreeTierEndpointParameters">
+            <summary>
+            Contains parameters used for resolving FreeTier endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal FreeTierEndpointProvider and FreeTierEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.FreeTier.Endpoints.FreeTierEndpointParameters.#ctor">
+            <summary>
+            FreeTierEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.Endpoints.FreeTierEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.Endpoints.FreeTierEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.Endpoints.FreeTierEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.FreeTier.AmazonFreeTierException">
+            <summary>
+             Common exception for the FreeTier service.
+             </summary>
+        </member>
+        <member name="M:Amazon.FreeTier.AmazonFreeTierException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonFreeTierException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.FreeTier.AmazonFreeTierException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonFreeTierException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.FreeTier.AmazonFreeTierException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonFreeTierException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.FreeTier.AmazonFreeTierException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonFreeTierException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.FreeTier.AmazonFreeTierException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonFreeTierException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.FreeTier.Internal.AmazonFreeTierEndpointProvider">
+            <summary>
+            Amazon FreeTier endpoint provider.
+            Resolves endpoint for given set of FreeTierEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.FreeTier.Internal.AmazonFreeTierEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for FreeTierEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.FreeTier.Internal.AmazonFreeTierEndpointResolver">
+            <summary>
+            Amazon FreeTier endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for FreeTier service requests.
+            Collects values for FreeTierEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses FreeTierEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.FreeTier.Internal.AmazonFreeTierMetadata">
+            <summary>
+            Service metadata for  Amazon FreeTier service
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.Internal.AmazonFreeTierMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.Internal.AmazonFreeTierMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.FreeTier.AmazonFreeTierRequest">
+            <summary>
+            Base class for FreeTier operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.FreeTier.Model.DimensionValues">
+            <summary>
+            Contains the specifications for the filters to use for your request.
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.Model.DimensionValues.Key">
+            <summary>
+            Gets and sets the property Key. 
+            <para>
+            The name of the dimension that you want to filter on.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.Model.DimensionValues.MatchOptions">
+            <summary>
+            Gets and sets the property MatchOptions. 
+            <para>
+            The match options that you can use to filter your results. You can specify only one
+            of these values in the array.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.Model.DimensionValues.Values">
+            <summary>
+            Gets and sets the property Values. 
+            <para>
+            The metadata values you can specify to filter upon, so that the results all match
+            at least one of the specified values.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.FreeTier.Model.Expression">
+            <summary>
+            Use <c>Expression</c> to filter in the <c>GetFreeTierUsage</c> API operation.
+            
+             
+            <para>
+            You can use the following patterns:
+            </para>
+             <ul> <li> 
+            <para>
+            Simple dimension values (<c>Dimensions</c> root operator)
+            </para>
+             </li> <li> 
+            <para>
+            Complex expressions with logical operators (<c>AND</c>, <c>NOT</c>, and <c>OR</c>
+            root operators).
+            </para>
+             </li> </ul> 
+            <para>
+            For <i>simple dimension values</i>, you can set the dimension name, values, and match
+            type for the filters that you plan to use.
+            </para>
+             
+            <para>
+             <b>Example for simple dimension values</b> 
+            </para>
+             
+            <para>
+            You can filter to match exactly for <c>REGION==us-east-1 OR REGION==us-west-1</c>.
+            </para>
+             
+            <para>
+            The corresponding <c>Expression</c> appears like the following: <c>{ "Dimensions":
+            { "Key": "REGION", "Values": [ "us-east-1", "us-west-1" ], "MatchOptions": ["EQUALS"]
+            } }</c> 
+            </para>
+             
+            <para>
+            As shown in the previous example, lists of dimension values are combined with <c>OR</c>
+            when you apply the filter.
+            </para>
+             
+            <para>
+            For <i>complex expressions with logical operators</i>, you can have nested expressions
+            to use the logical operators and specify advanced filtering.
+            </para>
+             
+            <para>
+             <b>Example for complex expressions with logical operators</b> 
+            </para>
+             
+            <para>
+            You can filter by <c>((REGION == us-east-1 OR REGION == us-west-1) OR (SERVICE CONTAINS
+            AWSLambda)) AND (USAGE_TYPE !CONTAINS DataTransfer)</c>.
+            </para>
+             
+            <para>
+            The corresponding <c>Expression</c> appears like the following: <c>{ "And": [ {"Or":
+            [ {"Dimensions": { "Key": "REGION", "Values": [ "us-east-1", "us-west-1" ], "MatchOptions":
+            ["EQUALS"] }}, {"Dimensions": { "Key": "SERVICE", "Values": ["AWSLambda"], "MatchOptions":
+            ["CONTAINS"] } } ]}, {"Not": {"Dimensions": { "Key": "USAGE_TYPE", "Values": ["DataTransfer"],
+            "MatchOptions": ["CONTAINS"] }}} ] }</c> 
+            </para>
+             
+            <para>
+            In the following <b>Contents</b>, you must specify exactly one of the following root
+            operators.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.Model.Expression.And">
+            <summary>
+            Gets and sets the property And. 
+            <para>
+            Return results that match all <c>Expressions</c> that you specified in the array.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.Model.Expression.Dimensions">
+            <summary>
+            Gets and sets the property Dimensions. 
+            <para>
+            The specific dimension, values, and match type to filter objects with.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.Model.Expression.Not">
+            <summary>
+            Gets and sets the property Not. 
+            <para>
+            Return results that don’t match the <c>Expression</c> that you specified.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.Model.Expression.Or">
+            <summary>
+            Gets and sets the property Or. 
+            <para>
+            Return results that match any of the <c>Expressions</c> that you specified. in the
+            array.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.FreeTier.Model.FreeTierUsage">
+            <summary>
+            Consists of a Amazon Web Services Free Tier offer’s metadata and your data usage for
+            the offer.
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.Model.FreeTierUsage.ActualUsageAmount">
+            <summary>
+            Gets and sets the property ActualUsageAmount. 
+            <para>
+            Describes the actual usage accrued month-to-day (MTD) that you've used so far.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.Model.FreeTierUsage.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+            The description of the Free Tier offer.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.Model.FreeTierUsage.ForecastedUsageAmount">
+            <summary>
+            Gets and sets the property ForecastedUsageAmount. 
+            <para>
+            Describes the forecasted usage by the month that you're expected to use.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.Model.FreeTierUsage.FreeTierType">
+            <summary>
+            Gets and sets the property FreeTierType. 
+            <para>
+            Describes the type of the Free Tier offer. For example, the offer can be <c>"12 Months
+            Free"</c>, <c>"Always Free"</c>, and <c>"Free Trial"</c>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.Model.FreeTierUsage.Limit">
+            <summary>
+            Gets and sets the property Limit. 
+            <para>
+            Describes the maximum usage allowed in Free Tier.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.Model.FreeTierUsage.Operation">
+            <summary>
+            Gets and sets the property Operation. 
+            <para>
+            Describes <c>usageType</c> more granularly with the specific Amazon Web Service API
+            operation. For example, this can be the <c>RunInstances</c> API operation for Amazon
+            Elastic Compute Cloud.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.Model.FreeTierUsage.Region">
+            <summary>
+            Gets and sets the property Region. 
+            <para>
+            Describes the Amazon Web Services Region for which this offer is applicable
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.Model.FreeTierUsage.Service">
+            <summary>
+            Gets and sets the property Service. 
+            <para>
+            The name of the Amazon Web Service providing the Free Tier offer. For example, this
+            can be Amazon Elastic Compute Cloud.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.Model.FreeTierUsage.Unit">
+            <summary>
+            Gets and sets the property Unit. 
+            <para>
+            Describes the unit of the <c>usageType</c>, such as <c>Hrs</c>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.Model.FreeTierUsage.UsageType">
+            <summary>
+            Gets and sets the property UsageType. 
+            <para>
+            Describes the usage details of the offer. For example, this might be <c>Global-BoxUsage:freetrial</c>.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.FreeTier.Model.GetFreeTierUsageRequest">
+            <summary>
+            Container for the parameters to the GetFreeTierUsage operation.
+            Returns a list of all Free Tier usage objects that match your filters.
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.Model.GetFreeTierUsageRequest.Filter">
+            <summary>
+            Gets and sets the property Filter. 
+            <para>
+            An expression that specifies the conditions that you want each <c>FreeTierUsage</c>
+            object to meet.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.Model.GetFreeTierUsageRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            The maximum number of results to return in the response. <c>MaxResults</c> means that
+            there can be up to the specified number of values, but there might be fewer results
+            based on your filters.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.Model.GetFreeTierUsageRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The pagination token that indicates the next set of results to retrieve.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.FreeTier.Model.GetFreeTierUsageResponse">
+            <summary>
+            This is the response object from the GetFreeTierUsage operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.Model.GetFreeTierUsageResponse.FreeTierUsages">
+            <summary>
+            Gets and sets the property FreeTierUsages. 
+            <para>
+            The list of Free Tier usage objects that meet your filter expression.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.Model.GetFreeTierUsageResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The pagination token that indicates the next set of results to retrieve.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.FreeTier.Model.InternalServerException">
+            <summary>
+            An unexpected error occurred during the processing of your request.
+            </summary>
+        </member>
+        <member name="M:Amazon.FreeTier.Model.InternalServerException.#ctor(System.String)">
+            <summary>
+            Constructs a new InternalServerException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.FreeTier.Model.InternalServerException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.FreeTier.Model.InternalServerException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.FreeTier.Model.InternalServerException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.FreeTier.Model.InternalServerException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.FreeTier.Model.Internal.MarshallTransformations.DimensionValuesMarshaller">
+            <summary>
+            DimensionValues Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.FreeTier.Model.Internal.MarshallTransformations.DimensionValuesMarshaller.Marshall(Amazon.FreeTier.Model.DimensionValues,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.FreeTier.Model.Internal.MarshallTransformations.DimensionValuesMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.FreeTier.Model.Internal.MarshallTransformations.ExpressionMarshaller">
+            <summary>
+            Expression Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.FreeTier.Model.Internal.MarshallTransformations.ExpressionMarshaller.Marshall(Amazon.FreeTier.Model.Expression,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.FreeTier.Model.Internal.MarshallTransformations.ExpressionMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.FreeTier.Model.Internal.MarshallTransformations.FreeTierUsageUnmarshaller">
+            <summary>
+            Response Unmarshaller for FreeTierUsage Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.FreeTier.Model.Internal.MarshallTransformations.FreeTierUsageUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#FreeTier#Model#FreeTierUsage,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.FreeTier.Model.Internal.MarshallTransformations.FreeTierUsageUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.FreeTier.Model.Internal.MarshallTransformations.FreeTierUsageUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.FreeTier.Model.Internal.MarshallTransformations.GetFreeTierUsageRequestMarshaller">
+            <summary>
+            GetFreeTierUsage Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.FreeTier.Model.Internal.MarshallTransformations.GetFreeTierUsageRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.FreeTier.Model.Internal.MarshallTransformations.GetFreeTierUsageRequestMarshaller.Marshall(Amazon.FreeTier.Model.GetFreeTierUsageRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.FreeTier.Model.Internal.MarshallTransformations.GetFreeTierUsageRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.FreeTier.Model.Internal.MarshallTransformations.GetFreeTierUsageResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetFreeTierUsage operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.FreeTier.Model.Internal.MarshallTransformations.GetFreeTierUsageResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.FreeTier.Model.Internal.MarshallTransformations.GetFreeTierUsageResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.FreeTier.Model.Internal.MarshallTransformations.GetFreeTierUsageResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.FreeTier.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InternalServerException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.FreeTier.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.FreeTier.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.FreeTier.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.FreeTier.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ThrottlingException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.FreeTier.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.FreeTier.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.FreeTier.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.FreeTier.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.FreeTier.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.FreeTier.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.FreeTier.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.FreeTier.Model.ThrottlingException">
+            <summary>
+            The request was denied due to request throttling.
+            </summary>
+        </member>
+        <member name="M:Amazon.FreeTier.Model.ThrottlingException.#ctor(System.String)">
+            <summary>
+            Constructs a new ThrottlingException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.FreeTier.Model.ThrottlingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.FreeTier.Model.ThrottlingException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.FreeTier.Model.ThrottlingException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.FreeTier.Model.ThrottlingException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.FreeTier.Model.ValidationException">
+            <summary>
+            The input fails to satisfy the constraints specified by an Amazon Web Service.
+            </summary>
+        </member>
+        <member name="M:Amazon.FreeTier.Model.ValidationException.#ctor(System.String)">
+            <summary>
+            Constructs a new ValidationException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.FreeTier.Model.ValidationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.FreeTier.Model.ValidationException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.FreeTier.Model.ValidationException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.FreeTier.Model.ValidationException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.FreeTier.Model.FreeTierPaginatorFactory">
+             <summary>
+             Paginators for the FreeTier service
+            </summary>
+        </member>
+        <member name="M:Amazon.FreeTier.Model.FreeTierPaginatorFactory.GetFreeTierUsage(Amazon.FreeTier.Model.GetFreeTierUsageRequest)">
+             <summary>
+             Paginator for GetFreeTierUsage operation
+            </summary>
+        </member>
+        <member name="T:Amazon.FreeTier.Model.GetFreeTierUsagePaginator">
+            <summary>
+            Base class for GetFreeTierUsage paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.Model.GetFreeTierUsagePaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.Model.GetFreeTierUsagePaginator.FreeTierUsages">
+            <summary>
+            Enumerable containing all of the FreeTierUsages
+            </summary>
+        </member>
+        <member name="T:Amazon.FreeTier.Model.IFreeTierPaginatorFactory">
+             <summary>
+             Paginators for the FreeTier service
+            </summary>
+        </member>
+        <member name="M:Amazon.FreeTier.Model.IFreeTierPaginatorFactory.GetFreeTierUsage(Amazon.FreeTier.Model.GetFreeTierUsageRequest)">
+             <summary>
+             Paginator for GetFreeTierUsage operation
+            </summary>
+        </member>
+        <member name="T:Amazon.FreeTier.Model.IGetFreeTierUsagePaginator">
+             <summary>
+             Paginator for the GetFreeTierUsage operation
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.Model.IGetFreeTierUsagePaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.Model.IGetFreeTierUsagePaginator.FreeTierUsages">
+            <summary>
+            Enumerable containing all of the FreeTierUsages
+            </summary>
+        </member>
+        <member name="T:Amazon.FreeTier.Dimension">
+            <summary>
+            Constants used for properties of type Dimension.
+            </summary>
+        </member>
+        <member name="F:Amazon.FreeTier.Dimension.DESCRIPTION">
+            <summary>
+            Constant DESCRIPTION for Dimension
+            </summary>
+        </member>
+        <member name="F:Amazon.FreeTier.Dimension.FREE_TIER_TYPE">
+            <summary>
+            Constant FREE_TIER_TYPE for Dimension
+            </summary>
+        </member>
+        <member name="F:Amazon.FreeTier.Dimension.OPERATION">
+            <summary>
+            Constant OPERATION for Dimension
+            </summary>
+        </member>
+        <member name="F:Amazon.FreeTier.Dimension.REGION">
+            <summary>
+            Constant REGION for Dimension
+            </summary>
+        </member>
+        <member name="F:Amazon.FreeTier.Dimension.SERVICE">
+            <summary>
+            Constant SERVICE for Dimension
+            </summary>
+        </member>
+        <member name="F:Amazon.FreeTier.Dimension.USAGE_PERCENTAGE">
+            <summary>
+            Constant USAGE_PERCENTAGE for Dimension
+            </summary>
+        </member>
+        <member name="F:Amazon.FreeTier.Dimension.USAGE_TYPE">
+            <summary>
+            Constant USAGE_TYPE for Dimension
+            </summary>
+        </member>
+        <member name="M:Amazon.FreeTier.Dimension.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.FreeTier.Dimension.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.FreeTier.Dimension.op_Implicit(System.String)~Amazon.FreeTier.Dimension">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.FreeTier.MatchOption">
+            <summary>
+            Constants used for properties of type MatchOption.
+            </summary>
+        </member>
+        <member name="F:Amazon.FreeTier.MatchOption.CONTAINS">
+            <summary>
+            Constant CONTAINS for MatchOption
+            </summary>
+        </member>
+        <member name="F:Amazon.FreeTier.MatchOption.ENDS_WITH">
+            <summary>
+            Constant ENDS_WITH for MatchOption
+            </summary>
+        </member>
+        <member name="F:Amazon.FreeTier.MatchOption.EQUALS">
+            <summary>
+            Constant EQUALS for MatchOption
+            </summary>
+        </member>
+        <member name="F:Amazon.FreeTier.MatchOption.GREATER_THAN_OR_EQUAL">
+            <summary>
+            Constant GREATER_THAN_OR_EQUAL for MatchOption
+            </summary>
+        </member>
+        <member name="F:Amazon.FreeTier.MatchOption.STARTS_WITH">
+            <summary>
+            Constant STARTS_WITH for MatchOption
+            </summary>
+        </member>
+        <member name="M:Amazon.FreeTier.MatchOption.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.FreeTier.MatchOption.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.FreeTier.MatchOption.op_Implicit(System.String)~Amazon.FreeTier.MatchOption">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.FreeTier.AmazonFreeTierClient">
+             <summary>
+             <para>Implementation for accessing FreeTier</para>
+            
+             You can use the Amazon Web Services Free Tier API to query programmatically your Free
+             Tier usage data.
+             
+              
+             <para>
+             Free Tier tracks your monthly usage data for all free tier offers that are associated
+             with your Amazon Web Services account. You can use the Free Tier API to filter and
+             show only the data that you want.
+             </para>
+              
+             <para>
+             Service endpoint
+             </para>
+              
+             <para>
+             The Free Tier API provides the following endpoint:
+             </para>
+              <ul> <li> 
+             <para>
+             https://freetier.us-east-1.api.aws
+             </para>
+              </li> </ul> 
+             <para>
+             For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html">Using
+             the Amazon Web Services Free Tier</a> in the <i>Billing User Guide</i>.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Amazon.FreeTier.AmazonFreeTierClient.#ctor">
+             <summary>
+             Constructs AmazonFreeTierClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.FreeTier.AmazonFreeTierClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonFreeTierClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.FreeTier.AmazonFreeTierClient.#ctor(Amazon.FreeTier.AmazonFreeTierConfig)">
+             <summary>
+             Constructs AmazonFreeTierClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonFreeTierClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.FreeTier.AmazonFreeTierClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonFreeTierClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.FreeTier.AmazonFreeTierClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonFreeTierClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.FreeTier.AmazonFreeTierClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.FreeTier.AmazonFreeTierConfig)">
+            <summary>
+            Constructs AmazonFreeTierClient with AWS Credentials and an
+            AmazonFreeTierClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonFreeTierClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.FreeTier.AmazonFreeTierClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonFreeTierClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.FreeTier.AmazonFreeTierClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonFreeTierClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.FreeTier.AmazonFreeTierClient.#ctor(System.String,System.String,Amazon.FreeTier.AmazonFreeTierConfig)">
+            <summary>
+            Constructs AmazonFreeTierClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonFreeTierClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonFreeTierClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.FreeTier.AmazonFreeTierClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonFreeTierClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.FreeTier.AmazonFreeTierClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonFreeTierClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.FreeTier.AmazonFreeTierClient.#ctor(System.String,System.String,System.String,Amazon.FreeTier.AmazonFreeTierConfig)">
+            <summary>
+            Constructs AmazonFreeTierClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonFreeTierClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonFreeTierClient Configuration Object</param>
+        </member>
+        <member name="P:Amazon.FreeTier.AmazonFreeTierClient.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.FreeTier.AmazonFreeTierClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.FreeTier.AmazonFreeTierClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.FreeTier.AmazonFreeTierClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.FreeTier.AmazonFreeTierClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.FreeTier.AmazonFreeTierClient.GetFreeTierUsageAsync(Amazon.FreeTier.Model.GetFreeTierUsageRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns a list of all Free Tier usage objects that match your filters.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetFreeTierUsage service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetFreeTierUsage service method, as returned by FreeTier.</returns>
+            <exception cref="T:Amazon.FreeTier.Model.InternalServerException">
+            An unexpected error occurred during the processing of your request.
+            </exception>
+            <exception cref="T:Amazon.FreeTier.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.FreeTier.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/freetier-2023-09-07/GetFreeTierUsage">REST API Reference for GetFreeTierUsage Operation</seealso>
+        </member>
+        <member name="M:Amazon.FreeTier.AmazonFreeTierClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.FreeTier.IAmazonFreeTier">
+             <summary>
+             <para>Interface for accessing FreeTier</para>
+            
+             You can use the Amazon Web Services Free Tier API to query programmatically your Free
+             Tier usage data.
+             
+              
+             <para>
+             Free Tier tracks your monthly usage data for all free tier offers that are associated
+             with your Amazon Web Services account. You can use the Free Tier API to filter and
+             show only the data that you want.
+             </para>
+              
+             <para>
+             Service endpoint
+             </para>
+              
+             <para>
+             The Free Tier API provides the following endpoint:
+             </para>
+              <ul> <li> 
+             <para>
+             https://freetier.us-east-1.api.aws
+             </para>
+              </li> </ul> 
+             <para>
+             For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html">Using
+             the Amazon Web Services Free Tier</a> in the <i>Billing User Guide</i>.
+             </para>
+             </summary>
+        </member>
+        <member name="P:Amazon.FreeTier.IAmazonFreeTier.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.FreeTier.IAmazonFreeTier.GetFreeTierUsageAsync(Amazon.FreeTier.Model.GetFreeTierUsageRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns a list of all Free Tier usage objects that match your filters.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetFreeTierUsage service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetFreeTierUsage service method, as returned by FreeTier.</returns>
+            <exception cref="T:Amazon.FreeTier.Model.InternalServerException">
+            An unexpected error occurred during the processing of your request.
+            </exception>
+            <exception cref="T:Amazon.FreeTier.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.FreeTier.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/freetier-2023-09-07/GetFreeTierUsage">REST API Reference for GetFreeTierUsage Operation</seealso>
+        </member>
+        <member name="M:Amazon.FreeTier.IAmazonFreeTier.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+    </members>
+</doc>

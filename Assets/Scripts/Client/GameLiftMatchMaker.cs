@@ -40,13 +40,13 @@ namespace Client
             Debug.Log(response.MatchmakingTicket.GameSessionConnectionInfo.IpAddress);
         }
 
-        [ContextMenu("Make Game Lift Config")]
-        public void CreateConfig()
-        {
-            _client.CreateMatchmakingConfiguration(new CreateMatchmakingConfigurationRequest
-            {
-                Name = "QuickMatch"
-            });
-        }
+        // [ContextMenu("Make Game Lift Config")]
+        // public void CreateConfig()
+        // {
+        //     _client.CreateMatchmakingConfiguration(new CreateMatchmakingConfigurationRequest
+        //     {
+        //         Name = "QuickMatch"
+        //     });
+        // }
     }
 }

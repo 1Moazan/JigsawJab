@@ -1,0 +1,2007 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.CloudFrontKeyValueStore</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreConfig">
+            <summary>
+            Configuration for accessing Amazon CloudFrontKeyValueStore service
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon CloudFrontKeyValueStore service
+            </summary>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            CloudFrontKeyValueStore
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Endpoints.CloudFrontKeyValueStoreEndpointParameters">
+            <summary>
+            Contains parameters used for resolving CloudFrontKeyValueStore endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal CloudFrontKeyValueStoreEndpointProvider and CloudFrontKeyValueStoreEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Endpoints.CloudFrontKeyValueStoreEndpointParameters.#ctor">
+            <summary>
+            CloudFrontKeyValueStoreEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Endpoints.CloudFrontKeyValueStoreEndpointParameters.KvsARN">
+            <summary>
+            KvsARN parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Endpoints.CloudFrontKeyValueStoreEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Endpoints.CloudFrontKeyValueStoreEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Endpoints.CloudFrontKeyValueStoreEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreException">
+            <summary>
+             Common exception for the CloudFrontKeyValueStore service.
+             </summary>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonCloudFrontKeyValueStoreException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonCloudFrontKeyValueStoreException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonCloudFrontKeyValueStoreException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonCloudFrontKeyValueStoreException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonCloudFrontKeyValueStoreException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Internal.AmazonCloudFrontKeyValueStoreEndpointProvider">
+            <summary>
+            Amazon CloudFrontKeyValueStore endpoint provider.
+            Resolves endpoint for given set of CloudFrontKeyValueStoreEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Internal.AmazonCloudFrontKeyValueStoreEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for CloudFrontKeyValueStoreEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Internal.AmazonCloudFrontKeyValueStoreEndpointResolver">
+            <summary>
+            Amazon CloudFrontKeyValueStore endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for CloudFrontKeyValueStore service requests.
+            Collects values for CloudFrontKeyValueStoreEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses CloudFrontKeyValueStoreEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Internal.AmazonCloudFrontKeyValueStoreMetadata">
+            <summary>
+            Service metadata for  Amazon CloudFrontKeyValueStore service
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Internal.AmazonCloudFrontKeyValueStoreMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Internal.AmazonCloudFrontKeyValueStoreMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.AccessDeniedException">
+            <summary>
+            Access denied.
+            </summary>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.AccessDeniedException.#ctor(System.String)">
+            <summary>
+            Constructs a new AccessDeniedException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.AccessDeniedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.AccessDeniedException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.AccessDeniedException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.AccessDeniedException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.ConflictException">
+            <summary>
+            Resource is not in expected state.
+            </summary>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.ConflictException.#ctor(System.String)">
+            <summary>
+            Constructs a new ConflictException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.ConflictException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.ConflictException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.ConflictException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.ConflictException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.DeleteKeyRequest">
+            <summary>
+            Container for the parameters to the DeleteKey operation.
+            Deletes the key value pair specified by the key.
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.DeleteKeyRequest.IfMatch">
+            <summary>
+            Gets and sets the property IfMatch. 
+            <para>
+            The current version (ETag) of the Key Value Store that you are deleting keys from,
+            which you can get using DescribeKeyValueStore.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.DeleteKeyRequest.Key">
+            <summary>
+            Gets and sets the property Key. 
+            <para>
+            The key to delete.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.DeleteKeyRequest.KvsARN">
+            <summary>
+            Gets and sets the property KvsARN. 
+            <para>
+            The Amazon Resource Name (ARN) of the Key Value Store.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.DeleteKeyRequestListItem">
+            <summary>
+            List item for keys to delete.
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.DeleteKeyRequestListItem.Key">
+            <summary>
+            Gets and sets the property Key. 
+            <para>
+            The key of the key value pair to be deleted.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.DeleteKeyResponse">
+            <summary>
+            Metadata information about a Key Value Store.
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.DeleteKeyResponse.ETag">
+            <summary>
+            Gets and sets the property ETag. 
+            <para>
+            The current version identifier of the Key Value Store after the successful delete.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.DeleteKeyResponse.ItemCount">
+            <summary>
+            Gets and sets the property ItemCount. 
+            <para>
+            Number of key value pairs in the Key Value Store after the successful delete.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.DeleteKeyResponse.TotalSizeInBytes">
+            <summary>
+            Gets and sets the property TotalSizeInBytes. 
+            <para>
+            Total size of the Key Value Store after the successful delete, in bytes.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.DescribeKeyValueStoreRequest">
+            <summary>
+            Container for the parameters to the DescribeKeyValueStore operation.
+            Returns metadata information about Key Value Store.
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.DescribeKeyValueStoreRequest.KvsARN">
+            <summary>
+            Gets and sets the property KvsARN. 
+            <para>
+            The Amazon Resource Name (ARN) of the Key Value Store.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.DescribeKeyValueStoreResponse">
+            <summary>
+            Metadata information about a Key Value Store.
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.DescribeKeyValueStoreResponse.Created">
+            <summary>
+            Gets and sets the property Created. 
+            <para>
+            Date and time when the Key Value Store was created.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.DescribeKeyValueStoreResponse.ETag">
+            <summary>
+            Gets and sets the property ETag. 
+            <para>
+            The version identifier for the current version of the Key Value Store.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.DescribeKeyValueStoreResponse.FailureReason">
+            <summary>
+            Gets and sets the property FailureReason. 
+            <para>
+            The reason for Key Value Store creation failure.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.DescribeKeyValueStoreResponse.ItemCount">
+            <summary>
+            Gets and sets the property ItemCount. 
+            <para>
+            Number of key value pairs in the Key Value Store.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.DescribeKeyValueStoreResponse.KvsARN">
+            <summary>
+            Gets and sets the property KvsARN. 
+            <para>
+            The Amazon Resource Name (ARN) of the Key Value Store.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.DescribeKeyValueStoreResponse.LastModified">
+            <summary>
+            Gets and sets the property LastModified. 
+            <para>
+            Date and time when the key value pairs in the Key Value Store was last modified.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.DescribeKeyValueStoreResponse.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            The current status of the Key Value Store.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.DescribeKeyValueStoreResponse.TotalSizeInBytes">
+            <summary>
+            Gets and sets the property TotalSizeInBytes. 
+            <para>
+            Total size of the Key Value Store in bytes.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.GetKeyRequest">
+            <summary>
+            Container for the parameters to the GetKey operation.
+            Returns a key value pair.
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.GetKeyRequest.Key">
+            <summary>
+            Gets and sets the property Key. 
+            <para>
+            The key to get.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.GetKeyRequest.KvsARN">
+            <summary>
+            Gets and sets the property KvsARN. 
+            <para>
+            The Amazon Resource Name (ARN) of the Key Value Store.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.GetKeyResponse">
+            <summary>
+            A key value pair.
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.GetKeyResponse.ItemCount">
+            <summary>
+            Gets and sets the property ItemCount. 
+            <para>
+            Number of key value pairs in the Key Value Store.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.GetKeyResponse.Key">
+            <summary>
+            Gets and sets the property Key. 
+            <para>
+            The key of the key value pair.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.GetKeyResponse.TotalSizeInBytes">
+            <summary>
+            Gets and sets the property TotalSizeInBytes. 
+            <para>
+            Total size of the Key Value Store in bytes.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.GetKeyResponse.Value">
+            <summary>
+            Gets and sets the property Value. 
+            <para>
+            The value of the key value pair.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.InternalServerException">
+            <summary>
+            Internal server error.
+            </summary>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.InternalServerException.#ctor(System.String)">
+            <summary>
+            Constructs a new InternalServerException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.InternalServerException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.InternalServerException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.InternalServerException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.InternalServerException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for AccessDeniedException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ConflictException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.DeleteKeyRequestListItemMarshaller">
+            <summary>
+            DeleteKeyRequestListItem Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.DeleteKeyRequestListItemMarshaller.Marshall(Amazon.CloudFrontKeyValueStore.Model.DeleteKeyRequestListItem,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.DeleteKeyRequestListItemMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.DeleteKeyRequestMarshaller">
+            <summary>
+            DeleteKey Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.DeleteKeyRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.DeleteKeyRequestMarshaller.Marshall(Amazon.CloudFrontKeyValueStore.Model.DeleteKeyRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.DeleteKeyRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.DeleteKeyResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DeleteKey operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.DeleteKeyResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.DeleteKeyResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.DeleteKeyResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.DescribeKeyValueStoreRequestMarshaller">
+            <summary>
+            DescribeKeyValueStore Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.DescribeKeyValueStoreRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.DescribeKeyValueStoreRequestMarshaller.Marshall(Amazon.CloudFrontKeyValueStore.Model.DescribeKeyValueStoreRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.DescribeKeyValueStoreRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.DescribeKeyValueStoreResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DescribeKeyValueStore operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.DescribeKeyValueStoreResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.DescribeKeyValueStoreResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.DescribeKeyValueStoreResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.GetKeyRequestMarshaller">
+            <summary>
+            GetKey Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.GetKeyRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.GetKeyRequestMarshaller.Marshall(Amazon.CloudFrontKeyValueStore.Model.GetKeyRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.GetKeyRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.GetKeyResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetKey operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.GetKeyResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.GetKeyResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.GetKeyResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InternalServerException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.ListKeysRequestMarshaller">
+            <summary>
+            ListKeys Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.ListKeysRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.ListKeysRequestMarshaller.Marshall(Amazon.CloudFrontKeyValueStore.Model.ListKeysRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.ListKeysRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.ListKeysResponseListItemUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListKeysResponseListItem Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.ListKeysResponseListItemUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#CloudFrontKeyValueStore#Model#ListKeysResponseListItem,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.ListKeysResponseListItemUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.ListKeysResponseListItemUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.ListKeysResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListKeys operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.ListKeysResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.ListKeysResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.ListKeysResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.PutKeyRequestListItemMarshaller">
+            <summary>
+            PutKeyRequestListItem Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.PutKeyRequestListItemMarshaller.Marshall(Amazon.CloudFrontKeyValueStore.Model.PutKeyRequestListItem,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.PutKeyRequestListItemMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.PutKeyRequestMarshaller">
+            <summary>
+            PutKey Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.PutKeyRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.PutKeyRequestMarshaller.Marshall(Amazon.CloudFrontKeyValueStore.Model.PutKeyRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.PutKeyRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.PutKeyResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for PutKey operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.PutKeyResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.PutKeyResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.PutKeyResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ResourceNotFoundException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ServiceQuotaExceededException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.UpdateKeysRequestMarshaller">
+            <summary>
+            UpdateKeys Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.UpdateKeysRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.UpdateKeysRequestMarshaller.Marshall(Amazon.CloudFrontKeyValueStore.Model.UpdateKeysRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.UpdateKeysRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.UpdateKeysResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for UpdateKeys operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.UpdateKeysResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.UpdateKeysResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.UpdateKeysResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.ListKeysRequest">
+            <summary>
+            Container for the parameters to the ListKeys operation.
+            Returns a list of key value pairs.
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.ListKeysRequest.KvsARN">
+            <summary>
+            Gets and sets the property KvsARN. 
+            <para>
+            The Amazon Resource Name (ARN) of the Key Value Store.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.ListKeysRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            Maximum number of results that are returned per call. The default is 10 and maximum
+            allowed page is 50.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.ListKeysRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            If nextToken is returned in the response, there are more results available. Make the
+            next call using the returned token to retrieve the next page.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.ListKeysResponse">
+            <summary>
+            This is the response object from the ListKeys operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.ListKeysResponse.Items">
+            <summary>
+            Gets and sets the property Items. 
+            <para>
+            Key value pairs
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.ListKeysResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            If nextToken is returned in the response, there are more results available. Make the
+            next call using the returned token to retrieve the next page.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.ListKeysResponseListItem">
+            <summary>
+            A key value pair.
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.ListKeysResponseListItem.Key">
+            <summary>
+            Gets and sets the property Key. 
+            <para>
+            The key of the key value pair.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.ListKeysResponseListItem.Value">
+            <summary>
+            Gets and sets the property Value. 
+            <para>
+            The value of the key value pair.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.PutKeyRequest">
+            <summary>
+            Container for the parameters to the PutKey operation.
+            Creates a new key value pair or replaces the value of an existing key.
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.PutKeyRequest.IfMatch">
+            <summary>
+            Gets and sets the property IfMatch. 
+            <para>
+            The current version (ETag) of the Key Value Store that you are putting keys into,
+            which you can get using DescribeKeyValueStore.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.PutKeyRequest.Key">
+            <summary>
+            Gets and sets the property Key. 
+            <para>
+            The key to put.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.PutKeyRequest.KvsARN">
+            <summary>
+            Gets and sets the property KvsARN. 
+            <para>
+            The Amazon Resource Name (ARN) of the Key Value Store.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.PutKeyRequest.Value">
+            <summary>
+            Gets and sets the property Value. 
+            <para>
+            The value to put.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.PutKeyRequestListItem">
+            <summary>
+            List item for key value pair to put.
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.PutKeyRequestListItem.Key">
+            <summary>
+            Gets and sets the property Key. 
+            <para>
+            The key of the key value pair list item to put.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.PutKeyRequestListItem.Value">
+            <summary>
+            Gets and sets the property Value. 
+            <para>
+            The value for the key value pair to put.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.PutKeyResponse">
+            <summary>
+            Metadata information about a Key Value Store.
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.PutKeyResponse.ETag">
+            <summary>
+            Gets and sets the property ETag. 
+            <para>
+            The current version identifier of the Key Value Store after the successful put.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.PutKeyResponse.ItemCount">
+            <summary>
+            Gets and sets the property ItemCount. 
+            <para>
+            Number of key value pairs in the Key Value Store after the successful put.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.PutKeyResponse.TotalSizeInBytes">
+            <summary>
+            Gets and sets the property TotalSizeInBytes. 
+            <para>
+            Total size of the Key Value Store after the successful put, in bytes.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.ResourceNotFoundException">
+            <summary>
+            Resource was not found.
+            </summary>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.ResourceNotFoundException.#ctor(System.String)">
+            <summary>
+            Constructs a new ResourceNotFoundException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.ResourceNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.ResourceNotFoundException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.ResourceNotFoundException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.ResourceNotFoundException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.ServiceQuotaExceededException">
+            <summary>
+            Limit exceeded.
+            </summary>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.ServiceQuotaExceededException.#ctor(System.String)">
+            <summary>
+            Constructs a new ServiceQuotaExceededException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.ServiceQuotaExceededException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.ServiceQuotaExceededException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.ServiceQuotaExceededException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.ServiceQuotaExceededException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.UpdateKeysRequest">
+            <summary>
+            Container for the parameters to the UpdateKeys operation.
+            Puts or Deletes multiple key value pairs in a single, all-or-nothing operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.UpdateKeysRequest.Deletes">
+            <summary>
+            Gets and sets the property Deletes. 
+            <para>
+            List of keys to delete.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.UpdateKeysRequest.IfMatch">
+            <summary>
+            Gets and sets the property IfMatch. 
+            <para>
+            The current version (ETag) of the Key Value Store that you are updating keys of, which
+            you can get using DescribeKeyValueStore.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.UpdateKeysRequest.KvsARN">
+            <summary>
+            Gets and sets the property KvsARN. 
+            <para>
+            The Amazon Resource Name (ARN) of the Key Value Store.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.UpdateKeysRequest.Puts">
+            <summary>
+            Gets and sets the property Puts. 
+            <para>
+            List of key value pairs to put.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.UpdateKeysResponse">
+            <summary>
+            Metadata information about a Key Value Store.
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.UpdateKeysResponse.ETag">
+            <summary>
+            Gets and sets the property ETag. 
+            <para>
+            The current version identifier of the Key Value Store after the successful update.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.UpdateKeysResponse.ItemCount">
+            <summary>
+            Gets and sets the property ItemCount. 
+            <para>
+            Number of key value pairs in the Key Value Store after the successful update.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.UpdateKeysResponse.TotalSizeInBytes">
+            <summary>
+            Gets and sets the property TotalSizeInBytes. 
+            <para>
+            Total size of the Key Value Store after the successful update, in bytes.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.ValidationException">
+            <summary>
+            Validation failed.
+            </summary>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.ValidationException.#ctor(System.String)">
+            <summary>
+            Constructs a new ValidationException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.ValidationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.ValidationException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.ValidationException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.ValidationException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.CloudFrontKeyValueStorePaginatorFactory">
+             <summary>
+             Paginators for the CloudFrontKeyValueStore service
+            </summary>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.CloudFrontKeyValueStorePaginatorFactory.ListKeys(Amazon.CloudFrontKeyValueStore.Model.ListKeysRequest)">
+             <summary>
+             Paginator for ListKeys operation
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.ICloudFrontKeyValueStorePaginatorFactory">
+             <summary>
+             Paginators for the CloudFrontKeyValueStore service
+            </summary>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.Model.ICloudFrontKeyValueStorePaginatorFactory.ListKeys(Amazon.CloudFrontKeyValueStore.Model.ListKeysRequest)">
+             <summary>
+             Paginator for ListKeys operation
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.IListKeysPaginator">
+             <summary>
+             Paginator for the ListKeys operation
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.IListKeysPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.IListKeysPaginator.Items">
+            <summary>
+            Enumerable containing all of the Items
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.Model.ListKeysPaginator">
+            <summary>
+            Base class for ListKeys paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.ListKeysPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.Model.ListKeysPaginator.Items">
+            <summary>
+            Enumerable containing all of the Items
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreRequest">
+            <summary>
+            Base class for CloudFrontKeyValueStore operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreClient">
+             <summary>
+             <para>Implementation for accessing CloudFrontKeyValueStore</para>
+            
+             Amazon CloudFront KeyValueStore Service to View and Update Data in a KVS Resource
+             </summary>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreClient.#ctor">
+             <summary>
+             Constructs AmazonCloudFrontKeyValueStoreClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonCloudFrontKeyValueStoreClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreClient.#ctor(Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreConfig)">
+             <summary>
+             Constructs AmazonCloudFrontKeyValueStoreClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonCloudFrontKeyValueStoreClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonCloudFrontKeyValueStoreClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonCloudFrontKeyValueStoreClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreConfig)">
+            <summary>
+            Constructs AmazonCloudFrontKeyValueStoreClient with AWS Credentials and an
+            AmazonCloudFrontKeyValueStoreClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonCloudFrontKeyValueStoreClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonCloudFrontKeyValueStoreClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonCloudFrontKeyValueStoreClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreClient.#ctor(System.String,System.String,Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreConfig)">
+            <summary>
+            Constructs AmazonCloudFrontKeyValueStoreClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonCloudFrontKeyValueStoreClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonCloudFrontKeyValueStoreClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonCloudFrontKeyValueStoreClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonCloudFrontKeyValueStoreClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreClient.#ctor(System.String,System.String,System.String,Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreConfig)">
+            <summary>
+            Constructs AmazonCloudFrontKeyValueStoreClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonCloudFrontKeyValueStoreClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonCloudFrontKeyValueStoreClient Configuration Object</param>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreClient.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreClient.DeleteKeyAsync(Amazon.CloudFrontKeyValueStore.Model.DeleteKeyRequest,System.Threading.CancellationToken)">
+            <summary>
+            Deletes the key value pair specified by the key.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteKey service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeleteKey service method, as returned by CloudFrontKeyValueStore.</returns>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.AccessDeniedException">
+            Access denied.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ConflictException">
+            Resource is not in expected state.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.InternalServerException">
+            Internal server error.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ResourceNotFoundException">
+            Resource was not found.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ServiceQuotaExceededException">
+            Limit exceeded.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ValidationException">
+            Validation failed.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-keyvaluestore-2022-07-26/DeleteKey">REST API Reference for DeleteKey Operation</seealso>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreClient.DescribeKeyValueStoreAsync(Amazon.CloudFrontKeyValueStore.Model.DescribeKeyValueStoreRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns metadata information about Key Value Store.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DescribeKeyValueStore service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DescribeKeyValueStore service method, as returned by CloudFrontKeyValueStore.</returns>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.AccessDeniedException">
+            Access denied.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ConflictException">
+            Resource is not in expected state.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.InternalServerException">
+            Internal server error.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ResourceNotFoundException">
+            Resource was not found.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-keyvaluestore-2022-07-26/DescribeKeyValueStore">REST API Reference for DescribeKeyValueStore Operation</seealso>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreClient.GetKeyAsync(Amazon.CloudFrontKeyValueStore.Model.GetKeyRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns a key value pair.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetKey service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetKey service method, as returned by CloudFrontKeyValueStore.</returns>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.AccessDeniedException">
+            Access denied.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ConflictException">
+            Resource is not in expected state.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.InternalServerException">
+            Internal server error.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ResourceNotFoundException">
+            Resource was not found.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-keyvaluestore-2022-07-26/GetKey">REST API Reference for GetKey Operation</seealso>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreClient.ListKeysAsync(Amazon.CloudFrontKeyValueStore.Model.ListKeysRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns a list of key value pairs.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListKeys service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListKeys service method, as returned by CloudFrontKeyValueStore.</returns>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.AccessDeniedException">
+            Access denied.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ConflictException">
+            Resource is not in expected state.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.InternalServerException">
+            Internal server error.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ResourceNotFoundException">
+            Resource was not found.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ValidationException">
+            Validation failed.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-keyvaluestore-2022-07-26/ListKeys">REST API Reference for ListKeys Operation</seealso>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreClient.PutKeyAsync(Amazon.CloudFrontKeyValueStore.Model.PutKeyRequest,System.Threading.CancellationToken)">
+            <summary>
+            Creates a new key value pair or replaces the value of an existing key.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the PutKey service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the PutKey service method, as returned by CloudFrontKeyValueStore.</returns>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.AccessDeniedException">
+            Access denied.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ConflictException">
+            Resource is not in expected state.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.InternalServerException">
+            Internal server error.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ResourceNotFoundException">
+            Resource was not found.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ServiceQuotaExceededException">
+            Limit exceeded.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ValidationException">
+            Validation failed.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-keyvaluestore-2022-07-26/PutKey">REST API Reference for PutKey Operation</seealso>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreClient.UpdateKeysAsync(Amazon.CloudFrontKeyValueStore.Model.UpdateKeysRequest,System.Threading.CancellationToken)">
+            <summary>
+            Puts or Deletes multiple key value pairs in a single, all-or-nothing operation.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UpdateKeys service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UpdateKeys service method, as returned by CloudFrontKeyValueStore.</returns>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.AccessDeniedException">
+            Access denied.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ConflictException">
+            Resource is not in expected state.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.InternalServerException">
+            Internal server error.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ResourceNotFoundException">
+            Resource was not found.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ServiceQuotaExceededException">
+            Limit exceeded.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ValidationException">
+            Validation failed.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-keyvaluestore-2022-07-26/UpdateKeys">REST API Reference for UpdateKeys Operation</seealso>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.AmazonCloudFrontKeyValueStoreClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.CloudFrontKeyValueStore.IAmazonCloudFrontKeyValueStore">
+             <summary>
+             <para>Interface for accessing CloudFrontKeyValueStore</para>
+            
+             Amazon CloudFront KeyValueStore Service to View and Update Data in a KVS Resource
+             </summary>
+        </member>
+        <member name="P:Amazon.CloudFrontKeyValueStore.IAmazonCloudFrontKeyValueStore.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.IAmazonCloudFrontKeyValueStore.DeleteKeyAsync(Amazon.CloudFrontKeyValueStore.Model.DeleteKeyRequest,System.Threading.CancellationToken)">
+            <summary>
+            Deletes the key value pair specified by the key.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteKey service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeleteKey service method, as returned by CloudFrontKeyValueStore.</returns>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.AccessDeniedException">
+            Access denied.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ConflictException">
+            Resource is not in expected state.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.InternalServerException">
+            Internal server error.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ResourceNotFoundException">
+            Resource was not found.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ServiceQuotaExceededException">
+            Limit exceeded.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ValidationException">
+            Validation failed.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-keyvaluestore-2022-07-26/DeleteKey">REST API Reference for DeleteKey Operation</seealso>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.IAmazonCloudFrontKeyValueStore.DescribeKeyValueStoreAsync(Amazon.CloudFrontKeyValueStore.Model.DescribeKeyValueStoreRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns metadata information about Key Value Store.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DescribeKeyValueStore service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DescribeKeyValueStore service method, as returned by CloudFrontKeyValueStore.</returns>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.AccessDeniedException">
+            Access denied.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ConflictException">
+            Resource is not in expected state.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.InternalServerException">
+            Internal server error.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ResourceNotFoundException">
+            Resource was not found.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-keyvaluestore-2022-07-26/DescribeKeyValueStore">REST API Reference for DescribeKeyValueStore Operation</seealso>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.IAmazonCloudFrontKeyValueStore.GetKeyAsync(Amazon.CloudFrontKeyValueStore.Model.GetKeyRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns a key value pair.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetKey service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetKey service method, as returned by CloudFrontKeyValueStore.</returns>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.AccessDeniedException">
+            Access denied.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ConflictException">
+            Resource is not in expected state.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.InternalServerException">
+            Internal server error.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ResourceNotFoundException">
+            Resource was not found.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-keyvaluestore-2022-07-26/GetKey">REST API Reference for GetKey Operation</seealso>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.IAmazonCloudFrontKeyValueStore.ListKeysAsync(Amazon.CloudFrontKeyValueStore.Model.ListKeysRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns a list of key value pairs.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListKeys service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListKeys service method, as returned by CloudFrontKeyValueStore.</returns>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.AccessDeniedException">
+            Access denied.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ConflictException">
+            Resource is not in expected state.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.InternalServerException">
+            Internal server error.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ResourceNotFoundException">
+            Resource was not found.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ValidationException">
+            Validation failed.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-keyvaluestore-2022-07-26/ListKeys">REST API Reference for ListKeys Operation</seealso>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.IAmazonCloudFrontKeyValueStore.PutKeyAsync(Amazon.CloudFrontKeyValueStore.Model.PutKeyRequest,System.Threading.CancellationToken)">
+            <summary>
+            Creates a new key value pair or replaces the value of an existing key.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the PutKey service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the PutKey service method, as returned by CloudFrontKeyValueStore.</returns>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.AccessDeniedException">
+            Access denied.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ConflictException">
+            Resource is not in expected state.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.InternalServerException">
+            Internal server error.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ResourceNotFoundException">
+            Resource was not found.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ServiceQuotaExceededException">
+            Limit exceeded.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ValidationException">
+            Validation failed.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-keyvaluestore-2022-07-26/PutKey">REST API Reference for PutKey Operation</seealso>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.IAmazonCloudFrontKeyValueStore.UpdateKeysAsync(Amazon.CloudFrontKeyValueStore.Model.UpdateKeysRequest,System.Threading.CancellationToken)">
+            <summary>
+            Puts or Deletes multiple key value pairs in a single, all-or-nothing operation.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UpdateKeys service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UpdateKeys service method, as returned by CloudFrontKeyValueStore.</returns>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.AccessDeniedException">
+            Access denied.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ConflictException">
+            Resource is not in expected state.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.InternalServerException">
+            Internal server error.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ResourceNotFoundException">
+            Resource was not found.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ServiceQuotaExceededException">
+            Limit exceeded.
+            </exception>
+            <exception cref="T:Amazon.CloudFrontKeyValueStore.Model.ValidationException">
+            Validation failed.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-keyvaluestore-2022-07-26/UpdateKeys">REST API Reference for UpdateKeys Operation</seealso>
+        </member>
+        <member name="M:Amazon.CloudFrontKeyValueStore.IAmazonCloudFrontKeyValueStore.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+    </members>
+</doc>

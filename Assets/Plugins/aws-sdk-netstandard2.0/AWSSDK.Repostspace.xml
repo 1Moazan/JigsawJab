@@ -1,0 +1,3601 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.Repostspace</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.Repostspace.AmazonRepostspaceConfig">
+            <summary>
+            Configuration for accessing Amazon Repostspace service
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.AmazonRepostspaceConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.AmazonRepostspaceConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.AmazonRepostspaceConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.AmazonRepostspaceConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.AmazonRepostspaceDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon Repostspace service
+            </summary>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            Repostspace
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.AmazonRepostspaceDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.AmazonRepostspaceDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.AmazonRepostspaceDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.AmazonRepostspaceDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.AmazonRepostspaceDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.AmazonRepostspaceDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Endpoints.RepostspaceEndpointParameters">
+            <summary>
+            Contains parameters used for resolving Repostspace endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal RepostspaceEndpointProvider and RepostspaceEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.Repostspace.Endpoints.RepostspaceEndpointParameters.#ctor">
+            <summary>
+            RepostspaceEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Endpoints.RepostspaceEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Endpoints.RepostspaceEndpointParameters.UseDualStack">
+            <summary>
+            UseDualStack parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Endpoints.RepostspaceEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Endpoints.RepostspaceEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.AmazonRepostspaceException">
+            <summary>
+             Common exception for the Repostspace service.
+             </summary>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonRepostspaceException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonRepostspaceException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonRepostspaceException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonRepostspaceException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonRepostspaceException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.Repostspace.Internal.AmazonRepostspaceEndpointProvider">
+            <summary>
+            Amazon Repostspace endpoint provider.
+            Resolves endpoint for given set of RepostspaceEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.Repostspace.Internal.AmazonRepostspaceEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for RepostspaceEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Internal.AmazonRepostspaceEndpointResolver">
+            <summary>
+            Amazon Repostspace endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for Repostspace service requests.
+            Collects values for RepostspaceEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses RepostspaceEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Internal.AmazonRepostspaceMetadata">
+            <summary>
+            Service metadata for  Amazon Repostspace service
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Internal.AmazonRepostspaceMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Internal.AmazonRepostspaceMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.AccessDeniedException">
+            <summary>
+            User does not have sufficient access to perform this action.
+            </summary>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.AccessDeniedException.#ctor(System.String)">
+            <summary>
+            Constructs a new AccessDeniedException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.AccessDeniedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.AccessDeniedException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.AccessDeniedException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.AccessDeniedException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.BatchAddRoleRequest">
+            <summary>
+            Container for the parameters to the BatchAddRole operation.
+            Add role to multiple users or groups in a private re:Post.
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.BatchAddRoleRequest.AccessorIds">
+            <summary>
+            Gets and sets the property AccessorIds. 
+            <para>
+            The user or group accessor identifiers to add the role to.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.BatchAddRoleRequest.Role">
+            <summary>
+            Gets and sets the property Role. 
+            <para>
+            The role to add to the users or groups.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.BatchAddRoleRequest.SpaceId">
+            <summary>
+            Gets and sets the property SpaceId. 
+            <para>
+            The unique ID of the private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.BatchAddRoleResponse">
+            <summary>
+            This is the response object from the BatchAddRole operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.BatchAddRoleResponse.AddedAccessorIds">
+            <summary>
+            Gets and sets the property AddedAccessorIds. 
+            <para>
+            An array of successfully updated accessor identifiers.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.BatchAddRoleResponse.Errors">
+            <summary>
+            Gets and sets the property Errors. 
+            <para>
+            An array of errors that occurred when roles were added.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.BatchError">
+            <summary>
+            An error that occurred during a batch operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.BatchError.AccessorId">
+            <summary>
+            Gets and sets the property AccessorId. 
+            <para>
+            The accessor identifier that's related to the error.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.BatchError.Error">
+            <summary>
+            Gets and sets the property Error. 
+            <para>
+            The error code.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.BatchError.Message">
+            <summary>
+            Gets and sets the property Message. 
+            <para>
+            Description of the error.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.BatchRemoveRoleRequest">
+            <summary>
+            Container for the parameters to the BatchRemoveRole operation.
+            Remove role from multiple users or groups in a private re:Post.
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.BatchRemoveRoleRequest.AccessorIds">
+            <summary>
+            Gets and sets the property AccessorIds. 
+            <para>
+            The user or group accessor identifiers to remove the role from.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.BatchRemoveRoleRequest.Role">
+            <summary>
+            Gets and sets the property Role. 
+            <para>
+            The role to remove from the users or groups.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.BatchRemoveRoleRequest.SpaceId">
+            <summary>
+            Gets and sets the property SpaceId. 
+            <para>
+            The unique ID of the private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.BatchRemoveRoleResponse">
+            <summary>
+            This is the response object from the BatchRemoveRole operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.BatchRemoveRoleResponse.Errors">
+            <summary>
+            Gets and sets the property Errors. 
+            <para>
+            An array of errors that occurred when roles were removed.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.BatchRemoveRoleResponse.RemovedAccessorIds">
+            <summary>
+            Gets and sets the property RemovedAccessorIds. 
+            <para>
+            An array of successfully updated accessor identifiers.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.ConflictException">
+            <summary>
+            Updating or deleting a resource can cause an inconsistent state.
+            </summary>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.ConflictException.#ctor(System.String)">
+            <summary>
+            Constructs a new ConflictException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.ConflictException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.ConflictException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.ConflictException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.ConflictException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.ConflictException.ResourceId">
+            <summary>
+            Gets and sets the property ResourceId. 
+            <para>
+            The ID of the resource.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.ConflictException.ResourceType">
+            <summary>
+            Gets and sets the property ResourceType. 
+            <para>
+            The type of the resource.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.CreateSpaceRequest">
+            <summary>
+            Container for the parameters to the CreateSpace operation.
+            Creates an AWS re:Post Private private re:Post.
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.CreateSpaceRequest.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+            A description for the private re:Post. This is used only to help you identify this
+            private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.CreateSpaceRequest.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The name for the private re:Post. This must be unique in your account.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.CreateSpaceRequest.RoleArn">
+            <summary>
+            Gets and sets the property RoleArn. 
+            <para>
+            The IAM role that grants permissions to the private re:Post to convert unanswered
+            questions into AWS support tickets.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.CreateSpaceRequest.Subdomain">
+            <summary>
+            Gets and sets the property Subdomain. 
+            <para>
+            The subdomain that you use to access your AWS re:Post Private private re:Post. All
+            custom subdomains must be approved by AWS before use. In addition to your custom subdomain,
+            all private re:Posts are issued an AWS generated subdomain for immediate use.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.CreateSpaceRequest.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+            The list of tags associated with the private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.CreateSpaceRequest.Tier">
+            <summary>
+            Gets and sets the property Tier. 
+            <para>
+            The pricing tier for the private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.CreateSpaceRequest.UserKMSKey">
+            <summary>
+            Gets and sets the property UserKMSKey. 
+            <para>
+            The AWS KMS key ARN that’s used for the AWS KMS encryption. If you don't provide a
+            key, your data is encrypted by default with a key that AWS owns and manages for you.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.CreateSpaceResponse">
+            <summary>
+            This is the response object from the CreateSpace operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.CreateSpaceResponse.SpaceId">
+            <summary>
+            Gets and sets the property SpaceId. 
+            <para>
+            The unique ID of the private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.DeleteSpaceRequest">
+            <summary>
+            Container for the parameters to the DeleteSpace operation.
+            Deletes an AWS re:Post Private private re:Post.
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.DeleteSpaceRequest.SpaceId">
+            <summary>
+            Gets and sets the property SpaceId. 
+            <para>
+            The unique ID of the private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.DeleteSpaceResponse">
+            <summary>
+            This is the response object from the DeleteSpace operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.DeregisterAdminRequest">
+            <summary>
+            Container for the parameters to the DeregisterAdmin operation.
+            Removes the user or group from the list of administrators of the private re:Post.
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.DeregisterAdminRequest.AdminId">
+            <summary>
+            Gets and sets the property AdminId. 
+            <para>
+            The ID of the admin to remove.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.DeregisterAdminRequest.SpaceId">
+            <summary>
+            Gets and sets the property SpaceId. 
+            <para>
+            The ID of the private re:Post to remove the admin from.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.DeregisterAdminResponse">
+            <summary>
+            This is the response object from the DeregisterAdmin operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.GetSpaceRequest">
+            <summary>
+            Container for the parameters to the GetSpace operation.
+            Displays information about the AWS re:Post Private private re:Post.
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.GetSpaceRequest.SpaceId">
+            <summary>
+            Gets and sets the property SpaceId. 
+            <para>
+            The ID of the private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.GetSpaceResponse">
+            <summary>
+            This is the response object from the GetSpace operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.GetSpaceResponse.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+            The ARN of the private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.GetSpaceResponse.ClientId">
+            <summary>
+            Gets and sets the property ClientId. 
+            <para>
+            The Identity Center identifier for the Application Instance.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.GetSpaceResponse.ConfigurationStatus">
+            <summary>
+            Gets and sets the property ConfigurationStatus. 
+            <para>
+            The configuration status of the private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.GetSpaceResponse.ContentSize">
+            <summary>
+            Gets and sets the property ContentSize. 
+            <para>
+            The content size of the private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.GetSpaceResponse.CreateDateTime">
+            <summary>
+            Gets and sets the property CreateDateTime. 
+            <para>
+            The date when the private re:Post was created.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.GetSpaceResponse.CustomerRoleArn">
+            <summary>
+            Gets and sets the property CustomerRoleArn. 
+            <para>
+            The IAM role that grants permissions to the private re:Post to convert unanswered
+            questions into AWS support tickets.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.GetSpaceResponse.DeleteDateTime">
+            <summary>
+            Gets and sets the property DeleteDateTime. 
+            <para>
+            The date when the private re:Post was deleted.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.GetSpaceResponse.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+            The description of the private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.GetSpaceResponse.GroupAdmins">
+            <summary>
+            Gets and sets the property GroupAdmins. 
+            <para>
+            The list of groups that are administrators of the private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.GetSpaceResponse.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The name of the private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.GetSpaceResponse.RandomDomain">
+            <summary>
+            Gets and sets the property RandomDomain. 
+            <para>
+            The AWS generated subdomain of the private re:Post
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.GetSpaceResponse.Roles">
+            <summary>
+            Gets and sets the property Roles. 
+            <para>
+            A map of accessor identifiers and their roles.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.GetSpaceResponse.SpaceId">
+            <summary>
+            Gets and sets the property SpaceId. 
+            <para>
+            The unique ID of the private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.GetSpaceResponse.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            The creation or deletion status of the private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.GetSpaceResponse.StorageLimit">
+            <summary>
+            Gets and sets the property StorageLimit. 
+            <para>
+            The storage limit of the private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.GetSpaceResponse.Tier">
+            <summary>
+            Gets and sets the property Tier. 
+            <para>
+            The pricing tier of the private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.GetSpaceResponse.UserAdmins">
+            <summary>
+            Gets and sets the property UserAdmins. 
+            <para>
+            The list of users that are administrators of the private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.GetSpaceResponse.UserCount">
+            <summary>
+            Gets and sets the property UserCount. 
+            <para>
+            The number of users that have onboarded to the private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.GetSpaceResponse.UserKMSKey">
+            <summary>
+            Gets and sets the property UserKMSKey. 
+            <para>
+            The custom AWS KMS key ARN that’s used for the AWS KMS encryption.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.GetSpaceResponse.VanityDomain">
+            <summary>
+            Gets and sets the property VanityDomain. 
+            <para>
+            The custom subdomain that you use to access your private re:Post. All custom subdomains
+            must be approved by AWS before use.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.GetSpaceResponse.VanityDomainStatus">
+            <summary>
+            Gets and sets the property VanityDomainStatus. 
+            <para>
+            The approval status of the custom subdomain.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.InternalServerException">
+            <summary>
+            Unexpected error during processing of request.
+            </summary>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.InternalServerException.#ctor(System.String)">
+            <summary>
+            Constructs a new InternalServerException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.InternalServerException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.InternalServerException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.InternalServerException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.InternalServerException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.InternalServerException.RetryAfterSeconds">
+            <summary>
+            Gets and sets the property RetryAfterSeconds. 
+            <para>
+            Advice to clients on when the call can be safely retried.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.InternalServerException.Retryable">
+            <summary>
+            Flag indicating if the exception is retryable and the associated retry
+            details. A null value indicates that the exception is not retryable.
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for AccessDeniedException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.BatchAddRoleRequestMarshaller">
+            <summary>
+            BatchAddRole Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.BatchAddRoleRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.BatchAddRoleRequestMarshaller.Marshall(Amazon.Repostspace.Model.BatchAddRoleRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.BatchAddRoleRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.BatchAddRoleResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for BatchAddRole operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.BatchAddRoleResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.BatchAddRoleResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.BatchAddRoleResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.BatchErrorUnmarshaller">
+            <summary>
+            Response Unmarshaller for BatchError Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.BatchErrorUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Repostspace#Model#BatchError,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.BatchErrorUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.BatchErrorUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.BatchRemoveRoleRequestMarshaller">
+            <summary>
+            BatchRemoveRole Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.BatchRemoveRoleRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.BatchRemoveRoleRequestMarshaller.Marshall(Amazon.Repostspace.Model.BatchRemoveRoleRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.BatchRemoveRoleRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.BatchRemoveRoleResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for BatchRemoveRole operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.BatchRemoveRoleResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.BatchRemoveRoleResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.BatchRemoveRoleResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ConflictException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.CreateSpaceRequestMarshaller">
+            <summary>
+            CreateSpace Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.CreateSpaceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.CreateSpaceRequestMarshaller.Marshall(Amazon.Repostspace.Model.CreateSpaceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.CreateSpaceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.CreateSpaceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for CreateSpace operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.CreateSpaceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.CreateSpaceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.CreateSpaceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.DeleteSpaceRequestMarshaller">
+            <summary>
+            DeleteSpace Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.DeleteSpaceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.DeleteSpaceRequestMarshaller.Marshall(Amazon.Repostspace.Model.DeleteSpaceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.DeleteSpaceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.DeleteSpaceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DeleteSpace operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.DeleteSpaceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.DeleteSpaceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.DeleteSpaceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.DeregisterAdminRequestMarshaller">
+            <summary>
+            DeregisterAdmin Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.DeregisterAdminRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.DeregisterAdminRequestMarshaller.Marshall(Amazon.Repostspace.Model.DeregisterAdminRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.DeregisterAdminRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.DeregisterAdminResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DeregisterAdmin operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.DeregisterAdminResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.DeregisterAdminResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.DeregisterAdminResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.GetSpaceRequestMarshaller">
+            <summary>
+            GetSpace Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.GetSpaceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.GetSpaceRequestMarshaller.Marshall(Amazon.Repostspace.Model.GetSpaceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.GetSpaceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.GetSpaceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetSpace operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.GetSpaceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.GetSpaceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.GetSpaceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InternalServerException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.ListSpacesRequestMarshaller">
+            <summary>
+            ListSpaces Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.ListSpacesRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.ListSpacesRequestMarshaller.Marshall(Amazon.Repostspace.Model.ListSpacesRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.ListSpacesRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.ListSpacesResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListSpaces operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.ListSpacesResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.ListSpacesResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.ListSpacesResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller">
+            <summary>
+            ListTagsForResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Marshall(Amazon.Repostspace.Model.ListTagsForResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListTagsForResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.RegisterAdminRequestMarshaller">
+            <summary>
+            RegisterAdmin Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.RegisterAdminRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.RegisterAdminRequestMarshaller.Marshall(Amazon.Repostspace.Model.RegisterAdminRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.RegisterAdminRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.RegisterAdminResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for RegisterAdmin operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.RegisterAdminResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.RegisterAdminResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.RegisterAdminResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ResourceNotFoundException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.SendInvitesRequestMarshaller">
+            <summary>
+            SendInvites Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.SendInvitesRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.SendInvitesRequestMarshaller.Marshall(Amazon.Repostspace.Model.SendInvitesRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.SendInvitesRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.SendInvitesResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for SendInvites operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.SendInvitesResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.SendInvitesResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.SendInvitesResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ServiceQuotaExceededException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.SpaceDataUnmarshaller">
+            <summary>
+            Response Unmarshaller for SpaceData Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.SpaceDataUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Repostspace#Model#SpaceData,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.SpaceDataUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.SpaceDataUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller">
+            <summary>
+            TagResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Marshall(Amazon.Repostspace.Model.TagResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for TagResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ThrottlingException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller">
+            <summary>
+            UntagResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Marshall(Amazon.Repostspace.Model.UntagResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for UntagResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.UpdateSpaceRequestMarshaller">
+            <summary>
+            UpdateSpace Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.UpdateSpaceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.UpdateSpaceRequestMarshaller.Marshall(Amazon.Repostspace.Model.UpdateSpaceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.UpdateSpaceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.UpdateSpaceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for UpdateSpace operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.UpdateSpaceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.UpdateSpaceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.UpdateSpaceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationExceptionField Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Repostspace#Model#ValidationExceptionField,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Repostspace.Model.ListSpacesRequest">
+            <summary>
+            Container for the parameters to the ListSpaces operation.
+            Returns a list of AWS re:Post Private private re:Posts in the account with some information
+            about each private re:Post.
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.ListSpacesRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            The maximum number of private re:Posts to include in the results.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.ListSpacesRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The token for the next set of private re:Posts to return. You receive this token from
+            a previous ListSpaces operation.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.ListSpacesResponse">
+            <summary>
+            This is the response object from the ListSpaces operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.ListSpacesResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The token that you use when you request the next set of private re:Posts.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.ListSpacesResponse.Spaces">
+            <summary>
+            Gets and sets the property Spaces. 
+            <para>
+            An array of structures that contain some information about the private re:Posts in
+            the account.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.ListTagsForResourceRequest">
+            <summary>
+            Container for the parameters to the ListTagsForResource operation.
+            Returns the tags that are associated with the AWS re:Post Private resource specified
+            by the resourceArn. The only resource that can be tagged is a private re:Post.
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.ListTagsForResourceRequest.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+            The ARN of the resource that the tags are associated with.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.ListTagsForResourceResponse">
+            <summary>
+            This is the response object from the ListTagsForResource operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.ListTagsForResourceResponse.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+            The list of tags that are associated with the resource.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.RegisterAdminRequest">
+            <summary>
+            Container for the parameters to the RegisterAdmin operation.
+            Adds a user or group to the list of administrators of the private re:Post.
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.RegisterAdminRequest.AdminId">
+            <summary>
+            Gets and sets the property AdminId. 
+            <para>
+            The ID of the administrator.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.RegisterAdminRequest.SpaceId">
+            <summary>
+            Gets and sets the property SpaceId. 
+            <para>
+            The ID of the private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.RegisterAdminResponse">
+            <summary>
+            This is the response object from the RegisterAdmin operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.ResourceNotFoundException">
+            <summary>
+            Request references a resource which does not exist.
+            </summary>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.ResourceNotFoundException.#ctor(System.String)">
+            <summary>
+            Constructs a new ResourceNotFoundException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.ResourceNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.ResourceNotFoundException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.ResourceNotFoundException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.ResourceNotFoundException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.ResourceNotFoundException.ResourceId">
+            <summary>
+            Gets and sets the property ResourceId. 
+            <para>
+            The ID of the resource.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.ResourceNotFoundException.ResourceType">
+            <summary>
+            Gets and sets the property ResourceType. 
+            <para>
+            The type of the resource.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.SendInvitesRequest">
+            <summary>
+            Container for the parameters to the SendInvites operation.
+            Sends an invitation email to selected users and groups.
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.SendInvitesRequest.AccessorIds">
+            <summary>
+            Gets and sets the property AccessorIds. 
+            <para>
+            The array of identifiers for the users and groups.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.SendInvitesRequest.Body">
+            <summary>
+            Gets and sets the property Body. 
+            <para>
+            The body of the invite.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.SendInvitesRequest.SpaceId">
+            <summary>
+            Gets and sets the property SpaceId. 
+            <para>
+            The ID of the private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.SendInvitesRequest.Title">
+            <summary>
+            Gets and sets the property Title. 
+            <para>
+            The title of the invite.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.SendInvitesResponse">
+            <summary>
+            This is the response object from the SendInvites operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.ServiceQuotaExceededException">
+            <summary>
+            Request would cause a service quota to be exceeded.
+            </summary>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.ServiceQuotaExceededException.#ctor(System.String)">
+            <summary>
+            Constructs a new ServiceQuotaExceededException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.ServiceQuotaExceededException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.ServiceQuotaExceededException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.ServiceQuotaExceededException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.ServiceQuotaExceededException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.ServiceQuotaExceededException.QuotaCode">
+            <summary>
+            Gets and sets the property QuotaCode. 
+            <para>
+            The code to identify the quota.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.ServiceQuotaExceededException.ResourceId">
+            <summary>
+            Gets and sets the property ResourceId. 
+            <para>
+            The id of the resource.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.ServiceQuotaExceededException.ResourceType">
+            <summary>
+            Gets and sets the property ResourceType. 
+            <para>
+            The type of the resource.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.ServiceQuotaExceededException.ServiceCode">
+            <summary>
+            Gets and sets the property ServiceCode. 
+            <para>
+            The code to identify the service.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.SpaceData">
+            <summary>
+            A structure that contains some information about a private re:Post in the account.
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.SpaceData.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+            The ARN of the private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.SpaceData.ConfigurationStatus">
+            <summary>
+            Gets and sets the property ConfigurationStatus. 
+            <para>
+            The configuration status of the private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.SpaceData.ContentSize">
+            <summary>
+            Gets and sets the property ContentSize. 
+            <para>
+            The content size of the private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.SpaceData.CreateDateTime">
+            <summary>
+            Gets and sets the property CreateDateTime. 
+            <para>
+            The date when the private re:Post was created.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.SpaceData.DeleteDateTime">
+            <summary>
+            Gets and sets the property DeleteDateTime. 
+            <para>
+            The date when the private re:Post was deleted.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.SpaceData.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+            The description for the private re:Post. This is used only to help you identify this
+            private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.SpaceData.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The name for the private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.SpaceData.RandomDomain">
+            <summary>
+            Gets and sets the property RandomDomain. 
+            <para>
+            The AWS generated subdomain of the private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.SpaceData.SpaceId">
+            <summary>
+            Gets and sets the property SpaceId. 
+            <para>
+            The unique ID of the private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.SpaceData.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            The creation/deletion status of the private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.SpaceData.StorageLimit">
+            <summary>
+            Gets and sets the property StorageLimit. 
+            <para>
+            The storage limit of the private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.SpaceData.Tier">
+            <summary>
+            Gets and sets the property Tier. 
+            <para>
+            The pricing tier of the private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.SpaceData.UserCount">
+            <summary>
+            Gets and sets the property UserCount. 
+            <para>
+            The number of onboarded users to the private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.SpaceData.UserKMSKey">
+            <summary>
+            Gets and sets the property UserKMSKey. 
+            <para>
+            The custom AWS KMS key ARN that’s used for the AWS KMS encryption.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.SpaceData.VanityDomain">
+            <summary>
+            Gets and sets the property VanityDomain. 
+            <para>
+            This custom subdomain that you use to access your private re:Post. All custom subdomains
+            must be approved by AWS before use.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.SpaceData.VanityDomainStatus">
+            <summary>
+            Gets and sets the property VanityDomainStatus. 
+            <para>
+            This approval status of the custom subdomain.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.TagResourceRequest">
+            <summary>
+            Container for the parameters to the TagResource operation.
+            Associates tags with an AWS re:Post Private resource. Currently, the only resource
+            that can be tagged is the private re:Post. If you specify a new tag key for the resource,
+            the tag is appended to the list of tags that are associated with the resource. If
+            you specify a tag key that’s already associated with the resource, the new tag value
+            that you specify replaces the previous value for that tag.
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.TagResourceRequest.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+            The ARN of the resource that the tag is associated with.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.TagResourceRequest.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+            The list of tag keys and values that must be associated with the resource. You can
+            associate tag keys only, tags (key and values) only, or a combination of tag keys
+            and tags.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.TagResourceResponse">
+            <summary>
+            This is the response object from the TagResource operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.ThrottlingException">
+            <summary>
+            Request was denied due to request throttling.
+            </summary>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.ThrottlingException.#ctor(System.String)">
+            <summary>
+            Constructs a new ThrottlingException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.ThrottlingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.ThrottlingException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.ThrottlingException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.ThrottlingException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.ThrottlingException.QuotaCode">
+            <summary>
+            Gets and sets the property QuotaCode. 
+            <para>
+            The code to identify the quota.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.ThrottlingException.RetryAfterSeconds">
+            <summary>
+            Gets and sets the property RetryAfterSeconds. 
+            <para>
+             Advice to clients on when the call can be safely retried.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.ThrottlingException.ServiceCode">
+            <summary>
+            Gets and sets the property ServiceCode. 
+            <para>
+            The code to identify the service.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.ThrottlingException.Retryable">
+            <summary>
+            Flag indicating if the exception is retryable and the associated retry
+            details. A null value indicates that the exception is not retryable.
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.UntagResourceRequest">
+            <summary>
+            Container for the parameters to the UntagResource operation.
+            Removes the association of the tag with the AWS re:Post Private resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.UntagResourceRequest.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+            The ARN of the resource.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.UntagResourceRequest.TagKeys">
+            <summary>
+            Gets and sets the property TagKeys. 
+            <para>
+            The key values of the tag.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.UntagResourceResponse">
+            <summary>
+            This is the response object from the UntagResource operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.UpdateSpaceRequest">
+            <summary>
+            Container for the parameters to the UpdateSpace operation.
+            Modifies an existing AWS re:Post Private private re:Post.
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.UpdateSpaceRequest.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+            A description for the private re:Post. This is used only to help you identify this
+            private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.UpdateSpaceRequest.RoleArn">
+            <summary>
+            Gets and sets the property RoleArn. 
+            <para>
+            The IAM role that grants permissions to the private re:Post to convert unanswered
+            questions into AWS support tickets.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.UpdateSpaceRequest.SpaceId">
+            <summary>
+            Gets and sets the property SpaceId. 
+            <para>
+            The unique ID of this private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.UpdateSpaceRequest.Tier">
+            <summary>
+            Gets and sets the property Tier. 
+            <para>
+            The pricing tier of this private re:Post.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.UpdateSpaceResponse">
+            <summary>
+            This is the response object from the UpdateSpace operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.ValidationException">
+            <summary>
+            The input fails to satisfy the constraints specified by an AWS service.
+            </summary>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.ValidationException.#ctor(System.String)">
+            <summary>
+            Constructs a new ValidationException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.ValidationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.ValidationException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.ValidationException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.ValidationException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.ValidationException.FieldList">
+            <summary>
+            Gets and sets the property FieldList. 
+            <para>
+            The field that caused the error, if applicable.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.ValidationException.Reason">
+            <summary>
+            Gets and sets the property Reason. 
+            <para>
+            The reason why the request failed validation.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.ValidationExceptionField">
+            <summary>
+            Stores information about a field that’s passed inside a request that resulted in an
+            exception.
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.ValidationExceptionField.Message">
+            <summary>
+            Gets and sets the property Message. 
+            <para>
+            The name of the field.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.ValidationExceptionField.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            Message describing why the field failed validation.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.IListSpacesPaginator">
+             <summary>
+             Paginator for the ListSpaces operation
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.IListSpacesPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.IListSpacesPaginator.Spaces">
+            <summary>
+            Enumerable containing all of the Spaces
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.IRepostspacePaginatorFactory">
+             <summary>
+             Paginators for the Repostspace service
+            </summary>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.IRepostspacePaginatorFactory.ListSpaces(Amazon.Repostspace.Model.ListSpacesRequest)">
+             <summary>
+             Paginator for ListSpaces operation
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.ListSpacesPaginator">
+            <summary>
+            Base class for ListSpaces paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.ListSpacesPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.Model.ListSpacesPaginator.Spaces">
+            <summary>
+            Enumerable containing all of the Spaces
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.Model.RepostspacePaginatorFactory">
+             <summary>
+             Paginators for the Repostspace service
+            </summary>
+        </member>
+        <member name="M:Amazon.Repostspace.Model.RepostspacePaginatorFactory.ListSpaces(Amazon.Repostspace.Model.ListSpacesRequest)">
+             <summary>
+             Paginator for ListSpaces operation
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.AmazonRepostspaceRequest">
+            <summary>
+            Base class for Repostspace operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.Repostspace.ConfigurationStatus">
+            <summary>
+            Constants used for properties of type ConfigurationStatus.
+            </summary>
+        </member>
+        <member name="F:Amazon.Repostspace.ConfigurationStatus.CONFIGURED">
+            <summary>
+            Constant CONFIGURED for ConfigurationStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.Repostspace.ConfigurationStatus.UNCONFIGURED">
+            <summary>
+            Constant UNCONFIGURED for ConfigurationStatus
+            </summary>
+        </member>
+        <member name="M:Amazon.Repostspace.ConfigurationStatus.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.Repostspace.ConfigurationStatus.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.Repostspace.ConfigurationStatus.op_Implicit(System.String)~Amazon.Repostspace.ConfigurationStatus">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Repostspace.Role">
+            <summary>
+            Constants used for properties of type Role.
+            </summary>
+        </member>
+        <member name="F:Amazon.Repostspace.Role.ADMINISTRATOR">
+            <summary>
+            Constant ADMINISTRATOR for Role
+            </summary>
+        </member>
+        <member name="F:Amazon.Repostspace.Role.EXPERT">
+            <summary>
+            Constant EXPERT for Role
+            </summary>
+        </member>
+        <member name="F:Amazon.Repostspace.Role.MODERATOR">
+            <summary>
+            Constant MODERATOR for Role
+            </summary>
+        </member>
+        <member name="F:Amazon.Repostspace.Role.SUPPORTREQUESTOR">
+            <summary>
+            Constant SUPPORTREQUESTOR for Role
+            </summary>
+        </member>
+        <member name="M:Amazon.Repostspace.Role.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.Repostspace.Role.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.Repostspace.Role.op_Implicit(System.String)~Amazon.Repostspace.Role">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Repostspace.TierLevel">
+            <summary>
+            Constants used for properties of type TierLevel.
+            </summary>
+        </member>
+        <member name="F:Amazon.Repostspace.TierLevel.BASIC">
+            <summary>
+            Constant BASIC for TierLevel
+            </summary>
+        </member>
+        <member name="F:Amazon.Repostspace.TierLevel.STANDARD">
+            <summary>
+            Constant STANDARD for TierLevel
+            </summary>
+        </member>
+        <member name="M:Amazon.Repostspace.TierLevel.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.Repostspace.TierLevel.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.Repostspace.TierLevel.op_Implicit(System.String)~Amazon.Repostspace.TierLevel">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Repostspace.ValidationExceptionReason">
+            <summary>
+            Constants used for properties of type ValidationExceptionReason.
+            </summary>
+        </member>
+        <member name="F:Amazon.Repostspace.ValidationExceptionReason.CannotParse">
+            <summary>
+            Constant CannotParse for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.Repostspace.ValidationExceptionReason.FieldValidationFailed">
+            <summary>
+            Constant FieldValidationFailed for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.Repostspace.ValidationExceptionReason.Other">
+            <summary>
+            Constant Other for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.Repostspace.ValidationExceptionReason.UnknownOperation">
+            <summary>
+            Constant UnknownOperation for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="M:Amazon.Repostspace.ValidationExceptionReason.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.Repostspace.ValidationExceptionReason.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.Repostspace.ValidationExceptionReason.op_Implicit(System.String)~Amazon.Repostspace.ValidationExceptionReason">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Repostspace.VanityDomainStatus">
+            <summary>
+            Constants used for properties of type VanityDomainStatus.
+            </summary>
+        </member>
+        <member name="F:Amazon.Repostspace.VanityDomainStatus.APPROVED">
+            <summary>
+            Constant APPROVED for VanityDomainStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.Repostspace.VanityDomainStatus.PENDING">
+            <summary>
+            Constant PENDING for VanityDomainStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.Repostspace.VanityDomainStatus.UNAPPROVED">
+            <summary>
+            Constant UNAPPROVED for VanityDomainStatus
+            </summary>
+        </member>
+        <member name="M:Amazon.Repostspace.VanityDomainStatus.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.Repostspace.VanityDomainStatus.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.Repostspace.VanityDomainStatus.op_Implicit(System.String)~Amazon.Repostspace.VanityDomainStatus">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Repostspace.AmazonRepostspaceClient">
+             <summary>
+             <para>Implementation for accessing Repostspace</para>
+            
+             AWS re:Post Private is a private version of AWS re:Post for enterprises with Enterprise
+             Support or Enterprise On-Ramp Support plans. It provides access to knowledge and experts
+             to accelerate cloud adoption and increase developer productivity. With your organization-specific
+             private re:Post, you can build an organization-specific developer community that drives
+             efficiencies at scale and provides access to valuable knowledge resources. Additionally,
+             re:Post Private centralizes trusted AWS technical content and offers private discussion
+             forums to improve how your teams collaborate internally and with AWS to remove technical
+             obstacles, accelerate innovation, and scale more efficiently in the cloud.
+             </summary>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceClient.#ctor">
+             <summary>
+             Constructs AmazonRepostspaceClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonRepostspaceClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceClient.#ctor(Amazon.Repostspace.AmazonRepostspaceConfig)">
+             <summary>
+             Constructs AmazonRepostspaceClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonRepostspaceClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonRepostspaceClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonRepostspaceClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.Repostspace.AmazonRepostspaceConfig)">
+            <summary>
+            Constructs AmazonRepostspaceClient with AWS Credentials and an
+            AmazonRepostspaceClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonRepostspaceClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonRepostspaceClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonRepostspaceClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceClient.#ctor(System.String,System.String,Amazon.Repostspace.AmazonRepostspaceConfig)">
+            <summary>
+            Constructs AmazonRepostspaceClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonRepostspaceClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonRepostspaceClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonRepostspaceClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonRepostspaceClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceClient.#ctor(System.String,System.String,System.String,Amazon.Repostspace.AmazonRepostspaceConfig)">
+            <summary>
+            Constructs AmazonRepostspaceClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonRepostspaceClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonRepostspaceClient Configuration Object</param>
+        </member>
+        <member name="P:Amazon.Repostspace.AmazonRepostspaceClient.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.Repostspace.AmazonRepostspaceClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceClient.BatchAddRoleAsync(Amazon.Repostspace.Model.BatchAddRoleRequest,System.Threading.CancellationToken)">
+            <summary>
+            Add role to multiple users or groups in a private re:Post.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the BatchAddRole service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the BatchAddRole service method, as returned by Repostspace.</returns>
+            <exception cref="T:Amazon.Repostspace.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/repostspace-2022-05-13/BatchAddRole">REST API Reference for BatchAddRole Operation</seealso>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceClient.BatchRemoveRoleAsync(Amazon.Repostspace.Model.BatchRemoveRoleRequest,System.Threading.CancellationToken)">
+            <summary>
+            Remove role from multiple users or groups in a private re:Post.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the BatchRemoveRole service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the BatchRemoveRole service method, as returned by Repostspace.</returns>
+            <exception cref="T:Amazon.Repostspace.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/repostspace-2022-05-13/BatchRemoveRole">REST API Reference for BatchRemoveRole Operation</seealso>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceClient.CreateSpaceAsync(Amazon.Repostspace.Model.CreateSpaceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Creates an AWS re:Post Private private re:Post.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateSpace service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the CreateSpace service method, as returned by Repostspace.</returns>
+            <exception cref="T:Amazon.Repostspace.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ConflictException">
+            Updating or deleting a resource can cause an inconsistent state.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ServiceQuotaExceededException">
+            Request would cause a service quota to be exceeded.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/repostspace-2022-05-13/CreateSpace">REST API Reference for CreateSpace Operation</seealso>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceClient.DeleteSpaceAsync(Amazon.Repostspace.Model.DeleteSpaceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Deletes an AWS re:Post Private private re:Post.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteSpace service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeleteSpace service method, as returned by Repostspace.</returns>
+            <exception cref="T:Amazon.Repostspace.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/repostspace-2022-05-13/DeleteSpace">REST API Reference for DeleteSpace Operation</seealso>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceClient.DeregisterAdminAsync(Amazon.Repostspace.Model.DeregisterAdminRequest,System.Threading.CancellationToken)">
+            <summary>
+            Removes the user or group from the list of administrators of the private re:Post.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeregisterAdmin service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeregisterAdmin service method, as returned by Repostspace.</returns>
+            <exception cref="T:Amazon.Repostspace.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/repostspace-2022-05-13/DeregisterAdmin">REST API Reference for DeregisterAdmin Operation</seealso>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceClient.GetSpaceAsync(Amazon.Repostspace.Model.GetSpaceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Displays information about the AWS re:Post Private private re:Post.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetSpace service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetSpace service method, as returned by Repostspace.</returns>
+            <exception cref="T:Amazon.Repostspace.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/repostspace-2022-05-13/GetSpace">REST API Reference for GetSpace Operation</seealso>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceClient.ListSpacesAsync(Amazon.Repostspace.Model.ListSpacesRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns a list of AWS re:Post Private private re:Posts in the account with some information
+            about each private re:Post.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListSpaces service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListSpaces service method, as returned by Repostspace.</returns>
+            <exception cref="T:Amazon.Repostspace.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/repostspace-2022-05-13/ListSpaces">REST API Reference for ListSpaces Operation</seealso>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceClient.ListTagsForResourceAsync(Amazon.Repostspace.Model.ListTagsForResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns the tags that are associated with the AWS re:Post Private resource specified
+            by the resourceArn. The only resource that can be tagged is a private re:Post.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListTagsForResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListTagsForResource service method, as returned by Repostspace.</returns>
+            <exception cref="T:Amazon.Repostspace.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/repostspace-2022-05-13/ListTagsForResource">REST API Reference for ListTagsForResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceClient.RegisterAdminAsync(Amazon.Repostspace.Model.RegisterAdminRequest,System.Threading.CancellationToken)">
+            <summary>
+            Adds a user or group to the list of administrators of the private re:Post.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the RegisterAdmin service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the RegisterAdmin service method, as returned by Repostspace.</returns>
+            <exception cref="T:Amazon.Repostspace.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/repostspace-2022-05-13/RegisterAdmin">REST API Reference for RegisterAdmin Operation</seealso>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceClient.SendInvitesAsync(Amazon.Repostspace.Model.SendInvitesRequest,System.Threading.CancellationToken)">
+            <summary>
+            Sends an invitation email to selected users and groups.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the SendInvites service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the SendInvites service method, as returned by Repostspace.</returns>
+            <exception cref="T:Amazon.Repostspace.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/repostspace-2022-05-13/SendInvites">REST API Reference for SendInvites Operation</seealso>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceClient.TagResourceAsync(Amazon.Repostspace.Model.TagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Associates tags with an AWS re:Post Private resource. Currently, the only resource
+            that can be tagged is the private re:Post. If you specify a new tag key for the resource,
+            the tag is appended to the list of tags that are associated with the resource. If
+            you specify a tag key that’s already associated with the resource, the new tag value
+            that you specify replaces the previous value for that tag.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the TagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the TagResource service method, as returned by Repostspace.</returns>
+            <exception cref="T:Amazon.Repostspace.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/repostspace-2022-05-13/TagResource">REST API Reference for TagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceClient.UntagResourceAsync(Amazon.Repostspace.Model.UntagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Removes the association of the tag with the AWS re:Post Private resource.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UntagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UntagResource service method, as returned by Repostspace.</returns>
+            <exception cref="T:Amazon.Repostspace.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/repostspace-2022-05-13/UntagResource">REST API Reference for UntagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceClient.UpdateSpaceAsync(Amazon.Repostspace.Model.UpdateSpaceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Modifies an existing AWS re:Post Private private re:Post.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UpdateSpace service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UpdateSpace service method, as returned by Repostspace.</returns>
+            <exception cref="T:Amazon.Repostspace.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ConflictException">
+            Updating or deleting a resource can cause an inconsistent state.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/repostspace-2022-05-13/UpdateSpace">REST API Reference for UpdateSpace Operation</seealso>
+        </member>
+        <member name="M:Amazon.Repostspace.AmazonRepostspaceClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.Repostspace.IAmazonRepostspace">
+             <summary>
+             <para>Interface for accessing Repostspace</para>
+            
+             AWS re:Post Private is a private version of AWS re:Post for enterprises with Enterprise
+             Support or Enterprise On-Ramp Support plans. It provides access to knowledge and experts
+             to accelerate cloud adoption and increase developer productivity. With your organization-specific
+             private re:Post, you can build an organization-specific developer community that drives
+             efficiencies at scale and provides access to valuable knowledge resources. Additionally,
+             re:Post Private centralizes trusted AWS technical content and offers private discussion
+             forums to improve how your teams collaborate internally and with AWS to remove technical
+             obstacles, accelerate innovation, and scale more efficiently in the cloud.
+             </summary>
+        </member>
+        <member name="P:Amazon.Repostspace.IAmazonRepostspace.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.Repostspace.IAmazonRepostspace.BatchAddRoleAsync(Amazon.Repostspace.Model.BatchAddRoleRequest,System.Threading.CancellationToken)">
+            <summary>
+            Add role to multiple users or groups in a private re:Post.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the BatchAddRole service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the BatchAddRole service method, as returned by Repostspace.</returns>
+            <exception cref="T:Amazon.Repostspace.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/repostspace-2022-05-13/BatchAddRole">REST API Reference for BatchAddRole Operation</seealso>
+        </member>
+        <member name="M:Amazon.Repostspace.IAmazonRepostspace.BatchRemoveRoleAsync(Amazon.Repostspace.Model.BatchRemoveRoleRequest,System.Threading.CancellationToken)">
+            <summary>
+            Remove role from multiple users or groups in a private re:Post.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the BatchRemoveRole service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the BatchRemoveRole service method, as returned by Repostspace.</returns>
+            <exception cref="T:Amazon.Repostspace.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/repostspace-2022-05-13/BatchRemoveRole">REST API Reference for BatchRemoveRole Operation</seealso>
+        </member>
+        <member name="M:Amazon.Repostspace.IAmazonRepostspace.CreateSpaceAsync(Amazon.Repostspace.Model.CreateSpaceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Creates an AWS re:Post Private private re:Post.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateSpace service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the CreateSpace service method, as returned by Repostspace.</returns>
+            <exception cref="T:Amazon.Repostspace.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ConflictException">
+            Updating or deleting a resource can cause an inconsistent state.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ServiceQuotaExceededException">
+            Request would cause a service quota to be exceeded.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/repostspace-2022-05-13/CreateSpace">REST API Reference for CreateSpace Operation</seealso>
+        </member>
+        <member name="M:Amazon.Repostspace.IAmazonRepostspace.DeleteSpaceAsync(Amazon.Repostspace.Model.DeleteSpaceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Deletes an AWS re:Post Private private re:Post.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteSpace service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeleteSpace service method, as returned by Repostspace.</returns>
+            <exception cref="T:Amazon.Repostspace.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/repostspace-2022-05-13/DeleteSpace">REST API Reference for DeleteSpace Operation</seealso>
+        </member>
+        <member name="M:Amazon.Repostspace.IAmazonRepostspace.DeregisterAdminAsync(Amazon.Repostspace.Model.DeregisterAdminRequest,System.Threading.CancellationToken)">
+            <summary>
+            Removes the user or group from the list of administrators of the private re:Post.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeregisterAdmin service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeregisterAdmin service method, as returned by Repostspace.</returns>
+            <exception cref="T:Amazon.Repostspace.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/repostspace-2022-05-13/DeregisterAdmin">REST API Reference for DeregisterAdmin Operation</seealso>
+        </member>
+        <member name="M:Amazon.Repostspace.IAmazonRepostspace.GetSpaceAsync(Amazon.Repostspace.Model.GetSpaceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Displays information about the AWS re:Post Private private re:Post.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetSpace service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetSpace service method, as returned by Repostspace.</returns>
+            <exception cref="T:Amazon.Repostspace.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/repostspace-2022-05-13/GetSpace">REST API Reference for GetSpace Operation</seealso>
+        </member>
+        <member name="M:Amazon.Repostspace.IAmazonRepostspace.ListSpacesAsync(Amazon.Repostspace.Model.ListSpacesRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns a list of AWS re:Post Private private re:Posts in the account with some information
+            about each private re:Post.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListSpaces service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListSpaces service method, as returned by Repostspace.</returns>
+            <exception cref="T:Amazon.Repostspace.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/repostspace-2022-05-13/ListSpaces">REST API Reference for ListSpaces Operation</seealso>
+        </member>
+        <member name="M:Amazon.Repostspace.IAmazonRepostspace.ListTagsForResourceAsync(Amazon.Repostspace.Model.ListTagsForResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns the tags that are associated with the AWS re:Post Private resource specified
+            by the resourceArn. The only resource that can be tagged is a private re:Post.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListTagsForResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListTagsForResource service method, as returned by Repostspace.</returns>
+            <exception cref="T:Amazon.Repostspace.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/repostspace-2022-05-13/ListTagsForResource">REST API Reference for ListTagsForResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.Repostspace.IAmazonRepostspace.RegisterAdminAsync(Amazon.Repostspace.Model.RegisterAdminRequest,System.Threading.CancellationToken)">
+            <summary>
+            Adds a user or group to the list of administrators of the private re:Post.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the RegisterAdmin service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the RegisterAdmin service method, as returned by Repostspace.</returns>
+            <exception cref="T:Amazon.Repostspace.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/repostspace-2022-05-13/RegisterAdmin">REST API Reference for RegisterAdmin Operation</seealso>
+        </member>
+        <member name="M:Amazon.Repostspace.IAmazonRepostspace.SendInvitesAsync(Amazon.Repostspace.Model.SendInvitesRequest,System.Threading.CancellationToken)">
+            <summary>
+            Sends an invitation email to selected users and groups.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the SendInvites service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the SendInvites service method, as returned by Repostspace.</returns>
+            <exception cref="T:Amazon.Repostspace.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/repostspace-2022-05-13/SendInvites">REST API Reference for SendInvites Operation</seealso>
+        </member>
+        <member name="M:Amazon.Repostspace.IAmazonRepostspace.TagResourceAsync(Amazon.Repostspace.Model.TagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Associates tags with an AWS re:Post Private resource. Currently, the only resource
+            that can be tagged is the private re:Post. If you specify a new tag key for the resource,
+            the tag is appended to the list of tags that are associated with the resource. If
+            you specify a tag key that’s already associated with the resource, the new tag value
+            that you specify replaces the previous value for that tag.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the TagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the TagResource service method, as returned by Repostspace.</returns>
+            <exception cref="T:Amazon.Repostspace.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/repostspace-2022-05-13/TagResource">REST API Reference for TagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.Repostspace.IAmazonRepostspace.UntagResourceAsync(Amazon.Repostspace.Model.UntagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Removes the association of the tag with the AWS re:Post Private resource.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UntagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UntagResource service method, as returned by Repostspace.</returns>
+            <exception cref="T:Amazon.Repostspace.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/repostspace-2022-05-13/UntagResource">REST API Reference for UntagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.Repostspace.IAmazonRepostspace.UpdateSpaceAsync(Amazon.Repostspace.Model.UpdateSpaceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Modifies an existing AWS re:Post Private private re:Post.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UpdateSpace service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UpdateSpace service method, as returned by Repostspace.</returns>
+            <exception cref="T:Amazon.Repostspace.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ConflictException">
+            Updating or deleting a resource can cause an inconsistent state.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Repostspace.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/repostspace-2022-05-13/UpdateSpace">REST API Reference for UpdateSpace Operation</seealso>
+        </member>
+        <member name="M:Amazon.Repostspace.IAmazonRepostspace.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+    </members>
+</doc>

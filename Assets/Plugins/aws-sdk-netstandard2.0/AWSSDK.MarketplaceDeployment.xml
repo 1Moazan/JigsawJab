@@ -1,0 +1,1590 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.MarketplaceDeployment</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentConfig">
+            <summary>
+            Configuration for accessing Amazon MarketplaceDeployment service
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon MarketplaceDeployment service
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            MarketplaceDeployment
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Endpoints.MarketplaceDeploymentEndpointParameters">
+            <summary>
+            Contains parameters used for resolving MarketplaceDeployment endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal MarketplaceDeploymentEndpointProvider and MarketplaceDeploymentEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Endpoints.MarketplaceDeploymentEndpointParameters.#ctor">
+            <summary>
+            MarketplaceDeploymentEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Endpoints.MarketplaceDeploymentEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Endpoints.MarketplaceDeploymentEndpointParameters.UseDualStack">
+            <summary>
+            UseDualStack parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Endpoints.MarketplaceDeploymentEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Endpoints.MarketplaceDeploymentEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentException">
+            <summary>
+             Common exception for the MarketplaceDeployment service.
+             </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonMarketplaceDeploymentException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonMarketplaceDeploymentException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonMarketplaceDeploymentException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonMarketplaceDeploymentException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonMarketplaceDeploymentException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Internal.AmazonMarketplaceDeploymentEndpointProvider">
+            <summary>
+            Amazon MarketplaceDeployment endpoint provider.
+            Resolves endpoint for given set of MarketplaceDeploymentEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Internal.AmazonMarketplaceDeploymentEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for MarketplaceDeploymentEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Internal.AmazonMarketplaceDeploymentEndpointResolver">
+            <summary>
+            Amazon MarketplaceDeployment endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for MarketplaceDeployment service requests.
+            Collects values for MarketplaceDeploymentEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses MarketplaceDeploymentEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Internal.AmazonMarketplaceDeploymentMetadata">
+            <summary>
+            Service metadata for  Amazon MarketplaceDeployment service
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Internal.AmazonMarketplaceDeploymentMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Internal.AmazonMarketplaceDeploymentMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Model.AccessDeniedException">
+            <summary>
+            You do not have sufficient access to perform this action.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.AccessDeniedException.#ctor(System.String)">
+            <summary>
+            Constructs a new AccessDeniedException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.AccessDeniedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.AccessDeniedException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.AccessDeniedException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.AccessDeniedException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Model.ConflictException">
+            <summary>
+            The request configuration has conflicts. For details, see the accompanying error message.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.ConflictException.#ctor(System.String)">
+            <summary>
+            Constructs a new ConflictException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.ConflictException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.ConflictException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.ConflictException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.ConflictException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.ConflictException.ResourceId">
+            <summary>
+            Gets and sets the property ResourceId. 
+            <para>
+            The unique identifier for the resource associated with the error.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Model.DeploymentParameterInput">
+            <summary>
+            The shape containing the requested deployment parameter name and secretString.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.DeploymentParameterInput.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The desired name of the deployment parameter. This is the identifier on which deployment
+            parameters are keyed for a given buyer and product. If this name matches an existing
+            deployment parameter, this request will update the existing resource.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.DeploymentParameterInput.SecretString">
+            <summary>
+            Gets and sets the property SecretString. 
+            <para>
+            The text to encrypt and store in the secret.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Model.InternalServerException">
+            <summary>
+            There was an internal service exception.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.InternalServerException.#ctor(System.String)">
+            <summary>
+            Constructs a new InternalServerException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.InternalServerException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.InternalServerException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.InternalServerException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.InternalServerException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.InternalServerException.Retryable">
+            <summary>
+            Flag indicating if the exception is retryable and the associated retry
+            details. A null value indicates that the exception is not retryable.
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for AccessDeniedException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ConflictException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.DeploymentParameterInputMarshaller">
+            <summary>
+            DeploymentParameterInput Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.DeploymentParameterInputMarshaller.Marshall(Amazon.MarketplaceDeployment.Model.DeploymentParameterInput,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.DeploymentParameterInputMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InternalServerException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller">
+            <summary>
+            ListTagsForResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Marshall(Amazon.MarketplaceDeployment.Model.ListTagsForResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListTagsForResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.PutDeploymentParameterRequestMarshaller">
+            <summary>
+            PutDeploymentParameter Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.PutDeploymentParameterRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.PutDeploymentParameterRequestMarshaller.Marshall(Amazon.MarketplaceDeployment.Model.PutDeploymentParameterRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.PutDeploymentParameterRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.PutDeploymentParameterResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for PutDeploymentParameter operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.PutDeploymentParameterResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.PutDeploymentParameterResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.PutDeploymentParameterResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ResourceNotFoundException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ServiceQuotaExceededException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller">
+            <summary>
+            TagResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Marshall(Amazon.MarketplaceDeployment.Model.TagResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for TagResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ThrottlingException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller">
+            <summary>
+            UntagResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Marshall(Amazon.MarketplaceDeployment.Model.UntagResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for UntagResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Model.ListTagsForResourceRequest">
+            <summary>
+            Container for the parameters to the ListTagsForResource operation.
+            Lists all tags that have been added to a deployment parameter resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.ListTagsForResourceRequest.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+            The Amazon Resource Name (ARN) associated with the deployment parameter resource you
+            want to list tags on.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Model.ListTagsForResourceResponse">
+            <summary>
+            This is the response object from the ListTagsForResource operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.ListTagsForResourceResponse.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+            A map of key-value pairs, where each pair represents a tag present on the resource.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Model.PutDeploymentParameterRequest">
+            <summary>
+            Container for the parameters to the PutDeploymentParameter operation.
+            Creates or updates a deployment parameter and is targeted by <c>catalog</c> and <c>agreementId</c>.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.PutDeploymentParameterRequest.AgreementId">
+            <summary>
+            Gets and sets the property AgreementId. 
+            <para>
+            The unique identifier of the agreement.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.PutDeploymentParameterRequest.Catalog">
+            <summary>
+            Gets and sets the property Catalog. 
+            <para>
+            The catalog related to the request. Fixed value: <c>AWS Marketplace</c> 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.PutDeploymentParameterRequest.ClientToken">
+            <summary>
+            Gets and sets the property ClientToken. 
+            <para>
+            The idempotency token for deployment parameters. A unique identifier for the new version.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.PutDeploymentParameterRequest.DeploymentParameter">
+            <summary>
+            Gets and sets the property DeploymentParameter. 
+            <para>
+            The deployment parameter targeted to the acceptor of an agreement for which to create
+            the AWS Secret Manager resource.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.PutDeploymentParameterRequest.ExpirationDate">
+            <summary>
+            Gets and sets the property ExpirationDate. 
+            <para>
+            The date when deployment parameters expire and are scheduled for deletion.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.PutDeploymentParameterRequest.ProductId">
+            <summary>
+            Gets and sets the property ProductId. 
+            <para>
+            The product for which AWS Marketplace will save secrets for the buyer’s account.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.PutDeploymentParameterRequest.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+            A map of key-value pairs, where each pair represents a tag saved to the resource.
+            Tags will only be applied for create operations, and they'll be ignored if the resource
+            already exists.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Model.PutDeploymentParameterResponse">
+            <summary>
+            This is the response object from the PutDeploymentParameter operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.PutDeploymentParameterResponse.AgreementId">
+            <summary>
+            Gets and sets the property AgreementId. 
+            <para>
+            The unique identifier of the agreement.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.PutDeploymentParameterResponse.DeploymentParameterId">
+            <summary>
+            Gets and sets the property DeploymentParameterId. 
+            <para>
+            The unique identifier of the deployment parameter.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.PutDeploymentParameterResponse.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+            The Amazon Resource Name (ARN) associated with the deployment parameter resource you
+            want to create or update.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.PutDeploymentParameterResponse.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+            A map of key-value pairs, where each pair represents a tag saved to the resource.
+            Tags will only be applied for create operations, and they'll be ignored if the resource
+            already exists.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Model.ResourceNotFoundException">
+            <summary>
+            The specified resource wasn't found.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.ResourceNotFoundException.#ctor(System.String)">
+            <summary>
+            Constructs a new ResourceNotFoundException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.ResourceNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.ResourceNotFoundException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.ResourceNotFoundException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.ResourceNotFoundException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Model.ServiceQuotaExceededException">
+            <summary>
+            The maximum number of requests per account has been exceeded.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.ServiceQuotaExceededException.#ctor(System.String)">
+            <summary>
+            Constructs a new ServiceQuotaExceededException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.ServiceQuotaExceededException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.ServiceQuotaExceededException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.ServiceQuotaExceededException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.ServiceQuotaExceededException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Model.TagResourceRequest">
+            <summary>
+            Container for the parameters to the TagResource operation.
+            Tags a resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.TagResourceRequest.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+            The Amazon Resource Name (ARN) associated with the resource you want to tag.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.TagResourceRequest.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+            A map of key-value pairs, where each pair represents a tag present on the resource.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Model.TagResourceResponse">
+            <summary>
+            This is the response object from the TagResource operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Model.ThrottlingException">
+            <summary>
+            Too many requests.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.ThrottlingException.#ctor(System.String)">
+            <summary>
+            Constructs a new ThrottlingException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.ThrottlingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.ThrottlingException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.ThrottlingException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.ThrottlingException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.ThrottlingException.Retryable">
+            <summary>
+            Flag indicating if the exception is retryable and the associated retry
+            details. A null value indicates that the exception is not retryable.
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Model.UntagResourceRequest">
+            <summary>
+            Container for the parameters to the UntagResource operation.
+            Removes a tag or list of tags from a resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.UntagResourceRequest.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+            The Amazon Resource Name (ARN) associated with the resource you want to remove the
+            tag from.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.UntagResourceRequest.TagKeys">
+            <summary>
+            Gets and sets the property TagKeys. 
+            <para>
+            A list of key names of tags to be removed.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Model.UntagResourceResponse">
+            <summary>
+            This is the response object from the UntagResource operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.Model.ValidationException">
+            <summary>
+            An error occurred during validation.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.ValidationException.#ctor(System.String)">
+            <summary>
+            Constructs a new ValidationException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.ValidationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.ValidationException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.ValidationException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.Model.ValidationException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.Model.ValidationException.FieldName">
+            <summary>
+            Gets and sets the property FieldName. 
+            <para>
+            The field name associated with the error.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentRequest">
+            <summary>
+            Base class for MarketplaceDeployment operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentClient">
+             <summary>
+             <para>Implementation for accessing MarketplaceDeployment</para>
+            
+             The AWS Marketplace Deployment Service supports the Quick Launch experience, which
+             is a deployment option for software as a service (SaaS) products. Quick Launch simplifies
+             and reduces the time, resources, and steps required to configure, deploy, and launch
+             a products. The AWS Marketplace Deployment Service provides sellers with a secure
+             method for passing deployment parameters (for example, API keys and external IDs)
+             to buyers during the Quick Launch experience.
+             </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentClient.#ctor">
+             <summary>
+             Constructs AmazonMarketplaceDeploymentClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonMarketplaceDeploymentClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentClient.#ctor(Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentConfig)">
+             <summary>
+             Constructs AmazonMarketplaceDeploymentClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonMarketplaceDeploymentClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonMarketplaceDeploymentClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonMarketplaceDeploymentClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentConfig)">
+            <summary>
+            Constructs AmazonMarketplaceDeploymentClient with AWS Credentials and an
+            AmazonMarketplaceDeploymentClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonMarketplaceDeploymentClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonMarketplaceDeploymentClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonMarketplaceDeploymentClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentClient.#ctor(System.String,System.String,Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentConfig)">
+            <summary>
+            Constructs AmazonMarketplaceDeploymentClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonMarketplaceDeploymentClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonMarketplaceDeploymentClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonMarketplaceDeploymentClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonMarketplaceDeploymentClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentClient.#ctor(System.String,System.String,System.String,Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentConfig)">
+            <summary>
+            Constructs AmazonMarketplaceDeploymentClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonMarketplaceDeploymentClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonMarketplaceDeploymentClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentClient.ListTagsForResourceAsync(Amazon.MarketplaceDeployment.Model.ListTagsForResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists all tags that have been added to a deployment parameter resource.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListTagsForResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListTagsForResource service method, as returned by MarketplaceDeployment.</returns>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.InternalServerException">
+            There was an internal service exception.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.ResourceNotFoundException">
+            The specified resource wasn't found.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.ThrottlingException">
+            Too many requests.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.ValidationException">
+            An error occurred during validation.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-deployment-2023-01-25/ListTagsForResource">REST API Reference for ListTagsForResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentClient.PutDeploymentParameterAsync(Amazon.MarketplaceDeployment.Model.PutDeploymentParameterRequest,System.Threading.CancellationToken)">
+            <summary>
+            Creates or updates a deployment parameter and is targeted by <c>catalog</c> and <c>agreementId</c>.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the PutDeploymentParameter service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the PutDeploymentParameter service method, as returned by MarketplaceDeployment.</returns>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.ConflictException">
+            The request configuration has conflicts. For details, see the accompanying error message.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.InternalServerException">
+            There was an internal service exception.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.ResourceNotFoundException">
+            The specified resource wasn't found.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.ServiceQuotaExceededException">
+            The maximum number of requests per account has been exceeded.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.ThrottlingException">
+            Too many requests.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.ValidationException">
+            An error occurred during validation.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-deployment-2023-01-25/PutDeploymentParameter">REST API Reference for PutDeploymentParameter Operation</seealso>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentClient.TagResourceAsync(Amazon.MarketplaceDeployment.Model.TagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Tags a resource.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the TagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the TagResource service method, as returned by MarketplaceDeployment.</returns>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.ConflictException">
+            The request configuration has conflicts. For details, see the accompanying error message.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.InternalServerException">
+            There was an internal service exception.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.ResourceNotFoundException">
+            The specified resource wasn't found.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.ThrottlingException">
+            Too many requests.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.ValidationException">
+            An error occurred during validation.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-deployment-2023-01-25/TagResource">REST API Reference for TagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentClient.UntagResourceAsync(Amazon.MarketplaceDeployment.Model.UntagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Removes a tag or list of tags from a resource.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UntagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UntagResource service method, as returned by MarketplaceDeployment.</returns>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.ConflictException">
+            The request configuration has conflicts. For details, see the accompanying error message.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.InternalServerException">
+            There was an internal service exception.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.ResourceNotFoundException">
+            The specified resource wasn't found.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.ThrottlingException">
+            Too many requests.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.ValidationException">
+            An error occurred during validation.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-deployment-2023-01-25/UntagResource">REST API Reference for UntagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.AmazonMarketplaceDeploymentClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.MarketplaceDeployment.IAmazonMarketplaceDeployment">
+             <summary>
+             <para>Interface for accessing MarketplaceDeployment</para>
+            
+             The AWS Marketplace Deployment Service supports the Quick Launch experience, which
+             is a deployment option for software as a service (SaaS) products. Quick Launch simplifies
+             and reduces the time, resources, and steps required to configure, deploy, and launch
+             a products. The AWS Marketplace Deployment Service provides sellers with a secure
+             method for passing deployment parameters (for example, API keys and external IDs)
+             to buyers during the Quick Launch experience.
+             </summary>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.IAmazonMarketplaceDeployment.ListTagsForResourceAsync(Amazon.MarketplaceDeployment.Model.ListTagsForResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists all tags that have been added to a deployment parameter resource.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListTagsForResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListTagsForResource service method, as returned by MarketplaceDeployment.</returns>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.InternalServerException">
+            There was an internal service exception.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.ResourceNotFoundException">
+            The specified resource wasn't found.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.ThrottlingException">
+            Too many requests.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.ValidationException">
+            An error occurred during validation.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-deployment-2023-01-25/ListTagsForResource">REST API Reference for ListTagsForResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.IAmazonMarketplaceDeployment.PutDeploymentParameterAsync(Amazon.MarketplaceDeployment.Model.PutDeploymentParameterRequest,System.Threading.CancellationToken)">
+            <summary>
+            Creates or updates a deployment parameter and is targeted by <c>catalog</c> and <c>agreementId</c>.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the PutDeploymentParameter service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the PutDeploymentParameter service method, as returned by MarketplaceDeployment.</returns>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.ConflictException">
+            The request configuration has conflicts. For details, see the accompanying error message.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.InternalServerException">
+            There was an internal service exception.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.ResourceNotFoundException">
+            The specified resource wasn't found.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.ServiceQuotaExceededException">
+            The maximum number of requests per account has been exceeded.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.ThrottlingException">
+            Too many requests.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.ValidationException">
+            An error occurred during validation.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-deployment-2023-01-25/PutDeploymentParameter">REST API Reference for PutDeploymentParameter Operation</seealso>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.IAmazonMarketplaceDeployment.TagResourceAsync(Amazon.MarketplaceDeployment.Model.TagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Tags a resource.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the TagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the TagResource service method, as returned by MarketplaceDeployment.</returns>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.ConflictException">
+            The request configuration has conflicts. For details, see the accompanying error message.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.InternalServerException">
+            There was an internal service exception.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.ResourceNotFoundException">
+            The specified resource wasn't found.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.ThrottlingException">
+            Too many requests.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.ValidationException">
+            An error occurred during validation.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-deployment-2023-01-25/TagResource">REST API Reference for TagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.IAmazonMarketplaceDeployment.UntagResourceAsync(Amazon.MarketplaceDeployment.Model.UntagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Removes a tag or list of tags from a resource.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UntagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UntagResource service method, as returned by MarketplaceDeployment.</returns>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.ConflictException">
+            The request configuration has conflicts. For details, see the accompanying error message.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.InternalServerException">
+            There was an internal service exception.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.ResourceNotFoundException">
+            The specified resource wasn't found.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.ThrottlingException">
+            Too many requests.
+            </exception>
+            <exception cref="T:Amazon.MarketplaceDeployment.Model.ValidationException">
+            An error occurred during validation.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-deployment-2023-01-25/UntagResource">REST API Reference for UntagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.MarketplaceDeployment.IAmazonMarketplaceDeployment.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,3255 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.Billing</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.Billing.AmazonBillingConfig">
+            <summary>
+            Configuration for accessing Amazon Billing service
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.AmazonBillingConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.Billing.AmazonBillingConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.AmazonBillingConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.AmazonBillingConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.AmazonBillingConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.AmazonBillingDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon Billing service
+            </summary>
+        </member>
+        <member name="M:Amazon.Billing.AmazonBillingDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            Billing
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.AmazonBillingDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.AmazonBillingDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.AmazonBillingDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.AmazonBillingDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.AmazonBillingDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.AmazonBillingDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Endpoints.BillingEndpointParameters">
+            <summary>
+            Contains parameters used for resolving Billing endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal BillingEndpointProvider and BillingEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.Billing.Endpoints.BillingEndpointParameters.#ctor">
+            <summary>
+            BillingEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Endpoints.BillingEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Endpoints.BillingEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Endpoints.BillingEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.AmazonBillingException">
+            <summary>
+             Common exception for the Billing service.
+             </summary>
+        </member>
+        <member name="M:Amazon.Billing.AmazonBillingException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonBillingException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.Billing.AmazonBillingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonBillingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Billing.AmazonBillingException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonBillingException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Billing.AmazonBillingException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonBillingException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Billing.AmazonBillingException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonBillingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.Billing.Internal.AmazonBillingEndpointProvider">
+            <summary>
+            Amazon Billing endpoint provider.
+            Resolves endpoint for given set of BillingEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.Billing.Internal.AmazonBillingEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for BillingEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Internal.AmazonBillingEndpointResolver">
+            <summary>
+            Amazon Billing endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for Billing service requests.
+            Collects values for BillingEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses BillingEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Internal.AmazonBillingMetadata">
+            <summary>
+            Service metadata for  Amazon Billing service
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Internal.AmazonBillingMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Internal.AmazonBillingMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.AccessDeniedException">
+            <summary>
+            You don't have sufficient access to perform this action.
+            </summary>
+        </member>
+        <member name="M:Amazon.Billing.Model.AccessDeniedException.#ctor(System.String)">
+            <summary>
+            Constructs a new AccessDeniedException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Billing.Model.AccessDeniedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Billing.Model.AccessDeniedException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Billing.Model.AccessDeniedException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Billing.Model.AccessDeniedException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.Billing.Model.ActiveTimeRange">
+            <summary>
+            A time range with a start and end time.
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.ActiveTimeRange.ActiveAfterInclusive">
+            <summary>
+            Gets and sets the property ActiveAfterInclusive. 
+            <para>
+            The inclusive time range start date.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.ActiveTimeRange.ActiveBeforeInclusive">
+            <summary>
+            Gets and sets the property ActiveBeforeInclusive. 
+            <para>
+             The inclusive time range end date. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.BillingViewElement">
+            <summary>
+            The metadata associated to the billing view.
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.BillingViewElement.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+             The Amazon Resource Name (ARN) that can be used to uniquely identify the billing
+            view. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.BillingViewElement.BillingViewType">
+            <summary>
+            Gets and sets the property BillingViewType. 
+            <para>
+            The type of billing group. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.BillingViewElement.CreatedAt">
+            <summary>
+            Gets and sets the property CreatedAt. 
+            <para>
+            The time when the billing view was created. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.BillingViewElement.DataFilterExpression">
+            <summary>
+            Gets and sets the property DataFilterExpression. 
+            <para>
+             See <a href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html">Expression</a>.
+            Billing view only supports <c>LINKED_ACCOUNT</c> and <c>Tags</c>. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.BillingViewElement.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+             The description of the billing view. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.BillingViewElement.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+             A list of names of the billing view. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.BillingViewElement.OwnerAccountId">
+            <summary>
+            Gets and sets the property OwnerAccountId. 
+            <para>
+             The list of owners of the billing view. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.BillingViewElement.UpdatedAt">
+            <summary>
+            Gets and sets the property UpdatedAt. 
+            <para>
+            The time when the billing view was last updated. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.BillingViewListElement">
+            <summary>
+            A representation of a billing view.
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.BillingViewListElement.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+            The Amazon Resource Name (ARN) that can be used to uniquely identify the billing view.
+            
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.BillingViewListElement.BillingViewType">
+            <summary>
+            Gets and sets the property BillingViewType. 
+            <para>
+            The type of billing view.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.BillingViewListElement.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+             The description of the billing view. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.BillingViewListElement.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+             A list of names of the Billing view. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.BillingViewListElement.OwnerAccountId">
+            <summary>
+            Gets and sets the property OwnerAccountId. 
+            <para>
+             The list of owners of the Billing view. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.ConflictException">
+            <summary>
+            The requested operation would cause a conflict with the current state of a service
+            resource associated with the request. Resolve the conflict before retrying this request.
+            </summary>
+        </member>
+        <member name="M:Amazon.Billing.Model.ConflictException.#ctor(System.String)">
+            <summary>
+            Constructs a new ConflictException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Billing.Model.ConflictException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Billing.Model.ConflictException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Billing.Model.ConflictException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Billing.Model.ConflictException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.Billing.Model.ConflictException.ResourceId">
+            <summary>
+            Gets and sets the property ResourceId. 
+            <para>
+             The identifier for the service resource associated with the request. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.ConflictException.ResourceType">
+            <summary>
+            Gets and sets the property ResourceType. 
+            <para>
+             The type of resource associated with the request. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.CreateBillingViewRequest">
+            <summary>
+            Container for the parameters to the CreateBillingView operation.
+            Creates a billing view with the specified billing view attributes.
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.CreateBillingViewRequest.ClientToken">
+            <summary>
+            Gets and sets the property ClientToken. 
+            <para>
+            A unique, case-sensitive identifier you specify to ensure idempotency of the request.
+            Idempotency ensures that an API request completes no more than one time. If the original
+            request completes successfully, any subsequent retries complete successfully without
+            performing any further actions with an idempotent request. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.CreateBillingViewRequest.DataFilterExpression">
+            <summary>
+            Gets and sets the property DataFilterExpression. 
+            <para>
+             See <a href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html">Expression</a>.
+            Billing view only supports <c>LINKED_ACCOUNT</c> and <c>Tags</c>. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.CreateBillingViewRequest.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+             The description of the billing view. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.CreateBillingViewRequest.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+             The name of the billing view. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.CreateBillingViewRequest.ResourceTags">
+            <summary>
+            Gets and sets the property ResourceTags. 
+            <para>
+            A list of key value map specifying tags associated to the billing view being created.
+            
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.CreateBillingViewRequest.SourceViews">
+            <summary>
+            Gets and sets the property SourceViews. 
+            <para>
+            A list of billing views used as the data source for the custom billing view.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.CreateBillingViewResponse">
+            <summary>
+            This is the response object from the CreateBillingView operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.CreateBillingViewResponse.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+             The Amazon Resource Name (ARN) that can be used to uniquely identify the billing
+            view. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.CreateBillingViewResponse.CreatedAt">
+            <summary>
+            Gets and sets the property CreatedAt. 
+            <para>
+             The time when the billing view was created. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.DeleteBillingViewRequest">
+            <summary>
+            Container for the parameters to the DeleteBillingView operation.
+            Deletes the specified billing view.
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.DeleteBillingViewRequest.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+             The Amazon Resource Name (ARN) that can be used to uniquely identify the billing
+            view. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.DeleteBillingViewResponse">
+            <summary>
+            This is the response object from the DeleteBillingView operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.DeleteBillingViewResponse.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+             The Amazon Resource Name (ARN) that can be used to uniquely identify the billing
+            view. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.DimensionValues">
+            <summary>
+            The metadata that you can use to filter and group your results.
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.DimensionValues.Key">
+            <summary>
+            Gets and sets the property Key. 
+            <para>
+             The names of the metadata types that you can use to filter and group your results.
+            
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.DimensionValues.Values">
+            <summary>
+            Gets and sets the property Values. 
+            <para>
+             The metadata values that you can use to filter and group your results. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.Expression">
+            <summary>
+            See <a href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html">Expression</a>.
+            Billing view only supports <c>LINKED_ACCOUNT</c> and <c>Tags</c>.
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.Expression.Dimensions">
+            <summary>
+            Gets and sets the property Dimensions. 
+            <para>
+             The specific <c>Dimension</c> to use for <c>Expression</c>. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.Expression.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+             The specific <c>Tag</c> to use for <c>Expression</c>. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.GetBillingViewRequest">
+            <summary>
+            Container for the parameters to the GetBillingView operation.
+            Returns the metadata associated to the specified billing view ARN.
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.GetBillingViewRequest.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+             The Amazon Resource Name (ARN) that can be used to uniquely identify the billing
+            view. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.GetBillingViewResponse">
+            <summary>
+            This is the response object from the GetBillingView operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.GetBillingViewResponse.BillingView">
+            <summary>
+            Gets and sets the property BillingView. 
+            <para>
+            The billing view element associated with the specified ARN. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.GetResourcePolicyRequest">
+            <summary>
+            Container for the parameters to the GetResourcePolicy operation.
+            Returns the resource-based policy document attached to the resource in <c>JSON</c>
+            format.
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.GetResourcePolicyRequest.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+            The Amazon Resource Name (ARN) of the billing view resource to which the policy is
+            attached to. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.GetResourcePolicyResponse">
+            <summary>
+            This is the response object from the GetResourcePolicy operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.GetResourcePolicyResponse.Policy">
+            <summary>
+            Gets and sets the property Policy. 
+            <para>
+            The resource-based policy document attached to the resource in <c>JSON</c> format.
+            
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.GetResourcePolicyResponse.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+            The Amazon Resource Name (ARN) of the billing view resource to which the policy is
+            attached to. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.InternalServerException">
+            <summary>
+            The request processing failed because of an unknown error, exception, or failure.
+            </summary>
+        </member>
+        <member name="M:Amazon.Billing.Model.InternalServerException.#ctor(System.String)">
+            <summary>
+            Constructs a new InternalServerException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Billing.Model.InternalServerException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Billing.Model.InternalServerException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Billing.Model.InternalServerException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Billing.Model.InternalServerException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for AccessDeniedException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Billing.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.ActiveTimeRangeMarshaller">
+            <summary>
+            ActiveTimeRange Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.ActiveTimeRangeMarshaller.Marshall(Amazon.Billing.Model.ActiveTimeRange,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.Billing.Model.Internal.MarshallTransformations.ActiveTimeRangeMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.BillingViewElementUnmarshaller">
+            <summary>
+            Response Unmarshaller for BillingViewElement Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.BillingViewElementUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Billing#Model#BillingViewElement,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.BillingViewElementUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.Billing.Model.Internal.MarshallTransformations.BillingViewElementUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.BillingViewListElementUnmarshaller">
+            <summary>
+            Response Unmarshaller for BillingViewListElement Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.BillingViewListElementUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Billing#Model#BillingViewListElement,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.BillingViewListElementUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.Billing.Model.Internal.MarshallTransformations.BillingViewListElementUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ConflictException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Billing.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.CreateBillingViewRequestMarshaller">
+            <summary>
+            CreateBillingView Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.CreateBillingViewRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.CreateBillingViewRequestMarshaller.Marshall(Amazon.Billing.Model.CreateBillingViewRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Billing.Model.Internal.MarshallTransformations.CreateBillingViewRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.CreateBillingViewResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for CreateBillingView operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.CreateBillingViewResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.CreateBillingViewResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Billing.Model.Internal.MarshallTransformations.CreateBillingViewResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.DeleteBillingViewRequestMarshaller">
+            <summary>
+            DeleteBillingView Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.DeleteBillingViewRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.DeleteBillingViewRequestMarshaller.Marshall(Amazon.Billing.Model.DeleteBillingViewRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Billing.Model.Internal.MarshallTransformations.DeleteBillingViewRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.DeleteBillingViewResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DeleteBillingView operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.DeleteBillingViewResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.DeleteBillingViewResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Billing.Model.Internal.MarshallTransformations.DeleteBillingViewResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.DimensionValuesMarshaller">
+            <summary>
+            DimensionValues Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.DimensionValuesMarshaller.Marshall(Amazon.Billing.Model.DimensionValues,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.Billing.Model.Internal.MarshallTransformations.DimensionValuesMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.DimensionValuesUnmarshaller">
+            <summary>
+            Response Unmarshaller for DimensionValues Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.DimensionValuesUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Billing#Model#DimensionValues,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.DimensionValuesUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.Billing.Model.Internal.MarshallTransformations.DimensionValuesUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.ExpressionMarshaller">
+            <summary>
+            Expression Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.ExpressionMarshaller.Marshall(Amazon.Billing.Model.Expression,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.Billing.Model.Internal.MarshallTransformations.ExpressionMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.ExpressionUnmarshaller">
+            <summary>
+            Response Unmarshaller for Expression Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.ExpressionUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Billing#Model#Expression,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.ExpressionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.Billing.Model.Internal.MarshallTransformations.ExpressionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.GetBillingViewRequestMarshaller">
+            <summary>
+            GetBillingView Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.GetBillingViewRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.GetBillingViewRequestMarshaller.Marshall(Amazon.Billing.Model.GetBillingViewRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Billing.Model.Internal.MarshallTransformations.GetBillingViewRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.GetBillingViewResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetBillingView operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.GetBillingViewResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.GetBillingViewResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Billing.Model.Internal.MarshallTransformations.GetBillingViewResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.GetResourcePolicyRequestMarshaller">
+            <summary>
+            GetResourcePolicy Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.GetResourcePolicyRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.GetResourcePolicyRequestMarshaller.Marshall(Amazon.Billing.Model.GetResourcePolicyRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Billing.Model.Internal.MarshallTransformations.GetResourcePolicyRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.GetResourcePolicyResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetResourcePolicy operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.GetResourcePolicyResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.GetResourcePolicyResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Billing.Model.Internal.MarshallTransformations.GetResourcePolicyResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InternalServerException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Billing.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.ListBillingViewsRequestMarshaller">
+            <summary>
+            ListBillingViews Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.ListBillingViewsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.ListBillingViewsRequestMarshaller.Marshall(Amazon.Billing.Model.ListBillingViewsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Billing.Model.Internal.MarshallTransformations.ListBillingViewsRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.ListBillingViewsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListBillingViews operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.ListBillingViewsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.ListBillingViewsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Billing.Model.Internal.MarshallTransformations.ListBillingViewsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.ListSourceViewsForBillingViewRequestMarshaller">
+            <summary>
+            ListSourceViewsForBillingView Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.ListSourceViewsForBillingViewRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.ListSourceViewsForBillingViewRequestMarshaller.Marshall(Amazon.Billing.Model.ListSourceViewsForBillingViewRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Billing.Model.Internal.MarshallTransformations.ListSourceViewsForBillingViewRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.ListSourceViewsForBillingViewResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListSourceViewsForBillingView operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.ListSourceViewsForBillingViewResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.ListSourceViewsForBillingViewResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Billing.Model.Internal.MarshallTransformations.ListSourceViewsForBillingViewResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller">
+            <summary>
+            ListTagsForResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Marshall(Amazon.Billing.Model.ListTagsForResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Billing.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListTagsForResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Billing.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ResourceNotFoundException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Billing.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.ResourceTagMarshaller">
+            <summary>
+            ResourceTag Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.ResourceTagMarshaller.Marshall(Amazon.Billing.Model.ResourceTag,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.Billing.Model.Internal.MarshallTransformations.ResourceTagMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.ResourceTagUnmarshaller">
+            <summary>
+            Response Unmarshaller for ResourceTag Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.ResourceTagUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Billing#Model#ResourceTag,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.ResourceTagUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.Billing.Model.Internal.MarshallTransformations.ResourceTagUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ServiceQuotaExceededException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Billing.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller">
+            <summary>
+            TagResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Marshall(Amazon.Billing.Model.TagResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Billing.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for TagResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Billing.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.TagValuesMarshaller">
+            <summary>
+            TagValues Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.TagValuesMarshaller.Marshall(Amazon.Billing.Model.TagValues,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.Billing.Model.Internal.MarshallTransformations.TagValuesMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.TagValuesUnmarshaller">
+            <summary>
+            Response Unmarshaller for TagValues Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.TagValuesUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Billing#Model#TagValues,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.TagValuesUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.Billing.Model.Internal.MarshallTransformations.TagValuesUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ThrottlingException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Billing.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller">
+            <summary>
+            UntagResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Marshall(Amazon.Billing.Model.UntagResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Billing.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for UntagResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Billing.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.UpdateBillingViewRequestMarshaller">
+            <summary>
+            UpdateBillingView Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.UpdateBillingViewRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.UpdateBillingViewRequestMarshaller.Marshall(Amazon.Billing.Model.UpdateBillingViewRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Billing.Model.Internal.MarshallTransformations.UpdateBillingViewRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.UpdateBillingViewResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for UpdateBillingView operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.UpdateBillingViewResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.UpdateBillingViewResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Billing.Model.Internal.MarshallTransformations.UpdateBillingViewResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationExceptionField Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Billing#Model#ValidationExceptionField,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns>The unmarshalled object</returns>
+        </member>
+        <member name="P:Amazon.Billing.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Billing.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Billing.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Billing.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Billing.Model.ListBillingViewsRequest">
+            <summary>
+            Container for the parameters to the ListBillingViews operation.
+            Lists the billing views available for a given time period. 
+            
+             
+            <para>
+            Every Amazon Web Services account has a unique <c>PRIMARY</c> billing view that represents
+            the billing data available by default. Accounts that use Billing Conductor also have
+            <c>BILLING_GROUP</c> billing views representing pro forma costs associated with each
+            created billing group.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.ListBillingViewsRequest.ActiveTimeRange">
+            <summary>
+            Gets and sets the property ActiveTimeRange. 
+            <para>
+             The time range for the billing views listed. <c>PRIMARY</c> billing view is always
+            listed. <c>BILLING_GROUP</c> billing views are listed for time ranges when the associated
+            billing group resource in Billing Conductor is active. The time range must be within
+            one calendar month. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.ListBillingViewsRequest.Arns">
+            <summary>
+            Gets and sets the property Arns. 
+            <para>
+            The Amazon Resource Name (ARN) that can be used to uniquely identify the billing view.
+            
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.ListBillingViewsRequest.BillingViewTypes">
+            <summary>
+            Gets and sets the property BillingViewTypes. 
+            <para>
+            The type of billing view.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.ListBillingViewsRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            The maximum number of billing views to retrieve. Default is 100. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.ListBillingViewsRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The pagination token that is used on subsequent calls to list billing views.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.ListBillingViewsRequest.OwnerAccountId">
+            <summary>
+            Gets and sets the property OwnerAccountId. 
+            <para>
+             The list of owners of the billing view. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.ListBillingViewsResponse">
+            <summary>
+            This is the response object from the ListBillingViews operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.ListBillingViewsResponse.BillingViews">
+            <summary>
+            Gets and sets the property BillingViews. 
+            <para>
+            A list of <c>BillingViewListElement</c> retrieved.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.ListBillingViewsResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The pagination token to use on subsequent calls to list billing views. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.ListSourceViewsForBillingViewRequest">
+            <summary>
+            Container for the parameters to the ListSourceViewsForBillingView operation.
+            Lists the source views (managed Amazon Web Services billing views) associated with
+            the billing view.
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.ListSourceViewsForBillingViewRequest.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+             The Amazon Resource Name (ARN) that can be used to uniquely identify the billing
+            view. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.ListSourceViewsForBillingViewRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+             The number of entries a paginated response contains. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.ListSourceViewsForBillingViewRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+             The pagination token that is used on subsequent calls to list billing views. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.ListSourceViewsForBillingViewResponse">
+            <summary>
+            This is the response object from the ListSourceViewsForBillingView operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.ListSourceViewsForBillingViewResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+             The pagination token that is used on subsequent calls to list billing views. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.ListSourceViewsForBillingViewResponse.SourceViews">
+            <summary>
+            Gets and sets the property SourceViews. 
+            <para>
+            A list of billing views used as the data source for the custom billing view. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.ListTagsForResourceRequest">
+            <summary>
+            Container for the parameters to the ListTagsForResource operation.
+            Lists tags associated with the billing view resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.ListTagsForResourceRequest.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+             The Amazon Resource Name (ARN) of the resource. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.ListTagsForResourceResponse">
+            <summary>
+            This is the response object from the ListTagsForResource operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.ListTagsForResourceResponse.ResourceTags">
+            <summary>
+            Gets and sets the property ResourceTags. 
+            <para>
+             A list of tag key value pairs that are associated with the resource. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.ResourceNotFoundException">
+            <summary>
+            The specified ARN in the request doesn't exist.
+            </summary>
+        </member>
+        <member name="M:Amazon.Billing.Model.ResourceNotFoundException.#ctor(System.String)">
+            <summary>
+            Constructs a new ResourceNotFoundException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Billing.Model.ResourceNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Billing.Model.ResourceNotFoundException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Billing.Model.ResourceNotFoundException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Billing.Model.ResourceNotFoundException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.Billing.Model.ResourceNotFoundException.ResourceId">
+            <summary>
+            Gets and sets the property ResourceId. 
+            <para>
+             Value is a list of resource IDs that were not found. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.ResourceNotFoundException.ResourceType">
+            <summary>
+            Gets and sets the property ResourceType. 
+            <para>
+             Value is the type of resource that was not found. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.ResourceTag">
+            <summary>
+            The tag structure that contains a tag key and value.
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.ResourceTag.Key">
+            <summary>
+            Gets and sets the property Key. 
+            <para>
+             The key that's associated with the tag. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.ResourceTag.Value">
+            <summary>
+            Gets and sets the property Value. 
+            <para>
+             The value that's associated with the tag. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.ServiceQuotaExceededException">
+            <summary>
+            You've reached the limit of resources you can create, or exceeded the size of an
+            individual resource.
+            </summary>
+        </member>
+        <member name="M:Amazon.Billing.Model.ServiceQuotaExceededException.#ctor(System.String)">
+            <summary>
+            Constructs a new ServiceQuotaExceededException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Billing.Model.ServiceQuotaExceededException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Billing.Model.ServiceQuotaExceededException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Billing.Model.ServiceQuotaExceededException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Billing.Model.ServiceQuotaExceededException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.Billing.Model.ServiceQuotaExceededException.QuotaCode">
+            <summary>
+            Gets and sets the property QuotaCode. 
+            <para>
+             The container for the <c>quotaCode</c>. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.ServiceQuotaExceededException.ResourceId">
+            <summary>
+            Gets and sets the property ResourceId. 
+            <para>
+             The ID of the resource. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.ServiceQuotaExceededException.ResourceType">
+            <summary>
+            Gets and sets the property ResourceType. 
+            <para>
+             The type of Amazon Web Services resource. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.ServiceQuotaExceededException.ServiceCode">
+            <summary>
+            Gets and sets the property ServiceCode. 
+            <para>
+             The container for the <c>serviceCode</c>. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.TagResourceRequest">
+            <summary>
+            Container for the parameters to the TagResource operation.
+            An API operation for adding one or more tags (key-value pairs) to a resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.TagResourceRequest.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+             The Amazon Resource Name (ARN) of the resource. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.TagResourceRequest.ResourceTags">
+            <summary>
+            Gets and sets the property ResourceTags. 
+            <para>
+             A list of tag key value pairs that are associated with the resource. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.TagResourceResponse">
+            <summary>
+            This is the response object from the TagResource operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.TagValues">
+            <summary>
+            The values that are available for a tag.
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.TagValues.Key">
+            <summary>
+            Gets and sets the property Key. 
+            <para>
+             The key for the tag. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.TagValues.Values">
+            <summary>
+            Gets and sets the property Values. 
+            <para>
+             The specific value of the tag. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.ThrottlingException">
+            <summary>
+            The request was denied due to request throttling.
+            </summary>
+        </member>
+        <member name="M:Amazon.Billing.Model.ThrottlingException.#ctor(System.String)">
+            <summary>
+            Constructs a new ThrottlingException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Billing.Model.ThrottlingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Billing.Model.ThrottlingException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Billing.Model.ThrottlingException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Billing.Model.ThrottlingException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.Billing.Model.UntagResourceRequest">
+            <summary>
+            Container for the parameters to the UntagResource operation.
+            Removes one or more tags from a resource. Specify only tag keys in your request.
+            Don't specify the value.
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.UntagResourceRequest.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+             The Amazon Resource Name (ARN) of the resource. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.UntagResourceRequest.ResourceTagKeys">
+            <summary>
+            Gets and sets the property ResourceTagKeys. 
+            <para>
+             A list of tag key value pairs that are associated with the resource. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.UntagResourceResponse">
+            <summary>
+            This is the response object from the UntagResource operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.UpdateBillingViewRequest">
+            <summary>
+            Container for the parameters to the UpdateBillingView operation.
+            An API to update the attributes of the billing view.
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.UpdateBillingViewRequest.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+             The Amazon Resource Name (ARN) that can be used to uniquely identify the billing
+            view. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.UpdateBillingViewRequest.DataFilterExpression">
+            <summary>
+            Gets and sets the property DataFilterExpression. 
+            <para>
+            See <a href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html">Expression</a>.
+            Billing view only supports <c>LINKED_ACCOUNT</c> and <c>Tags</c>. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.UpdateBillingViewRequest.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+             The description of the billing view. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.UpdateBillingViewRequest.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+             The name of the billing view. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.UpdateBillingViewResponse">
+            <summary>
+            This is the response object from the UpdateBillingView operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.UpdateBillingViewResponse.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+             The Amazon Resource Name (ARN) that can be used to uniquely identify the billing
+            view. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.UpdateBillingViewResponse.UpdatedAt">
+            <summary>
+            Gets and sets the property UpdatedAt. 
+            <para>
+             The time when the billing view was last updated. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.ValidationException">
+            <summary>
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </summary>
+        </member>
+        <member name="M:Amazon.Billing.Model.ValidationException.#ctor(System.String)">
+            <summary>
+            Constructs a new ValidationException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Billing.Model.ValidationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Billing.Model.ValidationException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Billing.Model.ValidationException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Billing.Model.ValidationException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.Billing.Model.ValidationException.FieldList">
+            <summary>
+            Gets and sets the property FieldList. 
+            <para>
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.ValidationException.Reason">
+            <summary>
+            Gets and sets the property Reason. 
+            <para>
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.ValidationExceptionField">
+            <summary>
+            The field's information of a request that resulted in an exception.
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.ValidationExceptionField.Message">
+            <summary>
+            Gets and sets the property Message. 
+            <para>
+            The message describing why the field failed validation.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.ValidationExceptionField.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The name of the field.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.BillingPaginatorFactory">
+             <summary>
+             Paginators for the Billing service
+            </summary>
+        </member>
+        <member name="M:Amazon.Billing.Model.BillingPaginatorFactory.ListBillingViews(Amazon.Billing.Model.ListBillingViewsRequest)">
+             <summary>
+             Paginator for ListBillingViews operation
+            </summary>
+        </member>
+        <member name="M:Amazon.Billing.Model.BillingPaginatorFactory.ListSourceViewsForBillingView(Amazon.Billing.Model.ListSourceViewsForBillingViewRequest)">
+             <summary>
+             Paginator for ListSourceViewsForBillingView operation
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.IBillingPaginatorFactory">
+             <summary>
+             Paginators for the Billing service
+            </summary>
+        </member>
+        <member name="M:Amazon.Billing.Model.IBillingPaginatorFactory.ListBillingViews(Amazon.Billing.Model.ListBillingViewsRequest)">
+             <summary>
+             Paginator for ListBillingViews operation
+            </summary>
+        </member>
+        <member name="M:Amazon.Billing.Model.IBillingPaginatorFactory.ListSourceViewsForBillingView(Amazon.Billing.Model.ListSourceViewsForBillingViewRequest)">
+             <summary>
+             Paginator for ListSourceViewsForBillingView operation
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.IListBillingViewsPaginator">
+             <summary>
+             Paginator for the ListBillingViews operation
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.IListBillingViewsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.IListBillingViewsPaginator.BillingViews">
+            <summary>
+            Enumerable containing all of the BillingViews
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.IListSourceViewsForBillingViewPaginator">
+             <summary>
+             Paginator for the ListSourceViewsForBillingView operation
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.IListSourceViewsForBillingViewPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.IListSourceViewsForBillingViewPaginator.SourceViews">
+            <summary>
+            Enumerable containing all of the SourceViews
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.ListBillingViewsPaginator">
+            <summary>
+            Base class for ListBillingViews paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.ListBillingViewsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.ListBillingViewsPaginator.BillingViews">
+            <summary>
+            Enumerable containing all of the BillingViews
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.Model.ListSourceViewsForBillingViewPaginator">
+            <summary>
+            Base class for ListSourceViewsForBillingView paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.ListSourceViewsForBillingViewPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.Billing.Model.ListSourceViewsForBillingViewPaginator.SourceViews">
+            <summary>
+            Enumerable containing all of the SourceViews
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.AmazonBillingRequest">
+            <summary>
+            Base class for Billing operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.Billing.BillingViewType">
+            <summary>
+            Constants used for properties of type BillingViewType.
+            </summary>
+        </member>
+        <member name="F:Amazon.Billing.BillingViewType.BILLING_GROUP">
+            <summary>
+            Constant BILLING_GROUP for BillingViewType
+            </summary>
+        </member>
+        <member name="F:Amazon.Billing.BillingViewType.CUSTOM">
+            <summary>
+            Constant CUSTOM for BillingViewType
+            </summary>
+        </member>
+        <member name="F:Amazon.Billing.BillingViewType.PRIMARY">
+            <summary>
+            Constant PRIMARY for BillingViewType
+            </summary>
+        </member>
+        <member name="M:Amazon.Billing.BillingViewType.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.Billing.BillingViewType.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.Billing.BillingViewType.op_Implicit(System.String)~Amazon.Billing.BillingViewType">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Billing.Dimension">
+            <summary>
+            Constants used for properties of type Dimension.
+            </summary>
+        </member>
+        <member name="F:Amazon.Billing.Dimension.LINKED_ACCOUNT">
+            <summary>
+            Constant LINKED_ACCOUNT for Dimension
+            </summary>
+        </member>
+        <member name="M:Amazon.Billing.Dimension.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.Billing.Dimension.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.Billing.Dimension.op_Implicit(System.String)~Amazon.Billing.Dimension">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Billing.ValidationExceptionReason">
+            <summary>
+            Constants used for properties of type ValidationExceptionReason.
+            </summary>
+        </member>
+        <member name="F:Amazon.Billing.ValidationExceptionReason.CannotParse">
+            <summary>
+            Constant CannotParse for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.Billing.ValidationExceptionReason.FieldValidationFailed">
+            <summary>
+            Constant FieldValidationFailed for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.Billing.ValidationExceptionReason.Other">
+            <summary>
+            Constant Other for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.Billing.ValidationExceptionReason.UnknownOperation">
+            <summary>
+            Constant UnknownOperation for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="M:Amazon.Billing.ValidationExceptionReason.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.Billing.ValidationExceptionReason.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.Billing.ValidationExceptionReason.op_Implicit(System.String)~Amazon.Billing.ValidationExceptionReason">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Billing.AmazonBillingClient">
+             <summary>
+             <para>Implementation for accessing Billing</para>
+            
+             You can use the Billing API to programatically list the billing views available to
+             you for a given time period. A billing view represents a set of billing data. 
+             
+              
+             <para>
+             The Billing API provides the following endpoint:
+             </para>
+              
+             <para>
+              <c>https://billing.us-east-1.api.aws</c> 
+             </para>
+             </summary>
+        </member>
+        <member name="M:Amazon.Billing.AmazonBillingClient.#ctor">
+             <summary>
+             Constructs AmazonBillingClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.Billing.AmazonBillingClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonBillingClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.Billing.AmazonBillingClient.#ctor(Amazon.Billing.AmazonBillingConfig)">
+             <summary>
+             Constructs AmazonBillingClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonBillingClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.Billing.AmazonBillingClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonBillingClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.Billing.AmazonBillingClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonBillingClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.Billing.AmazonBillingClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.Billing.AmazonBillingConfig)">
+            <summary>
+            Constructs AmazonBillingClient with AWS Credentials and an
+            AmazonBillingClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonBillingClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.Billing.AmazonBillingClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonBillingClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.Billing.AmazonBillingClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonBillingClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.Billing.AmazonBillingClient.#ctor(System.String,System.String,Amazon.Billing.AmazonBillingConfig)">
+            <summary>
+            Constructs AmazonBillingClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonBillingClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonBillingClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.Billing.AmazonBillingClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonBillingClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.Billing.AmazonBillingClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonBillingClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.Billing.AmazonBillingClient.#ctor(System.String,System.String,System.String,Amazon.Billing.AmazonBillingConfig)">
+            <summary>
+            Constructs AmazonBillingClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonBillingClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonBillingClient Configuration Object</param>
+        </member>
+        <member name="P:Amazon.Billing.AmazonBillingClient.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.Billing.AmazonBillingClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.Billing.AmazonBillingClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.Billing.AmazonBillingClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.Billing.AmazonBillingClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.Billing.AmazonBillingClient.CreateBillingViewAsync(Amazon.Billing.Model.CreateBillingViewRequest,System.Threading.CancellationToken)">
+            <summary>
+            Creates a billing view with the specified billing view attributes.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateBillingView service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the CreateBillingView service method, as returned by Billing.</returns>
+            <exception cref="T:Amazon.Billing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ConflictException">
+            The requested operation would cause a conflict with the current state of a service
+            resource associated with the request. Resolve the conflict before retrying this request.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.InternalServerException">
+            The request processing failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ServiceQuotaExceededException">
+            You've reached the limit of resources you can create, or exceeded the size of an
+            individual resource.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/billing-2023-09-07/CreateBillingView">REST API Reference for CreateBillingView Operation</seealso>
+        </member>
+        <member name="M:Amazon.Billing.AmazonBillingClient.DeleteBillingViewAsync(Amazon.Billing.Model.DeleteBillingViewRequest,System.Threading.CancellationToken)">
+            <summary>
+            Deletes the specified billing view.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteBillingView service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeleteBillingView service method, as returned by Billing.</returns>
+            <exception cref="T:Amazon.Billing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ConflictException">
+            The requested operation would cause a conflict with the current state of a service
+            resource associated with the request. Resolve the conflict before retrying this request.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.InternalServerException">
+            The request processing failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/billing-2023-09-07/DeleteBillingView">REST API Reference for DeleteBillingView Operation</seealso>
+        </member>
+        <member name="M:Amazon.Billing.AmazonBillingClient.GetBillingViewAsync(Amazon.Billing.Model.GetBillingViewRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns the metadata associated to the specified billing view ARN.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetBillingView service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetBillingView service method, as returned by Billing.</returns>
+            <exception cref="T:Amazon.Billing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.InternalServerException">
+            The request processing failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ResourceNotFoundException">
+            The specified ARN in the request doesn't exist.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/billing-2023-09-07/GetBillingView">REST API Reference for GetBillingView Operation</seealso>
+        </member>
+        <member name="M:Amazon.Billing.AmazonBillingClient.GetResourcePolicyAsync(Amazon.Billing.Model.GetResourcePolicyRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns the resource-based policy document attached to the resource in <c>JSON</c>
+            format.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetResourcePolicy service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetResourcePolicy service method, as returned by Billing.</returns>
+            <exception cref="T:Amazon.Billing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.InternalServerException">
+            The request processing failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ResourceNotFoundException">
+            The specified ARN in the request doesn't exist.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/billing-2023-09-07/GetResourcePolicy">REST API Reference for GetResourcePolicy Operation</seealso>
+        </member>
+        <member name="M:Amazon.Billing.AmazonBillingClient.ListBillingViewsAsync(Amazon.Billing.Model.ListBillingViewsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists the billing views available for a given time period. 
+            
+             
+            <para>
+            Every Amazon Web Services account has a unique <c>PRIMARY</c> billing view that represents
+            the billing data available by default. Accounts that use Billing Conductor also have
+            <c>BILLING_GROUP</c> billing views representing pro forma costs associated with each
+            created billing group.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListBillingViews service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListBillingViews service method, as returned by Billing.</returns>
+            <exception cref="T:Amazon.Billing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.InternalServerException">
+            The request processing failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/billing-2023-09-07/ListBillingViews">REST API Reference for ListBillingViews Operation</seealso>
+        </member>
+        <member name="M:Amazon.Billing.AmazonBillingClient.ListSourceViewsForBillingViewAsync(Amazon.Billing.Model.ListSourceViewsForBillingViewRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists the source views (managed Amazon Web Services billing views) associated with
+            the billing view.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListSourceViewsForBillingView service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListSourceViewsForBillingView service method, as returned by Billing.</returns>
+            <exception cref="T:Amazon.Billing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.InternalServerException">
+            The request processing failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ResourceNotFoundException">
+            The specified ARN in the request doesn't exist.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/billing-2023-09-07/ListSourceViewsForBillingView">REST API Reference for ListSourceViewsForBillingView Operation</seealso>
+        </member>
+        <member name="M:Amazon.Billing.AmazonBillingClient.ListTagsForResourceAsync(Amazon.Billing.Model.ListTagsForResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists tags associated with the billing view resource.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListTagsForResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListTagsForResource service method, as returned by Billing.</returns>
+            <exception cref="T:Amazon.Billing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.InternalServerException">
+            The request processing failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ResourceNotFoundException">
+            The specified ARN in the request doesn't exist.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/billing-2023-09-07/ListTagsForResource">REST API Reference for ListTagsForResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.Billing.AmazonBillingClient.TagResourceAsync(Amazon.Billing.Model.TagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            An API operation for adding one or more tags (key-value pairs) to a resource.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the TagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the TagResource service method, as returned by Billing.</returns>
+            <exception cref="T:Amazon.Billing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.InternalServerException">
+            The request processing failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ResourceNotFoundException">
+            The specified ARN in the request doesn't exist.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/billing-2023-09-07/TagResource">REST API Reference for TagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.Billing.AmazonBillingClient.UntagResourceAsync(Amazon.Billing.Model.UntagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Removes one or more tags from a resource. Specify only tag keys in your request.
+            Don't specify the value.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UntagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UntagResource service method, as returned by Billing.</returns>
+            <exception cref="T:Amazon.Billing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.InternalServerException">
+            The request processing failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ResourceNotFoundException">
+            The specified ARN in the request doesn't exist.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/billing-2023-09-07/UntagResource">REST API Reference for UntagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.Billing.AmazonBillingClient.UpdateBillingViewAsync(Amazon.Billing.Model.UpdateBillingViewRequest,System.Threading.CancellationToken)">
+            <summary>
+            An API to update the attributes of the billing view.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UpdateBillingView service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UpdateBillingView service method, as returned by Billing.</returns>
+            <exception cref="T:Amazon.Billing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ConflictException">
+            The requested operation would cause a conflict with the current state of a service
+            resource associated with the request. Resolve the conflict before retrying this request.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.InternalServerException">
+            The request processing failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ResourceNotFoundException">
+            The specified ARN in the request doesn't exist.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ServiceQuotaExceededException">
+            You've reached the limit of resources you can create, or exceeded the size of an
+            individual resource.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/billing-2023-09-07/UpdateBillingView">REST API Reference for UpdateBillingView Operation</seealso>
+        </member>
+        <member name="M:Amazon.Billing.AmazonBillingClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.Billing.IAmazonBilling">
+             <summary>
+             <para>Interface for accessing Billing</para>
+            
+             You can use the Billing API to programatically list the billing views available to
+             you for a given time period. A billing view represents a set of billing data. 
+             
+              
+             <para>
+             The Billing API provides the following endpoint:
+             </para>
+              
+             <para>
+              <c>https://billing.us-east-1.api.aws</c> 
+             </para>
+             </summary>
+        </member>
+        <member name="P:Amazon.Billing.IAmazonBilling.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.Billing.IAmazonBilling.CreateBillingViewAsync(Amazon.Billing.Model.CreateBillingViewRequest,System.Threading.CancellationToken)">
+            <summary>
+            Creates a billing view with the specified billing view attributes.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateBillingView service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the CreateBillingView service method, as returned by Billing.</returns>
+            <exception cref="T:Amazon.Billing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ConflictException">
+            The requested operation would cause a conflict with the current state of a service
+            resource associated with the request. Resolve the conflict before retrying this request.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.InternalServerException">
+            The request processing failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ServiceQuotaExceededException">
+            You've reached the limit of resources you can create, or exceeded the size of an
+            individual resource.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/billing-2023-09-07/CreateBillingView">REST API Reference for CreateBillingView Operation</seealso>
+        </member>
+        <member name="M:Amazon.Billing.IAmazonBilling.DeleteBillingViewAsync(Amazon.Billing.Model.DeleteBillingViewRequest,System.Threading.CancellationToken)">
+            <summary>
+            Deletes the specified billing view.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteBillingView service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeleteBillingView service method, as returned by Billing.</returns>
+            <exception cref="T:Amazon.Billing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ConflictException">
+            The requested operation would cause a conflict with the current state of a service
+            resource associated with the request. Resolve the conflict before retrying this request.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.InternalServerException">
+            The request processing failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/billing-2023-09-07/DeleteBillingView">REST API Reference for DeleteBillingView Operation</seealso>
+        </member>
+        <member name="M:Amazon.Billing.IAmazonBilling.GetBillingViewAsync(Amazon.Billing.Model.GetBillingViewRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns the metadata associated to the specified billing view ARN.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetBillingView service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetBillingView service method, as returned by Billing.</returns>
+            <exception cref="T:Amazon.Billing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.InternalServerException">
+            The request processing failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ResourceNotFoundException">
+            The specified ARN in the request doesn't exist.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/billing-2023-09-07/GetBillingView">REST API Reference for GetBillingView Operation</seealso>
+        </member>
+        <member name="M:Amazon.Billing.IAmazonBilling.GetResourcePolicyAsync(Amazon.Billing.Model.GetResourcePolicyRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns the resource-based policy document attached to the resource in <c>JSON</c>
+            format.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetResourcePolicy service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetResourcePolicy service method, as returned by Billing.</returns>
+            <exception cref="T:Amazon.Billing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.InternalServerException">
+            The request processing failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ResourceNotFoundException">
+            The specified ARN in the request doesn't exist.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/billing-2023-09-07/GetResourcePolicy">REST API Reference for GetResourcePolicy Operation</seealso>
+        </member>
+        <member name="M:Amazon.Billing.IAmazonBilling.ListBillingViewsAsync(Amazon.Billing.Model.ListBillingViewsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists the billing views available for a given time period. 
+            
+             
+            <para>
+            Every Amazon Web Services account has a unique <c>PRIMARY</c> billing view that represents
+            the billing data available by default. Accounts that use Billing Conductor also have
+            <c>BILLING_GROUP</c> billing views representing pro forma costs associated with each
+            created billing group.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListBillingViews service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListBillingViews service method, as returned by Billing.</returns>
+            <exception cref="T:Amazon.Billing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.InternalServerException">
+            The request processing failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/billing-2023-09-07/ListBillingViews">REST API Reference for ListBillingViews Operation</seealso>
+        </member>
+        <member name="M:Amazon.Billing.IAmazonBilling.ListSourceViewsForBillingViewAsync(Amazon.Billing.Model.ListSourceViewsForBillingViewRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists the source views (managed Amazon Web Services billing views) associated with
+            the billing view.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListSourceViewsForBillingView service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListSourceViewsForBillingView service method, as returned by Billing.</returns>
+            <exception cref="T:Amazon.Billing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.InternalServerException">
+            The request processing failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ResourceNotFoundException">
+            The specified ARN in the request doesn't exist.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/billing-2023-09-07/ListSourceViewsForBillingView">REST API Reference for ListSourceViewsForBillingView Operation</seealso>
+        </member>
+        <member name="M:Amazon.Billing.IAmazonBilling.ListTagsForResourceAsync(Amazon.Billing.Model.ListTagsForResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists tags associated with the billing view resource.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListTagsForResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListTagsForResource service method, as returned by Billing.</returns>
+            <exception cref="T:Amazon.Billing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.InternalServerException">
+            The request processing failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ResourceNotFoundException">
+            The specified ARN in the request doesn't exist.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/billing-2023-09-07/ListTagsForResource">REST API Reference for ListTagsForResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.Billing.IAmazonBilling.TagResourceAsync(Amazon.Billing.Model.TagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            An API operation for adding one or more tags (key-value pairs) to a resource.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the TagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the TagResource service method, as returned by Billing.</returns>
+            <exception cref="T:Amazon.Billing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.InternalServerException">
+            The request processing failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ResourceNotFoundException">
+            The specified ARN in the request doesn't exist.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/billing-2023-09-07/TagResource">REST API Reference for TagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.Billing.IAmazonBilling.UntagResourceAsync(Amazon.Billing.Model.UntagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Removes one or more tags from a resource. Specify only tag keys in your request.
+            Don't specify the value.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UntagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UntagResource service method, as returned by Billing.</returns>
+            <exception cref="T:Amazon.Billing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.InternalServerException">
+            The request processing failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ResourceNotFoundException">
+            The specified ARN in the request doesn't exist.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/billing-2023-09-07/UntagResource">REST API Reference for UntagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.Billing.IAmazonBilling.UpdateBillingViewAsync(Amazon.Billing.Model.UpdateBillingViewRequest,System.Threading.CancellationToken)">
+            <summary>
+            An API to update the attributes of the billing view.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UpdateBillingView service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UpdateBillingView service method, as returned by Billing.</returns>
+            <exception cref="T:Amazon.Billing.Model.AccessDeniedException">
+            You don't have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ConflictException">
+            The requested operation would cause a conflict with the current state of a service
+            resource associated with the request. Resolve the conflict before retrying this request.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.InternalServerException">
+            The request processing failed because of an unknown error, exception, or failure.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ResourceNotFoundException">
+            The specified ARN in the request doesn't exist.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ServiceQuotaExceededException">
+            You've reached the limit of resources you can create, or exceeded the size of an
+            individual resource.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.Billing.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an Amazon Web Services service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/billing-2023-09-07/UpdateBillingView">REST API Reference for UpdateBillingView Operation</seealso>
+        </member>
+        <member name="M:Amazon.Billing.IAmazonBilling.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+    </members>
+</doc>
