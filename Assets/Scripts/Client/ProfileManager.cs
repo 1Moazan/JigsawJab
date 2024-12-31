@@ -1,13 +1,15 @@
 using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Threading.Tasks;
 using Amazon;
 using Amazon.CognitoIdentity;
+using Amazon.CognitoIdentity.Model;
 using Amazon.DynamoDBv2;
-using Amazon.DynamoDBv2.DocumentModel;
 using Amazon.DynamoDBv2.Model;
+using Amazon.Runtime;
 using UnityEngine;
-using Random = UnityEngine.Random;
+using Credentials = Amazon.SecurityToken.Model.Credentials;
 
 namespace Client
 {
@@ -16,26 +18,82 @@ namespace Client
         private const string IdentityPoolId = "us-east-1:3c9345bb-60de-4433-88c3-0384b359168a";
         private const string TableName = "arn:aws:dynamodb:us-east-1:339713110717:table/UserInfo";
         private const string UserIdKey = "UserId";
+        private const string UserNameKey = "UserName";
+        private const string AvatarKey = "UserAvatar";
+        private const string SaveIdKey = "PrefsIdKey";
         private AmazonDynamoDBClient _client;
         private string _userId;
-        private bool _userIdSaved;
+        private bool _userIdSavedOrRetrieved;
 
-        void Start()
+        public Action UserNameUpdated;
+        public Action AvatarUpdated;
+        public Action GuestLoginSuccess;
+
+        public bool IsFirstLogin { get; private set; }
+
+        async void Start()
         {
-            InitializeGuestLogin();
+            await InitializeGuestLogin();
         }
 
-        private async void InitializeGuestLogin()
+        private async Task InitializeGuestLogin()
         {
-            CognitoAWSCredentials credentials = new CognitoAWSCredentials(IdentityPoolId, RegionEndpoint.USEast1);
-            _client = new AmazonDynamoDBClient(credentials, RegionEndpoint.USEast1);
-            _userId = SystemInfo.deviceUniqueIdentifier;
-            await SaveUserId();
+            AWSCredentials credentials = new AnonymousAWSCredentials();
+            AmazonCognitoIdentityClient identityClient =
+                new AmazonCognitoIdentityClient(credentials, RegionEndpoint.USEast1);
+
+            string identityId = "";
+            if (string.IsNullOrEmpty(PlayerPrefs.GetString(SaveIdKey, "")))
+            {
+                var client = await identityClient.GetIdAsync(new GetIdRequest
+                {
+                    IdentityPoolId = IdentityPoolId
+                });
+                identityId = client.IdentityId;
+                Debug.Log("New Id Found : " + identityId);
+                PlayerPrefs.SetString(SaveIdKey, identityId);
+            }
+            else
+            {
+                identityId = PlayerPrefs.GetString(SaveIdKey);
+                Debug.Log("Id Exists : " + identityId);
+            }
+            
+            var identityCred = await identityClient.GetCredentialsForIdentityAsync(new GetCredentialsForIdentityRequest
+            {
+                IdentityId = identityId
+            });
+
+            if (identityCred == null || identityCred.HttpStatusCode != HttpStatusCode.OK)
+            {
+                Debug.Log("Failed to get identity credentials");
+                return;
+            }
+            
+            Debug.Log("Credentials found for : " + identityCred.IdentityId);
+            _client = new AmazonDynamoDBClient(identityCred.Credentials, RegionEndpoint.USEast1);
+            _userId = identityId;
+            await GetOrSaveUserId();
         }
 
-        private async Task SaveUserId()
+        private async Task GetOrSaveUserId()
         {
-            if (_userIdSaved) return;
+            if (_userIdSavedOrRetrieved)
+            {
+                return;
+            }
+
+            var existResult = await CheckKeyExists(UserIdKey, _userId);
+
+            if (existResult.exists)
+            {
+                _userId = existResult.items[UserIdKey].S;
+                _userIdSavedOrRetrieved = true;
+                Debug.Log($"User ID: {_userId} already exists.");
+                GuestLoginSuccess?.Invoke();
+                IsFirstLogin = false;
+                return;
+            }
             try
             {
                 var request = new PutItemRequest
@@ -43,23 +101,25 @@ namespace Client
                     TableName = TableName,
                     Item = new Dictionary<string, AttributeValue>
                     {
-                        { UserIdKey, new AttributeValue { S = _userId }}
+                        { UserIdKey, new AttributeValue { S = _userId } }
                     }
                 };
                 await _client.PutItemAsync(request);
-                _userIdSaved = true;
+                Debug.Log($"New User ID: {_userId} has been saved.");
+                _userIdSavedOrRetrieved = true;
             }
             catch (AmazonDynamoDBException e)
             {
                 Debug.LogError("Error updating name: " + e.Message);
             }
+            IsFirstLogin = true;
+            GuestLoginSuccess?.Invoke();
         }
-
-        private async Task UpdateUserName(string userName)
+        private async Task UpdateItemByKey(string key , string value)
         {
             try
             {
-                await SaveUserId();
+                await GetOrSaveUserId();
                 var request = new UpdateItemRequest
                 {
                     TableName = TableName,
@@ -67,29 +127,75 @@ namespace Client
                     AttributeUpdates = new Dictionary<string, AttributeValueUpdate>
                     {
                         {
-                            "UserName", new AttributeValueUpdate
+                            key, new AttributeValueUpdate
                             {
                                 Action = AttributeAction.PUT,
                                 Value = new AttributeValue
                                 {
-                                    S = userName,
+                                    S = value
                                 }
                             }
                         }
                     }
                 };
-                var response = _client.UpdateItemAsync(request);
-
-                await response;
-                if (response.Result.HttpStatusCode == System.Net.HttpStatusCode.OK)
+                var response = await _client.UpdateItemAsync(request);
+                
+                if (response.HttpStatusCode == HttpStatusCode.OK)
                 {
-                    Debug.Log("Updated user name: " + userName);
+                    Debug.Log("Updated Key: " + key);
                 }
             }
             catch (AmazonDynamoDBException e)
             {
                 Debug.LogError(e.Message);
             }
+        }
+
+        private async Task<CheckResult> CheckKeyExists(string key , string value)
+        {
+            
+            var getUserResult = await _client.GetItemAsync(TableName, new Dictionary<string, AttributeValue>()
+            {
+                { key, new AttributeValue { S = value } }
+            });
+
+            CheckResult result = new CheckResult
+            {
+                exists = false,
+                items = null
+            };
+            if (getUserResult.HttpStatusCode == HttpStatusCode.OK)
+            {
+                if (getUserResult.Item != null && getUserResult.Item.Count > 0)
+                {
+                    result = new CheckResult
+                    {
+                        exists = true,
+                        items = getUserResult.Item,
+
+                    };
+                }
+            }
+
+            return result;
+        }
+        
+        public async void UpdateUserName(string userName)
+        {
+            await UpdateItemByKey(UserNameKey, userName);
+            UserNameUpdated?.Invoke();
+        }
+
+        public async void UpdateUserAvatar(string avatarId)
+        {
+            await UpdateItemByKey(AvatarKey, avatarId);
+            AvatarUpdated?.Invoke();
+        }
+
+        private class CheckResult
+        {
+            public bool exists;
+            public Dictionary<string , AttributeValue> items;
         }
     }
 }
