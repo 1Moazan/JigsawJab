@@ -12,7 +12,6 @@ namespace Client
     {
         [SerializeField] private TMP_InputField usernameInputField;
         [SerializeField] private TextMeshProUGUI errorText;
-        [SerializeField] private TextMeshProUGUI avatarErrorText;
         [SerializeField] private TextMeshProUGUI loadingText;
         [SerializeField] private Button saveUserNameButton;
         [SerializeField] private Button avatarClosebutton;
@@ -25,14 +24,25 @@ namespace Client
         [SerializeField] private RectTransform errorPunchPanel;
         [SerializeField] private AvatarPreview previewPrefab;
         [SerializeField] private Transform previewParent;
+        
+        [Header("Play Panel")]
+        [SerializeField] private GameObject playPanel;
+        [SerializeField] private Button playButton;
+        [SerializeField] private Button selectAvatarButton;
+        [SerializeField] private Button changeUsernameButton;
+        [SerializeField] private List<RectTransform> buttonRects;
+        [SerializeField] private List<float> finalYPositions;
+        [SerializeField] private float initialYPosition;
 
 
+        [Header("Managers")]
         [SerializeField] private ProfileManager profileManager;
         [SerializeField] private AvatarDataContainer dataContainer;
 
         private List<AvatarPreview> _previewObjects;
         private string _selectedAvatarKey;
         private Sequence _avatarSeq;
+        private AvatarPreview _lastAvatarPreview;
 
         private void Start()
         {
@@ -45,6 +55,8 @@ namespace Client
         {
             saveUserNameButton.onClick.AddListener(SaveUserNameClicked);
             avatarClosebutton.onClick.AddListener(CloseAvatarClicked);
+            selectAvatarButton.onClick.AddListener(SetAvatarPanelActive);
+            changeUsernameButton.onClick.AddListener(SetUsernamePanelActive);
             profileManager.UserNameUpdated += UserNameUpdated;
             profileManager.AvatarUpdated += AvatarUpdated;
             profileManager.GuestLoginSuccess += GuestLoginSuccess;
@@ -54,22 +66,35 @@ namespace Client
         {
             saveUserNameButton.onClick.RemoveListener(SaveUserNameClicked);
             avatarClosebutton.onClick.RemoveListener(CloseAvatarClicked);
+            selectAvatarButton.onClick.RemoveListener(SetAvatarPanelActive);
+            changeUsernameButton.onClick.RemoveListener(SetUsernamePanelActive);
             profileManager.UserNameUpdated -= UserNameUpdated;
             profileManager.GuestLoginSuccess -= GuestLoginSuccess;
+        }
+
+        private void SetUsernamePanelActive()
+        {
+            SetPanel(userNamePanel, punchPanel, true);
+        }
+        private void SetAvatarPanelActive()
+        {
+            SetPanel(avatarSelectionPanel, avatarPunchPanel, true);
         }
         
         private void UserNameUpdated()
         {
             SetPanel(userNamePanel, punchPanel);
+            saveUserNameButton.interactable = true;
 
             _avatarSeq?.Play();
-            SetPanel(avatarSelectionPanel, avatarPunchPanel, true);
+            if(profileManager.IsFirstLogin) SetPanel(avatarSelectionPanel, avatarPunchPanel, true);
         }
         
         private void AvatarUpdated()
         {
             avatarClosebutton.interactable = true;
             SetPanel(avatarSelectionPanel, avatarPunchPanel);
+            if(profileManager.IsFirstLogin) SetPlayPanel(true);
         }
         
         private void GuestLoginSuccess()
@@ -79,6 +104,10 @@ namespace Client
             if (profileManager.IsFirstLogin)
             {
                 SetPanel(userNamePanel, punchPanel , true);
+            }
+            else
+            {
+                SetPlayPanel(true);
             }
         }
 
@@ -94,13 +123,14 @@ namespace Client
             profileManager.UpdateUserName(usernameInputField.text);
         }
 
-        private void SetPanel(GameObject panel ,RectTransform childPanel, bool active = false)
+        private void SetPanel(GameObject panel, RectTransform childPanel, bool active = false)
         {
             mainPanel.SetActive(active);
             panel.SetActive(active);
             if (active) DefaultMove(childPanel);
             else childPanel.DOKill();
         }
+
         private void SetError(string message)
         {
             errorText.text = message;
@@ -121,12 +151,14 @@ namespace Client
             foreach (AvatarData avatarData in dataContainer.avatarDataList)
             {
                 AvatarPreview avatarPreview = Instantiate(previewPrefab, previewParent);
-
+                
                 _avatarSeq.Append(avatarPreview.transform.DOPunchScale(new Vector3(0.1f, 0.1f, 0.1f), 0.1f).SetDelay(0.3f));
                 avatarPreview.SetValues(avatarData, () =>
                 {
+                    if(_lastAvatarPreview != null) _lastAvatarPreview.SetSelected(false);
                     _selectedAvatarKey = avatarPreview.AvatarKey;
                     avatarPreview.SetSelected(true);
+                    _lastAvatarPreview = avatarPreview;
                 });
             }
         }
@@ -142,6 +174,23 @@ namespace Client
             {
                 SetError("Please Select An Avatar.");
             }
+        }
+
+        private void SetPlayPanel(bool active)
+        {
+            playPanel.SetActive(active);
+            if (active) PlayAnimation();
+        }
+
+        private void PlayAnimation()
+        {
+            Sequence playSequence = DOTween.Sequence();
+            for (int i = 0; i < buttonRects.Count; i++)
+            {
+                buttonRects[i].anchoredPosition = new Vector2(buttonRects[i].anchoredPosition.x, initialYPosition);
+                playSequence.Append(buttonRects[i].DOAnchorPosY(finalYPositions[i], 0.5f)).SetDelay(0.5f);
+            }
+            playSequence.Play();
         }
 
         private void ClearContainer()

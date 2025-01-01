@@ -1,0 +1,7 @@
+<linker>
+    <assembly fullname="AWSSDK.Core" preserve="all"/>
+    <assembly fullname="Aws.GameLift" preserve="all"/>
+    <assembly fullname="AWSSDK.GameLift" preserve="all"/>
+    <assembly fullname="AWSSDK.DynamoDBv2" preserve="all"/>
+    <assembly fullname="AWSSDK.CognitoIdentity" preserve="all"/>
+</linker>

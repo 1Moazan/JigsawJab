@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionData: {fileID: 11400000, guid: a4b8b6d848c9c47d4921c597775e10ce, type: 2}
-  isLocal: 1
+  isLocal: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
