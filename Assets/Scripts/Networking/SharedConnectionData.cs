@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Networking
@@ -5,10 +6,23 @@ namespace Networking
     [CreateAssetMenu(menuName = "Data/Shared Connection Data" , fileName = "Shared Connection Data")]
     public class SharedConnectionData : ScriptableObject
     {
-        public ConnectionData ConnectionData;
+        private ConnectionData _connectionData;
+        [SerializeField] private ConnectionData localConnectionData;
+        
+        
+        public bool isLocal;
+        public ConnectionData GetConnectionData()
+        {
+            return _connectionData;
+        }
+
+        public void SetRemoteConnectionData(ConnectionData connectionData)
+        {
+            _connectionData = connectionData;
+        }
     }
 
-    
+    [Serializable]
     public class ConnectionData
     {
         public string IPAddress;

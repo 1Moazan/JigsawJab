@@ -205,10 +205,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: YOUR TURN
+  m_text: Cool Message!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 26d2742d6ffb94b3f91d190bbdc71760, type: 2}
-  m_sharedMaterial: {fileID: -1583763013123410524, guid: 26d2742d6ffb94b3f91d190bbdc71760, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: acec7519d2af541d59f6f9b3b690771c, type: 2}
+  m_sharedMaterial: {fileID: -3665257826288264559, guid: acec7519d2af541d59f6f9b3b690771c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -232,12 +232,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 71.8
+  m_fontSize: 103.37
   m_fontSizeBase: 75
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 20
-  m_fontSizeMax: 71.8
+  m_fontSizeMax: 103.37
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512

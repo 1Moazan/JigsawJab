@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1021537929964653911}
   - component: {fileID: 1961801258854981150}
   - component: {fileID: 3956237342827616344}
+  - component: {fileID: 350686743397531179}
   m_Layer: 0
   m_Name: PuzzleNetworkManager
   m_TagString: Untagged
@@ -55,11 +56,11 @@ MonoBehaviour:
   onlineScene: 
   offlineSceneLoadDelay: 0
   transport: {fileID: 1961801258854981150}
-  networkAddress: localhost
+  networkAddress: 192.168.141.224
   maxConnections: 100
   disconnectInactiveConnections: 0
   disconnectInactiveTimeout: 60
-  authenticator: {fileID: 0}
+  authenticator: {fileID: 350686743397531179}
   playerPrefab: {fileID: 570830657718606486, guid: 065e79516f5b2400baebf77d9ff9ea75, type: 3}
   autoCreatePlayer: 1
   playerSpawnMethod: 1
@@ -123,3 +124,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offsetX: 0
   offsetY: 0
+--- !u!114 &350686743397531179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8728929449215259938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa826e86aff34053aeedf3ce671db6af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnServerAuthenticated:
+    m_PersistentCalls:
+      m_Calls: []
+  OnClientAuthenticated:
+    m_PersistentCalls:
+      m_Calls: []
+  connectionData: {fileID: 0}

@@ -12,3 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b41e347fb0a244f3bb92f24c7736603f, type: 3}
   m_Name: Shared Connection Data
   m_EditorClassIdentifier: 
+  localConnectionData:
+    IPAddress: 127.0.0.1
+    PortNo: 7777
+    isServer: 0
+  isLocal: 1

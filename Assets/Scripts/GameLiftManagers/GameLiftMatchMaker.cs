@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using Amazon;
 using Amazon.GameLift;
 using Amazon.GameLift.Model;
-using Amazon.Internal;
-using Constants;
 using UnityEngine;
 
-namespace Client
+namespace GameLiftManagers
 {
     public class GameLiftMatchMaker : MonoBehaviour
     {

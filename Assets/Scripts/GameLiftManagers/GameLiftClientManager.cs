@@ -1,65 +1,79 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Amazon.GameLift;
 using Amazon.GameLift.Model;
-using Constants;
+using kcp2k;
 using Networking;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-namespace Client
+namespace GameLiftManagers
 {
     public class GameLiftClientManager : MonoBehaviour
     {
-        public string PlayerSessionId => _currentPlayerSession?.PlayerSessionId;
-        public string PlayerId => _playerId;
-
-        [SerializeField] private SharedConnectionData connectionData;
-
+        public static PlayerSession CurrentPlayerSession;
         private AmazonGameLiftClient _client;
         private PlayerSession _currentPlayerSession;
         private string _playerId;
         private bool _sessionActive;
+        private string _currFleetId;
+        
+        private NetworkSettings _networkSettings;
 
-        void Start()
+        public void InitializeAndStart(NetworkSettings networkSettings)
         {
-            var config = new AmazonGameLiftConfig();
+            _networkSettings = networkSettings;
+            AmazonGameLiftConfig config = new AmazonGameLiftConfig();
+
+            if (!_networkSettings.connectionData.isLocal)
+            {
+                config.RegionEndpoint = GameLiftConstants.Region;
+            }
+
             _client = new AmazonGameLiftClient(GameLiftConstants.AccessKey, GameLiftConstants.SecretKey, config);
             _playerId = Guid.NewGuid().ToString();
-
-            StartCoroutine(ShiftToGameplay());
             FindOrCreateGame();
-        }
-
-        private IEnumerator ShiftToGameplay()
-        {
-            yield return new WaitUntil(() => _sessionActive);
-            Debug.Log("Shifting to Gameplay");
-            SceneManager.LoadScene("Gameplay");
         }
 
         private async void FindOrCreateGame()
         {
             try
             {
-                var fleets = await GetFleets();
-                if (!fleets.Any())
+                if (!_networkSettings.connectionData.isLocal)
                 {
-                    Debug.LogError("No active fleets found.");
-                    return;
+                    var fleets = await GetFleets();
+                    if (!fleets.Any())
+                    {
+                        Debug.LogError("No active fleets found.");
+                        return;
+                    }
+
+                    Debug.Log($"Found {fleets.Count} active fleets.");
+                    var fleet = fleets.First();
+
+                    if (string.IsNullOrEmpty(fleet))
+                    {
+                        Debug.LogError("No active fleet found.");
+                    }
+                    else
+                    {
+                        _currFleetId = fleet;
+                    }
+                }
+                else
+                {
+                    _currFleetId = GameLiftConstants.FleetId;
                 }
 
-                Debug.Log($"Found {fleets.Count} active fleets.");
-                var sessions = await GetAvailableGameSessionsAsync(fleets.First());
+                var sessions = await GetAvailableGameSessionsAsync();
                 Debug.Log($"Found {sessions.Count} game sessions.");
 
                 if (sessions.Any())
                 {
-                    var activeSession = sessions.FirstOrDefault(s => s.Status == GameSessionStatus.ACTIVE && s.CurrentPlayerSessionCount < 2);
+                    var activeSession = sessions.FirstOrDefault(s =>
+                        s.Status == GameSessionStatus.ACTIVE && s.CurrentPlayerSessionCount < 2);
 
                     if (activeSession != null && activeSession.CurrentPlayerSessionCount < 1)
                     {
@@ -89,6 +103,7 @@ namespace Client
 
         private async Task JoinGame(PlayerSession playerSession)
         {
+            CurrentPlayerSession = playerSession;
             while (!_sessionActive)
             {
                 await Task.Delay(2000); // Check status every 2 seconds
@@ -97,7 +112,9 @@ namespace Client
                 if (activeGameSession.Status == GameSessionStatus.ACTIVE)
                 {
                     Debug.Log($"Joining game at {activeGameSession.IpAddress}:{activeGameSession.Port}");
-                    connectionData.ConnectionData = new ConnectionData(activeGameSession.IpAddress, activeGameSession.Port, false);
+                    _networkSettings.networkManager.networkAddress = activeGameSession.IpAddress;
+                    _networkSettings.transport.port = (ushort)activeGameSession.Port;
+                    _networkSettings.networkManager.StartClient();
                     _sessionActive = true;
                 }
             }
@@ -109,11 +126,11 @@ namespace Client
             return response.FleetIds;
         }
 
-        private async Task<List<GameSession>> GetAvailableGameSessionsAsync(string fleetId, CancellationToken token = default)
+        private async Task<List<GameSession>> GetAvailableGameSessionsAsync(CancellationToken token = default)
         {
             var response = await _client.DescribeGameSessionsAsync(new DescribeGameSessionsRequest
             {
-                FleetId = fleetId,
+                FleetId = _currFleetId,
                 StatusFilter = GameSessionStatus.ACTIVE.ToString()
             }, token);
             return response.GameSessions;
@@ -127,14 +144,27 @@ namespace Client
 
         private async Task<GameSession> CreateGameSessionAsync(CancellationToken token = default)
         {
-            var response = await _client.CreateGameSessionAsync(new CreateGameSessionRequest
+            if (_networkSettings.connectionData.isLocal)
             {
-                FleetId = GameLiftConstants.FleetId,
-                Location = GameLiftConstants.LocationName,
-                MaximumPlayerSessionCount = 2,
-                Name = "QuickSession"
-            }, token);
-            return response.GameSession;
+                var response = await _client.CreateGameSessionAsync(new CreateGameSessionRequest
+                {
+                    FleetId = _currFleetId,
+                    Location = GameLiftConstants.LocationName,
+                    MaximumPlayerSessionCount = 2,
+                    Name = "QuickSession"
+                }, token);
+                return response.GameSession;
+            }
+            else
+            {
+                var response = await _client.CreateGameSessionAsync(new CreateGameSessionRequest
+                {
+                    FleetId = _currFleetId,
+                    MaximumPlayerSessionCount = 2,
+                    Name = "QuickSession"
+                }, token);
+                return response.GameSession;
+            }
         }
 
         private async Task<GameSession> GetActiveGameSession(string gameSessionId, CancellationToken token = default)

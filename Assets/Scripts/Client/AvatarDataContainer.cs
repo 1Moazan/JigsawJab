@@ -8,6 +8,7 @@ namespace Client
     public class AvatarDataContainer : ScriptableObject
     {
         public List<AvatarData> avatarDataList;
+        public List<AvatarData> puzzlesList;
     }
 
     [Serializable]

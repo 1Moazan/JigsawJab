@@ -213,5 +213,12 @@ namespace Networking.Gameplay
                 crossSprite.SetActive(false);
             });
         }
+
+        private void OnDisable()
+        {
+            tickSprite.transform.DOKill();
+            crossSprite.transform.DOKill();
+            transform.DOKill();
+        }
     }
 }
