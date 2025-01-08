@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Aws.GameLift;
 using Aws.GameLift.Server;
-using kcp2k;
 using Networking;
 using UnityEngine;
 
@@ -95,11 +94,11 @@ namespace GameLiftManagers
 
         private IEnumerator StartServerDelayed()
         {
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
             _networkSettings.networkManager.StartServer();
         }
         
-        
+        [ContextMenu("Stop Server")]
         private void StopGameLiftServer()
         {
             try
@@ -126,5 +125,9 @@ namespace GameLiftManagers
             }
         }
 
+        private void OnApplicationQuit()
+        {
+            StopGameLiftServer();
+        }
     }
 }

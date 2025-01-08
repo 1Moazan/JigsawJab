@@ -75,11 +75,10 @@ namespace GameLiftManagers
                     var activeSession = sessions.FirstOrDefault(s =>
                         s.Status == GameSessionStatus.ACTIVE && s.CurrentPlayerSessionCount < 2);
 
-                    if (activeSession != null && activeSession.CurrentPlayerSessionCount < 1)
+                    if (activeSession != null)
                     {
                         Debug.Log($"Joining existing game session: {activeSession.GameSessionId}");
-                        var playerSession = await CreatePlayerSessionAsync(activeSession.GameSessionId);
-                        await JoinGame(playerSession);
+                        await JoinGame(activeSession);
                         return;
                     }
                 }
@@ -96,24 +95,25 @@ namespace GameLiftManagers
         private async Task CreateAndJoinNewSession()
         {
             var gameSession = await CreateGameSessionAsync();
-            await Task.Delay(2000); // Give some time for the session to initialize
-            var playerSession = await CreatePlayerSessionAsync(gameSession.GameSessionId);
-            await JoinGame(playerSession);
+            await JoinGame(gameSession);
         }
 
-        private async Task JoinGame(PlayerSession playerSession)
+        private async Task JoinGame(GameSession gameSession)
         {
-            CurrentPlayerSession = playerSession;
             while (!_sessionActive)
             {
                 await Task.Delay(2000); // Check status every 2 seconds
-                var activeGameSession = await GetActiveGameSession(playerSession.GameSessionId);
+                var activeGameSession = await GetActiveGameSession(gameSession.GameSessionId);
 
+                Debug.Log("Session State : " + activeGameSession.Status);
                 if (activeGameSession.Status == GameSessionStatus.ACTIVE)
                 {
+                    var playerSession = await CreatePlayerSessionAsync(gameSession.GameSessionId);
+                    CurrentPlayerSession = playerSession;
                     Debug.Log($"Joining game at {activeGameSession.IpAddress}:{activeGameSession.Port}");
                     _networkSettings.networkManager.networkAddress = activeGameSession.IpAddress;
                     _networkSettings.transport.port = (ushort)activeGameSession.Port;
+                    await Task.Delay(3000);
                     _networkSettings.networkManager.StartClient();
                     _sessionActive = true;
                 }

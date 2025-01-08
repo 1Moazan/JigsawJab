@@ -33,27 +33,21 @@ namespace Networking
             }
         }
 
-        public void StartTimer(double totalSeconds, Action onComplete = null)
+        public void StartTimer(double totalSeconds)
         {
-            if (!isServer)
-            {
-                Debug.LogError("StartTimer can only be called on the server.");
-                return;
-            }
-
             _endTime = NetworkTime.time + totalSeconds;
             _isTimerRunning = true;
-            OnTimerCompleted = onComplete;
         }
 
         private void StopTimer()
         {
-            if (!isServer)
-                return;
-
             _isTimerRunning = false;
             OnTimerCompleted?.Invoke();
-            OnTimerCompleted = null;
+        }
+
+        public void ResetTimer()
+        {
+            _isTimerRunning = false;
         }
 
         private void OnTimerUpdated(double oldValue, double newValue)

@@ -51,10 +51,10 @@ MonoBehaviour:
   syncInterval: 0
   piecePrefab: {fileID: 2148190581973293927, guid: 4e250cba28b32457886ad1729a5a560c, type: 3}
   animationPrefab: {fileID: 6570651012781917031, guid: 67bde0c67b0c043e794075a312ed3cb5, type: 3}
-  piecePlacepoint: {fileID: 0}
   piecesPanel: {fileID: 0}
   blockerImage: {fileID: 0}
   pieceContainer: {fileID: 11400000, guid: 869e343a451da4c118bcca2f23adf135, type: 2}
+  dataContainer: {fileID: 0}
   pieceTriggers:
   - {fileID: 0}
   - {fileID: 0}
@@ -73,8 +73,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   correctVfx: {fileID: 6558040259054717161}
-  demoTexture: {fileID: 21300000, guid: dc62a85ba7bf24a53aa239cc171aaa8b, type: 3}
+  messageBanner: {fileID: 0}
   maxPlayerCount: 2
+  totalRounds: 0
+  totalCorrectPieces: 8
 --- !u!114 &7053420103920467636
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -25,16 +25,19 @@ namespace Networking.Gameplay
         [SerializeField] private Animator playerAnimator;
         [SerializeField] private List<PlayerCanvas> playerCanvases;
         [SerializeField] private NetworkTimer networkTimer;
+        [SerializeField] private ParticleSystem hitEffect;
 
         public override void OnStartServer()
         {
             _currTurnCount = totalTurns;
             networkTimer.OnTimerTick += NetworkTimerOnOnTimerTick;
+            networkTimer.OnTimerCompleted += ServerEndPlayerTurn;
         }
 
         public override void OnStopServer()
         {
             networkTimer.OnTimerTick -= NetworkTimerOnOnTimerTick;
+            networkTimer.OnTimerCompleted -= ServerEndPlayerTurn;
         }
 
         private void NetworkTimerOnOnTimerTick(double obj)
@@ -73,6 +76,7 @@ namespace Networking.Gameplay
         private void ServerEndPlayerTurn()
         {
             _currTurnCount = totalTurns;
+            networkTimer.ResetTimer();
             ServerTurnEnded?.Invoke();
         }
 
@@ -99,7 +103,7 @@ namespace Networking.Gameplay
         [Server]
         public void ServerStartTimer()
         {
-            networkTimer.StartTimer(totalTurnTime, ServerEndPlayerTurn);
+            networkTimer.StartTimer(totalTurnTime);
         }
 
         [ClientRpc]
@@ -167,7 +171,23 @@ namespace Networking.Gameplay
 
         public void PlayHitEffect()
         {
+            hitEffect.Play();
             CameraShake.instance.Shake();
+        }
+
+        [Server]
+        public void ServerResetPlayer()
+        {
+            networkTimer.ResetTimer();
+            RpcResetPlayer();
+        }
+
+        [ClientRpc]
+        private void RpcResetPlayer()
+        {
+            playerAnimator.ResetTrigger("BoxingHit");
+            _currTurnCount = totalTurns;
+            _currCanvas.MoveOut();
         }
 
         public enum PlayerSide
@@ -182,6 +202,7 @@ namespace Networking.Gameplay
             public PlayerSide side;
             public GameObject mainObject;
             public RectTransform panelRect;
+            public Image bgImage;
             public TextMeshProUGUI turnText;
             public TextMeshProUGUI scoreText;
             public TextMeshProUGUI playerName;
@@ -193,16 +214,34 @@ namespace Networking.Gameplay
 
             public void MoveIn()
             {
+                StopAlert();
                 panelRect.DOAnchorPosX(moveInX, moveDelay).SetEase(Ease.InOutQuad);
             }
-            
+
+            private void StopAlert()
+            {
+                panelRect.DOKill();
+                panelRect.transform.localScale = Vector3.one;
+                bgImage.color = Color.white;
+            }
+
             public void MoveOut()
             {
                 panelRect.DOAnchorPosX(moveOutX, moveDelay).SetEase(Ease.InOutQuad);
             }
 
+            public void StartAlert()
+            {
+                panelRect.DOScale(new Vector2(1.1f, 1.1f), 1f).SetEase(Ease.InOutQuad).SetLoops(-1, LoopType.Yoyo);
+                bgImage.DOColor(Color.red, 1f).SetLoops(-1, LoopType.Yoyo);
+            }
+
             public void SetTimerFillAmount(float amount)
             {
+                if (Mathf.Approximately(amount, 0.2f))
+                {
+                    StartAlert();
+                }
                 fillImage.fillAmount = amount;
             }
         }

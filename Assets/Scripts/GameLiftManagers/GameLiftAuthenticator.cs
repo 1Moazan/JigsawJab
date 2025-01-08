@@ -9,7 +9,6 @@ namespace GameLiftManagers
 {
     public class GameliftAuthenticator : NetworkAuthenticator
     {
-        [SerializeField] private SharedConnectionData connectionData;
         public struct AuthRequestMessage : NetworkMessage 
         {
             public string PlayerSessionId;
@@ -44,6 +43,7 @@ namespace GameLiftManagers
             PlayerSessionId = msg.PlayerSessionId
         });
 
+        Debug.Log($"PlayerSessionId: {playerSessions.Result.PlayerSessions.Count}");
         if (playerSessions.Result.PlayerSessions.Count > 0)
         {
             conn.Send(new AuthResponseMessage() 

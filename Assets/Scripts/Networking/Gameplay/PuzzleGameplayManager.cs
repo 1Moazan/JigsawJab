@@ -20,15 +20,15 @@ namespace Networking.Gameplay
         [SerializeField] AvatarDataContainer dataContainer;
         [SerializeField] List<PieceTrigger> pieceTriggers;
         [SerializeField] private ParticleSystem correctVfx;
-        [SerializeField] Sprite demoTexture;
         [SerializeField] MessageBanner messageBanner;
 
         public int maxPlayerCount;
         public int totalRounds;
+        public int totalCorrectPieces;
         public Action PieceAnimationCompleted;
         public Action<int> CorrectPiecePlaced;
         public Action GameReset;
-        public Action<PuzzlePlayer> ServerTurnStarted;
+        public Action<bool> PuzzleSelectionStarted;
         public Action<string> ClientPuzzleSelected;
 
         
@@ -37,10 +37,14 @@ namespace Networking.Gameplay
         private int _currentPlayerIndex;
         private bool _firstTurn = true;
         private int _animationEndedCount;
-        private int _currRoundNo;
+        [SyncVar]
+        private int _currRoundNo = 1;
         private int _noOfCorrectPieces;
         private List<PuzzlePieceGameplay> _currPieces;
         private bool _isPuzzleSelected;
+        private Coroutine _lastTurnRoutine;
+        private int _lastPuzzleSelectorIndex;
+        private int _currentPuzzleSelectorIndex;
 
         private void OnEnable()
         {
@@ -56,6 +60,11 @@ namespace Networking.Gameplay
         [TargetRpc]
         private void TargetSetTurnUI(NetworkConnectionToClient target, bool active , bool showRoundNumber)
         {
+            if (showRoundNumber)
+            {
+                messageBanner.Show("Round : " + _currRoundNo);
+                return;
+            }
             blockerImage.SetActive(!active);
             if (active)
             {
@@ -67,17 +76,6 @@ namespace Networking.Gameplay
                 messageBanner.Show("OPPONENT'S TURN");
                 piecesPanel.DOAnchorPosY(-500f, 1f).SetEase(Ease.InElastic);
             }
-
-            if (showRoundNumber)
-            {
-                StartCoroutine(SetBannerDelayed());
-            }
-        }
-
-        private IEnumerator SetBannerDelayed()
-        {
-            yield return new WaitForSeconds(2f);
-            messageBanner.Show("ROUND : " + _currRoundNo);
         }
 
         [ClientRpc]
@@ -159,6 +157,12 @@ namespace Networking.Gameplay
             onSpritesLoaded?.Invoke(pieceContainer.sharedPieces);
             pieceContainer.pieceTriggers = pieceTriggers;
         }
+        
+        [ClientRpc]
+        private void RpcSelectPuzzle(string key)
+        {
+            ClientPuzzleSelected?.Invoke(key);
+        }
 
         [Command(requiresAuthority = false)]
         public void CmdSpawnPuzzleAtSpawnPoint(int index , Vector2 spawnPosition)
@@ -187,7 +191,7 @@ namespace Networking.Gameplay
                 CorrectPiecePlaced?.Invoke(pieceIndex);
                 _currPieces ??= new List<PuzzlePieceGameplay>();
                 _currPieces.Add(_lastPiece);
-                bool allPiecesPlaced = _noOfCorrectPieces >= pieceContainer.sharedPieces.Count;
+                bool allPiecesPlaced = _noOfCorrectPieces >= totalCorrectPieces;
                 if (allPiecesPlaced)
                 {
                     ServerResetGame();
@@ -201,10 +205,15 @@ namespace Networking.Gameplay
         private void ServerResetGame()
         {
             _currRoundNo++;
-
+            _currentPuzzleSelectorIndex++;
             foreach (PuzzlePieceGameplay pieceGameplay in _currPieces)
             {
                 NetworkServer.Destroy(pieceGameplay.gameObject);
+            }
+
+            foreach (var player in _puzzlePlayers)
+            {
+                player.ServerResetPlayer();
             }
             _currPieces.Clear();
             _noOfCorrectPieces = 0;
@@ -212,6 +221,7 @@ namespace Networking.Gameplay
             _isPuzzleSelected = false;
             _firstTurn = true;
             _animationEndedCount = 0;
+            if (_lastTurnRoutine != null) StopCoroutine(_lastTurnRoutine);
             GameReset?.Invoke();
             
             StartCoroutine(SetRoundNoDelayed());
@@ -236,16 +246,33 @@ namespace Networking.Gameplay
             
             return _puzzlePlayers[index];
         }
-
+        
+        [Server]
+        private PuzzlePlayer GetCurrentPuzzleSelector()
+        {
+            int index = _currentPuzzleSelectorIndex % _puzzlePlayers.Count;
+            return _puzzlePlayers[index];
+        }
+        
         [Server]
         private void ServerStartTurn()
         {
-            StartCoroutine(ServerStartPlayerTurn());
+            _lastTurnRoutine = StartCoroutine(ServerStartPlayerTurn());
 
             if (!_isPuzzleSelected)
             {
-                ServerTurnStarted?.Invoke(GetCurrentTurnPlayer());
+                foreach (PuzzlePlayer puzzlePlayer in _puzzlePlayers)
+                {
+                    TargetSetPuzzleSelection(puzzlePlayer.connectionToClient,
+                        puzzlePlayer == GetCurrentPuzzleSelector());
+                }
             }
+        }
+
+        [TargetRpc]
+        private void TargetSetPuzzleSelection(NetworkConnectionToClient target , bool isSelecting)
+        {
+            PuzzleSelectionStarted?.Invoke(isSelecting);
         }
 
         [Command(requiresAuthority = false)]
@@ -253,12 +280,6 @@ namespace Networking.Gameplay
         {
             _isPuzzleSelected = true;
             RpcSelectPuzzle(key);
-        }
-
-        [ClientRpc]
-        private void RpcSelectPuzzle(string key)
-        {
-            ClientPuzzleSelected?.Invoke(key);
         }
         
         

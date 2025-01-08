@@ -16,4 +16,4 @@ MonoBehaviour:
     IPAddress: 127.0.0.1
     PortNo: 7777
     isServer: 0
-  isLocal: 1
+  isLocal: 0

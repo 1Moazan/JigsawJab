@@ -37,6 +37,14 @@ namespace Networking
             SetPuzzles();
             selectPuzzlebutton.onClick.AddListener(SelectPuzzle);
             puzzleGameplayManager.ClientPuzzleSelected += PuzzleSelected;
+            puzzleGameplayManager.PuzzleSelectionStarted += SetSelectionPanelActive;
+        }
+
+        private void OnDisable()
+        {
+            puzzleGameplayManager.ClientPuzzleSelected -= PuzzleSelected;
+            puzzleGameplayManager.PuzzleSelectionStarted -= SetSelectionPanelActive;
+            selectPuzzlebutton.onClick.RemoveListener(SelectPuzzle);
         }
 
         private void PuzzleSelected(string obj)
@@ -58,12 +66,6 @@ namespace Networking
             base.OnStartServer();
             puzzleGameplayManager.CorrectPiecePlaced += RpcDisableCorrectPieceInUi;
             puzzleGameplayManager.GameReset += GameReset;
-            puzzleGameplayManager.ServerTurnStarted += SetSelectionPanelActive;
-        }
-
-        private void SetSelectionPanelActive(PuzzlePlayer obj)
-        {
-            TargetSetSelectionUI(obj.connectionToClient , true);
         }
 
         [Server]
@@ -72,6 +74,11 @@ namespace Networking
             RpcResetUI();
         }
 
+        [Client]
+        private void SetSelectionPanelActive(bool isSelecting)
+        {
+            SetSelectionUI(isSelecting);
+        }
         [ClientRpc]
         private void RpcDisableCorrectPieceInUi(int pieceIndex)
         {
@@ -171,13 +178,12 @@ namespace Networking
             moveTransform.DOAnchorPosX(0, 0.5f).SetEase(Ease.OutElastic);
         }
 
-        [TargetRpc]
-        public void TargetSetSelectionUI(NetworkConnectionToClient target, bool isTurn)
+        private void SetSelectionUI(bool isSelecting)
         {
             SetPanel(selectPuzzlePanel, punchPanel);
-            SetPanel(waitForPuzzlePanel, waitPunchPanel, false);
+            SetPanel(waitForPuzzlePanel, waitPunchPanel);
 
-            if (isTurn)
+            if (isSelecting)
             {
                 SetPanel(selectPuzzlePanel, punchPanel, true);
                 selectPuzzlebutton.interactable = true;
