@@ -29,10 +29,12 @@ namespace Client
         public Action AvatarUpdated;
         public Action GuestLoginSuccess;
 
+        public static PlayerItems LocalPlayerItems { get; private set; }
         public bool IsFirstLogin { get; private set; }
 
         async void Start()
         {
+            LocalPlayerItems = new PlayerItems();
             await InitializeGuestLogin();
         }
 
@@ -90,6 +92,7 @@ namespace Client
                 _userId = existResult.items[UserIdKey].S;
                 _userIdSavedOrRetrieved = true;
                 Debug.Log($"User ID: {_userId} already exists.");
+                await UpdatePlayerItems();
                 GuestLoginSuccess?.Invoke();
                 IsFirstLogin = false;
                 return;
@@ -151,6 +154,24 @@ namespace Client
             }
         }
 
+        private async Task UpdatePlayerItems()
+        {
+            var getResult = await _client.GetItemAsync(new GetItemRequest
+            {
+                Key = new Dictionary<string, AttributeValue>()
+                {
+                    { UserIdKey, new AttributeValue { S = _userId } }
+                },
+                TableName = TableName
+            });
+            if (getResult.Item.Count > 0)
+            {
+                LocalPlayerItems.userName = getResult.Item[UserNameKey].S;
+                LocalPlayerItems.selectedAvatar = getResult.Item[AvatarKey].S;
+            }
+        }
+        
+
         private async Task<CheckResult> CheckKeyExists(string key , string value)
         {
             
@@ -183,15 +204,25 @@ namespace Client
         public async void UpdateUserName(string userName)
         {
             await UpdateItemByKey(UserNameKey, userName);
+            LocalPlayerItems.userName = userName;
             UserNameUpdated?.Invoke();
         }
 
         public async void UpdateUserAvatar(string avatarId)
         {
             await UpdateItemByKey(AvatarKey, avatarId);
+            LocalPlayerItems.selectedAvatar = avatarId;
             AvatarUpdated?.Invoke();
         }
 
+        [Serializable]
+        public class PlayerItems
+        {
+            public string userName = "";
+            public string selectedAvatar = "";
+        }
+
+        [Serializable]
         private class CheckResult
         {
             public bool exists;

@@ -113,7 +113,6 @@ namespace GameLiftManagers
                     Debug.Log($"Joining game at {activeGameSession.IpAddress}:{activeGameSession.Port}");
                     _networkSettings.networkManager.networkAddress = activeGameSession.IpAddress;
                     _networkSettings.transport.port = (ushort)activeGameSession.Port;
-                    await Task.Delay(3000);
                     _networkSettings.networkManager.StartClient();
                     _sessionActive = true;
                 }

@@ -21,6 +21,10 @@ namespace Networking.Gameplay
         [SerializeField] List<PieceTrigger> pieceTriggers;
         [SerializeField] private ParticleSystem correctVfx;
         [SerializeField] MessageBanner messageBanner;
+        
+        [Header("End Animation")]
+        [SerializeField] NetworkIdentity ringTransform;
+        [SerializeField] Transform gridTransform;
 
         public int maxPlayerCount;
         public int totalRounds;
@@ -30,6 +34,8 @@ namespace Networking.Gameplay
         public Action GameReset;
         public Action<bool> PuzzleSelectionStarted;
         public Action<string> ClientPuzzleSelected;
+        public Action<bool> ClientGameEnded;
+        public static Action ServerGameEnded;
 
         
         private PuzzlePieceGameplay _lastPiece;
@@ -68,12 +74,12 @@ namespace Networking.Gameplay
             blockerImage.SetActive(!active);
             if (active)
             {
-                messageBanner.Show("YOUR TURN");
+                messageBanner.Show("Your Turn");
                 piecesPanel.DOAnchorPosY(176f, 1f).SetEase(Ease.InElastic);
             }
             else
             {
-                messageBanner.Show("OPPONENT'S TURN");
+                messageBanner.Show("Opponent's Turn");
                 piecesPanel.DOAnchorPosY(-500f, 1f).SetEase(Ease.InElastic);
             }
         }
@@ -130,6 +136,55 @@ namespace Networking.Gameplay
                 CmdAnimationEnded();
             });
 
+        }
+
+        [ClientRpc]
+        private void RpcSetGameEndAnimation()
+        {
+            piecesPanel.gameObject.SetActive(false);
+            
+            Sequence sequence = DOTween.Sequence();
+
+            sequence.Append(ringTransform.transform.DOMoveY(0f, 0.2f).SetEase(Ease.InOutQuad));
+            sequence.Append(gridTransform.DOMoveY(-8f, 1f).SetEase(Ease.InElastic));
+            sequence.Play();
+        }
+
+        private void SetFinalWinner()
+        {
+            int maxScore = -1;
+            int winnerIndex = -1;
+            foreach (PuzzlePlayer player in _puzzlePlayers)
+            {
+                if (player.CurrScore > maxScore)
+                {
+                    maxScore = player.CurrScore;
+                    winnerIndex = _puzzlePlayers.IndexOf(player);
+                }
+            }
+            
+            GameEnded(_puzzlePlayers[winnerIndex].connectionToClient , true);
+            _puzzlePlayers[winnerIndex].RpcPlaySuccessAnimation();
+            for (int i = 0; i < _puzzlePlayers.Count; i++)
+            {
+                if (i == winnerIndex) continue;
+                GameEnded(_puzzlePlayers[i].connectionToClient , false);
+                _puzzlePlayers[i].RpcPlayFailAnimation();
+            }
+
+            StartCoroutine(EndGameOnServer());
+        }
+
+        private IEnumerator EndGameOnServer()
+        {
+            yield return new WaitForSeconds(10f);
+            ServerGameEnded?.Invoke();
+        }
+
+        [TargetRpc]
+        private void GameEnded(NetworkConnectionToClient client , bool hasWon)
+        {
+            ClientGameEnded?.Invoke(hasWon);
         }
 
 
@@ -206,6 +261,33 @@ namespace Networking.Gameplay
         {
             _currRoundNo++;
             _currentPuzzleSelectorIndex++;
+
+            if (_currRoundNo < totalRounds)
+            {
+                ServerResetProperties();
+                GameReset?.Invoke();
+                StartCoroutine(SetRoundNoDelayed());
+            }
+            else
+            {
+                ServerResetProperties();
+                foreach (PuzzlePlayer puzzlePlayer in _puzzlePlayers)
+                {
+                    puzzlePlayer.RpcSetParent(ringTransform);
+                }
+                RpcSetGameEndAnimation();
+                StartCoroutine(ServerSetFinalWinnerDelayed());
+            }
+        }
+
+        private IEnumerator ServerSetFinalWinnerDelayed()
+        {
+            yield return new WaitForSeconds(1.2f);
+            SetFinalWinner();
+        }
+
+        private void ServerResetProperties()
+        {
             foreach (PuzzlePieceGameplay pieceGameplay in _currPieces)
             {
                 NetworkServer.Destroy(pieceGameplay.gameObject);
@@ -215,6 +297,7 @@ namespace Networking.Gameplay
             {
                 player.ServerResetPlayer();
             }
+
             _currPieces.Clear();
             _noOfCorrectPieces = 0;
             _currentPlayerIndex = 0;
@@ -222,9 +305,6 @@ namespace Networking.Gameplay
             _firstTurn = true;
             _animationEndedCount = 0;
             if (_lastTurnRoutine != null) StopCoroutine(_lastTurnRoutine);
-            GameReset?.Invoke();
-            
-            StartCoroutine(SetRoundNoDelayed());
         }
 
         [Server]
@@ -243,7 +323,6 @@ namespace Networking.Gameplay
         private PuzzlePlayer GetCurrentTurnPlayer()
         {
             int index = _currentPlayerIndex % _puzzlePlayers.Count;
-            
             return _puzzlePlayers[index];
         }
         

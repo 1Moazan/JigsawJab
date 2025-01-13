@@ -74,9 +74,11 @@ MonoBehaviour:
   - {fileID: 0}
   correctVfx: {fileID: 6558040259054717161}
   messageBanner: {fileID: 0}
+  ringTransform: {fileID: 0}
+  gridTransform: {fileID: 0}
   maxPlayerCount: 2
-  totalRounds: 0
-  totalCorrectPieces: 8
+  totalRounds: 3
+  totalCorrectPieces: 16
 --- !u!114 &7053420103920467636
 MonoBehaviour:
   m_ObjectHideFlags: 0

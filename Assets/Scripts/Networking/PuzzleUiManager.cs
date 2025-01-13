@@ -1,12 +1,13 @@
-using System;
+using System.Collections;
 using System.Collections.Generic;
 using Client;
 using DG.Tweening;
 using Mirror;
 using Networking.Gameplay;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using Object = UnityEngine.Object;
 
 namespace Networking
 {
@@ -30,6 +31,9 @@ namespace Networking
         [SerializeField] private Transform previewParent;
         [SerializeField] private AvatarDataContainer dataContainer;
         [SerializeField] private Button selectPuzzlebutton;
+        [SerializeField] private Button backToMenuButton;
+        [SerializeField] private GameObject resultPanel;
+        [SerializeField] private TextMeshProUGUI resultText;
 
         public override void OnStartClient()
         {
@@ -38,6 +42,8 @@ namespace Networking
             selectPuzzlebutton.onClick.AddListener(SelectPuzzle);
             puzzleGameplayManager.ClientPuzzleSelected += PuzzleSelected;
             puzzleGameplayManager.PuzzleSelectionStarted += SetSelectionPanelActive;
+            puzzleGameplayManager.ClientGameEnded += SetResultPanel;
+            backToMenuButton.onClick.AddListener(ShiftToMainMenu);
         }
 
         private void OnDisable()
@@ -45,6 +51,8 @@ namespace Networking
             puzzleGameplayManager.ClientPuzzleSelected -= PuzzleSelected;
             puzzleGameplayManager.PuzzleSelectionStarted -= SetSelectionPanelActive;
             selectPuzzlebutton.onClick.RemoveListener(SelectPuzzle);
+            puzzleGameplayManager.ClientGameEnded -= SetResultPanel;
+            backToMenuButton.onClick.RemoveListener(ShiftToMainMenu);
         }
 
         private void PuzzleSelected(string obj)
@@ -134,7 +142,7 @@ namespace Networking
             _index = 0;
             puzzleGameplayManager.PieceAnimationCompleted -= SetNextPieceActive;
         }
-        
+
         private void SetPuzzles()
         {
             _previewObjects ??= new List<AvatarPreview>();
@@ -193,6 +201,25 @@ namespace Networking
                 SetPanel(waitForPuzzlePanel, waitPunchPanel, true);
             }
 
+        }
+
+        
+        private void SetResultPanel(bool hasWon)
+        {
+            StartCoroutine(SetPanelDelayed(hasWon));
+        }
+
+        private void ShiftToMainMenu()
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+        
+        private IEnumerator SetPanelDelayed(bool hasWon)
+        {
+            yield return new WaitForSeconds(3f);
+            Debug.Log("Set Result : " + hasWon);
+            resultPanel.SetActive(true);
+            resultText.text = hasWon ? "You Knocked Out Your Opponent!!" : "Your Opponent Knocked You Out!!";
         }
 
     }

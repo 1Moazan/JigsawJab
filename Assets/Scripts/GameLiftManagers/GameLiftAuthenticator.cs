@@ -1,8 +1,12 @@
 using Mirror;
 using Networking;
 using UnityEngine;
+
+#if UNITY_SERVER || UNITY_EDITOR
 using Aws.GameLift.Server;
 using Aws.GameLift.Server.Model;
+#endif
+
 using System.Collections;
 
 namespace GameLiftManagers
@@ -21,6 +25,7 @@ namespace GameLiftManagers
             public string Message;
         }
 
+#if UNITY_SERVER || UNITY_EDITOR
     /// <summary>
     /// Called on server from StartServer to initialize the Authenticator
     /// <para>Server message handlers should be registered in this method.</para>
@@ -82,6 +87,7 @@ namespace GameLiftManagers
             ServerReject(conn as NetworkConnectionToClient);
         }
     }
+#endif
     
     
         public override void OnClientAuthenticate()

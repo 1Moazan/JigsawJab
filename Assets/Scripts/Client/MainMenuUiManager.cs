@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Client
@@ -60,8 +61,9 @@ namespace Client
             profileManager.UserNameUpdated += UserNameUpdated;
             profileManager.AvatarUpdated += AvatarUpdated;
             profileManager.GuestLoginSuccess += GuestLoginSuccess;
+            playButton.onClick.AddListener(ShiftToGameplay);
         }
-
+        
         private void OnDisable()
         {
             saveUserNameButton.onClick.RemoveListener(SaveUserNameClicked);
@@ -70,6 +72,13 @@ namespace Client
             changeUsernameButton.onClick.RemoveListener(SetUsernamePanelActive);
             profileManager.UserNameUpdated -= UserNameUpdated;
             profileManager.GuestLoginSuccess -= GuestLoginSuccess;
+            profileManager.AvatarUpdated -= AvatarUpdated;
+            playButton.onClick.RemoveListener(ShiftToGameplay);
+        }
+        
+        private void ShiftToGameplay()
+        {
+            SceneManager.LoadScene("Gameplay");
         }
 
         private void SetUsernamePanelActive()

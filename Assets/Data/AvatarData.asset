@@ -21,6 +21,14 @@ MonoBehaviour:
     avatarSprite: {fileID: 21300000, guid: 99c4f499e24854f98adaba03e43fe98c, type: 3}
   - avatarKey: Head4
     avatarSprite: {fileID: 21300000, guid: 6ce18b5b16ea144a1a2822ad22aa7d02, type: 3}
+  - avatarKey: Head6
+    avatarSprite: {fileID: 21300000, guid: 52ac2d21681594bce833b890290416f0, type: 3}
+  - avatarKey: Head7
+    avatarSprite: {fileID: 21300000, guid: e100dfc76b48f4a71a7902359e8346b3, type: 3}
+  - avatarKey: Head8
+    avatarSprite: {fileID: 21300000, guid: 4ce09bbd96d9c424b807672761db16a5, type: 3}
+  - avatarKey: Head9
+    avatarSprite: {fileID: 21300000, guid: 7f58b2d43a3394ea881d98587cedc457, type: 3}
   puzzlesList:
   - avatarKey: Puzzle1
     avatarSprite: {fileID: 21300000, guid: dc62a85ba7bf24a53aa239cc171aaa8b, type: 3}

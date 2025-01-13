@@ -1,9 +1,12 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using Client;
 using DG.Tweening;
 using Mirror;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Networking.Gameplay
@@ -24,8 +27,15 @@ namespace Networking.Gameplay
         [SerializeField] private SpriteRenderer avatarSprite;
         [SerializeField] private Animator playerAnimator;
         [SerializeField] private List<PlayerCanvas> playerCanvases;
+        [SerializeField] private Button backToMenuButton;
         [SerializeField] private NetworkTimer networkTimer;
         [SerializeField] private ParticleSystem hitEffect;
+        [SerializeField] private AvatarDataContainer dataContainer;
+
+        [SyncVar(hook = nameof(UpdateItems))]
+        private ProfileManager.PlayerItems _syncedItems; 
+        
+        public int CurrScore => _currScore;
 
         public override void OnStartServer()
         {
@@ -34,10 +44,29 @@ namespace Networking.Gameplay
             networkTimer.OnTimerCompleted += ServerEndPlayerTurn;
         }
 
+        public override void OnStartClient()
+        {
+            base.OnStartClient();
+            backToMenuButton.onClick.AddListener(() => SceneManager.LoadScene("MainMenu"));
+        }
+
         public override void OnStopServer()
         {
             networkTimer.OnTimerTick -= NetworkTimerOnOnTimerTick;
             networkTimer.OnTimerCompleted -= ServerEndPlayerTurn;
+        }
+
+        [Command]
+        private void CmdSetUserProperties(ProfileManager.PlayerItems items)
+        {
+            _syncedItems = items;
+        }
+
+        private void UpdateItems(ProfileManager.PlayerItems old, ProfileManager.PlayerItems newValue)
+        {
+            avatarSprite.sprite = dataContainer.avatarDataList.Find(a => a.avatarKey == newValue.selectedAvatar)
+                .avatarSprite;
+            _currCanvas.playerName.text = newValue.userName;
         }
 
         private void NetworkTimerOnOnTimerTick(double obj)
@@ -123,12 +152,19 @@ namespace Networking.Gameplay
         {
             _currDirection = transform.position.x < 0 ? PlayerSide.Left : PlayerSide.Right;
             SetPlayerCanvas();
+            CmdSetUserProperties(ProfileManager.LocalPlayerItems);
         }
         
         [ClientRpc]
         private void RpcUpdateTimer(double obj)
         {
             _currCanvas.SetTimerFillAmount((float)obj / totalTurnTime);
+        }
+
+        [ClientRpc]
+        public void RpcSetParent(NetworkIdentity parentId)
+        {
+            transform.parent = parentId.transform;
         }
         
         private void SetPlayerCanvas()
@@ -189,6 +225,22 @@ namespace Networking.Gameplay
             _currTurnCount = totalTurns;
             _currCanvas.MoveOut();
         }
+
+        [ClientRpc]
+        public void RpcPlaySuccessAnimation()
+        {
+            playerAnimator.Play("FinalSuccess");
+        }
+
+       
+
+        [ClientRpc]
+        public void RpcPlayFailAnimation()
+        {
+            playerAnimator.Play("FinalFail");
+        }
+        
+        
 
         public enum PlayerSide
         {

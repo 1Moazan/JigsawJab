@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Shared Connection Data
   m_EditorClassIdentifier: 
   localConnectionData:
-    IPAddress: 127.0.0.1
+    IPAddress: 192.168.57.50
     PortNo: 7777
     isServer: 0
   isLocal: 0

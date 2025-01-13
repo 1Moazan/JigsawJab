@@ -87,7 +87,7 @@ namespace Networking.Gameplay
                 }
                 else
                 {
-                    _lastRoutine = StartCoroutine(SmoothMoveTo(_initialPosition, 5f, 3f));
+                    _lastRoutine = StartCoroutine(SmoothMoveTo(_initialPosition, 5f));
                 }
             }
             if (_isDragging)

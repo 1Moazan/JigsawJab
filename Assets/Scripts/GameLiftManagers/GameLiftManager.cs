@@ -8,7 +8,10 @@ namespace GameLiftManagers
     public class GameLiftManager : MonoBehaviour
     {
         [SerializeField] private GameLiftClientManager clientManager;
+        
+#if UNITY_SERVER || UNITY_EDITOR
         [SerializeField] private GameLiftServerManager serverManager;
+#endif
 
         [SerializeField] private NetworkSettings networkSettings;
         [SerializeField] private GameLiftBuildType buildType;
@@ -17,8 +20,10 @@ namespace GameLiftManagers
             switch (buildType)
             {
                 case GameLiftBuildType.Server:
+#if UNITY_SERVER || UNITY_EDITOR
                     serverManager.gameObject.SetActive(true);
                     serverManager.InitializeAndStart(networkSettings);
+#endif
                     break;
                 case GameLiftBuildType.Client:
                     clientManager.gameObject.SetActive(true);

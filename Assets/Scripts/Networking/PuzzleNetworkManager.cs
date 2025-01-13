@@ -1,8 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Aws.GameLift.Server;
 using Mirror;
+using Networking.Gameplay;
 using UnityEngine;
 
 namespace Networking
@@ -13,25 +13,22 @@ namespace Networking
         
         public static Action<PlayerConnectionInfo> OnPlayerConnected;
         public static Action ManagerShutdown;
+
         public override void OnStartServer()
         {
             base.OnStartServer();
-            Debug.Log("Server Started");
+            PuzzleGameplayManager.ServerGameEnded += ServerGameEnded;
         }
 
-        private void StopGameLiftServer()
+        public override void OnStopServer()
         {
-            var outcome = GameLiftServerAPI.ProcessEnding();
+            base.OnStopServer();
+            PuzzleGameplayManager.ServerGameEnded -= ServerGameEnded;
+        }
 
-            if (outcome.Success)
-            {
-                GameLiftServerAPI.Destroy();
-                Debug.Log("Server Terminated");
-            }
-            else
-            {
-                Debug.LogError("Server Termination Failed + " + outcome.Error.ErrorMessage);
-            }
+        private void ServerGameEnded()
+        {
+            StartCoroutine(ShutdownServer());
         }
 
         public override void OnServerAddPlayer(NetworkConnectionToClient conn)

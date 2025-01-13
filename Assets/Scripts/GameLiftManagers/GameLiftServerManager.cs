@@ -1,3 +1,4 @@
+#if UNITY_SERVER || UNITY_EDITOR
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -94,7 +95,7 @@ namespace GameLiftManagers
 
         private IEnumerator StartServerDelayed()
         {
-            yield return new WaitForSeconds(1f);
+            yield return null;
             _networkSettings.networkManager.StartServer();
         }
         
@@ -131,3 +132,5 @@ namespace GameLiftManagers
         }
     }
 }
+
+#endif
